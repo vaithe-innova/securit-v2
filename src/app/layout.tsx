@@ -1,6 +1,5 @@
 import SmoothScrollProvider from '@/components/shared/SmoothScroll';
 import { ThemeProvider } from '@/components/shared/ThemeProvider';
-import DemoShowcase from '@/components/shared/demo-showcase';
 import Footer from '@/components/shared/footer/Footer';
 import Navbar from '@/components/shared/navbar/Navbar';
 import { AppContextProvider } from '@/context/AppContext';
@@ -27,7 +26,6 @@ export default function RootLayout({
             <Suspense>
               <SmoothScrollProvider>
                 <Navbar />
-                <DemoShowcase activeDemoId={8} />
                 {children}
                 <Footer />
               </SmoothScrollProvider>

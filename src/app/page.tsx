@@ -4,6 +4,7 @@ import Feature from '@/components/home/Feature';
 import Hero from '@/components/home/Hero';
 import Integration from '@/components/home/Integration';
 import Number from '@/components/home/Number';
+import DeploymentTimeline from '@/components/home/DeploymentTimeline';
 import Process from '@/components/home/Process';
 import Services from '@/components/home/Services';
 import Team from '@/components/home/Team';
@@ -23,6 +24,7 @@ const page = () => {
       <Feature />
       <Services />
       <Process />
+      <DeploymentTimeline />
       <Faq />
       <Integration />
       <Number />

@@ -4,3 +4,18 @@ Default Body and Typography styles
 body {
   @apply font-roboto antialiased;
 }
+
+.text-gradient {
+  background: linear-gradient(197.37deg, #0070CE 13.54%, #E5F3FF 110.24%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.fs-36 {
+  font-size: 36px;
+  line-height: 40px;
+}

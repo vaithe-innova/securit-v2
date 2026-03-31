@@ -11,14 +11,17 @@ const Hero = () => {
         <div className="space-y-[40px] md:space-y-[50px] lg:space-y-[60px] xl:space-y-[70px]">
           <div className="flex flex-col items-center">
             <RevealAnimation delay={0.1}>
-              <span className="badge badge-green mb-3 md:mb-4 lg:mb-5">Smart Safety for Every Worker</span>
+              <span className="badge badge-white mb-3 md:mb-4 lg:mb-5">
+                <span className="badge badge-primary ">Securit</span>
+                <span className="badge badge-white">Smart Safety for Every Worker</span>
+              </span>
             </RevealAnimation>
             <div className="space-y-3 md:mx-10 md:space-y-4 lg:mx-0">
               <RevealAnimation delay={0.2}>
-                <h1 className="max-w-[1200px] text-center">You can’t fix what you can’t see. <br /> So we made safety impossible to miss. </h1>
+                <h1 className="max-w-[1200px] text-center text-primary-700 fw-700">You can’t fix what you can’t see. <br /> So we made safety impossible to miss. </h1>
               </RevealAnimation>
               <RevealAnimation delay={0.3}>
-                <p className="text-center">
+                <p className="text-center text-black/80">
                   Real-time location intelligence and AI-powered insights to protect your workforce, reduce incidents, and transform reactive safety into proactive prevention.
                 </p>
               </RevealAnimation>

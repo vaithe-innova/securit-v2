@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { IApproach } from '@/interface';
 import RevealAnimation from '../animation/RevealAnimation';
 
@@ -15,10 +16,10 @@ const UseCasesClient = ({ useCasesData }: UseCasesClientProps) => {
           <div className="flex-1 text-center lg:text-left">
             <div className="space-y-3">
               <RevealAnimation delay={0.1}>
-                <span className="badge badge-green">Our Approach</span>
+                <span className="badge badge-white">Our Approach</span>
               </RevealAnimation>
               <RevealAnimation delay={0.2}>
-                <h2 className="">Stop waiting on data. Start acting on it.</h2>
+                <h2 className="text-gradient fw-700">Stop waiting on data. Start acting on it.</h2>
               </RevealAnimation>
             </div>
           </div>
@@ -29,11 +30,11 @@ const UseCasesClient = ({ useCasesData }: UseCasesClientProps) => {
               <div className="col-span-12 lg:col-span-3">
                 <div className="space-y-6">
                   <div className="max-lg:text-center">
-                    <span className={`${useCase.icon} text-secondary dark:text-accent text-[52px]`} />
+                    <Image src={useCase.icon} alt="icon" width={40} height={40} className="text-secondary dark:text-accent" />
                   </div>
                   <div className="space-y-1 text-center lg:text-left">
-                    <h3 className="text-heading-5">{useCase.title}</h3>
-                    <p className="mx-auto line-clamp-3 max-w-[337px] lg:mx-0">{useCase.description}</p>
+                    <h3 className="text-heading-5 h-20">{useCase.title}</h3>
+                    <p className="mx-auto line-clamp-3 max-w-[337px] lg:mx-0 font-normal">{useCase.description}</p>
                   </div>
                 </div>
               </div>

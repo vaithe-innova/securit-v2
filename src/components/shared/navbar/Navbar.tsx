@@ -59,7 +59,7 @@ const Navbar = () => {
                 <li className="relative cursor-pointer py-2.5">
                   <Link
                     href="/"
-                    className="hover:border-stroke-2 dark:hover:border-stroke-7 text-tagline-1 text-secondary/60 hover:text-secondary dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-normal transition-all duration-200">
+                    className="hover:border-stroke-2 dark:hover:border-stroke-7 text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">
                     <span>Home</span>
                   </Link>
                 </li>
@@ -71,7 +71,7 @@ const Navbar = () => {
                     onMouseEnter={() => handleMenuHover(dataMenu)}>
                     <button
                       type="button"
-                      className="hover:border-stroke-2 dark:hover:border-stroke-7 text-tagline-1 text-secondary/60 hover:text-secondary dark:text-accent/60 dark:hover:text-accent flex cursor-pointer items-center gap-1 rounded-full border border-transparent px-4 py-2 font-normal transition-all duration-200">
+                      className="hover:border-stroke-2 dark:hover:border-stroke-7 text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex cursor-pointer items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">
                       <span>{label}</span>
                       <span className="block origin-center translate-y-px transition-all duration-300 group-hover:rotate-180">
                         <svg
@@ -91,31 +91,31 @@ const Navbar = () => {
                 <li className="relative cursor-pointer py-2.5">
                   <Link
                     href="/company"
-                    className="hover:border-stroke-2 dark:hover:border-stroke-7 text-tagline-1 text-secondary/60 hover:text-secondary dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-normal transition-all duration-200">
+                    className="hover:border-stroke-2 dark:hover:border-stroke-7 text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">
                     <span>Company</span>
                   </Link>
                 </li>
                 <li className="relative cursor-pointer py-2.5">
                   <Link
                     href="/pricing"
-                    className="hover:border-stroke-2 dark:hover:border-stroke-7 text-tagline-1 text-secondary/60 hover:text-secondary dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-normal transition-all duration-200">
+                    className="hover:border-stroke-2 dark:hover:border-stroke-7 text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">
                     <span>Pricing</span>
                   </Link>
                 </li>
                 <li className="relative cursor-pointer py-2.5">
                   <Link
                     href="/contact-us"
-                    className="hover:border-stroke-2 dark:hover:border-stroke-7 text-tagline-1 text-secondary/60 hover:text-secondary dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-normal transition-all duration-200">
+                    className="hover:border-stroke-2 dark:hover:border-stroke-7 text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">
                     <span>Contact Us</span>
                   </Link>
                 </li>
               </ul>
             </nav>
             <div className="hidden items-center justify-center xl:flex">
-              <Link href="/demo" className="btn btn-md btn-primary hover:btn-white-dark dark:hover:btn-white mr-2">
+              <Link href="/demo" className="btn btn-md btn-primary hover:btn-white-dark dark:hover:btn-white mr-6 font-bold">
                 <span>Get Demo</span>
               </Link>
-              <Link href="/login" className="btn btn-md btn-outline hover:btn-white-dark dark:hover:btn-white">
+              <Link href="/login" className="btn btn-md btn-outline-primary hover:btn-white-dark dark:hover:btn-white font-bold text-primary-500">
                 <span>Login</span>
               </Link>
             </div>

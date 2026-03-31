@@ -119,7 +119,7 @@ const TestimonialMobile = () => {
                     </Link>
                   </div>
                   <blockquote
-                    className="font-inter-tight text-tagline-1 text-secondary line-clamp-3 font-normal"
+                    className="font-roboto text-tagline-1 text-secondary line-clamp-3 font-normal"
                     cite={testimonial.xUrl}>
                     &quot;{testimonial.quote}&quot;
                   </blockquote>

@@ -23,7 +23,7 @@ const TopNavButtons = ({ fillClass, className }: TopNavButtonsProps) => {
               <figure className="size-9 max-[400px]:pt-0.5">
                 <Image src={logo} alt="Top Green Nav" />
               </figure>
-              <figcaption className="text-secondary font-inter-tight md:text-tagline-2 text-[10px] leading-[150%] font-normal">
+              <figcaption className="text-secondary font-roboto md:text-tagline-2 text-[10px] leading-[150%] font-normal">
                 AI Applications new homepage is live now
               </figcaption>
             </div>

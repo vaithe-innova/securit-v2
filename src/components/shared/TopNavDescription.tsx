@@ -14,7 +14,7 @@ const TopNavDescription = () => {
     <RevealAnimation delay={0.1} direction="up" instant>
       <div className="px-5 py-1.5 bg-ns-cyan absolute w-full top-0 left-0 z-50">
         <div className="relative flex items-center justify-between">
-          <figcaption className="text-secondary text-left text-tagline-2 md:text-tagline-2 font-inter-tight font-normal leading-[150%]">
+          <figcaption className="text-secondary text-left text-tagline-2 md:text-tagline-2 font-roboto font-normal leading-[150%]">
             AI Gadgets new homepage is live now{' '}
             <Link href="#" className="underline">
               click here{' '}

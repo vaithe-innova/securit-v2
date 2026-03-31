@@ -14,6 +14,19 @@ const CheckIcon: FC<ArrowIconProps> = ({ className }) => (
   </svg>
 );
 
+const CheckIconCircle: FC<ArrowIconProps> = ({ className }) => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0">
+  <path d="M21.3709 12.0002C21.3709 13.0002 20.5109 13.7902 20.2309 14.6702C19.9509 15.5502 20.1309 16.7502 19.5809 17.5002C19.0309 18.2502 17.8509 18.4402 17.0809 18.9902C16.3109 19.5402 15.8009 20.6102 14.9009 20.9102C14.0009 21.2102 13.0009 20.6502 12.0009 20.6502C11.0009 20.6502 10.0009 21.2002 9.10086 20.9202C8.20086 20.6402 7.67086 19.5502 6.92086 19.0002C6.17086 18.4502 5.00086 18.2802 4.42086 17.5102C3.84086 16.7402 4.07086 15.5902 3.77086 14.6802C3.47086 13.7702 2.63086 13.0002 2.63086 12.0002C2.63086 11.0002 3.49086 10.2002 3.77086 9.32017C4.05086 8.44017 3.87086 7.24017 4.42086 6.49017C4.97086 5.74017 6.15086 5.56017 6.92086 5.00017C7.69086 4.44017 8.20086 3.39017 9.10086 3.09017C10.0009 2.79017 11.0309 3.36017 12.0009 3.36017C12.9709 3.36017 14.0009 2.81017 14.9009 3.09017C15.8009 3.37017 16.3309 4.46017 17.0809 5.00017C17.8309 5.54017 19.0209 5.72017 19.5809 6.49017C20.1409 7.26017 19.9309 8.41017 20.2309 9.32017C20.5309 10.2302 21.3709 11.0002 21.3709 12.0002Z" fill="url(#paint0_linear_840_891)"/>
+  <path d="M8 12L11 15L16 10" stroke="white" strokeLinecap="round" strokeLinejoin="round" 
+  className={cn('', className)}/>
+  <defs>
+  <linearGradient id="paint0_linear_840_891" x1="5.20761" y1="5.02756" x2="21.1822" y2="16.2784" gradientUnits="userSpaceOnUse">
+  <stop offset="0.475962" stopColor="#0070CE"/>
+  </linearGradient>
+  </defs>
+  </svg>  
+);
+
 const ArrowIcon: FC<ArrowIconProps> = ({ className }) => (
   <svg viewBox="0 0 24 24" fill="none" className={cn(className)} xmlns="http://www.w3.org/2000/svg">
     <path d="M3.75 12H20.25" stroke="inherit" strokeLinecap="round" strokeLinejoin="round" />
@@ -963,6 +976,7 @@ export {
   ArrowIcon,
   CalendarIcon,
   CheckIcon,
+  CheckIconCircle,
   ChromeExtensionIcon,
   ClockIcon,
   CompanyProgressIcon,

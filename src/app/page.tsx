@@ -2,7 +2,7 @@ import Hero from '@/components/home/Hero';
 import Counter from '@/components/home/Counter';
 import UseCases from '@/components/home/UseCases';
 import Feature from '@/components/home/Feature';
-import About from '@/components/home/About';
+// import About from '@/components/home/About';
 import DeploymentTimeline from '@/components/home/DeploymentTimeline';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
@@ -21,7 +21,7 @@ const page = () => {
         <UseCases />
       </div>
       <Feature />
-      <About />
+      {/* <About /> */}
       <DeploymentTimeline />
     </main>
   );

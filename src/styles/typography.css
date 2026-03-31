@@ -6,9 +6,10 @@ body {
 }
 
 .text-gradient {
-  background: linear-gradient(197.37deg, #0070CE 13.54%, #E5F3FF 110.24%);
+  background: linear-gradient(180deg, #8fcaf9 0%, #2a83d7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .fw-700 {

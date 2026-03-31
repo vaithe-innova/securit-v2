@@ -1,6 +1,6 @@
 ---
-title: 'Customer Support Automation'
-description: 'Deliver exceptional customer experiences with AI-powered support automation that reduces response times, lowers costs, and improves satisfaction.'
+title: 'Automate the response'
+description: 'Predefined workflows take over from there—escalating issues, logging events, and coordinating next steps across teams without delays or handoffs.'
 icon: 'ns-shape-15'
 image: '/images/home-page-1/services-customer-support.svg'
 coverImg: '/images/services/service-customer-support-cover.png'

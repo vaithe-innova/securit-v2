@@ -1,6 +1,6 @@
 ---
-title: 'Creative Filters & Effects'
-description: 'Add artistic flair to your images with AI-powered creative filters and effects — from cinematic tones to vintage aesthetics and modern stylizations.'
+title: 'Connect everything'
+description: 'Securit integrates with cameras, sensors, wearables, and existing systems through APIs, allowing data to move between systems automatically.'
 coverImg: '/images/home-page-36/service-06.png'
 icon: 'ns-shape-14'
 newFeature: true

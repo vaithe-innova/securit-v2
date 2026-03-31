@@ -1,6 +1,6 @@
 ---
-title: 'Cost Allocation & Calculation'
-description: 'Gain financial clarity with cost allocation and calculation services that ensure transparency, optimize resource use, and support smarter decision-making across your organization.'
+title: 'Process each signal as it comes in'
+description: 'Instead of batch processing (where data is collected and reviewed later), Securit processes every event as it happens—so nothing sits waiting to be analyzed.'
 icon: 'ns-shape-23'
 image: '/images/home-page-1/services-big-data-consulting.svg'
 coverImg: '/images/services/service-big-data-consulting-cover.png'

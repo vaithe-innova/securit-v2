@@ -1,6 +1,6 @@
 ---
-title: 'Cryptocurrency Lending'
-description: 'A secure and efficient way for individuals and businesses to lend or borrow digital assets, earn interest, and access liquidity without traditional banks.'
+title: 'Identify what actually matters'
+description: 'Incoming signals are analyzed and prioritized, filtering out noise and highlighting the events that require attention—not just everything that happens.'
 icon: 'ns-shape-9'
 image: '/images/home-page-1/services-crypto-lending.svg'
 coverImg: '/images/services/service-crypto-cover.png'

@@ -1,6 +1,6 @@
 'use client';
 import { useGSAP } from '@gsap/react';
-import heroVideo from '@public/images/ns-img-56.png';
+import heroVideo from '@public/images/dashboard-im.png';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';

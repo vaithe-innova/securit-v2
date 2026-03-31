@@ -75,6 +75,14 @@ export interface IService {
   content: string;
 }
 
+export interface IApproach {
+  id: number;
+  title: string;
+  icon: string;
+  description: string;
+  slug: string;
+}
+
 export interface ISocialLinks {
   behance?: string;
   dribbble?: string;

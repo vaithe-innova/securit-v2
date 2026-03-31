@@ -5,8 +5,7 @@ import UseCasesClient from './UseCasesClient';
 type UseCaseItem = IService & { [key: string]: unknown };
 
 const UseCases = () => {
-  const allUseCases: UseCaseItem[] = getMarkDownData<UseCaseItem>('src/data/services');
-  const useCasesData: UseCaseItem[] = allUseCases.slice(8, 11);
+  const useCasesData: UseCaseItem[] = getMarkDownData<UseCaseItem>('src/data/approach', false, 'slug');
 
   return <UseCasesClient useCasesData={useCasesData} />;
 };

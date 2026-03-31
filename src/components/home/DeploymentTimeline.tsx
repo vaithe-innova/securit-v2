@@ -72,8 +72,8 @@ const TimelineMarker = ({ variant }: { variant: (typeof timelineSteps)[0]['marke
       />
       <span
         className={`relative h-3.5 w-3.5 rounded-full ${isOrange
-            ? 'bg-orange-400 shadow-[0_0_10px_rgba(251,146,60,0.7)]'
-            : 'bg-blue-400 shadow-[0_0_10px_rgba(96,165,250,0.7)]'
+          ? 'bg-orange-400 shadow-[0_0_10px_rgba(251,146,60,0.7)]'
+          : 'bg-blue-400 shadow-[0_0_10px_rgba(96,165,250,0.7)]'
           }`}
       />
     </div>
@@ -165,7 +165,7 @@ const DeploymentTimeline = () => {
   return (
     <section
       ref={sectionRef}
-      className="bg-background-8 dark:bg-background-8 py-[80px] lg:py-[120px] xl:py-[150px]"
+      className="bg-background-5 dark:bg-background-5 py-[80px] lg:py-[120px] xl:py-[150px]"
     >
       <div className="main-container">
         {/* ── Section header (uses existing RevealAnimation) ── */}
@@ -176,9 +176,8 @@ const DeploymentTimeline = () => {
             </span>
           </RevealAnimation>
           <RevealAnimation delay={0.15}>
-            <h2 className="text-accent mt-4 max-w-[680px] font-bold leading-[110%]">
-              Up and running in days,{' '}
-              <span className="text-accent/60">not months</span>
+            <h2 className="text-accent mt-4 max-w-[1000px] fw-700 text-gradient leading-[110%]">
+              Up and running in days not months
             </h2>
           </RevealAnimation>
           <RevealAnimation delay={0.25}>

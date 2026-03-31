@@ -19,3 +19,7 @@ body {
   font-size: 36px;
   line-height: 40px;
 }
+
+.bg-blue-light {
+  background-color: #F5FAFF;
+}

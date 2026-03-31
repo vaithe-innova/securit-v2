@@ -7,31 +7,37 @@ const AboutTabList = () => {
       {/* Desktop TabList */}
       <TabList variant="desktop">
         <Tab index={0} variant="desktop">
-          Decentralization
+          Manufacturing & Industrial 
         </Tab>
         <Tab index={1} variant="desktop">
-          Blockchain
+          Warehousing & Logistics 
         </Tab>
         <Tab index={2} variant="desktop">
-          Privacy
+          Construction & Field Work 
         </Tab>
         <Tab index={3} variant="desktop">
-          Exchanges
+          Utilities & Remote Operations 
+        </Tab>
+        <Tab index={4} variant="desktop">
+          Oil, Gas & Energy 
         </Tab>
       </TabList>
       {/* Mobile TabList */}
       <TabList variant="mobile">
         <Tab index={0} variant="mobile">
-          Decentralization
+          Manufacturing & Industrial 
         </Tab>
         <Tab index={1} variant="mobile">
-          Blockchain
+          Warehousing & Logistics 
         </Tab>
         <Tab index={2} variant="mobile">
-          Privacy
+          Construction & Field Work
         </Tab>
         <Tab index={3} variant="mobile" className="text-nowrap">
-          Exchanges
+          Utilities & Remote Operations
+        </Tab>
+        <Tab index={4} variant="mobile">
+          Oil, Gas & Energy
         </Tab>
       </TabList>
     </>

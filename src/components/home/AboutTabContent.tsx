@@ -128,6 +128,36 @@ const aboutTabsData = [
       },
     ],
   },
+    {
+    id: 'exchanges',
+    badge: 'About',
+    title: 'Exchanges drive crypto',
+    titleBreak: false,
+    highlightedText: ' trading!',
+    description:
+      'Cryptocurrency exchanges are the beating heart of the digital asset market. These platforms enable users to buy',
+    image: aboutExchanges,
+    imageAlt: 'Happy man using phone',
+    buttonText: 'About us',
+    buttonHref: '/about',
+    features: [
+      {
+        icon: 'ns-shape-6',
+        title: 'Bold & direct',
+        description: 'Learn about your users.',
+      },
+      {
+        icon: 'ns-shape-46',
+        title: 'Conversational & friendly',
+        description: 'Monitor your metrics.',
+      },
+      {
+        icon: 'ns-shape-47',
+        title: 'Professional & clear',
+        description: 'Surface hidden trends.',
+      },
+    ],
+  },
 ];
 
 const AboutTabContent = () => {
@@ -137,7 +167,6 @@ const AboutTabContent = () => {
         <TabContent key={tab.id} index={index}>
           <div className="flex w-full flex-col items-start justify-between gap-x-24 gap-y-14 lg:flex-row">
             <div className="flex-1 sm:mx-auto sm:max-w-[500px] lg:max-w-full">
-              <span className="badge badge-green mb-3.5 xl:mb-5">{tab.badge}</span>
               <h2 className={`${index === 0 ? 'lg:text-heading-2 text-heading-4' : ''} mb-3`}>
                 {tab.title}
                 {tab.titleBreak && <br className="hidden lg:block" />}
@@ -160,13 +189,6 @@ const AboutTabContent = () => {
                   </li>
                 ))}
               </ul>
-              <div>
-                <LinkButton
-                  href={tab.buttonHref}
-                  className="btn btn-white btn-lg md:btn-xl dark:btn-transparent hover:btn-primary w-full md:w-auto">
-                  {tab.buttonText}
-                </LinkButton>
-              </div>
             </div>
             {/* About Image */}
             <div className="flex-1 sm:mx-auto sm:max-w-[500px] lg:max-w-full">

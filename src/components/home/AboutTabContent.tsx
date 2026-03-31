@@ -3,7 +3,6 @@ import aboutDecentralization from '@public/images/ns-img-6.png';
 import aboutExchanges from '@public/images/ns-img-8.png';
 import aboutPrivacy from '@public/images/ns-img-9.png';
 import Image from 'next/image';
-import LinkButton from '../ui/button/LinkButton';
 import TabContent from '../ui/tab/TabContent';
 
 const aboutTabsData = [
@@ -99,36 +98,6 @@ const aboutTabsData = [
     ],
   },
   {
-    id: 'exchanges',
-    badge: 'About',
-    title: 'Exchanges drive crypto',
-    titleBreak: false,
-    highlightedText: ' trading!',
-    description:
-      'Cryptocurrency exchanges are the beating heart of the digital asset market. These platforms enable users to buy',
-    image: aboutExchanges,
-    imageAlt: 'Happy man using phone',
-    buttonText: 'About us',
-    buttonHref: '/about',
-    features: [
-      {
-        icon: 'ns-shape-6',
-        title: 'Bold & direct',
-        description: 'Learn about your users.',
-      },
-      {
-        icon: 'ns-shape-46',
-        title: 'Conversational & friendly',
-        description: 'Monitor your metrics.',
-      },
-      {
-        icon: 'ns-shape-47',
-        title: 'Professional & clear',
-        description: 'Surface hidden trends.',
-      },
-    ],
-  },
-    {
     id: 'exchanges',
     badge: 'About',
     title: 'Exchanges drive crypto',

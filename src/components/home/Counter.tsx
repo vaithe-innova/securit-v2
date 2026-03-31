@@ -8,11 +8,14 @@ const Counter = () => {
     <section className="pt-16 md:pt-20 lg:pt-[90px] xl:pt-[100px] pb-16 md:pb-20 lg:pb-[90px] xl:pb-[100px]">
       <div className="main-container">
         <div className="text-center space-y-3 mb-10 md:mb-[70px]">
+          <RevealAnimation delay={0.1}>
+            <span className="uppercase text-primary-500 tracking-[3px] text-sm">The Challenge</span>
+          </RevealAnimation>
           <RevealAnimation delay={0.2}>
-            <h2 className='fs-36 fw-700 text-primary-700'>Preventable incidents still happen—not because teams lack data, but because they can’t act on it fast enough.</h2>
+            <h2 className='fs-36 fw-700 text-primary-700 max-w-[1024px] mx-auto'>Preventable incidents still happen—not because teams lack data, but because they can’t act on it fast enough.</h2>
           </RevealAnimation>
           <RevealAnimation delay={0.3}>
-            <p className="max-w-[680px] mx-auto">Safety systems generate plenty of information, but it’s fragmented across tools, delayed in reaching the right people, and difficult to act on in the moment. Without a clear, real-time view and coordinated response, critical signals are missed—leading to unnecessary risk, costly disruptions, and avoidable harm.</p>
+            <p className="max-w-[1024px] mx-auto">Safety systems generate plenty of information, but it’s fragmented across tools, delayed in reaching the right people, and difficult to act on in the moment. Without a clear, real-time view and coordinated response, critical signals are missed—leading to unnecessary risk, costly disruptions, and avoidable harm.</p>
           </RevealAnimation>
         </div>
         <RevealAnimation delay={0.4}>

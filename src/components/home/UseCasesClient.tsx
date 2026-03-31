@@ -16,7 +16,7 @@ const UseCasesClient = ({ useCasesData }: UseCasesClientProps) => {
           <div className="flex-1 text-center lg:text-left">
             <div className="space-y-3">
               <RevealAnimation delay={0.1}>
-                <span className="badge badge-white">Our Approach</span>
+                <span className="uppercase text-white tracking-[3px] text-sm">Our Approach</span>
               </RevealAnimation>
               <RevealAnimation delay={0.2}>
                 <h2 className="text-gradient fw-700">Stop waiting on data. Start acting on it.</h2>

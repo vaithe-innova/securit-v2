@@ -170,10 +170,8 @@ const DeploymentTimeline = () => {
       <div className="main-container">
         {/* ── Section header (uses existing RevealAnimation) ── */}
         <div className="mb-[60px] lg:mb-[80px]">
-          <RevealAnimation delay={0.05}>
-            <span className="badge badge-blur-light mb-4 text-xs uppercase tracking-widest">
-              Deployment
-            </span>
+          <RevealAnimation delay={0.2}>
+            <span className="uppercase text-primary-500 tracking-[3px] text-sm">Deployment</span>
           </RevealAnimation>
           <RevealAnimation delay={0.15}>
             <h2 className="text-accent mt-4 max-w-[1000px] fw-700 text-gradient leading-[110%]">
@@ -181,7 +179,7 @@ const DeploymentTimeline = () => {
             </h2>
           </RevealAnimation>
           <RevealAnimation delay={0.25}>
-            <p className="text-accent/60 mt-5 max-w-[580px] text-[15px] leading-relaxed">
+            <p className="text-accent/60 mt-5 max-w-[650px] text-[15px] leading-relaxed">
               Securit is designed to integrate quickly into existing operations—with most teams live
               in days and fully optimized within the first few weeks.
             </p>

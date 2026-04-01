@@ -7,7 +7,7 @@ const ContactInfo = () => {
         <div className="space-y-[50px]">
           <div className="mb-6 sm:mb-10 grid grid-cols-12 md:gap-8 space-y-4 md:space-y-0 xl:mb-18">
             <div className="col-span-12 md:col-span-6 lg:col-span-5">
-              <span className="text-primary-500 text-sm tracking-[3px] uppercase">Contact Us</span>
+              <span className="text-primary-500 tracking-[2%] sm:tracking-[3%] !leading-4 text-xs sm:text-sm font-normal">Contact Us</span>
               <h2 className="text-primary-700 mt-2 mb-4 font-bold text-3xl md:text-4xl lg:text-5xl">
                 Get in touch with Us
               </h2>

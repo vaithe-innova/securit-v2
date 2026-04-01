@@ -12,7 +12,7 @@ const Industries = () => {
         <div className="main-container">
           <div className="mx-auto mb-10 max-w-[1024px] space-y-5 text-center md:mb-[70px]">
             <RevealAnimation delay={0.2}>
-              <span className="uppercase text-primary-500 tracking-[2px] sm:tracking-[3px] text-xs sm:text-sm">Industries</span>
+              <span className="uppercase text-primary-500 tracking-[2%] sm:tracking-[3%] !leading-4 text-xs sm:text-sm font-normal">Industries</span>
             </RevealAnimation>
             <div>
               <RevealAnimation delay={0.3}>

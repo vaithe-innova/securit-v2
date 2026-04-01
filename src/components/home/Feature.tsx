@@ -86,7 +86,7 @@ const Feature = () => {
       <div className="main-container">
         <div className="mb-10 max-w-[750px] space-y-5 md:mb-[50px]">
           <RevealAnimation delay={0.2}>
-            <span className="uppercase text-primary-500 tracking-[2px] sm:tracking-[3px] text-xs sm:text-sm">Platform and Features</span>
+            <span className="uppercase text-primary-500 tracking-[2%] sm:tracking-[3%] !leading-4 text-xs sm:text-sm font-normal">Platform and Features</span>
           </RevealAnimation>
           <div>
             <RevealAnimation delay={0.3}>

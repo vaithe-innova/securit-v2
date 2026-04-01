@@ -16,15 +16,109 @@ const CheckIcon: FC<ArrowIconProps> = ({ className }) => (
 
 const CheckIconCircle: FC<ArrowIconProps> = ({ className }) => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0">
-  <path d="M21.3709 12.0002C21.3709 13.0002 20.5109 13.7902 20.2309 14.6702C19.9509 15.5502 20.1309 16.7502 19.5809 17.5002C19.0309 18.2502 17.8509 18.4402 17.0809 18.9902C16.3109 19.5402 15.8009 20.6102 14.9009 20.9102C14.0009 21.2102 13.0009 20.6502 12.0009 20.6502C11.0009 20.6502 10.0009 21.2002 9.10086 20.9202C8.20086 20.6402 7.67086 19.5502 6.92086 19.0002C6.17086 18.4502 5.00086 18.2802 4.42086 17.5102C3.84086 16.7402 4.07086 15.5902 3.77086 14.6802C3.47086 13.7702 2.63086 13.0002 2.63086 12.0002C2.63086 11.0002 3.49086 10.2002 3.77086 9.32017C4.05086 8.44017 3.87086 7.24017 4.42086 6.49017C4.97086 5.74017 6.15086 5.56017 6.92086 5.00017C7.69086 4.44017 8.20086 3.39017 9.10086 3.09017C10.0009 2.79017 11.0309 3.36017 12.0009 3.36017C12.9709 3.36017 14.0009 2.81017 14.9009 3.09017C15.8009 3.37017 16.3309 4.46017 17.0809 5.00017C17.8309 5.54017 19.0209 5.72017 19.5809 6.49017C20.1409 7.26017 19.9309 8.41017 20.2309 9.32017C20.5309 10.2302 21.3709 11.0002 21.3709 12.0002Z" fill="url(#paint0_linear_840_891)"/>
-  <path d="M8 12L11 15L16 10" stroke="white" strokeLinecap="round" strokeLinejoin="round" 
-  className={cn('', className)}/>
-  <defs>
-  <linearGradient id="paint0_linear_840_891" x1="5.20761" y1="5.02756" x2="21.1822" y2="16.2784" gradientUnits="userSpaceOnUse">
-  <stop offset="0.475962" stopColor="#0070CE"/>
-  </linearGradient>
-  </defs>
-  </svg>  
+    <path
+      d="M21.3709 12.0002C21.3709 13.0002 20.5109 13.7902 20.2309 14.6702C19.9509 15.5502 20.1309 16.7502 19.5809 17.5002C19.0309 18.2502 17.8509 18.4402 17.0809 18.9902C16.3109 19.5402 15.8009 20.6102 14.9009 20.9102C14.0009 21.2102 13.0009 20.6502 12.0009 20.6502C11.0009 20.6502 10.0009 21.2002 9.10086 20.9202C8.20086 20.6402 7.67086 19.5502 6.92086 19.0002C6.17086 18.4502 5.00086 18.2802 4.42086 17.5102C3.84086 16.7402 4.07086 15.5902 3.77086 14.6802C3.47086 13.7702 2.63086 13.0002 2.63086 12.0002C2.63086 11.0002 3.49086 10.2002 3.77086 9.32017C4.05086 8.44017 3.87086 7.24017 4.42086 6.49017C4.97086 5.74017 6.15086 5.56017 6.92086 5.00017C7.69086 4.44017 8.20086 3.39017 9.10086 3.09017C10.0009 2.79017 11.0309 3.36017 12.0009 3.36017C12.9709 3.36017 14.0009 2.81017 14.9009 3.09017C15.8009 3.37017 16.3309 4.46017 17.0809 5.00017C17.8309 5.54017 19.0209 5.72017 19.5809 6.49017C20.1409 7.26017 19.9309 8.41017 20.2309 9.32017C20.5309 10.2302 21.3709 11.0002 21.3709 12.0002Z"
+      fill="url(#paint0_linear_840_891)"
+    />
+    <path
+      d="M8 12L11 15L16 10"
+      stroke="white"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={cn('', className)}
+    />
+    <defs>
+      <linearGradient
+        id="paint0_linear_840_891"
+        x1="5.20761"
+        y1="5.02756"
+        x2="21.1822"
+        y2="16.2784"
+        gradientUnits="userSpaceOnUse">
+        <stop offset="0.475962" stopColor="#0070CE" />
+      </linearGradient>
+    </defs>
+  </svg>
+);
+
+const BlurOne: FC<ArrowIconProps> = ({}) => (
+  <svg width="325" height="515" viewBox="0 0 325 515" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g filter="url(#filter0_f_840_725)">
+      <rect
+        x="-65"
+        y="-0.337402"
+        width="72"
+        height="541"
+        rx="36"
+        transform="rotate(-30.8182 -65 -0.337402)"
+        fill="url(#paint0_linear_840_725)"
+      />
+    </g>
+    <defs>
+      <filter
+        id="filter0_f_840_725"
+        x="-115.645"
+        y="-87.8696"
+        width="440.287"
+        height="602.787"
+        filterUnits="userSpaceOnUse"
+        colorInterpolationFilters="sRGB">
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
+        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+        <feGaussianBlur stdDeviation="32" result="effect1_foregroundBlur_840_725" />
+      </filter>
+      <linearGradient
+        id="paint0_linear_840_725"
+        x1="-29"
+        y1="-0.337402"
+        x2="-29"
+        y2="540.663"
+        gradientUnits="userSpaceOnUse">
+        <stop stopColor="#B7D4FF" />
+        <stop offset="1" stopColor="#E6F1FF" />
+      </linearGradient>
+    </defs>
+  </svg>
+);
+
+const BlurTwo: FC<ArrowIconProps> = ({}) => (
+  <svg width="390" height="427" viewBox="0 0 390 427" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g filter="url(#filter0_f_840_727)">
+      <rect
+        x="14.9961"
+        y="-92.3362"
+        width="50.0937"
+        height="541"
+        rx="25.0469"
+        transform="rotate(-30.8182 14.9961 -92.3362)"
+        fill="url(#paint0_linear_840_727)"
+      />
+    </g>
+    <defs>
+      <filter
+        id="filter0_f_840_727"
+        x="-39.7125"
+        y="-172.709"
+        width="429.6"
+        height="599.69"
+        filterUnits="userSpaceOnUse"
+        colorInterpolationFilters="sRGB">
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
+        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+        <feGaussianBlur stdDeviation="32" result="effect1_foregroundBlur_840_727" />
+      </filter>
+      <linearGradient
+        id="paint0_linear_840_727"
+        x1="40.0429"
+        y1="-92.3362"
+        x2="40.0429"
+        y2="448.664"
+        gradientUnits="userSpaceOnUse">
+        <stop stopColor="#B7D4FF" />
+        <stop offset="1" stopColor="#E6F1FF" />
+      </linearGradient>
+    </defs>
+  </svg>
 );
 
 const ArrowIcon: FC<ArrowIconProps> = ({ className }) => (
@@ -447,7 +541,7 @@ const UserIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width={17} height={17} viewBox="0 0 17 17" fill="none">
     <path
       d="M3.49219 15.0195C3.49219 13.605 4.05409 12.2485 5.05428 11.2483C6.05448 10.2481 7.41103 9.6862 8.82552 9.6862C10.24 9.6862 11.5966 10.2481 12.5968 11.2483C13.597 12.2485 14.1589 13.605 14.1589 15.0195L12.8255 15.0195C12.8255 13.9587 12.4041 12.9412 11.6539 12.1911C10.9038 11.441 9.88639 11.0195 8.82552 11.0195C7.76465 11.0195 6.74724 11.441 5.99709 12.1911C5.24695 12.9412 4.82552 13.9587 4.82552 15.0195L3.49219 15.0195ZM8.82552 9.01953C6.61552 9.01953 4.82552 7.22953 4.82552 5.01953C4.82552 2.80953 6.61552 1.01953 8.82552 1.01953C11.0355 1.01953 12.8255 2.80953 12.8255 5.01953C12.8255 7.22953 11.0355 9.01953 8.82552 9.01953ZM8.82552 7.6862C10.2989 7.6862 11.4922 6.49286 11.4922 5.01953C11.4922 3.5462 10.2989 2.35286 8.82552 2.35286C7.35219 2.35286 6.15885 3.5462 6.15885 5.01953C6.15885 6.49286 7.35219 7.6862 8.82552 7.6862Z"
-      className="fill-[#09121F] dark:fill-accent"
+      className="dark:fill-accent fill-[#09121F]"
     />
   </svg>
 );
@@ -455,7 +549,7 @@ const MessageIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width={17} height={17} viewBox="0 0 17 17" fill="none">
     <path
       d="M2.16406 6.34952C2.16371 5.82432 2.26696 5.30421 2.46791 4.81898C2.66885 4.33374 2.96354 3.89291 3.3351 3.52172C3.70665 3.15054 4.14778 2.85629 4.63322 2.65583C5.11865 2.45538 5.63887 2.35264 6.16406 2.35352L11.4974 2.35352C13.7061 2.35352 15.4974 4.15019 15.4974 6.34952L15.4974 14.3535L6.16406 14.3535C3.9554 14.3535 2.16406 12.5569 2.16406 10.3575L2.16406 6.34952ZM14.1641 13.0202L14.1641 6.34952C14.1623 5.64319 13.8807 4.96635 13.3808 4.46727C12.881 3.96819 12.2037 3.68756 11.4974 3.68685L6.16406 3.68685C5.81396 3.68598 5.46713 3.75422 5.14346 3.88767C4.81979 4.02112 4.52565 4.21716 4.2779 4.46453C4.03016 4.7119 3.83368 5.00575 3.69975 5.32922C3.56581 5.65269 3.49704 5.99942 3.4974 6.34952L3.4974 10.3575C3.49916 11.0639 3.78081 11.7407 4.28064 12.2398C4.78046 12.7389 5.45773 13.0195 6.16406 13.0202L14.1641 13.0202ZM10.1641 7.68685L11.4974 7.68685L11.4974 9.02019L10.1641 9.02019L10.1641 7.68685ZM6.16406 7.68685L7.4974 7.68685L7.4974 9.02019L6.16406 9.02019L6.16406 7.68685Z"
-      className="fill-[#09121F] dark:fill-accent"
+      className="dark:fill-accent fill-[#09121F]"
     />
   </svg>
 );
@@ -465,7 +559,7 @@ const TaskIcon = () => (
     <g clipPath="url(#clip0_866_12336)">
       <path
         d="M24.0386 5.65905C24.5822 5.7549 24.9456 6.27389 24.8498 6.81751L24.1974 10.5174L21.8805 12.1397L22.7065 7.45502L8.91919 5.02394L6.14082 20.7809L19.9281 23.2119L20.4071 20.4958L22.724 18.8735L21.7241 24.544C21.6282 25.0877 21.1093 25.4511 20.5656 25.3552L4.80872 22.5768C4.26511 22.481 3.90171 21.962 3.99756 21.4184L7.12323 3.69184C7.21908 3.14823 7.73807 2.78483 8.28168 2.88068L24.0386 5.65905ZM24.6074 12.6724L25.7544 14.3104L16.7439 20.6196L15.3498 20.3718L15.5969 18.9816L24.6074 12.6724ZM15.4085 14.2916L15.0612 16.2612L10.1371 15.393L10.4844 13.4233L15.4085 14.2916ZM19.0575 10.8733L18.7102 12.8429L10.8317 11.4537L11.179 9.48412L19.0575 10.8733Z"
-        className="fill-[#09121F] dark:fill-accent"
+        className="dark:fill-accent fill-[#09121F]"
       />
     </g>
     <defs>
@@ -484,7 +578,7 @@ const TransferSuccessIcon = () => (
     fill="none"
     aria-hidden="true"
     focusable="false"
-    className="stroke-ns-green ">
+    className="stroke-ns-green">
     <path
       d="M13.0703 18.0011L16.6853 21.6311L23.9303 14.3711"
       strokeWidth={2}
@@ -579,7 +673,7 @@ const QuoteIcon = () => (
 );
 
 const NavigationArrow = ({ direction, className }: { direction: 'prev' | 'next'; className?: string }) => (
-  <div className={cn('absolute top-1/2 -translate-y-1/2 cursor-pointer group z-10', className)}>
+  <div className={cn('group absolute top-1/2 z-10 -translate-y-1/2 cursor-pointer', className)}>
     <svg width={36} height={36} viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect
         width={36}
@@ -593,7 +687,7 @@ const NavigationArrow = ({ direction, className }: { direction: 'prev' | 'next';
         stroke=""
         strokeLinecap="round"
         strokeLinejoin="round"
-        className="stroke-[#292929] group-hover:stroke-white dark:stroke-white transition-all duration-300 ease-in-out"
+        className="stroke-[#292929] transition-all duration-300 ease-in-out group-hover:stroke-white dark:stroke-white"
       />
     </svg>
   </div>
@@ -1011,4 +1105,6 @@ export {
   VoiceIcon,
   WindowsIcon,
   XIcon,
+  BlurOne,
+  BlurTwo
 };

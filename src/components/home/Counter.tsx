@@ -9,9 +9,9 @@ const Counter = () => {
       <div className="main-container">
           <div className="sm:mb-0 grid grid-cols-12 md:gap-8 md:space-y-0 xl:mb-1">
             <div className="col-span-12 md:col-span-6 lg:col-span-7">
-              <div className="space-y-3 max-w-[640px]">
+              <div className="gap-2 flex flex-col max-w-[640px]">
                 <RevealAnimation delay={0.1}>
-                  <span className="uppercase text-primary-500 tracking-[2px] sm:tracking-[3px] text-xs sm:text-sm">The Challenge</span>
+                  <span className="uppercase text-primary-500 tracking-[2%] sm:tracking-[3%] !leading-4 text-xs sm:text-sm font-normal">The Challenge</span>
                 </RevealAnimation>
                 <RevealAnimation delay={0.2}>
                   <h2 className='fw-700 text-primary-700 max-w-[1024px] text-3xl lg:text-4xl'>Preventable incidents still happen—not because teams lack data, but because they can’t act on it fast enough.</h2>
@@ -21,30 +21,30 @@ const Counter = () => {
               <div className="col-span-12 md:col-span-6 lg:col-span-5">
               <div className="">
                 <RevealAnimation delay={0.3}>
-                  <p className="pt-0 sm:pt-7">Safety systems generate plenty of information, but it’s fragmented across tools, delayed in reaching the right people, and difficult to act on in the moment. Without a clear, real-time view and coordinated response, critical signals are missed—leading to unnecessary risk, costly disruptions, and avoidable harm.</p>
+                  <p className="pt-0 sm:pt-7 !leading-[22px] text-ns-gray-light text-sm md:text-base">Safety systems generate plenty of information, but it’s fragmented across tools, delayed in reaching the right people, and difficult to act on in the moment. Without a clear, real-time view and coordinated response, critical signals are missed—leading to unnecessary risk, costly disruptions, and avoidable harm.</p>
                 </RevealAnimation>
               </div>
             </div>
         </div>
         <RevealAnimation delay={0.4}>
           <div className="flex flex-col max-md:gap-y-10 max-lg:gap-x-3 md:flex-row justify-between py-6 sm:py-14">
-            <div className="space-y-2">
-              <h3 className="text-primary-500 fw-700 flex">
+            <div className="space-y-2 border-l-2 border-[#E7E7E7] pl-5 md:pl-7">
+              <h3 className="text-primary-500 fw-700 flex  text-[56px]">
                 <NumberAnimation number={13000} speed={2000} interval={200} rooms={5} heightSpaceRatio={2} />+
               </h3>
-              <p className="text-black/60">Worker injuries daily in the Globally</p>
+              <p className="text-ns-gray-light text-sm sm:text-base !leading-5">Worker injuries daily in the Globally</p>
             </div>
-            <div className="space-y-2">
-              <h3 className="text-primary-500 fw-700 flex">
+            <div className="space-y-2 border-l-2 border-[#E7E7E7] pl-5 md:pl-7">
+              <h3 className="text-primary-500 fw-700 flex  text-[56px]">
                 $<NumberAnimation number={167} speed={2000} interval={200} rooms={3} heightSpaceRatio={2} />B
               </h3>
-              <p className="text-black/60">Lost annually to preventable incidents</p>
+              <p className="text-ns-gray-light text-sm sm:text-base !leading-5">Lost annually to preventable incidents</p>
             </div>
-            <div className="space-y-2">
-              <h3 className="text-primary-500 fw-700 flex">
+            <div className="space-y-2 border-l-2 border-[#E7E7E7] pl-5 md:pl-7">
+              <h3 className="text-primary-500 fw-700 flex text-[56px]">
                 <NumberAnimation number={50} speed={2000} interval={200} rooms={2} heightSpaceRatio={2} />%
               </h3>
-              <p className="text-black/60">Faster response when teams act in real time</p>
+              <p className="text-ns-gray-light text-sm sm:text-base !leading-5">Faster response when teams act in real time</p>
             </div>
           </div>
         </RevealAnimation>

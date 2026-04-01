@@ -14,9 +14,9 @@ const ApproachesList = ({ approachesData }: ApproachesListProps) => {
       <div className="main-container">
         <div className="mb-10 sm:mb-[70px] flex flex-col items-center justify-between lg:flex-row lg:items-end lg:gap-0">
           <div className="flex-1 text-center lg:text-left">
-            <div className="space-y-3">
+            <div className="gap-2 flex flex-col">
               <RevealAnimation delay={0.1}>
-                <span className="uppercase text-white tracking-[2px] sm:tracking-[3px] text-xs sm:text-sm">Our Approach</span>
+                <span className="uppercase text-white tracking-[2%] sm:tracking-[3%] !leading-4 text-xs sm:text-sm font-normal">Our Approach</span>
               </RevealAnimation>
               <RevealAnimation delay={0.2}>
                 <h2 className="text-gradient fw-700">Stop waiting on data. Start acting on it.</h2>
@@ -30,14 +30,14 @@ const ApproachesList = ({ approachesData }: ApproachesListProps) => {
         <div className="grid grid-cols-12 gap-y-14 lg:gap-8">
           {approachesData.map((approach, index) => (
             <RevealAnimation key={approach.slug} delay={0.4 + index * 0.1}>
-              <div className="col-span-12 lg:col-span-3">
+              <div className="col-span-12 sm:col-span-6 lg:col-span-3">
                 <div className="space-y-6">
-                  <div className="flex lg:justify-start md:justify-center max-sm:justify-center">
+                  <div className="flex lg:justify-start justify-center">
                     <Image src={approach.icon} alt="icon" width={40} height={40} />
                   </div>
                   <div className="space-y-1 text-center lg:text-left">
-                    <h3 className="text-heading-5 pb-2 lg:h-20">{approach.title}</h3>
-                    <p className="mx-auto max-w-[337px] lg:mx-0 font-normal">{approach.description}</p>
+                    <h3 className="text-[18px] sm:text-[22px] text-white font-bold pb-0 mt-0 lg:h-[62px]">{approach.title}</h3>
+                    <p className="mx-auto max-w-[337px] lg:mx-0 font-normal text-[#8A8A8A] !leading-[18px]">{approach.description}</p>
                   </div>
                 </div>
               </div>

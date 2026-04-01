@@ -19,10 +19,14 @@ const Industries = () => {
                 <h2 className="mb-3 max-w-[680px] mx-auto text-primary-700 fw-700 fs-36" >Built for environments where safety moves fast</h2>
               </RevealAnimation>
               <RevealAnimation delay={0.4}>
+                <div className='space-y-2'>
                 <p className="text-secondary/60 dark:text-accent/60 mx-auto max-w-[1000px]">
-                  Safety systems generate plenty of information, but it’s fragmented across tools, delayed in reaching the right people, and difficult to act on in the moment. Without a clear, real-time view and coordinated response, critical signals are missed—leading to unnecessary risk, costly disruptions, and avoidable harm.  <br />
+                  Safety systems generate plenty of information, but it’s fragmented across tools, delayed in reaching the right people, and difficult to act on in the moment. Without a clear, real-time view and coordinated response, critical signals are missed—leading to unnecessary risk, costly disruptions, and avoidable harm.
+                </p>
+                <p className="text-secondary/60 dark:text-accent/60 mx-auto max-w-[1000px]">
                   Rather than forcing a one-size-fits-all approach, the platform allows organizations to apply the same foundation of awareness in ways that feel natural for their teams.
                 </p>
+                </div>
               </RevealAnimation>
             </div>
           </div>

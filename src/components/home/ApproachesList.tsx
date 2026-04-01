@@ -4,11 +4,11 @@ import Image from 'next/image';
 import { IApproach } from '@/interface';
 import RevealAnimation from '../animation/RevealAnimation';
 
-interface UseCasesClientProps {
-  useCasesData: (IApproach & { [key: string]: unknown })[];
+interface ApproachesListProps {
+  approachesData: (IApproach & { [key: string]: unknown })[];
 }
 
-const UseCasesClient = ({ useCasesData }: UseCasesClientProps) => {
+const ApproachesList = ({ approachesData }: ApproachesListProps) => {
   return (
     <section className="bg-background-2 dark:bg-background-5 pt-[100px] pb-[100px] xl:pb-[200px]">
       <div className="main-container">
@@ -28,16 +28,16 @@ const UseCasesClient = ({ useCasesData }: UseCasesClientProps) => {
           <iframe width="100%" height="auto" className="min-h-[300px] sm:min-h-[400px] lg:min-h-[600px] md:min-h-[500px] mb-16" frameBorder="0" src="https://www.youtube.com/embed/b-lDuufDDLs?si=PZWr8sLe2XMlkfc9" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
         </div>
         <div className="grid grid-cols-12 gap-y-14 lg:gap-8">
-          {useCasesData.map((useCase, index) => (
-            <RevealAnimation key={useCase.slug} delay={0.4 + index * 0.1}>
+          {approachesData.map((approach, index) => (
+            <RevealAnimation key={approach.slug} delay={0.4 + index * 0.1}>
               <div className="col-span-12 lg:col-span-3">
                 <div className="space-y-6">
                   <div className="flex lg:justify-start md:justify-center max-sm:justify-center">
-                    <Image src={useCase.icon} alt="icon" width={40} height={40} />
+                    <Image src={approach.icon} alt="icon" width={40} height={40} />
                   </div>
                   <div className="space-y-1 text-center lg:text-left">
-                    <h3 className="text-heading-5 h-20">{useCase.title}</h3>
-                    <p className="mx-auto line-clamp-3 max-w-[337px] lg:mx-0 font-normal">{useCase.description}</p>
+                    <h3 className="text-heading-5 h-20">{approach.title}</h3>
+                    <p className="mx-auto line-clamp-3 max-w-[337px] lg:mx-0 font-normal">{approach.description}</p>
                   </div>
                 </div>
               </div>
@@ -49,4 +49,4 @@ const UseCasesClient = ({ useCasesData }: UseCasesClientProps) => {
   );
 };
 
-export default UseCasesClient;
+export default ApproachesList;

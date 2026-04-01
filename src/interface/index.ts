@@ -83,6 +83,14 @@ export interface IApproach {
   slug: string;
 }
 
+export interface IIntelligence {
+  id: number;
+  title: string;
+  icon: string;
+  description: string;
+  slug: string;
+}
+
 export interface ISocialLinks {
   behance?: string;
   dribbble?: string;

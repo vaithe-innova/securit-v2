@@ -2,10 +2,10 @@
 
 import { TabProvider } from '../../context/TabContext';
 import RevealAnimation from '../animation/RevealAnimation';
-import AboutTabContent from './AboutTabContent';
-import AboutTabList from './AboutTabList';
+import IndustriesTabContent from './IndustriesTabContent';
+import IndustriesTabList from './IndustriesTabList';
 
-const About = () => {
+const Industries = () => {
   return (
     <RevealAnimation delay={0.3}>
       <section className="dark:bg-background-6 overflow-hidden bg-blue-light pt-20 pb-14">
@@ -28,13 +28,13 @@ const About = () => {
           </div>
 
           <TabProvider defaultValue={0}>
-            <AboutTabList />
-            <AboutTabContent />
+            <IndustriesTabList />
+            <IndustriesTabContent />
           </TabProvider>
         </div>
       </section>
     </RevealAnimation>
   );
 };
-About.displayName = 'About';
-export default About;
+Industries.displayName = 'Industries';
+export default Industries;

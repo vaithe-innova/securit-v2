@@ -5,7 +5,7 @@ import aboutPrivacy from '@public/images/ns-img-9.png';
 import Image from 'next/image';
 import TabContent from '../ui/tab/TabContent';
 
-const aboutTabsData = [
+const industriesTabsData = [
   {
     id: 'decentralization',
     badge: 'About',
@@ -129,10 +129,10 @@ const aboutTabsData = [
   },
 ];
 
-const AboutTabContent = () => {
+const IndustriesTabContent = () => {
   return (
     <>
-      {aboutTabsData.map((tab, index) => (
+      {industriesTabsData.map((tab, index) => (
         <TabContent key={tab.id} index={index}>
           <div className="flex w-full flex-col items-start justify-between gap-x-24 gap-y-14 lg:flex-row">
             <div className="flex-1 sm:mx-auto sm:max-w-[500px] lg:max-w-full">
@@ -173,5 +173,5 @@ const AboutTabContent = () => {
     </>
   );
 };
-AboutTabContent.displayName = 'AboutTabContent';
-export default AboutTabContent;
+IndustriesTabContent.displayName = 'IndustriesTabContent';
+export default IndustriesTabContent;

@@ -23,7 +23,6 @@ interface CTAProps {
 
 const CTA = ({
   className,
-  badgeClass,
   ctaHeading,
   spanText,
   description,

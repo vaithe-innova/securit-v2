@@ -50,6 +50,7 @@ All the varaiables are added here
   --color-ns-cyan-light: #cdf5f8;
   --color-ns-yellow-light: #fdf7bc;
   --color-ns-gray-light: #868080;
+  --color-ns-gray-medium: #333333;
 
   --color-gradient-1: linear-gradient(135deg, #a585ff 0%, #ffc2ad 100%);
   --color-gradient-2: linear-gradient(135deg, #f9eb57 0%, #f99988 100%);

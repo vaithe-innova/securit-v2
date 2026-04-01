@@ -1,5 +1,5 @@
 // crypto marketing resources menu
-import { BlogIcon, FaqIcon, GlossaryIcon, SuccessStoriesIcon, SupportIcon, TutorialIcon } from '@/icons/menu-icon';
+import { BlogIcon, SuccessStoriesIcon, SupportIcon } from '@/icons/menu-icon';
 import { cn } from '@/utils/cn';
 import { ReactNode } from 'react';
 import CompanyMenuItemLink from './CompanyMenuItemLink';
@@ -19,34 +19,16 @@ const resourcesMenuItems: ResourcesMenuItem[] = [
     icon: <BlogIcon />,
   },
   {
-    href: '/tutorial',
-    title: 'Tutorial',
-    description: 'Step-by-step guides and tips',
-    icon: <TutorialIcon />,
-  },
-  {
-    href: '/faq',
-    title: 'FAQ',
-    description: 'Common questions answered',
-    icon: <FaqIcon />,
-  },
-  {
-    href: '/glossary',
-    title: 'Glossary',
-    description: 'Terms and definitions',
-    icon: <GlossaryIcon />,
-  },
-  {
-    href: '/support',
-    title: 'Support',
-    description: 'Get help and assistance',
-    icon: <SupportIcon />,
-  },
-  {
-    href: '/success-stories',
-    title: 'Success Stories',
-    description: 'Latest updates and changes',
+    href: '/case-studies',
+    title: 'Case Studies',
+    description: 'Real-world examples of Securit in action',
     icon: <SuccessStoriesIcon />,
+  },
+  {
+    href: '/news-and-events',
+    title: 'News and Events',
+    description: 'Stay updated with the latest news and events',
+    icon: <SupportIcon />,
   },
 ];
 
@@ -70,7 +52,7 @@ const ResourcesMenu = ({
       <ul
         id="resources-dropdown-menu"
         className={cn(
-          'dark:bg-background-6 shadow-14 border-stroke-1 absolute top-full left-1/2 z-50 mt-2 w-[320px] -translate-x-1/2 space-y-1 rounded-3xl border bg-white p-3 transition-all duration-300 dark:border-white/10',
+          'dark:bg-background-6 shadow-14 border-stroke-1 absolute top-full left-1/2 z-50 w-[320px] -translate-x-1/2 space-y-1 rounded-3xl border bg-white p-3 transition-all duration-300 dark:border-white/10',
           // when hover show the menu
           menuDropdownId === 'resources-dropdown-menu'
             ? 'translate-y-0 opacity-100'

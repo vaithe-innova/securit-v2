@@ -40,31 +40,19 @@ export const mobileMenuData: IMobileMenuGroup[] = [
 
 export const footerData: FooterOneData[] = [
   {
-    title: 'Company',
     links: [
-      { label: 'About Us', href: '/about' },
-      { label: 'Career', href: '/career' },
+      { label: 'Blogs', href: '/blog' },
       { label: 'Case Studies', href: '/case-study' },
+      { label: 'News and events', href: '/news-and-events' },
+      { label: 'Collaboration', href: '/collaboration' },
+    ],
+  },
+  {
+    links: [
+      { label: 'About Us', href: '/about-us' },
+      { label: 'Pricing', href: '/pricing' },
       { label: 'Contact Us', href: '/contact-us' },
-    ],
-  },
-  {
-    title: 'Support',
-    links: [
-      { label: 'FAQ', href: '/faq' },
-      { label: 'Documentation', href: '/documentation' },
-      { label: 'Tutorial', href: '/tutorial' },
-      { label: 'Community', href: '/community' },
-    ],
-  },
-  {
-    title: 'Legal Policies',
-    links: [
-      { label: 'Terms & Conditions', href: '/terms-conditions' },
-      { label: 'Privacy Policy', href: '/privacy-policy' },
-      { label: 'Refund Policy', href: '/refund-policy' },
-      { label: 'GDPR Compliance', href: '/gdpr' },
-      { label: 'Affiliate Policy', href: '/affiliate-policy' },
+      { label: 'FAQs', href: '/faqs' },
     ],
   },
 ];

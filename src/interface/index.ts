@@ -125,7 +125,7 @@ export interface TopNavButtonsProps {
 }
 
 export interface FooterOneData {
-  title: string;
+  title?: string;
   links: { label: string; href: string }[];
 }
 

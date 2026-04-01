@@ -1,12 +1,12 @@
 import Faq from '@/components/pricing/Faq';
-import Pricing from '@/components/pricing/Pricing';
+// import Pricing from '@/components/pricing/Pricing';
 import CTA from '@/components/shared/cta/CTA';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Pricing - Time Tracking Software || NextSaaS',
+  title: 'Securit - Pricing - Product Price || Innova Solutions',
 };
 
 const page = () => {
@@ -21,7 +21,7 @@ const page = () => {
         ctaBtnText="Get started"
         btnClass="btn-primary hover:btn-secondary dark:hover:btn-accent"
       />
-      <Pricing />
+      {/* <Pricing /> */}
       <Faq />
     </main>
   );

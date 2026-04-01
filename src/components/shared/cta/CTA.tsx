@@ -43,10 +43,9 @@ const CTA = ({
           <div className="mx-3 max-w-[649px] space-y-3 text-center sm:mx-0 md:w-full xl:text-left">
             {badgeText && (
               <RevealAnimation delay={0.3}>
-                <span className={cn('badge badge-green', badgeClass)}>{badgeText}</span>
+                <span className={cn('uppercase text-primary-500 tracking-[3px] text-sm')}>{badgeText}</span>
               </RevealAnimation>
             )}
-
             <div className="space-y-3">
               <RevealAnimation delay={badgeText ? 0.4 : 0.3}>
                 <h2 className={cn('md:text-heading-2 text-heading-5', headingClass)} aria-label="cta-heading">

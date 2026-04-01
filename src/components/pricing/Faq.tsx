@@ -16,7 +16,7 @@ const Faq = () => {
           <div className="flex-1 space-y-14 text-center lg:text-left">
             <div className="space-y-5">
               <RevealAnimation delay={0.2}>
-                <span className="uppercase text-primary-500 tracking-[3px] text-sm">FAQ</span>
+                <span className="uppercase text-primary-500 tracking-[2px] sm:tracking-[3px] text-xs sm:text-sm">FAQ</span>
               </RevealAnimation>
               <RevealAnimation delay={0.3}>
                 <h2 className="mx-auto lg:mx-0 lg:max-w-[439px]" id="faq-heading">

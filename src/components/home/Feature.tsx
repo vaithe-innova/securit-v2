@@ -109,12 +109,12 @@ const Feature = () => {
                 <div className="col-span-12 md:col-span-6 lg:col-span-6">
                   <ul className="space-y-3">
                     {featureList2.map((feature) => (
-                      <li key={feature.id} className="flex gap-2 text-xs items-center">
+                      <li key={feature.id} className="flex gap-2 text-xs items-start">
                         <span className="">
                           <CheckIconCircle />
                         </span>
 
-                        <span className="text-ns-gray-light">{feature.text}</span>
+                        <span className="text-ns-gray-light leading-[20px]">{feature.text}</span>
                       </li>
                     ))}
                   </ul>
@@ -122,11 +122,11 @@ const Feature = () => {
                 <div className="col-span-12 md:col-span-6 lg:col-span-6">
                   <ul className="space-y-3">
                     {featureList3.map((feature) => (
-                      <li key={feature.id} className="flex gap-2 text-xs items-center">
+                      <li key={feature.id} className="flex gap-2 text-xs items-start">
                         <span className="">
                           <CheckIconCircle />
                         </span>
-                        <span className="text-ns-gray-light">{feature.text}</span>
+                        <span className="text-ns-gray-light leading-[20px]">{feature.text}</span>
                       </li>
                     ))}
                   </ul>
@@ -147,14 +147,14 @@ const Feature = () => {
             <div className="border-8 border-stroke-10 space-y-6 rounded-[20px] p-[25px] col-span-12 md:col-span-6 lg:col-span-7">
               <div className="space-y-2">
                 <h5 className="max-sm:text-heading-6 text-lg sm:text-xl md:text-[32px] text-ns-black font-bold mb-4">Processing Layer—turning data into intelligence </h5>
-                <ul className="space-y-3 mb-5 grid grid-cols-3">
+                <ul className="space-y-3 mb-5 grid grid-cols-3 justify-between">
                     {featureList.map((feature) => (
-                      <li key={feature.id} className="flex gap-2 text-xs items-center">
+                      <li key={feature.id} className="flex gap-2 text-xs items-start">
                         <span className="">
                           <CheckIconCircle />
                         </span>
 
-                        <span className="text-ns-gray-light">{feature.text}</span>
+                        <span className="text-ns-gray-light leading-[20px]">{feature.text}</span>
                       </li>
                     ))}
                   </ul>
@@ -175,14 +175,14 @@ const Feature = () => {
             <div className="border-8 border-stroke-10 space-y-6 rounded-[20px] p-[25px] col-span-12 md:col-span-6 lg:col-span-8">
               <div className="space-y-2">
                 <h5 className="max-sm:text-heading-6 text-lg sm:text-xl md:text-[32px] text-ns-black font-bold mb-4">Control Layer—coordinating operations </h5>
-                <ul className="space-y-3 mb-2 grid grid-cols-2 lg:grid-cols-4">
+                <ul className="mb-2 grid grid-cols-2 lg:grid-cols-4 gap-3 justify-between">
                     {featureList4.map((feature) => (
-                      <li key={feature.id} className="flex gap-2 text-xs items-center">
+                      <li key={feature.id} className="flex gap-2 text-xs items-start">
                         <span className="">
                           <CheckIconCircle />
                         </span>
 
-                        <span className="text-ns-gray-light">{feature.text}</span>
+                        <span className="text-ns-gray-light leading-[20px]">{feature.text}</span>
                       </li>
                     ))}
                   </ul>
@@ -205,11 +205,11 @@ const Feature = () => {
                 <h5 className="max-sm:text-heading-6 text-lg sm:text-xl md:text-[26px] text-ns-black font-bold mb-4">Field Layer—enabling action on the ground </h5>
                   <ul className="space-y-3 mb-3">
                     {featureList5.map((feature) => (
-                      <li key={feature.id} className="flex gap-2 text-xs items-center">
+                      <li key={feature.id} className="flex gap-2 text-xs items-start">
                         <span className="">
                           <CheckIconCircle />
                         </span>
-                        <span className="text-ns-gray-light">{feature.text}</span>
+                        <span className="text-ns-gray-light leading-[20px]">{feature.text}</span>
                       </li>
                     ))}
                   </ul>

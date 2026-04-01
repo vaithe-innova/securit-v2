@@ -12,14 +12,14 @@ const ApproachesList = ({ approachesData }: ApproachesListProps) => {
   return (
     <section className="bg-background-2 dark:bg-background-5 pt-[70px] md:pt-[100px] pb-[70px] md:pb-[100px] xl:pb-[150px]">
       <div className="main-container">
-        <div className="mb-10 sm:mb-[70px] flex flex-col items-center justify-between lg:flex-row lg:items-end lg:gap-0">
+        <div className="mb-10 sm:mb-[35px] flex flex-col items-center justify-between lg:flex-row lg:items-end lg:gap-0">
           <div className="flex-1 text-center lg:text-left">
             <div className="gap-2 flex flex-col">
               <RevealAnimation delay={0.1}>
                 <span className="uppercase text-white tracking-[2%] sm:tracking-[3%] !leading-4 text-xs sm:text-sm font-normal">Our Approach</span>
               </RevealAnimation>
               <RevealAnimation delay={0.2}>
-                <h2 className="text-gradient fw-700">Stop waiting on data. Start acting on it.</h2>
+                <h2 className="text-gradient fw-700 text-[40px] !leading-[42px] md:text-[44px] md:!leading-[48px] lg:text-[48px] lg:!leading-[52px]">Stop waiting on data. Start acting on it.</h2>
               </RevealAnimation>
             </div>
           </div>

@@ -29,6 +29,7 @@ All the varaiables are added here
   --color-background-10: #ebebeb;
   --color-background-11: #b5b5b9;
   --color-background-12: #eaeceb;
+  --color-background-13: #FAFAFA;
   --color-stroke-1: #dfe4eb;
   --color-stroke-2: #e3e7ed;
   --color-stroke-3: #d7dde5;
@@ -39,6 +40,7 @@ All the varaiables are added here
   --color-stroke-8: #303b49;
   --color-stroke-9: var(--color-background-8);
   --color-stroke-10: #F4F4F4;
+  --color-stroke-11: #DEDEDE;
   --color-ns-black: #01010D;
   --color-ns-yellow: #f9eb57;
   --color-ns-green: #c6f56f;
@@ -61,7 +63,7 @@ All the varaiables are added here
   --color-gradient-10: linear-gradient(135deg, #83e7ee 0%, #c6f56f 100%);
   --color-gradient-11: linear-gradient(179deg, rgba(255, 255, 255, 0) 0.68%, #fff 79.47%);
   --color-gradient-12: radial-gradient(73.01% 80.77% at 19.23% 47.79%, #83e7ee 0%, rgba(134, 79, 254, 0) 100%);
-
+  --color-gradient-13: linear-gradient(#E5F3FF 0%, #FFFFFF 100%);
   /* =============== TYPOGRAPHY =============== */
   --text-heading-1: 4.25rem;
   --text-heading-1--line-height: 110%;

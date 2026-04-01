@@ -248,7 +248,7 @@ const DeploymentTimeline = () => {
                   ref={(el) => { if (el) { cardsRef.current[idx] = el; } }}
                   className="flex-1 px-3 first:pl-0 last:pr-0"
                 >
-                  <div className="space-y-2">
+                  <div className="space-y-2 text-center">
                     <h4 className="text-accent text-[15px] font-semibold leading-snug">
                       {step.title}
                     </h4>
@@ -288,29 +288,29 @@ const DeploymentTimeline = () => {
         <RevealAnimation delay={0.4}>
           <div className='flex flex-col mt-16 bg-white rounded-2xl'>
             <div className='flex text-center justify-center mt-10'>
-              <h3 className='text-primary-700 fw-700'>Certified. Compliant. Secure.</h3>
+              <h3 className='text-primary-700 fw-700 text-3xl lg:text-4xl'>Certified. Compliant. Secure.</h3>
             </div>
-            <div className="flex flex-col max-md:gap-y-10 max-lg:gap-x-3 md:flex-row justify-around px-3 lg:px-[60px] py-14">
+            <div className="flex flex-col max-md:gap-y-10 max-lg:gap-x-3 md:flex-row justify-around px-3 lg:px-[60px] py-14 pt-8">
               <div className="space-y-2 text-center">
                 <figure className='flex items-center justify-center'>
                   <Image src={metImg} alt="secure" width={64} height={64} />
                 </figure>
                 <h5 className="fw-700 flex items-center justify-center"> OSHA Compliant </h5>
-                <p className="text-black/60">Safety Standards Met</p>
+                <p className="text-black/60 text-sm">Safety Standards Met</p>
               </div>
               <div className="space-y-2 text-center">
                 <figure className='flex items-center justify-center'>
                   <Image src={readyImg} alt="secure" width={64} height={64} />
                 </figure>
                 <h5 className="fw-700 flex items-center justify-center"> ISO 45001 Ready </h5>
-                <p className="text-black/60">Occupational Health & Safety</p>
+                <p className="text-black/60 text-sm">Occupational Health & Safety</p>
               </div>
               <div className="space-y-2 text-center">
                 <figure className='flex items-center justify-center'>
                   <Image src={secureImg} alt="secure" width={64} height={64} />
                 </figure>
                 <h5 className="fw-700 flex items-center justify-center"> GDPR/Privacy Secure </h5>
-                <p className="text-black/60">Data Protection Certified</p>
+                <p className="text-black/60 text-sm">Data Protection Certified</p>
               </div>
             </div>
           </div>

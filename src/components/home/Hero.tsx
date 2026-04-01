@@ -6,19 +6,15 @@ import HeroPerspective from './HeroPerspective';
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden bg-white dark:bg-background-5 pt-[160px] lg:pt-[180px] xl:pt-[228px]">
+    <section className="relative overflow-hidden bg-gradient-to-b from-[#E5F3FF] to-[#FFFFFF] pt-[160px] lg:pt-[180px] xl:pt-[228px]">
       {/* Background glowing effects to match prototype */}
-      <div className="absolute top-0 left-0 w-[50%] h-full bg-gradient-to-r from-[#eaf4ff] to-transparent pointer-events-none" />
-      <div className="absolute top-0 right-0 w-[50%] h-full bg-gradient-to-l from-[#eaf4ff] to-transparent pointer-events-none" />
-      <div className="absolute top-[10%] -left-[15%] w-[60%] h-[80%] rounded-[100%] bg-[#cae5ff] opacity-60 blur-[100px] pointer-events-none" />
-      <div className="absolute top-[10%] -right-[15%] w-[60%] h-[80%] rounded-[100%] bg-[#cae5ff] opacity-60 blur-[100px] pointer-events-none" />
-
+      
       <div className="relative z-10 main-container">
         <div className="space-y-[40px] md:space-y-[50px] lg:space-y-[60px] xl:space-y-[70px]">
           <div className="flex flex-col items-center">
             <RevealAnimation delay={0.1}>
               <div className="mb-3 md:mb-4 lg:mb-5 flex items-center gap-2 rounded-full bg-white py-[6px] pl-[6px] pr-5 shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-black/5">
-                <span className="rounded-full bg-[#007bFF] px-3 py-1 text-[13px] font-medium text-white shadow-sm">Securit</span>
+                <span className="rounded-full bg-gradient px-5 py-2 text-[13px] font-medium text-white">Securit</span>
                 <span className="text-[14px] font-medium text-black/70">Smart Safety for Every Worker</span>
               </div>
             </RevealAnimation>
@@ -41,7 +37,7 @@ const Hero = () => {
                   <LinkButton
                     href="/demo"
                     insideSpan={false}
-                    className="btn rounded-full bg-[#0070CE] text-white hover:bg-[#005bb5] px-8 py-4 font-semibold w-[90%] sm:w-auto shadow-sm">
+                    className="btn rounded-full btn-primary text-white hover:btn-white-dark px-8 py-4 font-semibold w-[90%] sm:w-auto shadow-sm">
                     Get your Demo
                   </LinkButton>
                 </li>

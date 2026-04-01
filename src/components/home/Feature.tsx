@@ -109,7 +109,7 @@ const Feature = () => {
                 <div className="col-span-12 md:col-span-6 lg:col-span-6">
                   <ul className="space-y-3">
                     {featureList2.map((feature) => (
-                      <li key={feature.id} className="flex gap-2 text-xs items-start">
+                      <li key={feature.id} className="flex gap-2 text-xs md:text-sm items-start">
                         <span className="">
                           <CheckIconCircle />
                         </span>
@@ -122,7 +122,7 @@ const Feature = () => {
                 <div className="col-span-12 md:col-span-6 lg:col-span-6">
                   <ul className="space-y-3">
                     {featureList3.map((feature) => (
-                      <li key={feature.id} className="flex gap-2 text-xs items-start">
+                      <li key={feature.id} className="flex gap-2 text-xs md:text-sm items-start">
                         <span className="">
                           <CheckIconCircle />
                         </span>
@@ -149,7 +149,7 @@ const Feature = () => {
                 <h5 className="max-sm:text-heading-6 text-lg sm:text-xl md:text-[32px] text-ns-black font-bold mb-4">Processing Layer—turning data into intelligence </h5>
                 <ul className="space-y-3 mb-5 grid grid-cols-1 sm:grid-cols-3 justify-between">
                     {featureList.map((feature) => (
-                      <li key={feature.id} className="flex gap-2 text-xs items-start">
+                      <li key={feature.id} className="flex gap-2 text-xs md:text-sm items-start">
                         <span className="">
                           <CheckIconCircle />
                         </span>
@@ -177,7 +177,7 @@ const Feature = () => {
                 <h5 className="max-sm:text-heading-6 text-lg sm:text-xl md:text-[32px] text-ns-black font-bold mb-4">Control Layer—coordinating operations </h5>
                 <ul className="mb-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 justify-between">
                     {featureList4.map((feature) => (
-                      <li key={feature.id} className="flex gap-2 text-xs items-start">
+                      <li key={feature.id} className="flex gap-2 text-xs md:text-sm items-start">
                         <span className="">
                           <CheckIconCircle />
                         </span>
@@ -205,7 +205,7 @@ const Feature = () => {
                 <h5 className="max-sm:text-heading-6 text-lg sm:text-xl md:text-[26px] text-ns-black font-bold mb-4">Field Layer—enabling action on the ground </h5>
                   <ul className="space-y-3 mb-3">
                     {featureList5.map((feature) => (
-                      <li key={feature.id} className="flex gap-2 text-xs items-start">
+                      <li key={feature.id} className="flex gap-2 text-xs md:text-sm items-start">
                         <span className="">
                           <CheckIconCircle />
                         </span>

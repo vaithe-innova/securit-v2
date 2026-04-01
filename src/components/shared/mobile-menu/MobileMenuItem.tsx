@@ -9,9 +9,10 @@ interface MobileMenuItemProps {
   title: string;
   children?: ReactNode;
   hasSubmenu?: boolean;
+  onClick?: () => void;
 }
 
-const MobileMenuItem = ({ id, title, children, hasSubmenu = false }: MobileMenuItemProps) => {
+const MobileMenuItem = ({ id, title, children, hasSubmenu = false, onClick }: MobileMenuItemProps) => {
   const { activeSubmenu, toggleSubmenu } = useMobileMenuContext();
 
   const isActive = activeSubmenu === id;
@@ -51,7 +52,7 @@ const MobileMenuItem = ({ id, title, children, hasSubmenu = false }: MobileMenuI
 
       {/* show submenu parent  */}
       {hasSubmenu && children && (
-        <div
+        <div onClick={onClick}
           id={`submenu-${id}`}
           className={cn(
             'dark:bg-background-8 ml-3.5 w-full overflow-y-hidden bg-white transition-[height,opacity] duration-300 ease-in-out',

@@ -1,5 +1,6 @@
 'use client';
 
+import { BlurOne, BlurTwo } from '@/icons';
 import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/LinkButton';
 import HeroPerspective from './HeroPerspective';
@@ -8,7 +9,18 @@ const Hero = () => {
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-[#E5F3FF] to-[#FFFFFF] pt-[160px] lg:pt-[180px] xl:pt-[228px]">
       {/* Background glowing effects to match prototype */}
-      
+      <span className="absolute left-[-65px] top-[-37px]">
+        <BlurOne />
+      </span>
+      <span className="absolute left-[-70px] top-[-118px]">
+        <BlurTwo />
+      </span>
+      <span className="absolute right-[-65px] top-[-37px] scale-x-[-1]">
+        <BlurOne />
+      </span>
+      <span className="absolute right-[-70px] top-[-118px] scale-x-[-1]">
+        <BlurTwo />
+      </span>
       <div className="relative z-10 main-container">
         <div className="space-y-[40px] md:space-y-[50px] lg:space-y-[60px] xl:space-y-[70px]">
           <div className="flex flex-col items-center">
@@ -20,12 +32,12 @@ const Hero = () => {
             </RevealAnimation>
             <div className="space-y-3 md:mx-10 md:space-y-4 lg:mx-0">
               <RevealAnimation delay={0.2}>
-                <h1 className="max-w-[1000px] text-center text-primary-700 fw-700 tracking-tight leading-[1.1] md:text-5xl lg:text-[64px]">
+                <h1 className="max-w-[1000px] text-center text-primary-700 fw-700 tracking-tight leading-[1.1] md:text-5xl lg:text-[56px]">
                   You can’t fix what you can’t see. <br /> So we made safety impossible to miss.
                 </h1>
               </RevealAnimation>
               <RevealAnimation delay={0.3}>
-                <p className="mx-auto max-w-[800px] text-center text-[18px] text-[#202020] font-medium leading-[1.6]">
+                <p className="mx-auto max-w-[800px] text-center text-lg text-[#202020] font-normal leading-[1.6]">
                   Real-time location intelligence and AI-powered insights to protect your workforce, reduce incidents,
                   and transform reactive safety into proactive prevention.
                 </p>
@@ -37,7 +49,7 @@ const Hero = () => {
                   <LinkButton
                     href="/demo"
                     insideSpan={false}
-                    className="btn rounded-full btn-primary text-white hover:btn-white-dark px-8 py-4 font-semibold w-[90%] sm:w-auto shadow-sm">
+                    className="btn rounded-full btn-primary text-white hover:btn-white-dark px-8 py-3 h-[48px] font-semibold w-[90%] sm:w-[234px] shadow-sm">
                     Get your Demo
                   </LinkButton>
                 </li>
@@ -47,7 +59,7 @@ const Hero = () => {
                   <LinkButton
                     href="/video"
                     insideSpan={false}
-                    className="btn rounded-full bg-white text-[#4b5563] hover:text-black border border-transparent shadow-[0_4px_20px_rgba(0,0,0,0.05)] px-8 py-4 font-semibold w-[90%] sm:w-auto flex flex-row items-center justify-center gap-2">
+                    className="btn rounded-full bg-white text-[#4b5563] hover:text-black border border-transparent shadow-[0_4px_20px_rgba(0,0,0,0.05)] px-8 h-[48px] font-semibold w-[90%] sm:w-[234px] flex flex-row items-center justify-center gap-2">
                     <svg width="12" height="14" viewBox="0 0 12 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                       <path d="M11.5 6.13397C12.1667 6.51887 12.1667 7.48113 11.5 7.86603L1.75 13.4952C1.08333 13.8801 0.25 13.399 0.25 12.6292L0.25 1.37083C0.25 0.601034 1.08333 0.119908 1.75 0.504808L11.5 6.13397Z" />
                     </svg>

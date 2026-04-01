@@ -27,6 +27,45 @@ const CheckIconCircle: FC<ArrowIconProps> = ({ className }) => (
   </svg>  
 );
 
+const BlurOne: FC<ArrowIconProps> = ({  }) => (  
+<svg width="325" height="515" viewBox="0 0 325 515" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_f_840_725)">
+<rect x="-65" y="-0.337402" width="72" height="541" rx="36" transform="rotate(-30.8182 -65 -0.337402)" fill="url(#paint0_linear_840_725)"/>
+</g>
+<defs>
+<filter id="filter0_f_840_725" x="-115.645" y="-87.8696" width="440.287" height="602.787" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+<feFlood floodOpacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="32" result="effect1_foregroundBlur_840_725"/>
+</filter>
+<linearGradient id="paint0_linear_840_725" x1="-29" y1="-0.337402" x2="-29" y2="540.663" gradientUnits="userSpaceOnUse">
+<stop stopColor="#B7D4FF"/>
+<stop offset="1" stopColor="#E6F1FF"/>
+</linearGradient>
+</defs>
+</svg>
+ 
+);
+
+const BlurTwo: FC<ArrowIconProps> = ({ }) => (  
+<svg width="390" height="427" viewBox="0 0 390 427" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_f_840_727)">
+<rect x="14.9961" y="-92.3362" width="50.0937" height="541" rx="25.0469" transform="rotate(-30.8182 14.9961 -92.3362)" fill="url(#paint0_linear_840_727)"/>
+</g>
+<defs>
+<filter id="filter0_f_840_727" x="-39.7125" y="-172.709" width="429.6" height="599.69" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+<feFlood floodOpacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="32" result="effect1_foregroundBlur_840_727"/>
+</filter>
+<linearGradient id="paint0_linear_840_727" x1="40.0429" y1="-92.3362" x2="40.0429" y2="448.664" gradientUnits="userSpaceOnUse">
+<stop stopColor="#B7D4FF"/>
+<stop offset="1" stopColor="#E6F1FF"/>
+</linearGradient>
+</defs>
+</svg> 
+);
+
 const ArrowIcon: FC<ArrowIconProps> = ({ className }) => (
   <svg viewBox="0 0 24 24" fill="none" className={cn(className)} xmlns="http://www.w3.org/2000/svg">
     <path d="M3.75 12H20.25" stroke="inherit" strokeLinecap="round" strokeLinejoin="round" />
@@ -1011,4 +1050,6 @@ export {
   VoiceIcon,
   WindowsIcon,
   XIcon,
+  BlurOne,
+  BlurTwo
 };

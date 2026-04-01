@@ -9,11 +9,12 @@ interface MobileMenuItemProps {
   id: string;
   title: string;
   href?: string;
+  target?: string;
   children?: ReactNode;
   hasSubmenu?: boolean;
 }
 
-const MobileMenuItem = ({ id, title, href, children, hasSubmenu = false }: MobileMenuItemProps) => {
+const MobileMenuItem = ({ id, title, href, target, children, hasSubmenu = false }: MobileMenuItemProps) => {
   const { activeSubmenu, toggleSubmenu, closeMenu } = useMobileMenuContext();
 
   const isActive = activeSubmenu === id;
@@ -61,7 +62,7 @@ const MobileMenuItem = ({ id, title, href, children, hasSubmenu = false }: Mobil
           {content}
         </button>
       ) : href ? (
-        <Link href={href} onClick={() => closeMenu()} className={itemClassName}>
+        <Link href={href} target={target} onClick={() => closeMenu()} className={itemClassName}>
           {content}
         </Link>
       ) : (

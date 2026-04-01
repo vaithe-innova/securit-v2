@@ -194,6 +194,7 @@ export interface IMobileMenuItem {
   id: string;
   label: string;
   href: string;
+  target?: string;
 }
 
 export interface IMobileMenuGroup {
@@ -201,4 +202,5 @@ export interface IMobileMenuGroup {
   title: string;
   submenu: IMobileMenuItem[];
   href?: string;
+  target?: string;
 }

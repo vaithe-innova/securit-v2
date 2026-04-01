@@ -22,7 +22,8 @@ export const mobileMenuData: IMobileMenuGroup[] = [
     id: 'company',
     title: 'Company',
     submenu: [],
-    href: '/company',
+    href: 'https://www.innovasolutions.com',
+    target: '_blank',
   },
   {
     id: 'pricing',

@@ -3,8 +3,7 @@
 import { IMobileMenuGroup } from '@/interface';
 import { useMobileMenuContext } from '@/context/MobileMenuContext';
 import { cn } from '@/utils/cn';
-import logoDark from '@public/images/shared/logo-dark.svg';
-import logoIcon from '@public/images/shared/logo.svg';
+import mainLogo from '@public/images/shared/main-logo.svg';
 import Image from 'next/image';
 import Link from 'next/link';
 import MenuCloseButton from './MenuCloseButton';
@@ -23,9 +22,8 @@ const MobileMenu = ({ menuData }: { menuData: IMobileMenuGroup[] }) => {
         <div className="flex items-center justify-between">
           <Link href="/">
             <span className="sr-only">Home</span>
-            <figure className="max-w-[44px]">
-              <Image src={logoIcon} alt="NextSaaS" className="block w-full dark:hidden" />
-              <Image src={logoDark} alt="NextSaaS" className="hidden w-full dark:block" />
+            <figure className="">
+              <Image src={mainLogo} alt="Securit Logo" className="block w-full" />
             </figure>
           </Link>
           {/* close btn  */}
@@ -44,6 +42,7 @@ const MobileMenu = ({ menuData }: { menuData: IMobileMenuGroup[] }) => {
                 id={item.id}
                 title={item.title}
                 href={item.href}
+                target={item.target}
                 hasSubmenu={item.submenu.length > 0}>
                 {/* submenu items list  */}
                 <ul>
@@ -51,6 +50,7 @@ const MobileMenu = ({ menuData }: { menuData: IMobileMenuGroup[] }) => {
                     <li key={subItem.id}>
                       <Link
                         href={subItem.href}
+                        target={subItem.target}
                         className="text-tagline-1 text-secondary dark:text-accent ml-4 block py-2.5 text-left font-normal transition-all duration-200">
                         {subItem.label}
                       </Link>

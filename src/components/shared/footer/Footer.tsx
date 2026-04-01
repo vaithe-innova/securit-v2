@@ -3,6 +3,7 @@
 import RevealAnimation from '@/components/animation/RevealAnimation';
 import { FooterOneData } from '@/interface';
 import linkedin from '@public/images/icons/linkedin.svg';
+// import twitter from '@public/images/icons/twitter.svg';
 import youtube from '@public/images/icons/youtube.svg';
 import darkLogo from '@public/images/shared/logo-dark.svg';
 import Image from 'next/image';
@@ -45,7 +46,7 @@ const Footer = () => {
                     className="flex size-10 items-center justify-center rounded-lg bg-[#1A1A1E] transition-transform duration-300 hover:-translate-y-1"
                   >
                     <span className="sr-only">X (Twitter)</span>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
                       <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.139l11.944 15.644z" />
                     </svg>
                   </Link>
@@ -96,9 +97,9 @@ const Footer = () => {
                   </p>
                   <p className="text-tagline-1 text-white">
                     <span className="font-bold mr-1">Phone:</span>
-                    <span className="text-accent/60">
+                    <a href="tel:+1-770-493-5588" className="text-accent/60 transition-colors duration-200 hover:text-white">
                       +1 770-493-5588
-                    </span>
+                    </a>
                   </p>
                 </div>
               </div>

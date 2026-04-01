@@ -3,6 +3,7 @@
 import RevealAnimation from '@/components/animation/RevealAnimation';
 import { FooterOneData } from '@/interface';
 import linkedin from '@public/images/icons/linkedin.svg';
+// import twitter from '@public/images/icons/twitter.svg';
 import youtube from '@public/images/icons/youtube.svg';
 import twitter from '@public/images/icons/twitter.svg';
 import darkLogo from '@public/images/shared/logo-dark.svg';
@@ -38,35 +39,33 @@ const Footer = () => {
                 <p className="text-accent/60 text-tagline-1 mt-7 mb-7 font-normal">
                   Smart Safety for Every Worker. Real-time visibility and AI-powered insights to protect your workforce.
                 </p>
-                <div className="flex items-center gap-2 h-10">
-                  {isMounted && (
-                    <>
-                      <Link
-                        target="_blank"
-                        href="https://www.linkedin.com"
-                        className="flex size-10 items-center justify-center rounded-lg bg-[#1A1A1E] transition-transform duration-300 hover:-translate-y-1"
-                      >
-                        <span className="sr-only">LinkedIn</span>
-                        <Image className="size-5" src={linkedin} alt="LinkedIn" width={40} height={40} />
-                      </Link>
-                      <Link
-                        target="_blank"
-                        href="https://www.x.com"
-                        className="flex size-10 items-center justify-center rounded-lg bg-[#1A1A1E] transition-transform duration-300 hover:-translate-y-1"
-                      >
-                        <span className="sr-only">X (Twitter)</span>
-                        <Image className="size-5" src={twitter} alt="twitter" width={40} height={40} />
-                      </Link>
-                      <Link
-                        target="_blank"
-                        href="https://www.youtube.com"
-                        className="flex size-10 items-center justify-center rounded-lg bg-[#1A1A1E] transition-transform duration-300 hover:-translate-y-1"
-                      >
-                        <span className="sr-only">Youtube</span>
-                        <Image className="size-5" src={youtube} alt="Youtube" width={40} height={40} />
-                      </Link>
-                    </>
-                  )}
+                <div className="flex items-center gap-2">
+                  <Link
+                    target="_blank"
+                    href="https://www.linkedin.com"
+                    className="flex size-10 items-center justify-center rounded-lg bg-[#1A1A1E] transition-transform duration-300 hover:-translate-y-1"
+                  >
+                    <span className="sr-only">LinkedIn</span>
+                    <Image className="size-5 brightness-0 invert" src={linkedin} alt="LinkedIn" />
+                  </Link>
+                  <Link
+                    target="_blank"
+                    href="https://www.x.com"
+                    className="flex size-10 items-center justify-center rounded-lg bg-[#1A1A1E] transition-transform duration-300 hover:-translate-y-1"
+                  >
+                    <span className="sr-only">X (Twitter)</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.139l11.944 15.644z" />
+                    </svg>
+                  </Link>
+                  <Link
+                    target="_blank"
+                    href="https://www.youtube.com"
+                    className="flex size-10 items-center justify-center rounded-lg bg-[#1A1A1E] transition-transform duration-300 hover:-translate-y-1"
+                  >
+                    <span className="sr-only">Youtube</span>
+                    <Image className="size-5 brightness-0 invert" src={youtube} alt="Youtube" />
+                  </Link>
                 </div>
               </div>
             </RevealAnimation>
@@ -106,9 +105,9 @@ const Footer = () => {
                   </p>
                   <p className="text-tagline-1 text-white">
                     <span className="font-bold mr-1">Phone:</span>
-                    <span className="text-accent/60">
+                    <a href="tel:+1-770-493-5588" className="text-accent/60 transition-colors duration-200 hover:text-white">
                       +1 770-493-5588
-                    </span>
+                    </a>
                   </p>
                 </div>
               </div>

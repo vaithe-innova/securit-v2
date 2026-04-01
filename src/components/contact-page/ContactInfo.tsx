@@ -5,7 +5,7 @@ const ContactInfo = () => {
     <section className="bg-white pt-28 pb-14 sm:pt-28 md:pt-32 md:pb-16 lg:pb-20 xl:pt-[135px] xl:pb-[100px]">
       <div className="main-container">
         <div className="space-y-[50px]">
-          <div className="mb-10 grid grid-cols-12 space-y-8 md:gap-8 md:space-y-0 xl:mb-18">
+          <div className="mb-10 grid grid-cols-12 md:gap-8 space-y-0 xl:mb-18">
             <div className="col-span-12 md:col-span-6 lg:col-span-5">
               <span className="text-primary-500 text-sm tracking-[3px] uppercase">Contact Us</span>
               <h2 className="text-primary-700 mt-2 mb-4 font-bold text-3xl md:text-4xl lg:text-5xl">

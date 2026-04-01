@@ -10,13 +10,13 @@ interface ApproachesListProps {
 
 const ApproachesList = ({ approachesData }: ApproachesListProps) => {
   return (
-    <section className="bg-background-2 dark:bg-background-5 pt-[100px] pb-[100px] xl:pb-[200px]">
+    <section className="bg-background-2 dark:bg-background-5 pt-[70px] md:pt-[100px] pb-[70px] md:pb-[100px] xl:pb-[150px]">
       <div className="main-container">
-        <div className="mb-[70px] flex flex-col items-center justify-between lg:flex-row lg:items-end lg:gap-0">
+        <div className="mb-10 sm:mb-[70px] flex flex-col items-center justify-between lg:flex-row lg:items-end lg:gap-0">
           <div className="flex-1 text-center lg:text-left">
             <div className="space-y-3">
               <RevealAnimation delay={0.1}>
-                <span className="uppercase text-white tracking-[3px] text-sm">Our Approach</span>
+                <span className="uppercase text-white tracking-[2px] sm:tracking-[3px] text-xs sm:text-sm">Our Approach</span>
               </RevealAnimation>
               <RevealAnimation delay={0.2}>
                 <h2 className="text-gradient fw-700">Stop waiting on data. Start acting on it.</h2>
@@ -36,8 +36,8 @@ const ApproachesList = ({ approachesData }: ApproachesListProps) => {
                     <Image src={approach.icon} alt="icon" width={40} height={40} />
                   </div>
                   <div className="space-y-1 text-center lg:text-left">
-                    <h3 className="text-heading-5 h-20">{approach.title}</h3>
-                    <p className="mx-auto line-clamp-3 max-w-[337px] lg:mx-0 font-normal">{approach.description}</p>
+                    <h3 className="text-heading-5 pb-2 lg:h-20">{approach.title}</h3>
+                    <p className="mx-auto max-w-[337px] lg:mx-0 font-normal">{approach.description}</p>
                   </div>
                 </div>
               </div>

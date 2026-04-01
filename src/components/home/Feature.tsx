@@ -86,7 +86,7 @@ const Feature = () => {
       <div className="main-container">
         <div className="mb-10 max-w-[750px] space-y-5 md:mb-[50px]">
           <RevealAnimation delay={0.2}>
-            <span className="uppercase text-primary-500 tracking-[3px] text-sm">Platform and Features</span>
+            <span className="uppercase text-primary-500 tracking-[2px] sm:tracking-[3px] text-xs sm:text-sm">Platform and Features</span>
           </RevealAnimation>
           <div>
             <RevealAnimation delay={0.3}>
@@ -100,12 +100,12 @@ const Feature = () => {
           </div>
         </div>
         {/* feature Items */}
-        <div className="mb-10 grid grid-cols-12 space-y-8 md:gap-8 md:space-y-0 xl:mb-18">
+        <div className="mb-6 sm:mb-10 grid grid-cols-12 md:gap-8 space-y-4 md:space-y-0 xl:mb-18">
           <RevealAnimation delay={0.5}>
             <div className="border-8 border-stroke-10 space-y-6 rounded-[20px] p-[25px] col-span-12  md:col-span-6 lg:col-span-5">
               <div className="space-y-2">
                 <h5 className="max-sm:text-heading-6 text-lg sm:text-xl md:text-[26px] text-ns-black font-bold mb-4">Input Layer—where activity is captured </h5>
-                <div className='grid grid-cols-12 mb-3'>
+                <div className='grid grid-cols-12 mb-3 space-y-3'>
                 <div className="col-span-12 md:col-span-6 lg:col-span-6">
                   <ul className="space-y-3">
                     {featureList2.map((feature) => (
@@ -147,7 +147,7 @@ const Feature = () => {
             <div className="border-8 border-stroke-10 space-y-6 rounded-[20px] p-[25px] col-span-12 md:col-span-6 lg:col-span-7">
               <div className="space-y-2">
                 <h5 className="max-sm:text-heading-6 text-lg sm:text-xl md:text-[32px] text-ns-black font-bold mb-4">Processing Layer—turning data into intelligence </h5>
-                <ul className="space-y-3 mb-5 grid grid-cols-3 justify-between">
+                <ul className="space-y-3 mb-5 grid grid-cols-1 sm:grid-cols-3 justify-between">
                     {featureList.map((feature) => (
                       <li key={feature.id} className="flex gap-2 text-xs items-start">
                         <span className="">
@@ -175,7 +175,7 @@ const Feature = () => {
             <div className="border-8 border-stroke-10 space-y-6 rounded-[20px] p-[25px] col-span-12 md:col-span-6 lg:col-span-8">
               <div className="space-y-2">
                 <h5 className="max-sm:text-heading-6 text-lg sm:text-xl md:text-[32px] text-ns-black font-bold mb-4">Control Layer—coordinating operations </h5>
-                <ul className="mb-2 grid grid-cols-2 lg:grid-cols-4 gap-3 justify-between">
+                <ul className="mb-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 justify-between">
                     {featureList4.map((feature) => (
                       <li key={feature.id} className="flex gap-2 text-xs items-start">
                         <span className="">

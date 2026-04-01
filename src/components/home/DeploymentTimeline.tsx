@@ -186,7 +186,7 @@ const DeploymentTimeline = () => {
         {/* ── Section header (uses existing RevealAnimation) ── */}
         <div className="mb-[60px] lg:mb-[80px]">
           <RevealAnimation delay={0.2}>
-            <span className="uppercase text-primary-500 tracking-[3px] text-sm">Deployment</span>
+            <span className="uppercase text-primary-500 tracking-[2px] sm:tracking-[3px] text-xs sm:text-sm">Deployment</span>
           </RevealAnimation>
           <RevealAnimation delay={0.15}>
             <h2 className="text-accent mt-4 max-w-[1000px] fw-700 text-gradient leading-[110%]">

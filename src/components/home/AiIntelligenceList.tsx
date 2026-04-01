@@ -13,7 +13,7 @@ const AiIntelligenceList = ({ intelligenceData }: AiIntelligenceListProps) => {
             <div className="main-container">
                 <div className="mb-[70px] space-y-5 text-center">
                     <RevealAnimation delay={0.2}>
-                        <span className="uppercase text-primary-500 tracking-[3px] text-sm">AI Intelligence</span>
+                        <span className="uppercase text-primary-500 tracking-[2px] sm:tracking-[3px] text-xs sm:text-sm">AI Intelligence</span>
                     </RevealAnimation>
                 </div>
                 <div className="grid grid-cols-12 gap-y-5 md:gap-8 xl:gap-8">

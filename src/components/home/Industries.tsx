@@ -12,11 +12,11 @@ const Industries = () => {
         <div className="main-container">
           <div className="mx-auto mb-10 max-w-[1024px] space-y-5 text-center md:mb-[70px]">
             <RevealAnimation delay={0.2}>
-              <span className="uppercase text-primary-500 tracking-[3px] text-sm">Industries</span>
+              <span className="uppercase text-primary-500 tracking-[2px] sm:tracking-[3px] text-xs sm:text-sm">Industries</span>
             </RevealAnimation>
             <div>
               <RevealAnimation delay={0.3}>
-                <h2 className="mb-3 max-w-[680px] mx-auto text-primary-700 fw-700 fs-36" >Built for environments where safety moves fast</h2>
+                <h2 className="mb-3 max-w-[680px] mx-auto text-primary-700 fw-700 text-3xl lg:text-4xl" >Built for environments where safety moves fast</h2>
               </RevealAnimation>
               <RevealAnimation delay={0.4}>
                 <div className='space-y-2'>

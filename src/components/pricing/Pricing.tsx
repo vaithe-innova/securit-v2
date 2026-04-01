@@ -75,7 +75,7 @@ const Pricing = () => {
       <div className="main-container flex flex-col gap-[70px]">
         <div className="flex flex-col items-center text-center">
           <RevealAnimation delay={0.2}>
-            <span className="uppercase text-primary-500 tracking-[3px] text-sm">Our Pricing</span>
+            <span className="uppercase text-primary-500 tracking-[2px] sm:tracking-[3px] text-xs sm:text-sm">Our Pricing</span>
           </RevealAnimation>
           <RevealAnimation delay={0.3}>
             <h2 className="mx-auto mb-8 max-w-[650px]">Select the pricing plan that best suits your needs.</h2>

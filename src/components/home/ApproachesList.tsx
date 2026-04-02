@@ -37,7 +37,7 @@ const ApproachesList = ({ approachesData }: ApproachesListProps) => {
                   </div>
                   <div className="space-y-1 text-center lg:text-left">
                     <h3 className="text-[18px] sm:text-[22px] text-white font-bold pb-0 mt-0 lg:h-[62px]">{approach.title}</h3>
-                    <p className="mx-auto max-w-[337px] lg:mx-0 font-normal text-[#8A8A8A] !leading-[18px]">{approach.description}</p>
+                    <p className="mx-auto max-w-[337px] lg:mx-0 font-normal text-[#d6d6d6] !leading-[18px]">{approach.description}</p>
                   </div>
                 </div>
               </div>

@@ -28,7 +28,7 @@ const Footer = () => {
                 <figure>
                   <Image src={darkLogo} alt="Securit Logo" width={175} height={32} />
                 </figure>
-                <p className="text-accent/60 text-tagline-1 mt-7 mb-7 font-normal">
+                <p className="text-accent/80 text-tagline-1 mt-7 mb-7 font-normal">
                   Smart Safety for Every Worker. Real-time visibility and AI-powered insights to protect your workforce.
                 </p>
                 <div className="flex items-center gap-2">
@@ -85,19 +85,19 @@ const Footer = () => {
             <RevealAnimation delay={0.6}>
               <div className="max-w-[390px] space-y-6">
                 <h4 className="text-tagline-1 font-bold text-white">General Inquiries</h4>
-                <p className="text-accent/60 text-tagline-1 font-normal">
+                <p className="text-accent/80 text-tagline-1 font-normal">
                   Have a question or want to learn more? Reach out and we&apos;ll connect you with the right person.
                 </p>
                 <div className="space-y-3">
                   <p className="text-tagline-1 text-white">
                     <span className="font-bold mr-1">Email:</span>
-                    <a href="mailto:info@securit.com" className="text-accent/60 transition-colors duration-200 hover:text-white">
+                    <a href="mailto:info@securit.com" className="text-accent/80 transition-colors duration-200 hover:text-white">
                       info@securit.com
                     </a>
                   </p>
                   <p className="text-tagline-1 text-white">
                     <span className="font-bold mr-1">Phone:</span>
-                    <a href="tel:+919712342323" className="text-accent/60 transition-colors duration-200 hover:text-white">
+                    <a href="tel:+919712342323" className="text-accent/80 transition-colors duration-200 hover:text-white">
                       +91 97123 42323
                     </a>
                   </p>

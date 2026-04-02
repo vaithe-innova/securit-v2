@@ -11,7 +11,7 @@ const IndustriesTabContent = () => {
         <TabContent key={tab.id} index={index}>
           <div className="flex w-full flex-col items-start justify-between gap-x-24 gap-y-14 lg:flex-row">
             <div className="flex-1 sm:mx-auto sm:max-w-[500px] lg:max-w-full">
-              <h2 className={`${index === 0 ? 'text-[36px] md:text-[40px] lg:text-[48px] leading-[1.1] text-background-5 font-bold' : 'text-[36px] md:text-[40px] lg:text-[48px] leading-[1.1] text-background-5 font-bold'} mb-3`}>
+              <h2 className={`${index === 0 ? 'text-[32px] lg:text-[36px] xl:text-[40px] leading-[1.1] text-background-5 font-bold' : 'text-[36px] md:text-[40px] lg:text-[48px] leading-[1.1] text-background-5 font-bold'} mb-3`}>
                 {tab.title}
                 {tab.titleBreak && <br className="hidden lg:block" />}
                 {tab.titleContinue && ` ${tab.titleContinue}`}
@@ -29,7 +29,7 @@ const IndustriesTabContent = () => {
                       <strong className="text-tagline-1 text-secondary dark:text-accent font-medium">
                         {feature.title}
                       </strong>
-                      <p className="text-base text-ns-gray-medium font-normal">
+                      <p className="text-base text-secondary font-normal">
                         {feature.description}
                       </p>
                     </div>

@@ -40,19 +40,19 @@ const ResourcesMenu = ({
   setMenuDropdownId: (id: string | null) => void;
 }) => {
   return (
-    <div>
+    <div className={cn(menuDropdownId === 'resources-dropdown-menu' ? 'menu-triangle' : '')}>
       <div
         className={cn(
           'absolute top-full left-1/2 z-40 h-3 w-full min-w-[320px] -translate-x-1/2 bg-transparent',
           menuDropdownId === 'resources-dropdown-menu'
-            ? 'pointer-events-auto opacity-100'
+            ? 'pointer-events-auto opacity-100 active-submenu'
             : 'pointer-events-none opacity-0',
         )}
       />
       <ul
         id="resources-dropdown-menu"
         className={cn(
-          'dark:bg-background-6 shadow-14 border-stroke-1 absolute top-full left-1/2 z-50 w-[320px] -translate-x-1/2 space-y-1 rounded-3xl border bg-white p-3 transition-all duration-300 dark:border-white/10',
+          'dark:bg-background-6 shadow-14 border-stroke-1 absolute top-full left-1/2 z-50 w-[320px] -translate-x-1/2 space-y-1 rounded-b-3xl bg-white p-3 transition-all duration-300 dark:border-white/10',
           // when hover show the menu
           menuDropdownId === 'resources-dropdown-menu'
             ? 'translate-y-0 opacity-100'

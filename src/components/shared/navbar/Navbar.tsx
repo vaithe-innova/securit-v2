@@ -36,11 +36,11 @@ const Navbar = () => {
           isScrolled && '',
         )}>
         <RevealAnimation direction="up" offset={100} delay={0.1} instant>
-            <div
-              className={cn(
-                'border-stroke-2 dark:border-stroke-6 bg-accent dark:bg-background-9 border-b-2 py-2.5 xl:py-1',
-              )}>
-              <div className='main-container  mx-auto flex items-center justify-between max-lg:justify-between'>
+          <div
+            className={cn(
+              'border-stroke-2 dark:border-stroke-6 bg-accent dark:bg-background-9 border-b-2 py-2.5 xl:py-1',
+            )}>
+            <div className='main-container  mx-auto flex items-center justify-between max-lg:justify-between'>
               <div className="flex items-center justify-center">
                 <Link href="/" className="inline-flex items-center">
                   <span className="sr-only">Home</span>
@@ -61,7 +61,7 @@ const Navbar = () => {
                   {dropdownNavItems.map(({ label, dataMenu, MenuComponent }) => (
                     <li
                       key={label}
-                      className="group relative cursor-pointer py-2.5"
+                      className={cn("group relative cursor-pointer py-2.5 ", menuDropdownId === dataMenu && "active")}
                       data-menu={dataMenu}
                       onMouseEnter={() => handleMenuHover(dataMenu)}>
                       <button

@@ -16,3 +16,30 @@
 html {
   scroll-behavior: smooth;
 }
+
+
+.menu-triangle::after {
+  position: absolute;
+  left: 55%;
+  margin-left: -20px;
+  bottom: 0px;
+  width: 0;
+  height: 0;
+  content: '';
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid #D8DBDD;
+  z-index: 9999999;
+  transition-duration: 2.3s;
+  transition-timing-function: ease-in;
+}
+
+nav ul li.active button span {
+  color: #0070ce !important;
+}
+
+nav .active-submenu {
+  background: #D8DBDD;
+  z-index: 51;
+  height: 5px;
+}

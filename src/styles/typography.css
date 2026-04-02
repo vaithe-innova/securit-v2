@@ -12,8 +12,7 @@ body {
   background-clip: text;
 }
 .bg-gradient{
-  background:linear-gradient(#0070CE 0%, #e5f3ffad 100%);
-  background-color: #0070ce;
+  background:#0070ce linear-gradient(#0070ce 0%, #e5f3ff70 100%);
 }
 
 .fw-700 {

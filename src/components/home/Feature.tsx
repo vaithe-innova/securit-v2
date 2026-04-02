@@ -86,7 +86,7 @@ const Feature = () => {
       <div className="main-container">
         <div className="mb-10 max-w-[750px] space-y-5 md:mb-[50px]">
           <RevealAnimation delay={0.2}>
-            <span className="uppercase text-primary-500 tracking-[2px] sm:tracking-[3px] text-xs sm:text-sm">Platform and Features</span>
+            <span className="uppercase text-primary-500 tracking-[2%] sm:tracking-[3%] !leading-4 text-xs sm:text-sm font-normal">Platform and Features</span>
           </RevealAnimation>
           <div>
             <RevealAnimation delay={0.3}>
@@ -109,11 +109,12 @@ const Feature = () => {
                   <div className="col-span-12 md:col-span-6 lg:col-span-6">
                     <ul className="space-y-3">
                       {featureList2.map((feature) => (
-                        <li key={feature.id} className="flex gap-2 text-xs items-start">
+                        <li key={feature.id} className="flex gap-2 text-xs md:text-sm items-start">
                           <span className="">
                             <CheckIconCircle />
                           </span>
-                          <span className="text-ns-gray-light text-[14px] leading-[20px]">{feature.text}</span>
+
+                          <span className="text-ns-gray-light leading-[20px]">{feature.text}</span>
                         </li>
                       ))}
                     </ul>
@@ -121,11 +122,11 @@ const Feature = () => {
                   <div className="col-span-12 md:col-span-6 lg:col-span-6">
                     <ul className="space-y-3">
                       {featureList3.map((feature) => (
-                        <li key={feature.id} className="flex gap-2 text-xs items-start">
+                        <li key={feature.id} className="flex gap-2 text-xs md:text-sm items-start">
                           <span className="">
                             <CheckIconCircle />
                           </span>
-                          <span className="text-ns-gray-light text-[14px] leading-[20px]">{feature.text}</span>
+                          <span className="text-ns-gray-light leading-[20px]">{feature.text}</span>
                         </li>
                       ))}
                     </ul>
@@ -148,11 +149,12 @@ const Feature = () => {
                 <h5 className="max-sm:text-heading-6 text-lg sm:text-xl md:text-[32px] text-ns-black font-bold mb-4">Processing Layer—turning data into intelligence </h5>
                 <ul className="space-y-3 mb-5 grid grid-cols-1 sm:grid-cols-3 justify-between">
                   {featureList.map((feature) => (
-                    <li key={feature.id} className="flex gap-2 text-xs items-start">
+                    <li key={feature.id} className="flex gap-2 text-xs md:text-sm items-start">
                       <span className="">
                         <CheckIconCircle />
                       </span>
-                      <span className="text-ns-gray-light text-[14px] leading-[20px]">{feature.text}</span>
+
+                      <span className="text-ns-gray-light leading-[20px]">{feature.text}</span>
                     </li>
                   ))}
                 </ul>
@@ -175,11 +177,12 @@ const Feature = () => {
                 <h5 className="max-sm:text-heading-6 text-lg sm:text-xl md:text-[32px] text-ns-black font-bold mb-4">Control Layer—coordinating operations </h5>
                 <ul className="mb-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 justify-between">
                   {featureList4.map((feature) => (
-                    <li key={feature.id} className="flex gap-2 text-xs items-start">
+                    <li key={feature.id} className="flex gap-2 text-xs md:text-sm items-start">
                       <span className="">
                         <CheckIconCircle />
                       </span>
-                      <span className="text-ns-gray-light text-[14px] leading-[20px]">{feature.text}</span>
+
+                      <span className="text-ns-gray-light leading-[20px]">{feature.text}</span>
                     </li>
                   ))}
                 </ul>
@@ -202,11 +205,11 @@ const Feature = () => {
                 <h5 className="max-sm:text-heading-6 text-lg sm:text-xl md:text-[26px] text-ns-black font-bold mb-4">Field Layer—enabling action on the ground </h5>
                 <ul className="space-y-3 mb-3">
                   {featureList5.map((feature) => (
-                    <li key={feature.id} className="flex gap-2 text-xs items-start">
+                    <li key={feature.id} className="flex gap-2 text-xs md:text-sm items-start">
                       <span className="">
                         <CheckIconCircle />
                       </span>
-                      <span className="text-ns-gray-light text-[14px] leading-[20px]">{feature.text}</span>
+                      <span className="text-ns-gray-light leading-[20px]">{feature.text}</span>
                     </li>
                   ))}
                 </ul>

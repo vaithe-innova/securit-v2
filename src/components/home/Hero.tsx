@@ -47,7 +47,7 @@ const Hero = () => {
               <RevealAnimation delay={0.3} direction="left" offset={50}>
                 <li className="w-full">
                   <LinkButton
-                    href="/demo"
+                    href="#contact"
                     insideSpan={false}
                     className="btn rounded-full btn-primary text-white hover:btn-white-dark px-4 py-2 !leading-[26px] sm:!leading-[28px] md:!leading-[30px] lg:!leading-[32px] text-base font-bold w-full sm:w-[170px] md:w-[210px] lg:w-[234px] sm:h-10 md:h-11 lg:h-12 shadow-sm">
                     Get your demo
@@ -57,7 +57,7 @@ const Hero = () => {
               <RevealAnimation delay={0.5} direction="left" offset={50}>
                 <li className="w-full">
                   <LinkButton
-                    href="/video"
+                    href="#video"
                     insideSpan={false}
                     className="btn rounded-full bg-white text-[#364153] hover:text-black border border-transparent shadow-[0_4px_20px_rgba(0,0,0,0.05)] px-4 py-2 !leading-[26px] sm:!leading-[28px] md:!leading-[30px] lg:!leading-[32px] text-base font-bold w-full sm:w-[170px] md:w-[210px] lg:w-[234px] sm:h-10 md:h-11 lg:h-12 shadow-sm flex flex-row items-center justify-center gap-2">
                     <svg width="12" height="14" viewBox="0 0 12 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

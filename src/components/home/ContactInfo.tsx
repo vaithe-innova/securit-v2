@@ -5,7 +5,7 @@ import RevealAnimation from '../animation/RevealAnimation';
 
 const ContactInfo = () => {
   return (
-    <section className="bg-white pt-28 pb-14 sm:pt-28 md:pt-32 md:pb-16 lg:pb-20 xl:pt-[135px]">
+    <section className="bg-white pt-28 pb-14 sm:pt-28 md:pt-32 md:pb-16 lg:pb-20 xl:pt-[135px]" id="contact">
       <div className="main-container">
         <div className="space-y-[50px]">
           <div className="mb-6 sm:mb-10 grid grid-cols-12 md:gap-8 space-y-4 md:space-y-0">
@@ -82,7 +82,7 @@ const ContactInfo = () => {
                             </svg>
                           </p>
                           <p className="text-primary-700 hover:text-primary-500 font-bold text-sm md:text-base md:text-lg">
-                            <Link href="#">Download Brochure</Link>
+                            <Link href="/images/securit-brochure-design.pdf" target='_blank'>Download Brochure</Link>
                           </p>
                         </div>
                       </div>

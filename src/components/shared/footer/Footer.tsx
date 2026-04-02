@@ -11,9 +11,9 @@ import { footerData } from '../navbar/data';
 import FooterDivider from './FooterDivider';
 
 const legalLinks = [
-  { label: 'Privacy Policy', href: '/privacy-policy' },
-  { label: 'Terms of Service', href: '/terms-conditions' },
-  { label: 'Security', href: '/security' },
+  { label: 'Privacy Policy', href: '/' },
+  { label: 'Terms of Service', href: '/' },
+  { label: 'Security', href: '/' },
 ];
 
 const Footer = () => {
@@ -34,7 +34,7 @@ const Footer = () => {
                 <div className="flex items-center gap-2">
                   <Link
                     target="_blank"
-                    href="https://www.linkedin.com"
+                    href="https://www.linkedin.com/company/innova-solutions"
                     className="flex size-10 items-center justify-center rounded-lg bg-[#1A1A1E] transition-transform duration-300 hover:-translate-y-1"
                   >
                     <span className="sr-only">LinkedIn</span>
@@ -42,7 +42,7 @@ const Footer = () => {
                   </Link>
                   <Link
                     target="_blank"
-                    href="https://www.x.com"
+                    href="https://www.twitter.com/innovasolutions"
                     className="flex size-10 items-center justify-center rounded-lg bg-[#1A1A1E] transition-transform duration-300 hover:-translate-y-1"
                   >
                     <span className="sr-only">X (Twitter)</span>
@@ -52,7 +52,7 @@ const Footer = () => {
                   </Link>
                   <Link
                     target="_blank"
-                    href="https://www.youtube.com"
+                    href="https://www.youtube.com/@innovasolutionscompany"
                     className="flex size-10 items-center justify-center rounded-lg bg-[#1A1A1E] transition-transform duration-300 hover:-translate-y-1"
                   >
                     <span className="sr-only">Youtube</span>
@@ -91,8 +91,8 @@ const Footer = () => {
                 <div className="space-y-3">
                   <p className="text-tagline-1 text-white">
                     <span className="font-bold mr-1">Email:</span>
-                    <a href="mailto:info@securit.com" className="text-accent/60 transition-colors duration-200 hover:text-white">
-                      info@securit.com
+                    <a href="mailto:hello@securit.com" className="text-accent/60 transition-colors duration-200 hover:text-white">
+                      hello@securit.com
                     </a>
                   </p>
                   <p className="text-tagline-1 text-white">

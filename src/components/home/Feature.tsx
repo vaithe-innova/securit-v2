@@ -1,9 +1,9 @@
 'use client';
 
-import feature1 from '@public/images/ns-feature1.png';
-import feature2 from '@public/images/ns-feature2.png';
-import feature3 from '@public/images/ns-feature3.png';
-import feature4 from '@public/images/ns-feature4.png';
+import feature1 from '@public/images/ns-feature1.gif';
+import feature2 from '@public/images/ns-feature2.gif';
+import feature3 from '@public/images/ns-feature3.gif';
+import feature4 from '@public/images/ns-feature4.gif';
 import Image from 'next/image';
 import RevealAnimation from '../animation/RevealAnimation';
 import { CheckIconCircle } from '@/icons';

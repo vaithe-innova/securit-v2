@@ -13,19 +13,19 @@ type ResourcesMenuItem = {
 
 const resourcesMenuItems: ResourcesMenuItem[] = [
   {
-    href: '/blog',
+    href: '',
     title: 'Blog',
     description: 'Latest articles and insights',
     icon: <BlogIcon />,
   },
   {
-    href: '/case-studies',
+    href: '',
     title: 'Case Studies',
     description: 'Real-world examples of Securit in action',
     icon: <SuccessStoriesIcon />,
   },
   {
-    href: '/news-and-events',
+    href: '',
     title: 'News and Events',
     description: 'Stay updated with the latest news and events',
     icon: <SupportIcon />,
@@ -60,7 +60,7 @@ const ResourcesMenu = ({
         )}>
         {resourcesMenuItems.map((item, index) => (
           <CompanyMenuItemLink
-            key={item.href}
+            key={item.title}
             {...item}
             showDivider={index < resourcesMenuItems.length - 1}
             setMenuDropdownId={setMenuDropdownId}

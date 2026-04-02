@@ -10,7 +10,7 @@ interface ApproachesListProps {
 
 const ApproachesList = ({ approachesData }: ApproachesListProps) => {
   return (
-    <section className="bg-background-2 dark:bg-background-5 pt-[70px] md:pt-[100px] pb-[70px] md:pb-[100px] xl:pb-[150px]">
+    <section className="bg-background-2 dark:bg-background-5 pt-[70px] md:pt-[100px] pb-[70px] md:pb-[100px] xl:pb-[150px]" id='video'>
       <div className="main-container">
         <div className="mb-10 sm:mb-[35px] flex flex-col items-center justify-between lg:flex-row lg:items-end lg:gap-0">
           <div className="flex-1 text-center lg:text-left">

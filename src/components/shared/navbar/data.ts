@@ -22,8 +22,7 @@ export const mobileMenuData: IMobileMenuGroup[] = [
     id: 'company',
     title: 'Company',
     submenu: [],
-    href: 'https://www.innovasolutions.com',
-    target: '_blank',
+    href: '/about',
   },
   {
     id: 'pricing',
@@ -50,7 +49,7 @@ export const footerData: FooterOneData[] = [
   },
   {
     links: [
-      { label: 'About Us', href: 'https://www.innovasolutions.com', target: '_blank' },
+      { label: 'About Us', href: '/about' },
       { label: 'Pricing', href: '/pricing' },
       { label: 'Contact Us', href: '/contact-us' },
       { label: 'FAQs', href: '' },

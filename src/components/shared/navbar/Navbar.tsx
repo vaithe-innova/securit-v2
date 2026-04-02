@@ -85,8 +85,7 @@ const Navbar = () => {
                   ))}
                   <li className="relative cursor-pointer py-2.5">
                     <Link
-                      href="https://www.innovasolutions.com"
-                      target='_blank'
+                      href="/about"
                       className=" text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">
                       <span>Company</span>
                     </Link>

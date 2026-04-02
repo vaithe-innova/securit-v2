@@ -25,8 +25,8 @@ const AiIntelligenceList = ({ intelligenceData }: AiIntelligenceListProps) => {
                                         <span className={`${intelligence.icon} text-secondary dark:text-accent text-[52px]`} />
                                     </div>
                                     <div className="space-y-2">
-                                        <h3 className="text-heading-5 line-clamp-1">{intelligence.title}</h3>
-                                        <p className="mx-auto line-clamp-3 max-w-[361px]">{intelligence.description}</p>
+                                        <h3 className="text-heading-5 line-clamp-1" title={intelligence.title} >{intelligence.title}</h3>
+                                        <p className="mx-auto line-clamp-3 max-w-[361px]" title={intelligence.description}>{intelligence.description}</p>
                                     </div>
                                 </div>
                             </div>

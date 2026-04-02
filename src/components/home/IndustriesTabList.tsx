@@ -6,37 +6,37 @@ const IndustriesTabList = () => {
     <>
       {/* Desktop TabList */}
       <TabList variant="desktop">
-        <Tab index={0} variant="desktop">
+        <Tab className='fw-700' index={0} variant="desktop">
           Manufacturing & Industrial
         </Tab>
-        <Tab index={1} variant="desktop">
+        <Tab className='fw-700' index={1} variant="desktop">
           Warehousing & Logistics
         </Tab>
-        <Tab index={2} variant="desktop">
+        <Tab className='fw-700' index={2} variant="desktop">
           Construction & Field Work
         </Tab>
-        <Tab index={3} variant="desktop">
+        <Tab className='fw-700' index={3} variant="desktop">
           Utilities & Remote Operations
         </Tab>
-        <Tab index={4} variant="desktop">
+        <Tab className='fw-700' index={4} variant="desktop">
           Oil, Gas & Energy
         </Tab>
       </TabList>
       {/* Mobile TabList */}
       <TabList variant="mobile">
-        <Tab index={0} variant="mobile">
+        <Tab className='fw-700' index={0} variant="mobile">
           Manufacturing & Industrial
         </Tab>
-        <Tab index={1} variant="mobile">
+        <Tab className='fw-700' index={1} variant="mobile">
           Warehousing & Logistics
         </Tab>
-        <Tab index={2} variant="mobile">
+        <Tab className='fw-700' index={2} variant="mobile">
           Construction & Field Work
         </Tab>
-        <Tab index={3} variant="mobile" className="text-nowrap">
+        <Tab className='fw-700 text-nowrap' index={3} variant="mobile">
           Utilities & Remote Operations
         </Tab>
-        <Tab index={4} variant="mobile">
+        <Tab className='fw-700' index={4} variant="mobile">
           Oil, Gas & Energy
         </Tab>
       </TabList>

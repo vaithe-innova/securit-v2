@@ -1,4 +1,4 @@
-import aboutWarehousing  from '@public/images/ns-img-5.png';
+import aboutWarehousing from '@public/images/ns-img-5.png';
 import aboutManufacturing from '@public/images/ns-img-6.png';
 import iconN1First from '@public/images/ns1-icon1.svg';
 import iconN1Two from '@public/images/ns1-icon2.svg';
@@ -63,7 +63,7 @@ const industriesTabsData = [
     highlightedText: ' ',
     description:
       '',
-    image: aboutWarehousing ,
+    image: aboutWarehousing,
     imageAlt: 'Happy man using phone',
     buttonText: 'About us',
     buttonHref: '/about',
@@ -149,7 +149,7 @@ const industriesTabsData = [
     highlightedText: ' ',
     description:
       '',
-    image: aboutRemote,
+    image: aboutOilGas,
     imageAlt: 'Happy man using phone',
     buttonText: 'About us',
     buttonHref: '/about',
@@ -192,7 +192,7 @@ const industriesTabsData = [
     highlightedText: ' ',
     description:
       '',
-    image: aboutOilGas,
+    image: aboutRemote,
     imageAlt: 'Happy man using phone',
     buttonText: 'About us',
     buttonHref: '/about',
@@ -236,7 +236,7 @@ const IndustriesTabContent = () => {
         <TabContent key={tab.id} index={index}>
           <div className="flex w-full flex-col items-start justify-between gap-x-24 gap-y-14 lg:flex-row">
             <div className="flex-1 sm:mx-auto sm:max-w-[500px] lg:max-w-full">
-              <h2 className={`${index === 0 ? 'text-[36px] md:text-[40px] lg:text-[48px] leading-[100%] text-background-5 font-bold' : 'text-[36px] md:text-[40px] lg:text-[48px] leading-[100%] text-background-5 font-bold'} mb-3`}>
+              <h2 className={`${index === 0 ? 'text-[36px] md:text-[40px] lg:text-[48px] leading-[1.1] text-background-5 font-bold' : 'text-[36px] md:text-[40px] lg:text-[48px] leading-[1.1] text-background-5 font-bold'} mb-3`}>
                 {tab.title}
                 {tab.titleBreak && <br className="hidden lg:block" />}
                 {tab.titleContinue && ` ${tab.titleContinue}`}
@@ -248,8 +248,8 @@ const IndustriesTabContent = () => {
                   <li key={featureIndex} className="flex list-none items-center gap-5 py-2">
                     {/* <span className={`${feature.icon} text-secondary text-[36px] dark:text-white`}></span> */}
                     <figure className={index === 0 ? 'w-[calc(100%-40px)]lg:inline-block' : 'tab-item-image'}>
-                    <Image src={feature.image} alt={feature.imageAlt} className={index === 0 ? 'w-fit object-cover rounded-[16px] w-10 h-10' : ''} />
-                  </figure>
+                      <Image src={feature.image} alt={feature.imageAlt} className={index === 0 ? 'w-fit object-cover rounded-[16px] w-10 h-10' : ''} />
+                    </figure>
                     <div className='w-[calc(100%-40px)]'>
                       <strong className="text-tagline-1 text-secondary dark:text-accent font-medium">
                         {feature.title}

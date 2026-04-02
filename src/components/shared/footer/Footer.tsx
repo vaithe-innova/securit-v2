@@ -3,13 +3,10 @@
 import RevealAnimation from '@/components/animation/RevealAnimation';
 import { FooterOneData } from '@/interface';
 import linkedin from '@public/images/icons/linkedin.svg';
-// import twitter from '@public/images/icons/twitter.svg';
 import youtube from '@public/images/icons/youtube.svg';
-import twitter from '@public/images/icons/twitter.svg';
 import darkLogo from '@public/images/shared/logo-dark.svg';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
 import { footerData } from '../navbar/data';
 import FooterDivider from './FooterDivider';
 
@@ -20,11 +17,6 @@ const legalLinks = [
 ];
 
 const Footer = () => {
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
 
   return (
     <footer className="relative overflow-hidden bg-[#000000]">

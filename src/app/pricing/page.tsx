@@ -12,17 +12,18 @@ export const metadata: Metadata = {
 const page = () => {
   return (
     <main className="bg-background-1 dark:bg-background-6">
-      <CTA
-        className="dark:bg-background-5 bg-background-1"
-        badgeText="Get started"
-        badgeClass="!badge-yellow-v2"
-        ctaHeading="Build a complete website using the assistance"
-        description="Start your free trial today and see your ideas come to life easily and creatively."
-        ctaBtnText="Get started"
-        btnClass="btn-primary hover:btn-secondary dark:hover:btn-accent"
-      />
-      {/* <Pricing /> */}
-      <Faq />
+      <div className='pt-[50px]'>
+        <CTA
+          className="dark:bg-background-5 bg-background-1"
+          badgeClass="!badge-yellow-v2"
+          ctaHeading="Custom Pricing Built Around Your Needs"
+          headingClass='text-[32px] fw-[500] w-[100%]'
+          description="We’re currently onboarding early users. Enter your email, and our team will connect with you to discuss pricing and find the right fit for your use case."
+          ctaBtnText="Contact Us"
+          btnClass="btn btn-md btn-primary hover:btn-white-dark dark:hover:btn-white mr-6 font-bold"
+        />
+        <Faq />
+      </div>
     </main>
   );
 };

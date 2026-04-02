@@ -81,14 +81,18 @@ export interface IApproach {
   icon: string;
   description: string;
   slug: string;
+  content: string;
+  [key: string]: unknown;
 }
 
 export interface IIntelligence {
-  id: number;
+  id: string;
   title: string;
   icon: string;
   description: string;
   slug: string;
+  content: string;
+  [key: string]: unknown;
 }
 
 export interface ISocialLinks {

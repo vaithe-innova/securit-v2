@@ -9,7 +9,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '..
 const Faq = () => {
   return (
     <section
-      className="py-[50px] md:py-[70px] lg:py-[85px] xl:pt-[200px] xl:pb-[100px]"
+      className="py-[50px] md:py-[70px] lg:py-[85px] xl:pb-[100px]"
       aria-label="Frequently Asked Questions">
       <div className="main-container">
         <div className="flex flex-col items-center justify-between gap-8 lg:flex-row lg:gap-0">

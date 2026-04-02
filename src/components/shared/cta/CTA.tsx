@@ -47,7 +47,7 @@ const CTA = ({
             )}
             <div className="space-y-3">
               <RevealAnimation delay={badgeText ? 0.4 : 0.3}>
-                <h2 className={cn('md:text-heading-2 text-heading-5', headingClass)} aria-label="cta-heading">
+                <h2 className={cn('text-heading-2', headingClass)} aria-label="cta-heading">
                   {ctaHeading}
                   {spanText && <span className="text-primary-500"> {spanText}</span>}
                 </h2>

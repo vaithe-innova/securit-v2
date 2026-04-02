@@ -21,26 +21,26 @@ const Counter = () => {
               <div className="col-span-12 md:col-span-6 lg:col-span-5">
               <div className="">
                 <RevealAnimation delay={0.3}>
-                  <p className="pt-0 sm:pt-7 !leading-[22px] text-ns-gray-light text-sm md:text-base">Safety systems generate plenty of information, but it’s fragmented across tools, delayed in reaching the right people, and difficult to act on in the moment. Without a clear, real-time view and coordinated response, critical signals are missed—leading to unnecessary risk, costly disruptions, and avoidable harm.</p>
+                  <p className="pt-0 md:pt-7 !leading-[22px] text-ns-gray-light text-sm md:text-base">Safety systems generate plenty of information, but it’s fragmented across tools, delayed in reaching the right people, and difficult to act on in the moment. Without a clear, real-time view and coordinated response, critical signals are missed—leading to unnecessary risk, costly disruptions, and avoidable harm.</p>
                 </RevealAnimation>
               </div>
             </div>
         </div>
         <RevealAnimation delay={0.4}>
-          <div className="flex flex-col max-md:gap-y-10 max-lg:gap-x-3 md:flex-row justify-between py-6 sm:py-14">
-            <div className="space-y-2 border-l-2 border-[#E7E7E7] pl-5 md:pl-7">
+          <div className="flex flex-col max-md:gap-y-6 max-lg:gap-x-3 md:flex-row justify-between py-6 sm:py-14">
+            <div className="space-y-2 md:border-l-2 md:border-[#E7E7E7] md:pl-5 md:pl-7">
               <h3 className="text-primary-500 fw-700 flex  text-[56px]">
                 <NumberAnimation number={13000} speed={2000} interval={200} rooms={5} heightSpaceRatio={2} />+
               </h3>
               <p className="text-ns-gray-light text-sm sm:text-base !leading-5">Worker injuries daily in the Globally</p>
             </div>
-            <div className="space-y-2 border-l-2 border-[#E7E7E7] pl-5 md:pl-7">
+            <div className="space-y-2 md:border-l-2 md:border-[#E7E7E7] md:pl-5 md:pl-7">
               <h3 className="text-primary-500 fw-700 flex  text-[56px]">
                 $<NumberAnimation number={167} speed={2000} interval={200} rooms={3} heightSpaceRatio={2} />B
               </h3>
               <p className="text-ns-gray-light text-sm sm:text-base !leading-5">Lost annually to preventable incidents</p>
             </div>
-            <div className="space-y-2 border-l-2 border-[#E7E7E7] pl-5 md:pl-7">
+            <div className="space-y-2 md:border-l-2 md:border-[#E7E7E7] md:pl-5 md:pl-7">
               <h3 className="text-primary-500 fw-700 flex text-[56px]">
                 <NumberAnimation number={50} speed={2000} interval={200} rooms={2} heightSpaceRatio={2} />%
               </h3>

@@ -9,7 +9,7 @@ interface AiIntelligenceListProps {
 
 const AiIntelligenceList = ({ intelligenceData }: AiIntelligenceListProps) => {
     return (
-        <section className="pt-32 pb-14 sm:pt-36 md:pt-42 md:pb-16 lg:pb-[88px] xl:pt-[180px] xl:pb-[100px]">
+        <section className="pt-20 pb-14 sm:pt-28 lg:pt-32 md:pb-16 lg:pb-[88px] xl:pt-[180px] xl:pb-[100px]">
             <div className="main-container">
                 <div className="mb-[70px] gap-2 flex flex-col text-center">
                     <RevealAnimation delay={0.2}>

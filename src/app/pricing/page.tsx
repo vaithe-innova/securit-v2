@@ -22,7 +22,7 @@ const page = () => {
           description="We’re currently onboarding early users. Enter your email, and our team will connect with you to discuss pricing and find the right fit for your use case."
           descriptionClass='!leading-[22px] text-secondary text-sm md:text-base'
           ctaBtnText="Contact Us"
-          btnClass="btn btn-md btn-primary hover:btn-white-dark dark:hover:btn-white mr-6 font-bold"
+          btnClass="btn btn-md btn-primary hover:btn-white-dark dark:hover:btn-white max-md:w-full font-bold"
         />
         <Faq />
       </div>

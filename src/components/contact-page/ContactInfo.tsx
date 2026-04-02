@@ -1,25 +1,32 @@
+'use client';
+
 import Link from 'next/link';
 import RevealAnimation from '../animation/RevealAnimation';
 
 const ContactInfo = () => {
   return (
-    <section className="bg-white pt-28 pb-14 sm:pt-28 md:pt-32 md:pb-16 lg:pb-20 xl:pt-[135px] xl:pb-[100px]">
+    <section className="bg-white pt-28 pb-14 sm:pt-28 md:pt-32 md:pb-16 lg:pb-20 xl:pt-[135px]">
       <div className="main-container">
-        <RevealAnimation delay={0.2}>
-          <div className="space-y-[50px]">
-            <div className="mb-10 grid grid-cols-12 md:gap-8 space-y-0 xl:mb-18">
-              <div className="col-span-12 md:col-span-6 lg:col-span-5">
-                <span className="text-primary-500 text-sm tracking-[3px] uppercase">Contact Us</span>
+        <div className="space-y-[50px] mt-10">
+          <div className="mb-6 sm:mb-10 grid grid-cols-12 md:gap-8 space-y-4 md:space-y-0">
+            <div className="col-span-12 md:col-span-6 lg:col-span-5">
+              <RevealAnimation delay={0.1}>
+                <span className="text-primary-500 tracking-[2%] sm:tracking-[3%] !leading-4 text-xs sm:text-sm font-normal">Contact Us</span>
+              </RevealAnimation>
+              <RevealAnimation delay={0.2}>
                 <h2 className="text-primary-700 mt-2 mb-4 font-bold text-3xl md:text-4xl lg:text-5xl">
                   Get in touch with Us
                 </h2>
+              </RevealAnimation>
+              <RevealAnimation delay={0.2}>
                 <p className="text-ns-gray-light max-w-[690px] text-sm md:text-base">
                   We're here to help! Whether you have a question about our services, need assistance with your account,
                   or want to provide feedback, our team is ready to assist you.
                 </p>
-                <div className="mt-10 flex flex-col justify-center gap-10 lg:flex-row lg:items-start lg:gap-8 xl:gap-[70px]">
-                  {/* contact info cards  */}
-                  <div className="grid grid-cols-12 space-y-8 md:gap-8 md:space-y-0">
+              </RevealAnimation>
+              <div className="mt-10 flex flex-col justify-center gap-10 lg:flex-row lg:items-start lg:gap-8 xl:gap-[70px]">
+                <div className="grid grid-cols-12 space-y-8 md:gap-8 md:space-y-0">
+                  <RevealAnimation delay={0.2}>
                     <div className="col-span-12 md:col-span-7 lg:col-span-7">
                       <div className="bg-blue-light dark:bg-background-6 relative w-full space-y-6 overflow-hidden rounded-[12px] p-6">
                         <div className="space-y-5">
@@ -38,6 +45,8 @@ const ContactInfo = () => {
                         </div>
                       </div>
                     </div>
+                  </RevealAnimation>
+                  <RevealAnimation delay={0.2}>
                     <div className="col-span-12 md:col-span-5 lg:col-span-5">
                       <div className="border-stroke-11 dark:bg-background-6 relative h-full w-full space-y-6 overflow-hidden rounded-[12px] border bg-white p-6">
                         <div className="flex h-full flex-col justify-between space-y-2.5">
@@ -78,16 +87,15 @@ const ContactInfo = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </RevealAnimation>
                 </div>
               </div>
-              <div className="col-span-12 md:col-span-6 lg:col-span-7">
-                {/* contact form  */}
-                <div className="dark:bg-background-6 bg-blue-light mx-auto w-full max-w-[847px] rounded-2xl p-6 md:p-7 lg:p-8">
-                  <form action="#" method="POST" className="space-y-8">
-                    {/* first name and last name */}
+            </div>
+            <div className="col-span-12 md:col-span-6 lg:col-span-7">
+              <div className="dark:bg-background-6 bg-blue-light mx-auto w-full max-w-[847px] rounded-2xl p-6 md:p-7 lg:p-8">
+                <RevealAnimation delay={0.2}>
+                  <form className="space-y-8">
                     <div className="flex flex-col items-center justify-between gap-8 lg:flex-row">
-                      {/*  first name */}
                       <div className="w-full space-y-2 lg:max-w-[364px]">
                         <label
                           htmlFor="firstname"
@@ -101,7 +109,7 @@ const ContactInfo = () => {
                           placeholder="Enter your first name"
                           required={true}
                           autoComplete="name"
-                          className="border-stroke-11 bg-background-13 placeholder:text-ns-gray-light focus:border-secondary placeholder:text-tagline-2 h-[48px] w-full rounded-xl border px-[18px] py-3 text-base font-normal placeholder:font-normal focus:outline-none focus:bg-white xl:h-[56px]"
+                          className="border-stroke-11 bg-background-13 placeholder:text-ns-gray-light focus:border-secondary/50 focus:bg-white placeholder:text-tagline-2 h-[48px] w-full rounded-xl border px-[18px] py-3 text-base font-normal placeholder:font-normal focus:outline-none xl:h-[56px]"
                         />
                       </div>
                       {/* Last name */}
@@ -118,7 +126,7 @@ const ContactInfo = () => {
                           placeholder="Enter your last name"
                           required={true}
                           autoComplete="name"
-                          className="border-stroke-11 bg-background-13 placeholder:text-ns-gray-light focus:border-secondary placeholder:text-tagline-2 h-[48px] w-full rounded-xl border px-[18px] py-3 text-base font-normal placeholder:font-normal focus:outline-none xl:h-[56px]"
+                          className="border-stroke-11 bg-background-13 placeholder:text-ns-gray-light focus:border-secondary/50 focus:bg-white placeholder:text-tagline-2 h-[48px] w-full rounded-xl border px-[18px] py-3 text-base font-normal placeholder:font-normal focus:outline-none xl:h-[56px]"
                         />
                       </div>
                     </div>
@@ -134,7 +142,7 @@ const ContactInfo = () => {
                         placeholder="Enter your email id"
                         required={true}
                         autoComplete="email"
-                        className="border-stroke-11 bg-background-13 placeholder:text-ns-gray-light focus:border-secondary placeholder:text-tagline-2 h-[48px] w-full rounded-xl border px-[18px] py-3 text-base font-normal placeholder:font-normal focus:outline-none xl:h-[56px]"
+                        className="border-stroke-11 bg-background-13 placeholder:text-ns-gray-light focus:border-secondary/50 focus:bg-white placeholder:text-tagline-2 h-[48px] w-full rounded-xl border px-[18px] py-3 text-base font-normal placeholder:font-normal focus:outline-none xl:h-[56px]"
                       />
                     </div>
                     {/* message */}
@@ -150,7 +158,7 @@ const ContactInfo = () => {
                         rows={7}
                         placeholder="Enter your message"
                         required={true}
-                        className="border-stroke-11 bg-background-13 placeholder:text-ns-gray-light focus:border-secondary placeholder:text-tagline-2 w-full rounded-xl border px-[18px] py-3 text-base font-normal placeholder:font-normal focus:outline-none"
+                        className="border-stroke-11 bg-background-13 placeholder:text-ns-gray-light focus:border-secondary/50 focus:bg-white placeholder:text-tagline-2 w-full rounded-xl border px-[18px] py-3 text-base font-normal placeholder:font-normal focus:outline-none"
                         defaultValue={''}
                       />
                     </div>
@@ -161,11 +169,11 @@ const ContactInfo = () => {
                       Send Message
                     </button>
                   </form>
-                </div>
+                </RevealAnimation>
               </div>
             </div>
           </div>
-        </RevealAnimation>
+        </div>
       </div>
     </section>
   );

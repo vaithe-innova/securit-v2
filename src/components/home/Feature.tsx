@@ -114,7 +114,7 @@ const Feature = () => {
                             <CheckIconCircle />
                           </span>
 
-                          <span className="text-ns-gray-light leading-[20px]">{feature.text}</span>
+                          <span className="text-ns-gray-light text-[14px] leading-[20px]">{feature.text}</span>
                         </li>
                       ))}
                     </ul>
@@ -126,7 +126,7 @@ const Feature = () => {
                           <span className="">
                             <CheckIconCircle />
                           </span>
-                          <span className="text-ns-gray-light leading-[20px]">{feature.text}</span>
+                          <span className="text-ns-gray-light text-[14px] leading-[20px]">{feature.text}</span>
                         </li>
                       ))}
                     </ul>
@@ -154,7 +154,7 @@ const Feature = () => {
                         <CheckIconCircle />
                       </span>
 
-                      <span className="text-ns-gray-light leading-[20px]">{feature.text}</span>
+                      <span className="text-ns-gray-light text-[14px] leading-[20px]">{feature.text}</span>
                     </li>
                   ))}
                 </ul>
@@ -182,7 +182,7 @@ const Feature = () => {
                         <CheckIconCircle />
                       </span>
 
-                      <span className="text-ns-gray-light leading-[20px]">{feature.text}</span>
+                      <span className="text-ns-gray-light text-[14px] leading-[20px]">{feature.text}</span>
                     </li>
                   ))}
                 </ul>
@@ -209,7 +209,7 @@ const Feature = () => {
                       <span className="">
                         <CheckIconCircle />
                       </span>
-                      <span className="text-ns-gray-light leading-[20px]">{feature.text}</span>
+                      <span className="text-ns-gray-light text-[14px] leading-[20px]">{feature.text}</span>
                     </li>
                   ))}
                 </ul>

@@ -9,9 +9,9 @@ const ContactInfo = () => {
       <div className="main-container">
         <div className="space-y-[50px]">
           <div className="mb-6 sm:mb-10 grid grid-cols-12 md:gap-8 space-y-4 md:space-y-0">
-            <div className="col-span-12 md:col-span-6 lg:col-span-5">
+            <div className="col-span-12 md:col-span-6 lg:col-span-5 gap-2">
               <RevealAnimation delay={0.1}>
-                <span className="text-primary-500 tracking-[2%] sm:tracking-[3%] !leading-4 text-xs sm:text-sm font-normal">Contact Us</span>
+                <span className="text-primary-500 tracking-[2%] sm:tracking-[3%] !leading-4 text-xs sm:text-sm font-normal uppercase">Contact Us</span>
               </RevealAnimation>
               <RevealAnimation delay={0.2}>
                 <h2 className="text-primary-700 mt-2 mb-4 font-bold text-3xl md:text-4xl lg:text-5xl">
@@ -19,7 +19,7 @@ const ContactInfo = () => {
                 </h2>
               </RevealAnimation>
               <RevealAnimation delay={0.2}>
-                <p className="text-ns-gray-light max-w-[690px] text-sm md:text-base">
+                <p className="text-secondary max-w-[690px] text-sm md:text-base">
                   We're here to help! Whether you have a question about our services, need assistance with your account,
                   or want to provide feedback, our team is ready to assist you.
                 </p>
@@ -31,13 +31,13 @@ const ContactInfo = () => {
                       <div className="bg-blue-light dark:bg-background-6 relative w-full space-y-6 overflow-hidden rounded-[12px] p-6">
                         <div className="space-y-5">
                           <div className="space-y-1">
-                            <p className="text-ns-gray-light text-xs sm:text-sm">Email:</p>
+                            <p className="text-secondary text-xs sm:text-sm">Email:</p>
                             <p className="text-primary-500 hover:text-primary-700 underline font-bold text-sm md:text-base md:text-lg">
                               <Link href="mailto:info@securit.com">info@securit.com</Link>
                             </p>
                           </div>
                           <div className="space-y-1">
-                            <p className="text-ns-gray-light text-xs sm:text-sm">Phone :</p>
+                            <p className="text-secondary text-xs sm:text-sm">Phone :</p>
                             <p className="text-primary-700 hover:text-primary-500 font-bold text-sm md:text-base md:text-lg">
                               <Link href="tel:+919712342323">+91 97123 42323</Link>
                             </p>
@@ -51,6 +51,7 @@ const ContactInfo = () => {
                       <div className="border-stroke-11 dark:bg-background-6 relative h-full w-full space-y-6 overflow-hidden rounded-[12px] border bg-white p-6">
                         <div className="flex h-full flex-col justify-between space-y-2.5">
                           <p className="text-heading-6 text-accent">
+                            <Link href="/images/securit-brochure-design.pdf" target='_blank'>
                             <svg
                               width="48"
                               height="48"
@@ -80,6 +81,7 @@ const ContactInfo = () => {
                                 strokeLinejoin="round"
                               />
                             </svg>
+                            </Link>
                           </p>
                           <p className="text-primary-700 hover:text-primary-500 font-bold text-sm md:text-base md:text-lg">
                             <Link href="/images/securit-brochure-design.pdf" target='_blank'>Download Brochure</Link>
@@ -113,7 +115,7 @@ const ContactInfo = () => {
                         />
                       </div>
                       {/* Last name */}
-                      <div className="w-full max-w-[364px] space-y-2">
+                      <div className="w-full lg:max-w-[364px] space-y-2">
                         <label
                           htmlFor="lastname"
                           className="text-ns-black dark:text-accent block text-sm font-normal sm:text-base">

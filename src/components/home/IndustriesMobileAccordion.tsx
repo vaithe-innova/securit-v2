@@ -51,9 +51,11 @@ const handleToggle = (index: number) => {
           {/* Header */}
           <button
             onClick={() => handleToggle(i)}
-            className="flex w-full justify-between p-4 font-bold text-left"
+            className="flex w-full justify-between p-4 font-bold text-left text-lg sm:text-xl"
           >
-            <span>{tab.maintitle}</span>
+            <span className={` ${
+                activeIndex === i ? 'text-primary-500' : ''
+              }`}>{tab.maintitle}</span>
 
             {/* Arrow */}
             <span
@@ -67,7 +69,8 @@ const handleToggle = (index: number) => {
 
           {/* Content */}
           {activeIndex === i && (
-            <div className="p-4 pt-0 space-y-4">
+            <div className="p-4 pt-0 space-y-4 border-t border-[#bdc2d7]">
+                <h4 className='text-[24px] leading-[1.1] text-background-5 font-bold mb-5 pt-5'>{tab.title}</h4>
 
               <ul className="space-y-2">
                 {tab.features.map((f, idx) => (

@@ -29,7 +29,7 @@ const Counter = () => {
         <RevealAnimation delay={0.4}>
           <div className="flex flex-col max-md:gap-y-6 max-lg:gap-x-3 md:flex-row justify-between py-6 sm:py-14">
             <div className="space-y-2 md:pl-5 md:pl-7">
-              <h3 className="text-primary-500 fw-700 flex  text-[56px]">
+              <h3 className="text-primary-500 fw-700 flex text-[56px]">
                 <NumberAnimation number={13000} speed={2000} interval={200} rooms={5} heightSpaceRatio={2} />+
               </h3>
               <p className="text-secondary text-sm sm:text-base !leading-5">Worker injuries daily in the Globally</p>

@@ -210,7 +210,7 @@ const DeploymentTimeline = () => {
             </h2>
           </RevealAnimation>
           <RevealAnimation delay={0.25}>
-            <p className="text-accent/60 mt-5 max-w-[650px] text-[15px] leading-relaxed">
+            <p className="text-[#ccc] mt-5 max-w-[650px] text-[15px] leading-relaxed">
               Securit is designed to integrate quickly into existing operations—with most teams live
               in days and fully optimized within the first few weeks.
             </p>
@@ -228,7 +228,7 @@ const DeploymentTimeline = () => {
                   ref={(el) => { if (el) { labelsRef.current[idx] = el; } }}
                   className="flex-1 text-center"
                 >
-                  <span className="text-accent/70 text-[13px] font-medium">{step.timeLabel}</span>
+                  <span className="text-[#ccc] text-sm leading-[20px] font-medium">{step.timeLabel}</span>
                 </div>
               ))}
             </div>
@@ -268,7 +268,7 @@ const DeploymentTimeline = () => {
                     <h4 className="text-accent text-[15px] font-semibold leading-snug">
                       {step.title}
                     </h4>
-                    <p className="text-accent/50 text-[13px] leading-relaxed">
+                    <p className="text-[#ccc] text-[14px] leading-[20px]">
                       {step.description}
                     </p>
                   </div>

@@ -93,7 +93,7 @@ const Feature = () => {
               <h2 className="mb-3 font-bold text-primary-700 text-[48px] leading-[52px]">A connected system for monitoring, detection, and response </h2>
             </RevealAnimation>
             <RevealAnimation delay={0.4}>
-              <p className="text-ns-gray-light max-w-[690px]">
+              <p className="text-secondary max-w-[690px]">
                 Securit brings together devices, sensors, and workflows into a single platform that captures activity, processes it instantly, and drives coordinated action.
               </p>
             </RevealAnimation>
@@ -114,7 +114,7 @@ const Feature = () => {
                             <CheckIconCircle />
                           </span>
 
-                          <span className="text-ns-gray-light text-[14px] leading-[20px]">{feature.text}</span>
+                          <span className="text-secondary text-[14px] leading-[20px]">{feature.text}</span>
                         </li>
                       ))}
                     </ul>
@@ -126,7 +126,7 @@ const Feature = () => {
                           <span className="">
                             <CheckIconCircle />
                           </span>
-                          <span className="text-ns-gray-light text-[14px] leading-[20px]">{feature.text}</span>
+                          <span className="text-secondary text-[14px] leading-[20px]">{feature.text}</span>
                         </li>
                       ))}
                     </ul>
@@ -154,7 +154,7 @@ const Feature = () => {
                         <CheckIconCircle />
                       </span>
 
-                      <span className="text-ns-gray-light text-[14px] leading-[20px]">{feature.text}</span>
+                      <span className="text-secondary text-[14px] leading-[20px]">{feature.text}</span>
                     </li>
                   ))}
                 </ul>
@@ -182,7 +182,7 @@ const Feature = () => {
                         <CheckIconCircle />
                       </span>
 
-                      <span className="text-ns-gray-light text-[14px] leading-[20px]">{feature.text}</span>
+                      <span className="text-secondary text-[14px] leading-[20px]">{feature.text}</span>
                     </li>
                   ))}
                 </ul>
@@ -209,7 +209,7 @@ const Feature = () => {
                       <span className="">
                         <CheckIconCircle />
                       </span>
-                      <span className="text-ns-gray-light text-[14px] leading-[20px]">{feature.text}</span>
+                      <span className="text-secondary text-[14px] leading-[20px]">{feature.text}</span>
                     </li>
                   ))}
                 </ul>

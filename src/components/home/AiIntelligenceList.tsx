@@ -23,15 +23,15 @@ const AiIntelligenceList = ({ intelligenceData }: AiIntelligenceListProps) => {
                     {intelligenceData.map((intelligence, index) => (
                         <RevealAnimation key={intelligence.slug} delay={0.5 + index * 0.1}>
                             <div className="col-span-12 md:col-span-6 xl:col-span-4">
-                                <div className="bg-background-3 dark:bg-background-7 grid items-center justify-center space-y-6 rounded-[20px] px-6 py-8 text-center transition-transform duration-500 ease-in-out hover:translate-y-[-10px]">
+                                <div className="bg-background-3 dark:bg-background-7 grid items-center justify-center space-y-6 rounded-[20px] px-6 py-8 text-center transition-transform duration-500 ease-in-out hover:translate-y-[-10px h-full">
                                     <div className="flex items-center justify-center">
                                         <span className={`${intelligence.icon} text-secondary dark:text-accent text-[52px]`} />
                                     </div>
                                     <div className='h-[48px]'>
-                                        <h3 className="text-heading-5 fw-700" title={intelligence.title} >{intelligence.title}</h3>
+                                        <h3 className="text-heading-5 fw-700 text-primary-700" title={intelligence.title} >{intelligence.title}</h3>
                                     </div>
                                     <div className="space-y-2">
-                                        <p className="mx-auto line-clamp-3 text-[16px] max-w-[361px]" title={intelligence.description}>{intelligence.description}</p>
+                                        <p className="mx-auto line-clamp-5 text-secondary text-[16px] max-w-[361px]" title={intelligence.description}>{intelligence.description}</p>
                                     </div>
                                 </div>
                             </div>

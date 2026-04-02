@@ -44,7 +44,7 @@ const Tab: React.FC<TabProps> = ({ index, children, className = '', variant = 'd
   // Desktop variant styles
   const getDesktopClassName = (): string => {
     return cn(
-      'data-[state=selected]:text-secondary text-secondary/60 dark:data-[state=selected]:text-accent dark:text-accent/60 -mb-px cursor-pointer px-10 py-3 focus-visible:outline-0',
+      'data-[state=selected]:text-primary-500 font-bold text-secondary/60 dark:data-[state=selected]:text-accent dark:text-accent/60 -mb-px cursor-pointer px-5 xl:px-7 py-3 focus-visible:outline-0',
       className,
     );
   };
@@ -85,7 +85,7 @@ const Tab: React.FC<TabProps> = ({ index, children, className = '', variant = 'd
       style={getMobileStyle()}
       onClick={handleClick}
       onKeyDown={handleKeyDown}>
-      {variant === 'desktop' ? <span className="text-tagline-1 font-medium">{children}</span> : children}
+      {variant === 'desktop' ? <span className="text-tagline-1 font-bold">{children}</span> : children}
     </button>
   );
 };

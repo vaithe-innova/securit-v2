@@ -9,11 +9,14 @@ interface AiIntelligenceListProps {
 
 const AiIntelligenceList = ({ intelligenceData }: AiIntelligenceListProps) => {
     return (
-        <section className="pt-32 pb-14 sm:pt-36 md:pt-42 md:pb-16 lg:pb-[88px] xl:pt-[180px] xl:pb-[100px]">
+        <section className="pt-32 pb-20 md:pb-16 lg:pb-[88px] xl:pt-[80px] xl:pb-[100px]">
             <div className="main-container">
-                <div className="mb-[70px] space-y-5 text-center">
+                <div className="mb-[50px] space-y-5 text-center">
                     <RevealAnimation delay={0.2}>
                         <span className="uppercase text-primary-500 tracking-[2px] sm:tracking-[3px] text-xs sm:text-sm">AI Intelligence</span>
+                    </RevealAnimation>
+                    <RevealAnimation delay={0.3}>
+                        <h2 className="my-2 max-w-[680px] mx-auto text-primary-700 fw-700 text-3xl lg:text-4xl" >AI Intelligence</h2>
                     </RevealAnimation>
                 </div>
                 <div className="grid grid-cols-12 gap-y-5 md:gap-8 xl:gap-8">
@@ -24,9 +27,11 @@ const AiIntelligenceList = ({ intelligenceData }: AiIntelligenceListProps) => {
                                     <div className="flex items-center justify-center">
                                         <span className={`${intelligence.icon} text-secondary dark:text-accent text-[52px]`} />
                                     </div>
+                                    <div className='h-[48px]'>
+                                        <h3 className="text-heading-5 fw-700" title={intelligence.title} >{intelligence.title}</h3>
+                                    </div>
                                     <div className="space-y-2">
-                                        <h3 className="text-heading-5 line-clamp-1" title={intelligence.title} >{intelligence.title}</h3>
-                                        <p className="mx-auto line-clamp-3 max-w-[361px]" title={intelligence.description}>{intelligence.description}</p>
+                                        <p className="mx-auto line-clamp-3 text-[16px] max-w-[361px]" title={intelligence.description}>{intelligence.description}</p>
                                     </div>
                                 </div>
                             </div>

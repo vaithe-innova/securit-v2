@@ -33,13 +33,13 @@ const ContactInfo = () => {
                           <div className="space-y-1">
                             <p className="text-ns-gray-light text-xs sm:text-sm">Email:</p>
                             <p className="text-primary-500 hover:text-primary-700 underline font-bold text-sm md:text-base md:text-lg">
-                              <Link href="mailto:hello@securit.com">hello@securit.com</Link>
+                              <Link href="mailto:info@securit.com">info@securit.com</Link>
                             </p>
                           </div>
                           <div className="space-y-1">
                             <p className="text-ns-gray-light text-xs sm:text-sm">Phone :</p>
                             <p className="text-primary-700 hover:text-primary-500 font-bold text-sm md:text-base md:text-lg">
-                              <Link href="tel:+91 9712321342323">+91 97123 342323</Link>
+                              <Link href="tel:+919712342323">+91 97123 42323</Link>
                             </p>
                           </div>
                         </div>

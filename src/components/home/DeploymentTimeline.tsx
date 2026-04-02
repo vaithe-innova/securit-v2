@@ -73,7 +73,7 @@ const TimelineMarker = ({ variant }: { variant: (typeof timelineSteps)[0]['marke
   if (variant === 'diamond-orange') {
     return (
       <div className="relative flex items-center justify-center">
-        <span className="relative h-[18px] w-[18px] rotate-45 rounded-sm bg-[#e2501a] shadow-[0_0_12px_rgba(226,80,26,0.6)]" />
+        <span className="relative h-[17px] w-[17px] rotate-45 rounded-sm bg-[#e2501a] shadow-[0_0_12px_rgba(226,80,26,0.6)]" />
       </div>
     );
   }
@@ -82,11 +82,11 @@ const TimelineMarker = ({ variant }: { variant: (typeof timelineSteps)[0]['marke
   return (
     <div className="relative flex items-center justify-center">
       <span
-        className={`absolute h-8 w-8 rounded-full border ${isOrange ? 'border-[#e2501a]/30 bg-[#e2501a]/15' : 'border-[#007bFF]/30 bg-[#007bFF]/15'
+        className={`absolute h-[22px] w-[22px] rounded-full border ${isOrange ? 'border-[#e2501a]/30 bg-[#e2501a]/15' : 'border-[#007bFF]/30 bg-[#007bFF]/15'
           }`}
       />
       <span
-        className={`relative h-[10px] w-[10px] rounded-full ${isOrange
+        className={`relative h-[6px] w-[6px] rounded-full ${isOrange
           ? 'bg-[#e2501a] shadow-[0_0_10px_rgba(226,80,26,0.6)]'
           : 'bg-[#007bFF] shadow-[0_0_10px_rgba(0,123,255,0.6)]'
           }`}
@@ -123,6 +123,22 @@ const DeploymentTimeline = () => {
           trackRef.current,
           { scaleX: 1, duration: 1, ease: 'power2.inOut' },
           0,
+        );
+      }
+
+      // X. Mobile Progress segments drawing animation ─────────────────────────
+      const mobileSegments = section.querySelectorAll('.mobile-progress-segment');
+      if (mobileSegments.length) {
+        gsap.set(mobileSegments, { scaleY: 0 });
+        tl.to(
+          mobileSegments,
+          {
+            scaleY: 1,
+            duration: 0.5,
+            ease: 'none',
+            stagger: 0.2, // Draws segment by segment
+          },
+          0.1,
         );
       }
 
@@ -262,22 +278,46 @@ const DeploymentTimeline = () => {
           </div>
         </div>
 
-        {/* ── Mobile Timeline (< md) — uses RevealAnimation per item ── */}
-        <div className="flex flex-col gap-0 md:hidden">
+        <div className="relative flex flex-col gap-0 md:hidden">
           {timelineSteps.map((step, idx) => (
             <RevealAnimation key={step.id} delay={0.1 + idx * 0.12}>
-              <div className="relative flex gap-5">
-                <div className="flex flex-col items-center">
-                  <TimelineMarker variant={step.markerVariant} />
+              <div className="relative flex gap-5 min-h-[120px]">
+                <div className="relative flex flex-col items-center w-10 shrink-0">
+                  <div className="relative z-10 flex h-10 items-center justify-center">
+                    <TimelineMarker variant={step.markerVariant} />
+                  </div>
+                  {/* Bottom Line Segment (connects current node to bottom of step) */}
                   {idx < timelineSteps.length - 1 && (
-                    <div className="mt-1 w-[2px] flex-1 bg-white/10" style={{ minHeight: '44px' }} />
+                    <div className="absolute left-1/2 -translate-x-1/2 top-5 bottom-0 w-[2px] pointer-events-none">
+                      {/* Background track snippet */}
+                      <div className="absolute top-0 h-full w-full bg-white/10" />
+                      {/* Progress segment snippet */}
+                      <div
+                        className={`mobile-progress-segment absolute top-0 h-full w-full ${idx < 2 ? 'bg-[#007bFF]' : idx === 2 ? 'bg-gradient-to-b from-[#007bFF] to-[#e2501a]' : 'bg-[#e2501a]'
+                          }`}
+                        style={{ transformOrigin: 'top' }}
+                      />
+                    </div>
+                  )}
+                  {/* Top Line Segment (connects top of step to node center, for steps > 0) */}
+                  {idx > 0 && (
+                    <div className="absolute left-1/2 -translate-x-1/2 top-0 h-5 w-[2px] pointer-events-none">
+                      {/* Background track snippet */}
+                      <div className="absolute top-0 h-full w-full bg-white/10" />
+                      {/* Progress segment snippet */}
+                      <div
+                        className={`mobile-progress-segment absolute top-0 h-full w-full ${idx < 3 ? 'bg-[#007bFF]' : 'bg-[#e2501a]'
+                          }`}
+                        style={{ transformOrigin: 'top' }}
+                      />
+                    </div>
                   )}
                 </div>
-                <div className="pb-8">
-                  <span className="text-accent/60 mb-1 block text-[12px] font-medium uppercase tracking-wider">
+                <div className="pb-10 pt-2 flex-1">
+                  <span className="mb-1 block text-[12px] text-accent/60 font-medium uppercase tracking-wider">
                     {step.timeLabel}
                   </span>
-                  <h4 className="text-accent mb-1.5 text-[16px] font-semibold">{step.title}</h4>
+                  <h4 className="text-accent/70 mb-1.5 text-[16px] font-bold">{step.title}</h4>
                   <p className="text-accent/50 text-[14px] leading-relaxed">{step.description}</p>
                 </div>
               </div>
@@ -287,7 +327,7 @@ const DeploymentTimeline = () => {
 
         <RevealAnimation delay={0.4}>
           <div className='flex flex-col mt-16 bg-white rounded-2xl'>
-            <div className='flex text-center justify-center mt-10'>
+            <div className='flex text-center justify-center mt-10 px-[20px]'>
               <h3 className='text-primary-700 fw-700 text-3xl lg:text-4xl'>Certified. Compliant. Secure.</h3>
             </div>
             <div className="flex flex-col max-md:gap-y-10 max-lg:gap-x-3 md:flex-row justify-around px-3 lg:px-[60px] py-14 pt-8">

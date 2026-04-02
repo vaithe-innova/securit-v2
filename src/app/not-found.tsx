@@ -4,7 +4,7 @@ import NotFoundClient from './NotFoundClient';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: '404 - NextSaaS',
+  title: '404 - Securit || Innova Solutions',
 };
 
 const NotFound = () => {

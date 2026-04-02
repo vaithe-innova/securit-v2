@@ -1,17 +1,17 @@
-import PrivacyContent from '@/components/privacy/PrivacyContent';
-import CTA from '@/components/shared/cta/CTA';
+// import PrivacyContent from '@/components/privacy/PrivacyContent';
+// import CTA from '@/components/shared/cta/CTA';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Privacy Policy - Analytics & Reporting || NextSaaS',
+  title: 'Privacy Policy - Securit || Innova Solutions',
 };
 
 const page = () => {
   return (
-    <main className="bg-background-3 dark:bg-background-7">
-      <PrivacyContent />
+    <main className="bg-background-3 dark:bg-background-7 h-[50vh]">
+      {/* <PrivacyContent />
       <CTA
         className="dark:bg-background-5 bg-white"
         badgeClass="badge-yellow-v2"
@@ -20,7 +20,7 @@ const page = () => {
         description="If you have any questions, feel free to reach out to our team."
         btnClass="hover:btn-secondary dark:hover:btn-accent"
         ctaBtnText="Get started"
-      />
+      /> */}
     </main>
   );
 };

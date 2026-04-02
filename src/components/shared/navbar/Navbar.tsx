@@ -8,6 +8,7 @@ import { cn } from '@/utils/cn';
 import mainLogo from '@public/images/shared/main-logo.svg';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import MobileMenu from '../mobile-menu/MobileMenu';
 import MobileMenuButton from '../mobile-menu/MobileMenuButton';
@@ -19,6 +20,7 @@ const dropdownNavItems = [
 ];
 
 const Navbar = () => {
+  const pathname = usePathname();
   const [menuDropdownId, setMenuDropdownId] = useState<string | null>(null);
 
   const { isScrolled } = useNavbarScroll(150);
@@ -51,7 +53,7 @@ const Navbar = () => {
               </div>
               <nav className="hidden items-center lg:flex">
                 <ul className="flex items-center">
-                  <li className="relative cursor-pointer py-2.5">
+                  <li className={cn("relative cursor-pointer py-2.5", pathname === "/" && "active")}>
                     <Link
                       href="/"
                       className=" text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">
@@ -61,7 +63,7 @@ const Navbar = () => {
                   {dropdownNavItems.map(({ label, dataMenu, MenuComponent }) => (
                     <li
                       key={label}
-                      className={cn("group relative cursor-pointer py-2.5 ", menuDropdownId === dataMenu && "active")}
+                      className={cn("group relative cursor-pointer py-2.5", (menuDropdownId === dataMenu || pathname.startsWith('/resources')) && "active")}
                       data-menu={dataMenu}
                       onMouseEnter={() => handleMenuHover(dataMenu)}>
                       <button
@@ -90,14 +92,14 @@ const Navbar = () => {
                       <span>Company</span>
                     </Link>
                   </li>
-                  <li className="relative cursor-pointer py-2.5">
+                  <li className={cn("relative cursor-pointer py-2.5", pathname === "/pricing" && "active")}>
                     <Link
                       href="/pricing"
                       className=" text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">
                       <span>Pricing</span>
                     </Link>
                   </li>
-                  <li className="relative cursor-pointer py-2.5">
+                  <li className={cn("relative cursor-pointer py-2.5", pathname === "/contact-us" && "active")}>
                     <Link
                       href="/contact-us"
                       className=" text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">

@@ -5,7 +5,7 @@ import LinkButton from '../ui/button/LinkButton';
 
 const OurMission = () => {
   return (
-    <section className="relative pt-14 pb-14 md:pt-16 md:pb-16 lg:pt-[88px] lg:pb-[88px] xl:pt-[132px] xl:pb-[80px]">
+    <section className="relative pt-28 pb-14 md:pt-32 md:pb-16 lg:pt-[120px] lg:pb-[70px] xl:pt-[132px] xl:pb-[80px]">
       <div className="main-container">
         <div className="flex flex-wrap items-center gap-8 lg:flex-nowrap lg:gap-4 xl:gap-8">
           <div className="w-full lg:w-1/2">

@@ -22,7 +22,7 @@ html {
   position: absolute;
   left: 55%;
   margin-left: -20px;
-  bottom: 0px;
+  bottom: -16px;
   width: 0;
   height: 0;
   content: '';

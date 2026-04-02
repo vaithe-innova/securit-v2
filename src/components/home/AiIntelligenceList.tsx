@@ -11,10 +11,18 @@ const AiIntelligenceList = ({ intelligenceData }: AiIntelligenceListProps) => {
     return (
         <section className="pt-32 pb-14 sm:pt-36 md:pt-42 md:pb-16 lg:pb-[88px] xl:pt-[180px] xl:pb-[100px]">
             <div className="main-container">
-                <div className="mb-[70px] space-y-5 text-center">
+                <div className="mb-[70px] gap-2 flex flex-col text-center">
                     <RevealAnimation delay={0.2}>
-                        <span className="uppercase text-primary-500 tracking-[2px] sm:tracking-[3px] text-xs sm:text-sm">AI Intelligence</span>
-                    </RevealAnimation>
+                        <span className="uppercase text-primary-500 tracking-[2%] sm:tracking-[3%] !leading-4 text-xs sm:text-sm font-normal">
+                            AI Intelligence
+                        </span>
+                        </RevealAnimation>
+
+                        <RevealAnimation delay={0.3}>
+                        <h2 className="mb-3 max-w-[680px] mx-auto text-primary-700 fw-700 text-3xl lg:text-4xl">
+                            AI Intelligence
+                        </h2>
+                        </RevealAnimation>
                 </div>
                 <div className="grid grid-cols-12 gap-y-5 md:gap-8 xl:gap-8">
                     {intelligenceData.map((intelligence, index) => (

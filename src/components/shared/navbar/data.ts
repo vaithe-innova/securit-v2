@@ -12,10 +12,10 @@ export const mobileMenuData: IMobileMenuGroup[] = [
     title: 'Resources',
     href: undefined,
     submenu: [
-      { id: 'blog', label: 'Blog', href: './blog' },
-      { id: 'tutorial', label: 'Tutorial', href: './tutorial' },
-      { id: 'faq', label: 'FAQ', href: './faq' },
-      { id: 'glossary', label: 'Glossary', href: './glossary' },
+      { id: 'blog', label: 'Blog', href: '' },
+      { id: 'tutorial', label: 'Tutorial', href: '' },
+      { id: 'faq', label: 'FAQ', href: './' },
+      { id: 'glossary', label: 'Glossary', href: '' },
     ],
   },
   {
@@ -42,18 +42,18 @@ export const mobileMenuData: IMobileMenuGroup[] = [
 export const footerData: FooterOneData[] = [
   {
     links: [
-      { label: 'Blogs', href: '/blog' },
-      { label: 'Case Studies', href: '/case-study' },
-      { label: 'News and events', href: '/news-and-events' },
-      { label: 'Collaboration', href: '/collaboration' },
+      { label: 'Blogs', href: '' },
+      { label: 'Case Studies', href: '' },
+      { label: 'News and events', href: '' },
+      { label: 'Collaboration', href: '' },
     ],
   },
   {
     links: [
-      { label: 'About Us', href: '/about-us' },
+      { label: 'About Us', href: '' },
       { label: 'Pricing', href: '/pricing' },
       { label: 'Contact Us', href: '/contact-us' },
-      { label: 'FAQs', href: '/faqs' },
+      { label: 'FAQs', href: '' },
     ],
   },
 ];

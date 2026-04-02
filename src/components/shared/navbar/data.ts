@@ -12,10 +12,9 @@ export const mobileMenuData: IMobileMenuGroup[] = [
     title: 'Resources',
     href: undefined,
     submenu: [
-      { id: 'blog', label: 'Blog', href: '' },
-      { id: 'tutorial', label: 'Tutorial', href: '' },
-      { id: 'faq', label: 'FAQ', href: './' },
-      { id: 'glossary', label: 'Glossary', href: '' },
+      { id: 'blog', label: 'Blogs', href: '' },
+      { id: 'case', label: 'Case Studies', href: '' },
+      { id: 'news', label: 'News and events', href: '' },
     ],
   },
   {

@@ -1,6 +1,6 @@
 'use client';
 
-import faqImg from '@public/images/ns-img-52.png';
+import faqImg from '@public/images/ns-img-52.jpg';
 import faqImgDark from '@public/images/ns-img-dark-31.png';
 import Image from 'next/image';
 import RevealAnimation from '../animation/RevealAnimation';
@@ -34,14 +34,11 @@ const Faq = () => {
                     titleClassName="flex-1 text-left xl:text-heading-6 text-tagline-1 font-normal text-secondary dark:text-accent"
                     value="1"
                     iconType="arrow">
-                    What is the primary role of a business agency?
+                    What does implementation actually look like for our team?
                   </AccordionTrigger>
 
                   <AccordionContent value="1">
-                    When collaborating with a business agency, you can generally expect an extensive array of services
-                    designed to not only support your current operations but also to foster growth and innovation within
-                    your business. These services often include strategic planning, marketing solutions, financial
-                    consulting, and operational improvements.
+                    Securit is rolled out in phases—starting with connecting your existing systems, followed by configuring zones and workflows, and then onboarding teams. Most of the work happens in the background, so operations don’t need to stop or change significantly.
                   </AccordionContent>
                 </AccordionItem>
 
@@ -51,12 +48,11 @@ const Faq = () => {
                     titleClassName="flex-1 text-left xl:text-heading-6 text-tagline-1 font-normal text-secondary dark:text-accent"
                     value="2"
                     iconType="arrow">
-                    What kinds of services should I anticipate ?
+                    How does Securit handle environments with changing conditions?
                   </AccordionTrigger>
 
                   <AccordionContent value="2">
-                    When working with a business agency, you can typically anticipate a wide range of services tailored
-                    to support and grow your business.
+                    The platform is designed for dynamic environments. Zones, rules, and workflows can be adjusted as conditions change—whether that’s new hazards, shifting work areas, or temporary safety controls.
                   </AccordionContent>
                 </AccordionItem>
 
@@ -66,14 +62,11 @@ const Faq = () => {
                     titleClassName="flex-1 text-left xl:text-heading-6 text-tagline-1 font-normal text-secondary dark:text-accent"
                     value="3"
                     iconType="arrow">
-                    How often should I consider updating my website?
+                    Will this create more alerts for our team to manage?
                   </AccordionTrigger>
 
                   <AccordionContent value="3">
-                    When collaborating with a business agency, you can generally expect an extensive array of services
-                    designed to not only support your current operations but also to foster growth and innovation within
-                    your business. These services often include strategic planning, marketing solutions, financial
-                    consulting, and operational improvements.
+                    No—the goal is the opposite. Securit prioritizes events based on context and severity, helping teams focus on what actually matters instead of reacting to every signal.
                   </AccordionContent>
                 </AccordionItem>
 
@@ -83,14 +76,25 @@ const Faq = () => {
                     titleClassName="flex-1 text-left xl:text-heading-6 text-tagline-1 font-normal text-secondary dark:text-accent"
                     value="4"
                     iconType="arrow">
-                    How often is it recommended to refresh my website?
+                    How does Securit work with contractors or rotating teams?
                   </AccordionTrigger>
 
                   <AccordionContent value="4">
-                    When collaborating with a business agency, you can generally expect an extensive array of services
-                    designed to not only support your current operations but also to foster growth and innovation within
-                    your business. These services often include strategic planning, marketing solutions, financial
-                    consulting, and operational improvements.
+                    Securit is built to handle mixed workforces. Access, visibility, and alerts can be configured based on roles, so both internal teams and contractors follow consistent safety workflows.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="5">
+                  <AccordionTrigger
+                    className="flex w-full cursor-pointer items-center justify-between pt-6 pb-6"
+                    titleClassName="flex-1 text-left xl:text-heading-6 text-tagline-1 font-normal text-secondary dark:text-accent"
+                    value="5"
+                    iconType="arrow">
+                    How does the platform scale as we add more sites or teams?
+                  </AccordionTrigger>
+
+                  <AccordionContent value="5">
+                    Securit supports multi-site operations with centralized oversight. You can add new locations, zones, and teams without rebuilding your setup, while still maintaining consistent policies and visibility across all environments.
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>

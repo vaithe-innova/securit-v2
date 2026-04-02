@@ -7,7 +7,7 @@ const Counter = () => {
   return (
     <section className="pt-16 md:pt-20 lg:pt-[90px] xl:pt-[100px] pb-16 md:pb-20 lg:pb-[90px] xl:pb-[100px] bg-white">
       <div className="main-container">
-          <div className="sm:mb-0 grid grid-cols-12 md:gap-8 md:space-y-0 xl:mb-1">
+          <div className="sm:mb-0 grid grid-cols-12 gap-4 md:gap-8 md:space-y-0 xl:mb-1">
             <div className="col-span-12 md:col-span-6 lg:col-span-7">
               <div className="gap-2 flex flex-col max-w-[640px]">
                 <RevealAnimation delay={0.1}>

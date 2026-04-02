@@ -21,7 +21,7 @@ const page = () => {
           headingClass='fw-700 text-primary-700 text-3xl lg:text-4xl w-[100%]'
           description="We’re currently onboarding early users. Enter your email, and our team will connect with you to discuss pricing and find the right fit for your use case."
           descriptionClass='!leading-[22px] text-secondary text-sm md:text-base'
-          ctaBtnText="Contact Us"
+          ctaBtnText="Submit"
           btnClass="btn btn-md btn-primary hover:btn-white-dark dark:hover:btn-white max-md:w-full font-bold"
         />
         <Faq />

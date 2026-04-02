@@ -50,7 +50,7 @@ const Hero = () => {
                     href="#contact"
                     insideSpan={false}
                     className="btn rounded-full btn-primary text-white hover:btn-white-dark px-4 py-2 !leading-[24px] sm:!leading-[24px] md:!leading-[28px] lg:!leading-[32px] text-sm sm:text-base font-bold w-full sm:w-[170px] md:w-[210px] lg:w-[234px] sm:h-10 md:h-11 lg:h-12 shadow-sm">
-                    Get your demo
+                    Get a Demo
                   </LinkButton>
                 </li>
               </RevealAnimation>
@@ -63,7 +63,7 @@ const Hero = () => {
                     <svg width="12" height="14" viewBox="0 0 12 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                       <path d="M11.5 6.13397C12.1667 6.51887 12.1667 7.48113 11.5 7.86603L1.75 13.4952C1.08333 13.8801 0.25 13.399 0.25 12.6292L0.25 1.37083C0.25 0.601034 1.08333 0.119908 1.75 0.504808L11.5 6.13397Z" />
                     </svg>
-                    Watch a video
+                    Watch a Video
                   </LinkButton>
                 </li>
               </RevealAnimation>

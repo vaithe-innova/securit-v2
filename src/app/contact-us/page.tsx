@@ -1,4 +1,4 @@
-import ContactInfo from '@/components/contact-page/ContactInfo';
+import ContactInfo from '@/components/home/ContactInfo';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
 

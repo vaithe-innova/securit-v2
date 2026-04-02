@@ -5,7 +5,7 @@ import RevealAnimation from '../animation/RevealAnimation';
 
 const ContactInfo = () => {
   return (
-    <section className="bg-white pt-28 pb-14 sm:pt-28 md:pt-32 md:pb-16 lg:pb-20 xl:pt-[135px]" id="contact">
+    <section className="bg-white pt-20 pb-14 sm:pt-28 md:pt-32 md:pb-16 lg:pb-20 xl:pt-[135px]" id="contact">
       <div className="main-container">
         <div className="space-y-[50px]">
           <div className="mb-6 sm:mb-10 grid grid-cols-12 md:gap-8 space-y-4 md:space-y-0">

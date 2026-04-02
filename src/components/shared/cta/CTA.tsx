@@ -71,7 +71,7 @@ const CTA = ({
               ctaCheckListData={[
                 {
                   id: '1',
-                  text: '14-Day free trial',
+                  text: '30-Days free trial',
                 },
               ]}
               listTextClass={listTextClass}

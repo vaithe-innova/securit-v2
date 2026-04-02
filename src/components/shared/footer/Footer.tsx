@@ -25,9 +25,11 @@ const Footer = () => {
           <div className="col-span-12 md:col-span-6 xl:col-span-3">
             <RevealAnimation delay={0.3}>
               <div className="max-w-[306px]">
-                <figure>
-                  <Image src={darkLogo} alt="Securit Logo" width={175} height={32} />
-                </figure>
+                <Link href="/" className="inline-flex items-center">
+                  <figure>
+                    <Image src={darkLogo} alt="Securit Logo" width={175} height={32} />
+                  </figure>
+                </Link>
                 <p className="text-accent/60 text-tagline-1 mt-7 mb-7 font-normal">
                   Smart Safety for Every Worker. Real-time visibility and AI-powered insights to protect your workforce.
                 </p>
@@ -71,6 +73,7 @@ const Footer = () => {
                       <li key={link.label}>
                         <Link
                           href={link.href}
+                          target={link.target}
                           className="text-tagline-2 text-primary-50/70 hover:text-primary-50 font-normal transition-colors duration-200"
                         >  {link.label}
                         </Link>

@@ -71,10 +71,6 @@ const CTA = ({
               ctaCheckListData={[
                 {
                   id: '1',
-                  text: 'No credit card required',
-                },
-                {
-                  id: '2',
                   text: '14-Day free trial',
                 },
               ]}

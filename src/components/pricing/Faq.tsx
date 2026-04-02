@@ -19,7 +19,7 @@ const Faq = () => {
                 <span className="uppercase text-primary-500 tracking-[2px] sm:tracking-[3px] text-xs sm:text-sm">FAQ</span>
               </RevealAnimation>
               <RevealAnimation delay={0.3}>
-                <h2 className="mx-auto lg:mx-0 lg:max-w-[439px]" id="faq-heading">
+                <h2 className="mx-auto lg:mx-0 lg:max-w-[439px] text-primary-700 fw-700" id="faq-heading">
                   Common inquiries from clients
                 </h2>
               </RevealAnimation>

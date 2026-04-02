@@ -50,7 +50,7 @@ export const footerData: FooterOneData[] = [
   },
   {
     links: [
-      { label: 'About Us', href: '' },
+      { label: 'About Us', href: 'https://www.innovasolutions.com', target: '_blank' },
       { label: 'Pricing', href: '/pricing' },
       { label: 'Contact Us', href: '/contact-us' },
       { label: 'FAQs', href: '' },

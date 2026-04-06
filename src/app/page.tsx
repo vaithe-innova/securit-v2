@@ -1,7 +1,7 @@
 import Hero from '@/components/home/Hero';
 import Counter from '@/components/home/Counter';
 // import Approaches from '@/components/home/Approaches';
-import Feature from '@/components/home/Feature';
+import Platform from '@/components/home/Platform';
 import Industries from '@/components/home/Industries';
 import WhatWeOffer from '@/components/home/WhatWeOffer';
 import DeploymentTimeline from '@/components/home/DeploymentTimeline';
@@ -22,7 +22,7 @@ const page = () => {
       <div className="dark">
         <WhatWeOffer />
       </div>
-      <Feature />
+      <Platform />
       <Industries />
       <DeploymentTimeline />
       <ContactInfo />

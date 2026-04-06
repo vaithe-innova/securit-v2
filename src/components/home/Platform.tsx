@@ -9,93 +9,102 @@ import RevealAnimation from '../animation/RevealAnimation';
 import { CheckIconCircle } from '@/icons';
 
 // Feature list
-const featureList = [
-  {
-    id: 1,
-    text: 'AI-driven operational intelligence',
-  },
-  {
-    id: 2,
-    text: 'Anomaly detection',
-  },
-  {
-    id: 3,
-    text: 'Threshold alerts from live sensor data',
-  }
-];
-const featureList2 = [
-  {
-    id: 1,
-    text: 'Real-time location tracking',
-  },
-  {
-    id: 2,
-    text: 'SOS emergency button',
-  },
-  {
-    id: 3,
-    text: 'Fall detection',
-  },
-];
-const featureList3 = [
-  {
-    id: 1,
-    text: 'Environmental condition monitoring',
-  },
-  {
-    id: 5,
-    text: 'Threshold alerts from live sensor data',
-  },
-];
-const featureList4 = [
-  {
-    id: 1,
-    text: 'Centralized dashboard to manage all workers',
-  },
-  {
-    id: 2,
-    text: 'Admin console for incident and ticket management',
-  },
-  {
-    id: 3,
-    text: 'Traffic prioritization and policy control',
-  },
-  {
-    id: 4,
-    text: 'Automated compliance and records capture',
-  },
-];
-const featureList5 = [
-  {
-    id: 1,
-    text: 'Mobile applications',
-  },
-  {
-    id: 2,
-    text: 'Geofencing',
-  },
-  {
-    id: 3,
-    text: 'SOS-triggered workflows and escalation',
-  },
-];
+const intelligenceList = {
+  title: '🧠 Intelligence',
+  description: 'AI turns operational data into actionable safety insights.',
+  list: [
+    {
+      id: 1,
+      text: 'AI-powered operational intelligence',
+    },
+    {
+      id: 2,
+      text: 'Anomaly detection',
+    },
+    {
+      id: 3,
+      text: 'Live sensor threshold alerts',
+    }
+  ]
+};
+const signalList = {
+  title: '📡 Signal',
+  description: 'Real-time inputs from workers, devices, & environmental conditions.',
+  list: [
+    {
+      id: 1,
+      text: 'Mobile safety applications',
+    },
+    {
+      id: 2,
+      text: 'SOS emergency button',
+    },
+    {
+      id: 3,
+      text: 'Fall detection',
+    },
+    {
+      id: 4,
+      text: 'Environmental monitoring',
+    }
+  ]
+};
 
-const Feature = () => {
+const controlList = {
+  title: '🖥 Control',
+  description: 'Centralized management for teams, assets, and safety workflows.',
+  list: [
+    {
+      id: 1,
+      text: 'Workforce visibility dashboard',
+    },
+    {
+      id: 2,
+      text: 'Incident management',
+    },
+    {
+      id: 3,
+      text: 'Policy enforcement',
+    },
+    {
+      id: 4,
+      text: 'Automated compliance tracking',
+    },
+  ]
+}
+const actionList = {
+  title: '🚨 Action',
+  description: 'Field-ready tools for fast and coordinated response.',
+  list: [
+    {
+      id: 1,
+      text: 'Mobile applications',
+    },
+    {
+      id: 2,
+      text: 'Geofencing alerts',
+    },
+    {
+      id: 3,
+      text: 'SOS-triggered workflows & escalation',
+    },
+  ]
+};
+
+const Platform = () => {
   return (
     <section className="bg-white pt-16 pb-16 md:pt-20 md:pb-20 lg:pt-[90px] lg:pb-[90px] xl:pt-[100px] xl:pb-[100px] dark:bg-black">
       <div className="main-container">
         <div className="mb-10 max-w-[750px] space-y-5 md:mb-[50px]">
           <RevealAnimation delay={0.2}>
-            <span className="uppercase text-primary-500 tracking-[2%] sm:tracking-[3%] !leading-4 text-xs sm:text-sm font-normal">Platform and Features</span>
+            <span className="uppercase text-primary-500 tracking-[2%] sm:tracking-[3%] !leading-4 text-xs sm:text-sm font-normal">Platform Capabilities</span>
           </RevealAnimation>
           <div>
             <RevealAnimation delay={0.3}>
-              <h2 className="mb-3 font-bold text-primary-700 text-[48px] leading-[52px]">A connected system for monitoring, detection, and response </h2>
+              <h2 className="mb-3 font-bold text-primary-700 text-[30px] leading-[34px]">One platform for safety visibility </h2>
             </RevealAnimation>
             <RevealAnimation delay={0.4}>
-              <p className="text-secondary max-w-[690px]">
-                Securit brings together devices, sensors, and workflows into a single platform that captures activity, processes it instantly, and drives coordinated action.
-              </p>
+              <p className="text-secondary text-[20px] !leading[26px] max-w-[690px]"> Connect devices, sensors, and workflows to monitor activity, detect risks, and respond faster. </p>
             </RevealAnimation>
           </div>
         </div>
@@ -108,7 +117,7 @@ const Feature = () => {
                 <div className='grid grid-cols-12 mb-3 space-y-3'>
                   <div className="col-span-12 md:col-span-6 lg:col-span-6">
                     <ul className="space-y-3">
-                      {featureList2.map((feature) => (
+                      {signalList.list.map((feature) => (
                         <li key={feature.id} className="flex gap-2 text-xs md:text-sm items-start">
                           <span className="">
                             <CheckIconCircle />
@@ -121,7 +130,7 @@ const Feature = () => {
                   </div>
                   <div className="col-span-12 md:col-span-6 lg:col-span-6">
                     <ul className="space-y-3">
-                      {featureList3.map((feature) => (
+                      {intelligenceList.list.map((feature) => (
                         <li key={feature.id} className="flex gap-2 text-xs md:text-sm items-start">
                           <span className="">
                             <CheckIconCircle />
@@ -148,7 +157,7 @@ const Feature = () => {
               <div className="space-y-2">
                 <h5 className="max-sm:text-heading-6 text-lg sm:text-xl md:text-[32px] text-ns-black font-bold mb-4">Processing Layer—turning data into intelligence </h5>
                 <ul className="space-y-3 mb-5 grid grid-cols-1 sm:grid-cols-3 justify-between">
-                  {featureList.map((feature) => (
+                  {intelligenceList.list.map((feature) => (
                     <li key={feature.id} className="flex gap-2 text-xs md:text-sm items-start">
                       <span className="">
                         <CheckIconCircle />
@@ -176,7 +185,7 @@ const Feature = () => {
               <div className="space-y-2">
                 <h5 className="max-sm:text-heading-6 text-lg sm:text-xl md:text-[32px] text-ns-black font-bold mb-4">Control Layer—coordinating operations </h5>
                 <ul className="mb-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 justify-between">
-                  {featureList4.map((feature) => (
+                  {controlList.list.map((feature) => (
                     <li key={feature.id} className="flex gap-2 text-xs md:text-sm items-start">
                       <span className="">
                         <CheckIconCircle />
@@ -204,7 +213,7 @@ const Feature = () => {
               <div className="space-y-2">
                 <h5 className="max-sm:text-heading-6 text-lg sm:text-xl md:text-[26px] text-ns-black font-bold mb-4">Field Layer—enabling action on the ground </h5>
                 <ul className="space-y-3 mb-3">
-                  {featureList5.map((feature) => (
+                  {actionList.list.map((feature) => (
                     <li key={feature.id} className="flex gap-2 text-xs md:text-sm items-start">
                       <span className="">
                         <CheckIconCircle />
@@ -230,4 +239,4 @@ const Feature = () => {
   );
 };
 
-export default Feature;
+export default Platform;

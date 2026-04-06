@@ -13,8 +13,8 @@ const OfferList = ({ offerData }: OfferListProps) => {
             <div className="main-container">
                 <div className="mb-[60px] space-y-6 text-center">
                     <RevealAnimation delay={0.2}>
-                        <div className="inline-flex items-center rounded-full bg-white px-5 py-2 text-primary-700 font-bold text-xs sm:text-sm">
-                            What We Offers
+                        <div className="mb-3 flex items-center w-fit mx-auto rounded-full bg-white py-[6px] px-[13px] border-[1px] border-[#B7D4FF]">
+                            <span className="text-xs sm:text-sm md:text-base font-normal bg-white text-primary-700">What We Offers</span>
                         </div>
                     </RevealAnimation>
                     <RevealAnimation delay={0.3}>

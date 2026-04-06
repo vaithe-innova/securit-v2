@@ -37,7 +37,7 @@ export const mobileMenuData: IMobileMenuGroup[] = [
   },
 ];
 
-export const footerData: FooterOneData[] = [
+export const insightsData: FooterOneData[] = [
   {
     links: [
       { label: 'Blogs', href: '' },
@@ -46,6 +46,8 @@ export const footerData: FooterOneData[] = [
       { label: 'Collaboration', href: '' },
     ],
   },
+];
+export const companyData: FooterOneData[] = [
   {
     links: [
       { label: 'About Us', href: '/about' },

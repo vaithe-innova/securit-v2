@@ -5,7 +5,7 @@ All the varaiables are added here
   /* =============== FONTS =============== */
   --font-roboto: 'Roboto', sans-serif;
   /* =============== COLORS =============== */
-  --color-primary-50: #f4f2fe;
+  --color-primary-50: #F9F9F9;
   --color-primary-100: #ece8ff;
   --color-primary-200: #dcd4ff;
   --color-primary-300: #c3b1ff;
@@ -17,7 +17,7 @@ All the varaiables are added here
   --color-primary-900: #000000;
   --color-secondary: #202020;
   --color-accent: #fcfcfc;
-  --color-split-text: #202020;
+  --color-yellow: #FCED20;
   --color-background-1: #fcfcfd;
   --color-background-2: #f9fafb;
   --color-background-3: #f4f5f8;
@@ -31,6 +31,8 @@ All the varaiables are added here
   --color-background-11: #b5b5b9;
   --color-background-12: #eaeceb;
   --color-background-13: #FAFAFA;
+  --color-background-primary: #FFFFFF;
+  --color-background-secondary: #E6F3FF;
   --color-stroke-1: #dfe4eb;
   --color-stroke-2: #e3e7ed;
   --color-stroke-3: #d7dde5;

@@ -7,7 +7,7 @@ import youtube from '@public/images/icons/youtube.svg';
 import darkLogo from '@public/images/shared/logo-dark.svg';
 import Image from 'next/image';
 import Link from 'next/link';
-import { footerData } from '../navbar/data';
+import { insightsData, } from '../navbar/data';
 import FooterDivider from './FooterDivider';
 
 const legalLinks = [
@@ -62,7 +62,7 @@ const Footer = () => {
               </div>
             </RevealAnimation>
           </div>
-          {footerData?.map((item: FooterOneData, index: number) => (
+          {insightsData?.map((item: FooterOneData, index: number) => (
             <div key={index} className="col-span-12 md:col-span-6 xl:col-span-3">
               <RevealAnimation delay={0.4 + 0.1 * index}>
                 <div className="space-y-4">
@@ -85,21 +85,15 @@ const Footer = () => {
           <div className="col-span-12 md:col-span-6 xl:col-span-3">
             <RevealAnimation delay={0.6}>
               <div className="max-w-[390px] space-y-6">
-                <h4 className="text-tagline-1 font-bold text-white">General Inquiries</h4>
-                <p className="text-accent/80 text-tagline-1 font-normal">
+                <h4 className="text-[18px] !leading[20px] text-yellow">General Inquiries</h4>
+                <p className="text-primary-50">
                   Have a question or want to learn more? Reach out and we&apos;ll connect you with the right person.
                 </p>
                 <div className="space-y-3">
-                  <p className="text-tagline-1 text-white">
-                    <span className="font-bold mr-1">Email:</span>
-                    <a href="mailto:info@securit.com" className="text-accent/80 transition-colors duration-200 hover:text-white">
+                  <p className="text-[14px] !leading-[18px] text-white">
+                    <span className="text-primary-50 mr-1">Email:</span>
+                    <a href="mailto:info@securit.com" className="text-primary-50 transition-colors duration-200 hover:text-accent/80">
                       info@securit.com
-                    </a>
-                  </p>
-                  <p className="text-tagline-1 text-white">
-                    <span className="font-bold mr-1">Phone:</span>
-                    <a href="tel:+919712342323" className="text-accent/80 transition-colors duration-200 hover:text-white">
-                      +91 97123 42323
                     </a>
                   </p>
                 </div>

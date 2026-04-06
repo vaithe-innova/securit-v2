@@ -92,6 +92,7 @@ export interface IOffer {
   description: string;
   slug: string;
   content: string;
+  svgIcon: string;
   [key: string]: unknown;
 }
 

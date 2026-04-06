@@ -1,9 +1,9 @@
 import Hero from '@/components/home/Hero';
 import Counter from '@/components/home/Counter';
-import Approaches from '@/components/home/Approaches';
+// import Approaches from '@/components/home/Approaches';
 import Feature from '@/components/home/Feature';
 import Industries from '@/components/home/Industries';
-import AiIntelligence from '@/components/home/AiIntelligence';
+import WhatWeOffer from '@/components/home/WhatWeOffer';
 import DeploymentTimeline from '@/components/home/DeploymentTimeline';
 import ContactInfo from '@/components/home/ContactInfo';
 import { defaultMetadata } from '@/utils/generateMetaData';
@@ -20,11 +20,10 @@ const page = () => {
       <Hero />
       <Counter />
       <div className="dark">
-        <Approaches />
+        <WhatWeOffer />
       </div>
       <Feature />
       <Industries />
-      <AiIntelligence />
       <DeploymentTimeline />
       <ContactInfo />
     </main>

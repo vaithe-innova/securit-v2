@@ -85,7 +85,7 @@ export interface IApproach {
   [key: string]: unknown;
 }
 
-export interface IIntelligence {
+export interface IOffer {
   id: string;
   title: string;
   icon: string;

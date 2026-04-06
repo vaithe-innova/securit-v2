@@ -110,7 +110,7 @@ const Navbar = () => {
               </nav>
               <div className="hidden items-center justify-center lg:flex">
                 <Link href="/#contact" className="btn btn-md btn-primary hover:btn-white-dark dark:hover:btn-white mr-4 font-bold">
-                  <span>Get a Demo</span>
+                  <span>Schedule a Demo</span>
                 </Link>
                 <Link href="" className="btn btn-md btn-outline-primary hover:btn-white-dark dark:hover:btn-white font-bold text-primary-500">
                   <span>Login</span>

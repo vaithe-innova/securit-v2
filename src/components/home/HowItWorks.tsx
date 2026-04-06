@@ -51,9 +51,9 @@ const HowItWorks = () => {
   };
 
   return (
-    <section className="bg-white dark:bg-background-6 pt-16 pb-16 md:pt-20 md:pb-20 lg:pt-[90px] lg:pb-[90px]">
+    <section className="bg-white dark:bg-background-6 pt-16 pb-16 md:pt-20 md:pb-20 lg:pt-[90px] lg:pb-[90px]" id='video'>
       <div className="main-container">
-        
+
         {/* Headings */}
         <div className="mb-10 md:mb-14 space-y-4 text-center">
           <RevealAnimation delay={0.2}>
@@ -82,7 +82,7 @@ const HowItWorks = () => {
             className="relative mx-auto max-w-[1060px] w-full aspect-video rounded-[32px] overflow-hidden bg-[#0A1128] shadow-[0_20px_50px_rgba(0,0,0,0.1)] group cursor-pointer"
             onClick={togglePlay}
           >
-            
+
             {/* Real Dummy Video Element behind the play button */}
             <video
               ref={videoRef}

@@ -58,8 +58,10 @@ const Hero = () => {
                   <LinkButton
                     href="#video"
                     insideSpan={false}
-                    className="btn btn-md btn-outline-primary px-4 py-2 !leading-[24px] sm:!leading-[24px] md:!leading-[28px] lg:!leading-[32px] text-sm sm:text-base font-bold w-full sm:w-[170px] md:w-[210px] lg:w-[234px] sm:h-10 md:h-11 lg:h-12 shadow-sm">
-
+                    className="btn btn-md flex justify-center items-center gap-3 btn-outline-primary px-4 py-2 !leading-[24px] sm:!leading-[24px] md:!leading-[28px] lg:!leading-[32px] text-sm sm:text-base font-bold w-full sm:w-[170px] md:w-[210px] lg:w-[234px] sm:h-10 md:h-11 lg:h-12 border-[#0070CE] text-[#0070CE]">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path clip="evenodd" d="M4.40321 2.09407C4.65178 1.95923 4.95462 1.97001 5.19284 2.12217L19.6445 11.3529C19.866 11.4945 20 11.7383 20 12C20 12.2617 19.866 12.5055 19.6445 12.6471L5.19284 21.8778C4.95462 22.03 4.65178 22.0408 4.40321 21.9059C4.15464 21.7711 4 21.5122 4 21.2308V2.76923C4 2.48784 4.15464 2.22891 4.40321 2.09407ZM5.54839 4.1782V19.8218L17.7941 12L5.54839 4.1782Z" fill="#0070CE" />
+                    </svg>
                     Watch a Video
                   </LinkButton>
                 </li>

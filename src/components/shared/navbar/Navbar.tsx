@@ -109,10 +109,10 @@ const Navbar = () => {
                 </ul>
               </nav>
               <div className="hidden items-center justify-center lg:flex">
-                <Link href="/#contact" className="btn btn-md btn-primary hover:btn-white-dark dark:hover:btn-white mr-4 font-bold">
+                <Link href="/#contact" className="btn btn-md-v3 btn-primary hover:btn-white-dark dark:hover:btn-white mr-4 font-bold">
                   <span>Schedule a Demo</span>
                 </Link>
-                <Link href="" className="btn btn-md btn-outline-primary hover:btn-white-dark dark:hover:btn-white font-bold text-primary-500">
+                <Link href="" className="btn btn-md-v3 btn-outline-primary hover:btn-white-dark dark:hover:btn-white font-bold text-primary-500">
                   <span>Login</span>
                 </Link>
               </div>

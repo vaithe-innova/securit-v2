@@ -39,6 +39,7 @@ export const mobileMenuData: IMobileMenuGroup[] = [
 
 export const insightsData: FooterOneData[] = [
   {
+    title: 'Insights',
     links: [
       { label: 'Blogs', href: '' },
       { label: 'Case Studies', href: '' },
@@ -49,6 +50,7 @@ export const insightsData: FooterOneData[] = [
 ];
 export const companyData: FooterOneData[] = [
   {
+    title: 'Company',
     links: [
       { label: 'About Us', href: '/about' },
       { label: 'Pricing', href: '/pricing' },

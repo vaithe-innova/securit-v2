@@ -22,7 +22,7 @@ const timelineSteps = [
     timeLabel: 'Day 1–3',
     title: 'Integration Setup',
     description:
-      'We connect to your existing systems—including cameras, sensors, and internal tools—so data begins flowing without replacing your infrastructure.',
+      'Connect to existing systems and sensors.',
     markerVariant: 'circle-blue-first' as const,
   },
   {
@@ -30,23 +30,22 @@ const timelineSteps = [
     timeLabel: 'Week 1',
     title: 'Configuration & Alignment',
     description:
-      'Zones, workflows, and alert rules are tailored to your environment, matching how your operation actually runs.',
-    markerVariant: 'circle-blue' as const,
+      'Customized zones, workflows, and alerts match operations.',
   },
   {
     id: 3,
     timeLabel: 'Week 1–2',
     title: 'Team Onboarding',
     description:
-      'Supervisors and frontline teams are introduced to the platform through focused, scenario-based training.',
+      'Train teams and supervisors quickly.',
     markerVariant: 'circle-blue' as const,
   },
   {
     id: 4,
     timeLabel: 'Go Live',
-    title: 'Within the First Week',
+    title: 'Go Live',
     description:
-      'Live tracking, alerts, and workflows are activated—supporting operations without interruption.',
+      'Start tracking and responding in real time.',
     markerVariant: 'circle-orange' as const,
   },
   {
@@ -54,7 +53,7 @@ const timelineSteps = [
     timeLabel: 'Weeks 2–4',
     title: 'Optimization',
     description:
-      'As data comes in, configurations are refined—improving alert accuracy, workflows, and overall system performance.',
+      'Continuously improve alerts and workflows.',
     markerVariant: 'diamond-orange' as const,
   },
 ];
@@ -196,26 +195,28 @@ const DeploymentTimeline = () => {
   return (
     <section
       ref={sectionRef}
-      className="bg-background-5 dark:bg-background-5 py-[80px] lg:py-[120px] xl:py-[150px]"
+      className="bg-background-secondary py-[80px] lg:py-[120px] xl:py-[150px]"
     >
       <div className="main-container">
         {/* ── Section header (uses existing RevealAnimation) ── */}
-        <div className="mb-[60px] lg:mb-[80px]">
-          <RevealAnimation delay={0.2}>
-            <span className="uppercase text-primary-500 tracking-[2%] sm:tracking-[3%] !leading-4 text-xs sm:text-sm font-normal">Deployment</span>
-          </RevealAnimation>
-          <RevealAnimation delay={0.15}>
-            <h2 className="text-accent mt-4 max-w-[1000px] fw-700 text-gradient leading-[110%]">
-              Up and running in days not months
-            </h2>
-          </RevealAnimation>
-          <RevealAnimation delay={0.25}>
-            <p className="text-[#ccc] mt-5 max-w-[650px] text-[15px] leading-relaxed">
-              Securit is designed to integrate quickly into existing operations—with most teams live
-              in days and fully optimized within the first few weeks.
-            </p>
-          </RevealAnimation>
+
+        <div className="sm:mb-0 grid grid-cols-12 md:space-y-0 xl:mb-1">
+          <div className="col-span-12 text-center">
+            <RevealAnimation delay={0.1}>
+              <div className="mb-3 flex items-center w-fit mx-auto rounded-full bg-white py-[6px] px-[13px] border-[1px] border-[#B7D4FF]">
+                <span className="text-xs sm:text-sm md:text-base font-normal text-primary-700">Easy Implementation</span>
+              </div>
+            </RevealAnimation>
+            <RevealAnimation delay={0.2}>
+              <h2 className='fw-700 text-primary-700 text-[30px] mb-1 !leading-[34px]'>Up and running in days, not months</h2>
+            </RevealAnimation>
+            <RevealAnimation delay={0.3}>
+              <p className="pt-0 max-w-[560px] mx-auto mb-3 !leading-[26px] text-secondary text-[20px] md:text-base">Securit integrates quickly with your existing systems, so teams can start using
+                it within days.</p>
+            </RevealAnimation>
+          </div>
         </div>
+
 
         {/* ── Desktop Timeline (md+) ── */}
         <div className="hidden md:block">
@@ -228,7 +229,7 @@ const DeploymentTimeline = () => {
                   ref={(el) => { if (el) { labelsRef.current[idx] = el; } }}
                   className="flex-1 text-center"
                 >
-                  <span className="text-[#ccc] text-sm leading-[20px] font-medium">{step.timeLabel}</span>
+                  <span className="text-primary-900 text-[16px] leading-[22px] font-medium">{step.timeLabel}</span>
                 </div>
               ))}
             </div>
@@ -265,10 +266,10 @@ const DeploymentTimeline = () => {
                   className="flex-1 px-3 first:pl-0 last:pr-0"
                 >
                   <div className="space-y-2 text-center">
-                    <h4 className="text-accent text-[15px] font-semibold leading-snug">
+                    <h4 className="text-primary-900 text-[16px] !leading-[22px] font-semibold">
                       {step.title}
                     </h4>
-                    <p className="text-[#ccc] text-[14px] leading-[20px]">
+                    <p className="text-secondary text-[16px] leading-[21px]">
                       {step.description}
                     </p>
                   </div>
@@ -314,11 +315,11 @@ const DeploymentTimeline = () => {
                   )}
                 </div>
                 <div className="pb-10 pt-2 flex-1">
-                  <span className="mb-1 block text-[12px] text-accent/60 font-medium uppercase tracking-wider">
+                  <span className="mb-1 block text-[12px] text-primary-900 font-medium">
                     {step.timeLabel}
                   </span>
-                  <h4 className="text-accent/70 mb-1.5 text-[16px] font-bold">{step.title}</h4>
-                  <p className="text-accent/50 text-[14px] leading-relaxed">{step.description}</p>
+                  <h4 className="text-primary-900 mb-1.5 text-[16px] font-bold">{step.title}</h4>
+                  <p className="text-secondary text-[14px] leading-relaxed">{step.description}</p>
                 </div>
               </div>
             </RevealAnimation>
@@ -328,29 +329,29 @@ const DeploymentTimeline = () => {
         <RevealAnimation delay={0.4}>
           <div className='flex flex-col mt-16 bg-white rounded-2xl'>
             <div className='flex text-center justify-center mt-10 px-[20px]'>
-              <h3 className='text-primary-700 fw-700 text-3xl lg:text-4xl'>Certified. Compliant. Secure.</h3>
+              <h3 className='text-primary-700 fw-700 text-[30px] !leading-[34px]'>Certified. Compliant. Secure.</h3>
             </div>
             <div className="flex flex-col max-md:gap-y-10 max-lg:gap-x-3 md:flex-row justify-around px-3 lg:px-[60px] py-14 pt-8">
               <div className="space-y-2 text-center">
-                <figure className='flex items-center justify-center'>
+                <figure className='flex items-center justify-center mb-6'>
                   <Image src={metImg} alt="secure" width={64} height={64} />
                 </figure>
-                <h5 className="fw-700 flex items-center justify-center"> OSHA Compliant </h5>
-                <p className="text-black/60 text-sm">Safety Standards Met</p>
+                <h5 className="fw-700 text-[16px] !leading-[22px] flex items-center justify-center"> OSHA Compliant </h5>
+                <p className="text-secondary text-[16px] !leading-[21px]">Safety Standards Met</p>
               </div>
               <div className="space-y-2 text-center">
-                <figure className='flex items-center justify-center'>
+                <figure className='flex items-center justify-center mb-6'>
                   <Image src={readyImg} alt="secure" width={64} height={64} />
                 </figure>
-                <h5 className="fw-700 flex items-center justify-center"> ISO 45001 Ready </h5>
-                <p className="text-black/60 text-sm">Occupational Health & Safety</p>
+                <h5 className="fw-700 text-[16px] !leading-[22px] flex items-center justify-center"> ISO 45001 Ready </h5>
+                <p className="text-secondary text-[16px] !leading-[21px]">Occupational Health & Safety</p>
               </div>
               <div className="space-y-2 text-center">
-                <figure className='flex items-center justify-center'>
+                <figure className='flex items-center justify-center mb-6'>
                   <Image src={secureImg} alt="secure" width={64} height={64} />
                 </figure>
-                <h5 className="fw-700 flex items-center justify-center"> GDPR/Privacy Secure </h5>
-                <p className="text-black/60 text-sm">Data Protection Certified</p>
+                <h5 className="fw-700 text-[16px] !leading-[22px] flex items-center justify-center"> GDPR/Privacy Secure </h5>
+                <p className="text-secondary text-[16px] !leading-[21px]">Data Protection Certified</p>
               </div>
             </div>
           </div>

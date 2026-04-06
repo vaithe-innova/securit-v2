@@ -31,30 +31,30 @@ const Footer = () => {
                   <Link
                     target="_blank"
                     href="https://www.linkedin.com/company/innova-solutions"
-                    className="flex size-10 items-center justify-center rounded-lg bg-[#111111] transition-transform duration-300 hover:-translate-y-1"
+                    className="flex h-[32px] w-[32px] items-center justify-center rounded-lg bg-[#1D293D] transition-transform duration-300 hover:-translate-y-1"
                   >
-                    <img src="/images/icons/linkedin.svg" alt="LinkedIn" className="w-5 h-5" />
+                    <img src="/images/icons/linkedin.svg" alt="LinkedIn" className="w-[12px] h-[12px]" />
                   </Link>
                   <Link
                     target="_blank"
                     href="https://www.twitter.com/innovasolutions"
-                    className="flex size-10 items-center justify-center rounded-lg bg-[#111111] transition-transform duration-300 hover:-translate-y-1"
+                    className="flex h-[32px] w-[32px] items-center justify-center rounded-lg bg-[#1D293D] transition-transform duration-300 hover:-translate-y-1"
                   >
-                    <img src="/images/icons/twitter.svg" alt="Twitter" className="w-5 h-5" />
+                    <img src="/images/icons/twitter.svg" alt="Twitter" className="w-[12px] h-[12px]" />
                   </Link>
                   <Link
                     target="_blank"
                     href="https://www.instagram.com/innovasolutions"
-                    className="flex size-10 items-center justify-center rounded-lg bg-[#111111] transition-transform duration-300 hover:-translate-y-1"
+                    className="flex h-[32px] w-[32px] items-center justify-center rounded-lg bg-[#1D293D] transition-transform duration-300 hover:-translate-y-1"
                   >
-                    <img src="/images/icons/instagram.svg" alt="Instagram" className="w-5 h-5" />
+                    <img src="/images/icons/instagram.svg" alt="Instagram" className="w-[12px] h-[12px]" />
                   </Link>
                   <Link
                     target="_blank"
                     href="https://facebook.com"
-                    className="flex size-10 items-center justify-center rounded-lg bg-[#111111] transition-transform duration-300 hover:-translate-y-1"
+                    className="flex h-[32px] w-[32px] items-center justify-center rounded-lg bg-[#1D293D] transition-transform duration-300 hover:-translate-y-1"
                   >
-                    <img src="/images/icons/facebook.svg" alt="Facebook" className="w-5 h-5" />
+                    <img src="/images/icons/facebook.svg" alt="Facebook" className="w-[12px] h-[12px]" />
                   </Link>
                 </div>
               </div>

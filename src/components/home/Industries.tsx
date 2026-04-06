@@ -4,10 +4,10 @@ import Image from 'next/image';
 import RevealAnimation from '../animation/RevealAnimation';
 
 import imgConstruction from '@public/images/construction.png';
-import imgManufacturing from '@public/images/ns-img-6.png'; 
+import imgManufacturing from '@public/images/ns-img-6.png';
 import imgOilGas from '@public/images/oil-gas-energy.png';
-import imgMining from '@public/images/remote.png'; 
-import imgLogistics from '@public/images/ns-img-5.png'; 
+import imgMining from '@public/images/remote.png';
+import imgLogistics from '@public/images/ns-img-5.png';
 
 const industries = [
   { id: 1, name: 'Construction', image: imgConstruction },
@@ -46,24 +46,24 @@ const Industries = () => {
 
         {/* Grid of Industries */}
         <RevealAnimation delay={0.5}>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 md:gap-5 w-full mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 md:gap-5 w-full mx-auto">
             {industries.map((industry) => (
-              <div 
-                key={industry.id} 
+              <div
+                key={industry.id}
                 className="flex flex-col group overflow-hidden bg-primary-700 dark:bg-background-5 w-full h-[280px] sm:h-[320px] md:h-[360px] lg:h-[400px] xl:h-[440px] cursor-pointer"
               >
                 {/* Image Section */}
                 <div className="relative w-full h-[76%] overflow-hidden bg-black/10">
-                  <Image 
-                    src={industry.image} 
-                    alt={industry.name} 
-                    fill 
+                  <Image
+                    src={industry.image}
+                    alt={industry.name}
+                    fill
                     className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
                   />
                   {/* Subtle overlay for better contrast */}
                   <div className="absolute inset-0 bg-primary-700/10 mix-blend-multiply transition-opacity duration-300 group-hover:opacity-0" />
                 </div>
-                
+
                 {/* Title Section */}
                 <div className="h-[24%] flex items-center justify-center p-3 text-center bg-primary-700">
                   <h3 className="text-white font-bold text-[15px] sm:text-base md:text-lg tracking-wide">

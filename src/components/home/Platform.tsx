@@ -6,7 +6,8 @@ import feature1 from '@public/images/ns-feature1.gif';
 
 // Feature list
 const intelligenceList = {
-  title: '🧠 Intelligence',
+  title: 'Intelligence',
+  titleIcon: '/images/icons/intelligence_icon.svg',
   description: 'AI turns operational data into actionable safety insights.',
   list: [
     {
@@ -25,7 +26,8 @@ const intelligenceList = {
 };
 
 const signalList = {
-  title: '📡 Signal',
+  title: 'Signal',
+  titleIcon: '/images/icons/satelite_icon.svg',
   description: 'Real-time inputs from workers, devices, & environmental conditions.',
   list: [
     {
@@ -48,7 +50,8 @@ const signalList = {
 };
 
 const controlList = {
-  title: '🖥 Control',
+  title: 'Control',
+  titleIcon: '/images/icons/control_icon.svg',
   description: 'Centralized platform to manage safety operations and incidents.',
   list: [
     {
@@ -71,7 +74,8 @@ const controlList = {
 };
 
 const actionList = {
-  title: '🚨 Action',
+  title: 'Action',
+  titleIcon: '/images/icons/action_icon.svg',
   description: 'Field-ready tools for fast and coordinated response.',
   list: [
     {
@@ -121,7 +125,7 @@ const Platform = () => {
             {/* Top Middle: Signal */}
             <div className="bg-white dark:bg-background-5 rounded-3xl p-6 md:p-8 shadow-sm">
               <h3 className="text-secondary font-semibold md:text-[25px] mb-3">
-                {signalList.title}
+                <img src={signalList.titleIcon} alt={signalList.title} className=' h-[21px] inline-block mr-2' /> {signalList.title}
               </h3>
               <p className="text-[#53575A] text-[16px] mb-6 !leading-[24px]">
                 {signalList.description}
@@ -143,7 +147,7 @@ const Platform = () => {
             {/* Top Right: Intelligence */}
             <div className="bg-white dark:bg-background-5 rounded-3xl p-6 md:p-8 shadow-sm">
               <h3 className="text-secondary font-semibold md:text-[25px] mb-3">
-                {intelligenceList.title}
+                <img src={intelligenceList.titleIcon} alt={intelligenceList.title} className=' h-[21px] inline-block mr-2' /> {intelligenceList.title}
               </h3>
               <p className="text-[#53575A] text-[16px] mb-6 !leading-[24px]">
                 {intelligenceList.description}
@@ -172,7 +176,7 @@ const Platform = () => {
             {/* Bottom Middle: Action */}
             <div className="bg-white dark:bg-background-5 rounded-3xl p-6 md:p-8 shadow-sm">
               <h3 className="text-secondary font-semibold md:text-[25px] mb-3">
-                {actionList.title}
+                <img src={actionList.titleIcon} alt={actionList.title} className=' h-[21px] inline-block mr-2' /> {actionList.title}
               </h3>
               <p className="text-[#53575A] text-[16px] mb-6 !leading-[24px]">
                 {actionList.description}
@@ -194,7 +198,7 @@ const Platform = () => {
             {/* Bottom Right: Control */}
             <div className="bg-white dark:bg-background-5 rounded-3xl p-6 md:p-8 shadow-sm">
               <h3 className="text-secondary font-semibold md:text-[25px] mb-3">
-                {controlList.title}
+                <img src={controlList.titleIcon} alt={controlList.title} className=' h-[21px] inline-block mr-2' />  {controlList.title}
               </h3>
               <p className="text-[#53575A] text-[16px] mb-6 !leading-[24px]">
                 {controlList.description}

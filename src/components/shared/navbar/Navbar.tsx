@@ -12,11 +12,11 @@ import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import MobileMenu from '../mobile-menu/MobileMenu';
 import MobileMenuButton from '../mobile-menu/MobileMenuButton';
-import ResourcesMenu from './ResourcesMenu';
+import CompanyMenu from './CompanyMenu';
 import { mobileMenuData } from './data';
 
 const dropdownNavItems = [
-  { label: 'Resources', dataMenu: 'resources-dropdown-menu', MenuComponent: ResourcesMenu },
+  { label: 'Company', dataMenu: 'company-dropdown-menu', MenuComponent: CompanyMenu },
 ];
 
 const Navbar = () => {
@@ -43,7 +43,7 @@ const Navbar = () => {
               'border-stroke-2 dark:border-stroke-6 bg-accent dark:bg-background-9 border-b-2 py-2.5 xl:py-1',
             )}>
             <div className='main-container  mx-auto flex items-center justify-between max-lg:justify-between'>
-              <div className="flex items-center justify-center">
+              <div className="flex items-center justify-center" onMouseEnter={() => handleMenuHover(null)}>
                 <Link href="/" className="inline-flex items-center">
                   <span className="sr-only">Home</span>
                   <figure className="lg:max-w-[198px]">
@@ -53,17 +53,38 @@ const Navbar = () => {
               </div>
               <nav className="hidden items-center lg:flex">
                 <ul className="flex items-center">
-                  <li className={cn("relative cursor-pointer py-2.5", pathname === "/" && "active")}>
+                  <li className={cn("relative cursor-pointer py-2.5", pathname === "/" && "active")} onMouseEnter={() => handleMenuHover(null)}>
                     <Link
                       href="/"
                       className=" text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">
                       <span>Home</span>
                     </Link>
                   </li>
+                  <li className={cn("relative cursor-pointer py-2.5", pathname === "#features" && "active")} onMouseEnter={() => handleMenuHover(null)}>
+                    <Link
+                      href="#features"
+                      className=" text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">
+                      <span>Features</span>
+                    </Link>
+                  </li>
+                  <li className={cn("relative cursor-pointer py-2.5", pathname === "#customers" && "active")} onMouseEnter={() => handleMenuHover(null)}>
+                    <Link
+                      href="#customers"
+                      className=" text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">
+                      <span>Customers</span>
+                    </Link>
+                  </li>
+                  <li className={cn("relative cursor-pointer py-2.5", pathname === "#blog" && "active")} onMouseEnter={() => handleMenuHover(null)}>
+                    <Link
+                      href="#blog"
+                      className=" text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">
+                      <span>Blog</span>
+                    </Link>
+                  </li>
                   {dropdownNavItems.map(({ label, dataMenu, MenuComponent }) => (
                     <li
                       key={label}
-                      className={cn("group relative cursor-pointer py-2.5", (menuDropdownId === dataMenu || pathname.startsWith('/resources')) && "active")}
+                      className={cn("group relative cursor-pointer py-2.5", (menuDropdownId === dataMenu || pathname.startsWith('/company')) && "active")}
                       data-menu={dataMenu}
                       onMouseEnter={() => handleMenuHover(dataMenu)}>
                       <button
@@ -85,36 +106,19 @@ const Navbar = () => {
                       <MenuComponent menuDropdownId={menuDropdownId} setMenuDropdownId={setMenuDropdownId} />
                     </li>
                   ))}
-                  <li className="relative cursor-pointer py-2.5">
+                  <li className={cn("relative cursor-pointer py-2.5", pathname === "#contact" && "active")} onMouseEnter={() => handleMenuHover(null)}>
                     <Link
-                      href="/about"
+                      href="#contact"
                       className=" text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">
-                      <span>Company</span>
-                    </Link>
-                  </li>
-                  <li className={cn("relative cursor-pointer py-2.5", pathname === "/pricing" && "active")}>
-                    <Link
-                      href="/pricing"
-                      className=" text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">
-                      <span>Pricing</span>
-                    </Link>
-                  </li>
-                  <li className={cn("relative cursor-pointer py-2.5", pathname === "/contact-us" && "active")}>
-                    <Link
-                      href="/contact-us"
-                      className=" text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">
-                      <span>Contact Us</span>
+                      <span>Contact</span>
                     </Link>
                   </li>
                 </ul>
               </nav>
-              <div className="hidden items-center justify-center lg:flex">
-                <Link href="/#contact" className="btn btn-md-v3 btn-primary hover:btn-white-dark dark:hover:btn-white mr-4 font-bold">
-                  <span>Schedule a Demo</span>
-                </Link>
-                {/* <Link href="" className="btn btn-md-v3 btn-outline-primary hover:btn-white-dark dark:hover:btn-white font-bold text-primary-500">
+              <div className="hidden items-center justify-center lg:flex" onMouseEnter={() => handleMenuHover(null)}>
+                <Link href="https://workersafety.innovasolutions.com/" target="_blank" className="btn btn-md-v3 btn-primary hover:btn-white-dark dark:hover:btn-white mr-4 font-bold">
                   <span>Login</span>
-                </Link> */}
+                </Link>
               </div>
 
               {/* mobile menu ham burger icon  */}

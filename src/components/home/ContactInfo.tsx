@@ -46,7 +46,7 @@ const ContactInfo = () => {
           <div className="mb-6 sm:mb-10 grid grid-cols-12 md:gap-8 space-y-4 md:space-y-0">
             <div className="col-span-12 md:col-span-6 lg:col-span-5 gap-2">
               <RevealAnimation delay={0.1}>
-                <h2 className="text-secondary-900 mt-2 text-[24px] lg:text-[30px] leading-[44px]">
+                <h2 className="text-secondary-900 text-[24px] lg:text-[30px] leading-[44px]">
                   Ready to Innovate with Us?
                 </h2>
               </RevealAnimation>

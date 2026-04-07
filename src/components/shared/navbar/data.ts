@@ -8,6 +8,24 @@ export const mobileMenuData: IMobileMenuGroup[] = [
     href: '/',
   },
   {
+    id: 'features',
+    title: 'Features',
+    submenu: [],
+    href: '#features',
+  },
+  {
+    id: 'customers',
+    title: 'Customers',
+    submenu: [],
+    href: '#customers',
+  },
+  {
+    id: 'blog',
+    title: 'Blog',
+    submenu: [],
+    href: '#blog',
+  },
+  {
     id: 'resources',
     title: 'Resources',
     href: undefined,
@@ -20,14 +38,11 @@ export const mobileMenuData: IMobileMenuGroup[] = [
   {
     id: 'company',
     title: 'Company',
-    submenu: [],
-    href: '/about',
-  },
-  {
-    id: 'pricing',
-    title: 'Pricing',
-    submenu: [],
-    href: '/pricing',
+    href: undefined,
+    submenu: [
+      { id: 'about', label: 'About Us', href: '' },
+      { id: 'team', label: 'Our Team', href: '' },
+    ],
   },
   {
     id: 'contact-us',

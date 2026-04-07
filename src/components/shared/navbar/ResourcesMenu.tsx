@@ -1,5 +1,5 @@
 // crypto marketing resources menu
-import { BlogIcon, SuccessStoriesIcon, SupportIcon } from '@/icons/menu-icon';
+import { AboutIcon, TeamIcon } from '@/icons/menu-icon';
 import { cn } from '@/utils/cn';
 import { ReactNode } from 'react';
 import CompanyMenuItemLink from './CompanyMenuItemLink';
@@ -14,21 +14,15 @@ type ResourcesMenuItem = {
 const resourcesMenuItems: ResourcesMenuItem[] = [
   {
     href: '',
-    title: 'Blog',
+    title: 'About Us',
     description: 'Latest articles and insights',
-    icon: <BlogIcon />,
+    icon: <AboutIcon />,
   },
   {
     href: '',
-    title: 'Case Studies',
+    title: 'Our Team',
     description: 'Real-world examples of Securit in action',
-    icon: <SuccessStoriesIcon />,
-  },
-  {
-    href: '',
-    title: 'News and Events',
-    description: 'Stay updated with the latest news and events',
-    icon: <SupportIcon />,
+    icon: <TeamIcon />,
   },
 ];
 
@@ -40,12 +34,12 @@ const ResourcesMenu = ({
   setMenuDropdownId: (id: string | null) => void;
 }) => {
   return (
-    <div className={cn(menuDropdownId === 'resources-dropdown-menu' ? 'relative menu-triangle' : '')}>
+    <div className={cn('relative menu-triangle', menuDropdownId === 'resources-dropdown-menu' ? 'active' : '')}>
       <div
         className={cn(
-          'absolute left-1/2 z-40 h-3 w-full min-w-[320px] -translate-x-1/2 bg-transparent top-[15px]',
+          'absolute left-1/2 z-40 h-3 w-full min-w-[320px] -translate-x-1/2 bg-transparent top-[15px] transition-all duration-300 submenu-indicator',
           menuDropdownId === 'resources-dropdown-menu'
-            ? 'pointer-events-auto opacity-100 active-submenu'
+            ? 'pointer-events-auto opacity-100'
             : 'pointer-events-none opacity-0',
         )}
       />

@@ -4,8 +4,6 @@ import HoverBgTransform from '../hover-bg-transform';
 interface CompanyMenuItemLinkProps {
   href: string;
   title: string;
-  description: string;
-  icon: React.ReactNode;
   showDivider: boolean;
   setMenuDropdownId: (id: string | null) => void;
 }

@@ -5,6 +5,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import ReCAPTCHA from 'react-google-recaptcha';
 import RevealAnimation from '../animation/RevealAnimation';
+import facebookIcon from '@public/images/icons/facebook.svg';
+import instagramIcon from '@public/images/icons/instagram.svg';
+import linkedinIcon from '@public/images/icons/linkedin.svg';
+import twitterIcon from '@public/images/icons/twitter.svg';
 
 const countries = [
   { name: 'United States', code: '+1', iso: 'us' },
@@ -63,19 +67,19 @@ const ContactInfo = () => {
                   <div className="flex items-center gap-3">
                     {/* LinkedIn */}
                     <Link href="https://linkedin.com" target="_blank" className="w-[42px] h-[42px] bg-[#0077b5] rounded-[12px] flex items-center justify-center transition-transform hover:-translate-y-1">
-                      <img src="/images/icons/new-linkedin.svg" alt="LinkedIn" />
+                      <img src={linkedinIcon} alt="LinkedIn" />
                     </Link>
                     {/* Facebook */}
                     <Link href="https://facebook.com" target="_blank" className="w-[42px] h-[42px] bg-[#3b5998] rounded-[12px] flex items-center justify-center transition-transform hover:-translate-y-1">
-                      <img src="/images/icons/new-facebook.svg" alt="Facebook" />
+                      <img src={facebookIcon} alt="Facebook" />
                     </Link>
                     {/* X (Twitter) */}
                     <Link href="https://x.com" target="_blank" className="w-[42px] h-[42px] bg-black rounded-[12px] flex items-center justify-center transition-transform hover:-translate-y-1">
-                      <img src="/images/icons/new-twitter.svg" alt="Twitter" />
+                      <img src={twitterIcon} alt="Twitter" />
                     </Link>
                     {/* Instagram */}
                     <Link href="https://instagram.com" target="_blank" className="w-[42px] h-[42px] bg-[#e4405f] rounded-[12px] flex items-center justify-center transition-transform hover:-translate-y-1">
-                      <img src="/images/icons/new-instagram.svg" alt="Instagram" />
+                      <img src={instagramIcon} alt="Instagram" />
                     </Link>
                   </div>
                 </div>

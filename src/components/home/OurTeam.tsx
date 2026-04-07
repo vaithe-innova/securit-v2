@@ -2,31 +2,34 @@
 
 import Image from 'next/image';
 import RevealAnimation from '../animation/RevealAnimation';
+import team1 from '@public/images/team/Rajendra-Raj-Sadhu.jpg';
+import placeholder from '@public/images/team/placeholder.jpg';
+
 
 const teamMembers = [
   {
     id: 1,
     name: 'Rajendra (Raj) Sadhu',
     role: 'Senior Vice President, Hi-Tech SBU',
-    image: '/images/team/Rajendra-Raj-Sadhu.jpg',
+    image: team1
   },
   {
     id: 2,
     name: 'Pradeep Karki',
     role: 'Associate Vice President',
-    image: '/images/team/placeholder.jpg',
+    image: placeholder,
   },
   {
     id: 3,
     name: 'Sanchit Sharma',
     role: 'Deputy Manager - Support',
-    image: '/images/team/placeholder.jpg',
+    image: placeholder,
   },
   {
     id: 4,
     name: 'Name',
     role: 'Designation',
-    image: '/images/team/placeholder.jpg',
+    image: placeholder,
   },
 ];
 

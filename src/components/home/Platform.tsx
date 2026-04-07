@@ -3,11 +3,15 @@
 import RevealAnimation from '../animation/RevealAnimation';
 import { TickIcon } from '@/icons';
 import feature1 from '@public/images/Inbound.gif';
+import intelligenceIcon from '@public/images/icons/intelligence_icon.svg';
+import signalIcon from '@public/images/icons/signal_icon.svg';
+import controlIcon from '@public/images/icons/control_icon.svg';
+import actionIcon from '@public/images/icons/action_icon.svg';
 
 // Feature list
 const intelligenceList = {
   title: 'Intelligence',
-  titleIcon: '/images/icons/intelligence_icon.svg',
+  titleIcon: intelligenceIcon,
   description: 'AI turns operational data into actionable safety insights.',
   list: [
     {
@@ -27,7 +31,7 @@ const intelligenceList = {
 
 const signalList = {
   title: 'Signal',
-  titleIcon: '/images/icons/signal_icon.svg',
+  titleIcon: signalIcon,
   description: 'Real-time inputs from workers, devices, & environmental conditions.',
   list: [
     {
@@ -51,7 +55,7 @@ const signalList = {
 
 const controlList = {
   title: 'Control',
-  titleIcon: '/images/icons/control_icon.svg',
+  titleIcon: controlIcon,
   description: 'Centralized platform to manage safety operations and incidents.',
   list: [
     {
@@ -75,7 +79,7 @@ const controlList = {
 
 const actionList = {
   title: 'Action',
-  titleIcon: '/images/icons/action_icon.svg',
+  titleIcon: actionIcon,
   description: 'Field-ready tools for fast and coordinated response.',
   list: [
     {

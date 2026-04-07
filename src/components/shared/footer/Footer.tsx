@@ -7,6 +7,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { insightsData, companyData } from '../navbar/data';
 import FooterDivider from './FooterDivider';
+import facebookIcon from '@public/images/icons/facebook.svg';
+import instagramIcon from '@public/images/icons/instagram.svg';
+import linkedinIcon from '@public/images/icons/linkedin.svg';
+import twitterIcon from '@public/images/icons/twitter.svg';
 
 const legalLinks = [
   { label: 'Privacy Policy', href: '/' },
@@ -33,28 +37,28 @@ const Footer = () => {
                     href="https://www.linkedin.com/company/innova-solutions"
                     className="flex h-[32px] w-[32px] items-center justify-center rounded-lg bg-[#1D293D] transition-transform duration-300 hover:-translate-y-1"
                   >
-                    <img src="/images/icons/linkedin.svg" alt="LinkedIn" className="w-[12px] h-[12px]" />
+                    <img src={linkedinIcon} alt="LinkedIn" className="w-[12px] h-[12px]" />
                   </Link>
                   <Link
                     target="_blank"
                     href="https://www.twitter.com/innovasolutions"
                     className="flex h-[32px] w-[32px] items-center justify-center rounded-lg bg-[#1D293D] transition-transform duration-300 hover:-translate-y-1"
                   >
-                    <img src="/images/icons/twitter.svg" alt="Twitter" className="w-[12px] h-[12px]" />
+                    <img src={twitterIcon} alt="Twitter" className="w-[12px] h-[12px]" />
                   </Link>
                   <Link
                     target="_blank"
                     href="https://www.instagram.com/innovasolutions"
                     className="flex h-[32px] w-[32px] items-center justify-center rounded-lg bg-[#1D293D] transition-transform duration-300 hover:-translate-y-1"
                   >
-                    <img src="/images/icons/instagram.svg" alt="Instagram" className="w-[12px] h-[12px]" />
+                    <img src={instagramIcon} alt="Instagram" className="w-[12px] h-[12px]" />
                   </Link>
                   <Link
                     target="_blank"
                     href="https://facebook.com"
                     className="flex h-[32px] w-[32px] items-center justify-center rounded-lg bg-[#1D293D] transition-transform duration-300 hover:-translate-y-1"
                   >
-                    <img src="/images/icons/facebook.svg" alt="Facebook" className="w-[12px] h-[12px]" />
+                    <img src={facebookIcon} alt="Facebook" className="w-[12px] h-[12px]" />
                   </Link>
                 </div>
               </div>

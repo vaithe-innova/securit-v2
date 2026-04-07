@@ -2,7 +2,7 @@
 Default Body and Typography styles
 =========================== */
 body {
-  @apply font-roboto antialiased;
+  @apply font-poppins antialiased;
 }
 
 .text-gradient {
@@ -13,6 +13,12 @@ body {
 }
 .bg-gradient{
   background:#0070ce linear-gradient(#0070ce 0%, #e5f3ff70 100%);
+}
+.bg-gradient1{
+  background: linear-gradient(135deg, #2B7FFF 0%, #155DFC 100%);
+}
+.btn-remove:hover:before{
+  opacity: 0 !important;
 }
 
 .fw-700 {

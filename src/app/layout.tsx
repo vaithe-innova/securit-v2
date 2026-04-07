@@ -3,7 +3,7 @@ import { ThemeProvider } from '@/components/shared/ThemeProvider';
 import Footer from '@/components/shared/footer/Footer';
 import Navbar from '@/components/shared/navbar/Navbar';
 import { AppContextProvider } from '@/context/AppContext';
-import { roboto } from '@/utils/font';
+import { poppins } from '@/utils/font';
 import { generateMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
 import { ReactNode, Suspense } from 'react';
@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${roboto.variable} ${roboto.variable} antialiased`}>
+      <body className={`${poppins.variable} antialiased`}>
         <AppContextProvider>
           <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
             <Suspense>

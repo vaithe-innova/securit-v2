@@ -22,14 +22,14 @@ const TopNavMarquee = ({ fillClass, className }: TopNavButtonsProps) => {
           <div className="absolute right-0 top-0 h-full w-[15%] md:w-[20%] bg-gradient-to-l from-ns-yellow-light to-transparent dark:from-background-5 z-10" />
           <div className="flex items-center justify-center">
             <Marquee autoFill speed={40}>
-              <p className="text-secondary text-tagline-2 font-roboto font-normal leading-[150%] mr-2">
+              <p className="text-secondary text-tagline-2 font-normal leading-[150%] mr-2">
                 Introducing our AI-powered resume builder –
                 <Link href="#" className="underline hover:underline-offset-2 cursor-pointer">
                   discover now
                 </Link>{' '}
                 and upgrade your job search.
               </p>
-              <p className="text-secondary text-tagline-2 font-roboto font-normal leading-[150%]">
+              <p className="text-secondary text-tagline-2 font-normal leading-[150%]">
                 Try the latest templates for modern careers{' '}
                 <Link href="#" className="underline hover:underline-offset-2 cursor-pointer">
                   see details{' '}

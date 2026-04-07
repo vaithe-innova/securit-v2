@@ -1,7 +1,7 @@
 'use client';
 
 import RevealAnimation from '../animation/RevealAnimation';
-import { CheckIconCircle } from '@/icons';
+import { TickIcon } from '@/icons';
 import feature1 from '@public/images/Inbound.gif';
 
 // Feature list
@@ -27,7 +27,7 @@ const intelligenceList = {
 
 const signalList = {
   title: 'Signal',
-  titleIcon: '/images/icons/satelite_icon.svg',
+  titleIcon: '/images/icons/signal_icon.svg',
   description: 'Real-time inputs from workers, devices, & environmental conditions.',
   list: [
     {
@@ -123,9 +123,9 @@ const Platform = () => {
             </div>
 
             {/* Top Middle: Signal */}
-            <div className="bg-white dark:bg-background-5 rounded-3xl p-6 md:p-8 shadow-sm">
+            <div className="bg-white dark:bg-background-5 rounded-3xl p-6 md:p-8 shadow-sm border border-primary-500">
               <h3 className="text-secondary font-semibold md:text-[25px] mb-3">
-                <img src={signalList.titleIcon} alt={signalList.title} className=' h-[21px] inline-block mr-2' /> {signalList.title}
+                <img src={signalList.titleIcon} alt={signalList.title} className=' h-[32px] inline-block mr-2' /> {signalList.title}
               </h3>
               <p className="text-[#53575A] text-[16px] mb-6 !leading-[24px]">
                 {signalList.description}
@@ -134,7 +134,7 @@ const Platform = () => {
                 {signalList.list.map((feature) => (
                   <li key={feature.id} className="flex gap-3 items-start">
                     <span className="mt-[2px] text-primary-600">
-                      <CheckIconCircle />
+                      <TickIcon />
                     </span>
                     <span className="text-secondary text-[16px] !leading-[21px]">
                       {feature.text}
@@ -145,9 +145,9 @@ const Platform = () => {
             </div>
 
             {/* Top Right: Intelligence */}
-            <div className="bg-white dark:bg-background-5 rounded-3xl p-6 md:p-8 shadow-sm">
+            <div className="bg-white dark:bg-background-5 rounded-3xl p-6 md:p-8 shadow-sm border border-primary-500">
               <h3 className="text-secondary font-semibold md:text-[25px] mb-3">
-                <img src={intelligenceList.titleIcon} alt={intelligenceList.title} className=' h-[21px] inline-block mr-2' /> {intelligenceList.title}
+                <img src={intelligenceList.titleIcon} alt={intelligenceList.title} className=' h-[32px] inline-block mr-2' /> {intelligenceList.title}
               </h3>
               <p className="text-[#53575A] text-[16px] mb-6 !leading-[24px]">
                 {intelligenceList.description}
@@ -156,7 +156,7 @@ const Platform = () => {
                 {intelligenceList.list.map((feature) => (
                   <li key={feature.id} className="flex gap-3 items-start">
                     <span className="mt-[2px] text-primary-600">
-                      <CheckIconCircle />
+                      <TickIcon />
                     </span>
                     <span className="text-secondary text-[16px] !leading-[21px]">
                       {feature.text}
@@ -167,16 +167,16 @@ const Platform = () => {
             </div>
 
             {/* Bottom Left: Diagram */}
-            <div className="bg-white dark:bg-background-5 rounded-3xl shadow-sm flex items-center justify-center min-h-[300px]">
+            <div className="bg-white dark:bg-background-5 rounded-3xl shadow-sm flex items-center justify-center min-h-[300px] border border-primary-500">
               <div className="relative w-full">
-                <img src={feature1.src} alt="Platform" className="h-full object-contain" />
+                <img src={feature1.src} alt="Platform" className="h-full object-contain rounded-3xl" />
               </div>
             </div>
 
             {/* Bottom Middle: Action */}
-            <div className="bg-white dark:bg-background-5 rounded-3xl p-6 md:p-8 shadow-sm">
+            <div className="bg-white dark:bg-background-5 rounded-3xl p-6 md:p-8 shadow-sm border border-primary-500">
               <h3 className="text-secondary font-semibold md:text-[25px] mb-3">
-                <img src={actionList.titleIcon} alt={actionList.title} className=' h-[21px] inline-block mr-2' /> {actionList.title}
+                <img src={actionList.titleIcon} alt={actionList.title} className=' h-[32px] inline-block mr-2' /> {actionList.title}
               </h3>
               <p className="text-[#53575A] text-[16px] mb-6 !leading-[24px]">
                 {actionList.description}
@@ -185,7 +185,7 @@ const Platform = () => {
                 {actionList.list.map((feature) => (
                   <li key={feature.id} className="flex gap-3 items-start">
                     <span className="mt-[2px] text-primary-600">
-                      <CheckIconCircle />
+                      <TickIcon />
                     </span>
                     <span className="text-secondary text-[16px] !leading-[21px]">
                       {feature.text}
@@ -196,9 +196,9 @@ const Platform = () => {
             </div>
 
             {/* Bottom Right: Control */}
-            <div className="bg-white dark:bg-background-5 rounded-3xl p-6 md:p-8 shadow-sm">
+            <div className="bg-white dark:bg-background-5 rounded-3xl p-6 md:p-8 shadow-sm border border-primary-500">
               <h3 className="text-secondary font-semibold md:text-[25px] mb-3">
-                <img src={controlList.titleIcon} alt={controlList.title} className=' h-[21px] inline-block mr-2' />  {controlList.title}
+                <img src={controlList.titleIcon} alt={controlList.title} className=' h-[32px] inline-block mr-2' />  {controlList.title}
               </h3>
               <p className="text-[#53575A] text-[16px] mb-6 !leading-[24px]">
                 {controlList.description}
@@ -207,7 +207,7 @@ const Platform = () => {
                 {controlList.list.map((feature) => (
                   <li key={feature.id} className="flex gap-3 items-start">
                     <span className="mt-[2px] text-primary-600">
-                      <CheckIconCircle />
+                      <TickIcon />
                     </span>
                     <span className="text-secondary text-[16px] !leading-[21px]">
                       {feature.text}

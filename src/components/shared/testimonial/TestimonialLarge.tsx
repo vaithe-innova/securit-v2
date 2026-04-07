@@ -46,7 +46,7 @@ const TestimonialLarge = () => {
                   </svg>
                 </Link>
               </div>
-              <blockquote className="font-roboto text-tagline-1 text-secondary font-normal" cite="https://x.com/">
+              <blockquote className="text-tagline-1 text-secondary font-normal" cite="https://x.com/">
                 &quot;I was skeptical at first, but the results speak for themselves. I landed an interview at my top
                 company!&quot;
               </blockquote>
@@ -86,7 +86,7 @@ const TestimonialLarge = () => {
                   </svg>
                 </Link>
               </div>
-              <blockquote className="font-roboto text-tagline-1 text-secondary font-normal" cite="https://x.com/">
+              <blockquote className="text-tagline-1 text-secondary font-normal" cite="https://x.com/">
                 “The templates and AI suggestions made everything effortless. I finally have a resume that feels
                 professional.”
               </blockquote>
@@ -126,7 +126,7 @@ const TestimonialLarge = () => {
                   </svg>
                 </Link>
               </div>
-              <blockquote className="font-roboto text-tagline-1 text-secondary font-normal" cite="https://x.com/">
+              <blockquote className="text-tagline-1 text-secondary font-normal" cite="https://x.com/">
                 “The AI feedback was spot on. It fixed what I couldn’t see.”
               </blockquote>
             </div>
@@ -165,7 +165,7 @@ const TestimonialLarge = () => {
                   </svg>
                 </Link>
               </div>
-              <blockquote className="font-roboto text-tagline-1 text-secondary font-normal" cite="https://x.com/">
+              <blockquote className="text-tagline-1 text-secondary font-normal" cite="https://x.com/">
                 “NestSaaS turned my generic resume into a powerful tool. I received 3 interview calls within two weeks!”
               </blockquote>
             </div>
@@ -204,7 +204,7 @@ const TestimonialLarge = () => {
                   </svg>
                 </Link>
               </div>
-              <blockquote className="font-roboto text-tagline-1 text-secondary font-normal" cite="https://x.com/">
+              <blockquote className="text-tagline-1 text-secondary font-normal" cite="https://x.com/">
                 “The AI suggestions made everything effortless. I finally have a resume that feels professional.”
               </blockquote>
             </div>
@@ -243,7 +243,7 @@ const TestimonialLarge = () => {
                   </svg>
                 </Link>
               </div>
-              <blockquote className="font-roboto text-tagline-1 text-secondary font-normal" cite="https://x.com/">
+              <blockquote className="text-tagline-1 text-secondary font-normal" cite="https://x.com/">
                 “From job hunting chaos to clarity this tool saved me time and helped me land my dream job.”
               </blockquote>
             </div>

@@ -3,7 +3,8 @@ All the varaiables are added here
 =========================== */
 @theme {
   /* =============== FONTS =============== */
-  --font-roboto: 'Roboto', sans-serif;
+  /* --font-roboto: 'Roboto', sans-serif; */
+  --font-poppins: 'Poppins', sans-serif;
   /* =============== COLORS =============== */
   --color-primary-50: #F9F9F9;
   --color-primary-100: #ece8ff;

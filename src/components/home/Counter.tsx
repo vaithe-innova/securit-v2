@@ -11,7 +11,7 @@ const Counter = () => {
           <div className="col-span-12 text-center">
             <RevealAnimation delay={0.1}>
               <div className="mb-3 flex items-center w-fit mx-auto rounded-full bg-white py-[6px] px-[13px] border-[1px] border-[#B7D4FF]">
-                <span className="text-xs sm:text-sm md:text-base font-normal text-primary-700">Why This Matters</span>
+                <span className="text-xs sm:text-sm md:text-base font-normal text-primary-700">Why it Matters</span>
               </div>
             </RevealAnimation>
             <RevealAnimation delay={0.2}>
@@ -26,26 +26,28 @@ const Counter = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 mt-10 md:mt-16">
             <div className="px-4 md:px-8 lg:px-12 py-6 md:py-0 text-center md:text-left border-b md:border-b-0 border-[#E7E7E7]">
               <h3 className="text-primary-500 fw-700 flex justify-center md:justify-start text-[42px] lg:text-[48px] xl:text-[56px] !leading-tight">
-                <NumberAnimation number={374} speed={2000} interval={200} rooms={3} heightSpaceRatio={2} />M +
+                <NumberAnimation number={2.78} speed={2000} interval={200} rooms={3} heightSpaceRatio={2} />M +
               </h3>
               <p className="text-primary-900 text-sm md:text-base lg:text-lg font-medium !leading-tight mt-3">
-                Workplace injuries reported <br className="hidden lg:block" /> globally each year
+                Workers die each year from occupational accidents and work-related diseases 
               </p>
             </div>
             <div className="px-4 md:px-8 lg:px-12 py-6 md:py-0 text-center md:text-left border-b md:border-b-0 md:border-x border-[#E7E7E7]">
               <h3 className="text-primary-500 fw-700 flex justify-center md:justify-start text-[42px] lg:text-[48px] xl:text-[56px] !leading-tight">
-                $<NumberAnimation number={3} speed={2000} interval={200} rooms={1} heightSpaceRatio={2} />T +
+                $<NumberAnimation number={176.5} speed={2000} interval={200} rooms={1} heightSpaceRatio={2} />B +
               </h3>
               <p className="text-primary-900 text-sm md:text-base lg:text-lg font-medium !leading-tight mt-3">
-                Economic loss from workplace <br className="hidden lg:block" /> accidents and illnesses
+                Annual economic cost of workplace injuries and fatalities worldwide  
+                <br className="hidden lg:block" /> 
               </p>
             </div>
             <div className="px-4 md:px-8 lg:px-12 py-6 md:py-0 text-center md:text-left">
               <h3 className="text-primary-500 fw-700 flex justify-center md:justify-start text-[42px] lg:text-[48px] xl:text-[56px] !leading-tight">
-                <NumberAnimation number={65} speed={2000} interval={200} rooms={2} heightSpaceRatio={2} />%
+                <NumberAnimation number={400} speed={2000} interval={200} rooms={3} heightSpaceRatio={2} />% ROI
               </h3>
               <p className="text-primary-900 text-sm md:text-base lg:text-lg font-medium !leading-tight mt-3">
-                Organizations lack real-time <br className="hidden lg:block" /> visibility across their workforce
+                Average return for every dollar invested in workplace safety 
+                 {/* <br className="hidden lg:block" />  */}
               </p>
             </div>
           </div>

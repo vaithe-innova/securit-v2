@@ -193,7 +193,7 @@ const DeploymentTimeline = () => {
   return (
     <section
       ref={sectionRef}
-      className="bg-background-secondary py-[100px]"
+      className="bg-background-5 py-[80px]"
     >
       <div className="main-container">
         {/* ── Section header (uses existing RevealAnimation) ── */}
@@ -316,31 +316,31 @@ const DeploymentTimeline = () => {
         </div> */}
 
         <RevealAnimation delay={0.4}>
-          <div className='flex flex-col bg-white rounded-2xl'>
-            <div className='flex text-center justify-center mt-10 px-[20px]'>
-              <h3 className='text-primary-700 fw-700 text-[30px] !leading-[34px]'>Certified. Compliant. Secure.</h3>
+          <div className='flex flex-col'>
+            <div className='flex text-center justify-center'>
+              <h3 className='text-white fw-700 text-[26px] sm:text-[30px] !leading-[34px]'>Certified. Compliant. Secure.</h3>
             </div>
-            <div className="flex flex-col max-md:gap-y-10 max-lg:gap-x-3 md:flex-row justify-around px-3 lg:px-[60px] py-14 pt-8">
-              <div className="space-y-2 text-center">
-                <figure className='flex items-center justify-center mb-6'>
-                  <Image src={metImg} alt="secure" width={64} height={64} />
+            <div className="flex flex-col max-md:gap-y-10 max-lg:gap-x-3 md:flex-row justify-around px-3 lg:px-[60px] pt-6 sm:pt-8">
+              <div className="text-center flex flex-col justify-center items-center">
+                <figure className='flex items-center justify-center mb-4 sm:mb-5 bg-gradient1 w-16 h-16 rounded-[14px]'>
+                  <Image src={metImg} alt="secure" width={32} height={32} />
                 </figure>
-                <h5 className="fw-700 text-[16px] !leading-[22px] flex items-center justify-center"> OSHA Compliant </h5>
-                <p className="text-secondary text-[16px] !leading-[21px]">Safety Standards Met</p>
+                <h5 className="text-[18px] sm:text-[20px] font-semibold !leading-[28px] text-white"> OSHA Compliant </h5>
+                <p className="text-[#DBEAFE] text-sm sm:text-base !leading-6 sm:!leading-[26px]">Safety Standards Met</p>
               </div>
-              <div className="space-y-2 text-center">
-                <figure className='flex items-center justify-center mb-6'>
-                  <Image src={readyImg} alt="secure" width={64} height={64} />
+              <div className="text-center flex flex-col justify-center items-center">
+                <figure className='flex items-center justify-center mb-4 sm:mb-5 bg-gradient1 w-16 h-16 rounded-[14px]'>
+                  <Image src={readyImg} alt="secure" width={32} height={32} />
                 </figure>
-                <h5 className="fw-700 text-[16px] !leading-[22px] flex items-center justify-center"> ISO 45001 Ready </h5>
-                <p className="text-secondary text-[16px] !leading-[21px]">Occupational Health & Safety</p>
+                <h5 className="text-[18px] sm:text-[20px] font-semibold !leading-[28px] text-white"> ISO 45001 Ready </h5>
+                <p className="text-[#DBEAFE] text-sm sm:text-base !leading-6 sm:!leading-[26px]">Occupational Health & Safety</p>
               </div>
-              <div className="space-y-2 text-center">
-                <figure className='flex items-center justify-center mb-6'>
-                  <Image src={secureImg} alt="secure" width={64} height={64} />
+              <div className="text-center flex flex-col justify-center items-center">
+                <figure className='flex items-center justify-center mb-4 sm:mb-5 bg-gradient1 w-16 h-16 rounded-[14px]'>
+                  <Image src={secureImg} alt="secure" width={32} height={32} />
                 </figure>
-                <h5 className="fw-700 text-[16px] !leading-[22px] flex items-center justify-center"> GDPR/Privacy Secure </h5>
-                <p className="text-secondary text-[16px] !leading-[21px]">Data Protection Certified</p>
+                <h5 className="text-[18px] sm:text-[20px] font-semibold !leading-[28px] text-white"> GDPR/Privacy Secure </h5>
+                <p className="text-[#DBEAFE] text-sm sm:text-base !leading-6 sm:!leading-[26px]">Data Protection Certified</p>
               </div>
             </div>
           </div>

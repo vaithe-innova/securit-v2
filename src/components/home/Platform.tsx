@@ -2,7 +2,7 @@
 
 import RevealAnimation from '../animation/RevealAnimation';
 import { CheckIconCircle } from '@/icons';
-import feature1 from '@public/images/ns-feature1.gif';
+import feature1 from '@public/images/Inbound.gif';
 
 // Feature list
 const intelligenceList = {

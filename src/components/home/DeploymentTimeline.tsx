@@ -14,85 +14,83 @@ if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
 }
 
+// const timelineSteps = [
+//   {
+//     id: 1,
+//     timeLabel: 'Day 1–3',
+//     title: 'Integration Setup',
+//     description:
+//       'Connect to existing systems and sensors.',
+//     markerVariant: 'circle-blue-first' as const,
+//   },
+//   {
+//     id: 2,
+//     timeLabel: 'Week 1',
+//     title: 'Configuration & Alignment',
+//     description:
+//       'Customized zones, workflows, and alerts match operations.',
+//   },
+//   {
+//     id: 3,
+//     timeLabel: 'Week 1–2',
+//     title: 'Team Onboarding',
+//     description:
+//       'Train teams and supervisors quickly.',
+//     markerVariant: 'circle-blue' as const,
+//   },
+//   {
+//     id: 4,
+//     timeLabel: 'Go Live',
+//     title: 'Go Live',
+//     description:
+//       'Start tracking and responding in real time.',
+//     markerVariant: 'circle-orange' as const,
+//   },
+//   {
+//     id: 5,
+//     timeLabel: 'Weeks 2–4',
+//     title: 'Optimization',
+//     description:
+//       'Continuously improve alerts and workflows.',
+//     markerVariant: 'diamond-orange' as const,
+//   },
+// ];
 
+// const TimelineMarker = ({ variant }: { variant: (typeof timelineSteps)[0]['markerVariant'] }) => {
+//   if (variant === 'circle-blue-first') {
+//     return (
+//       <div className="relative flex items-center justify-center">
+//         <span className="relative flex h-[22px] w-[22px] items-center justify-center rounded-full bg-[#007bFF] shadow-[0_0_15px_rgba(0,123,255,0.5)]">
+//           <span className="h-[6px] w-[6px] rounded-full bg-white" />
+//         </span>
+//       </div>
+//     );
+//   }
 
-const timelineSteps = [
-  {
-    id: 1,
-    timeLabel: 'Day 1–3',
-    title: 'Integration Setup',
-    description:
-      'Connect to existing systems and sensors.',
-    markerVariant: 'circle-blue-first' as const,
-  },
-  {
-    id: 2,
-    timeLabel: 'Week 1',
-    title: 'Configuration & Alignment',
-    description:
-      'Customized zones, workflows, and alerts match operations.',
-  },
-  {
-    id: 3,
-    timeLabel: 'Week 1–2',
-    title: 'Team Onboarding',
-    description:
-      'Train teams and supervisors quickly.',
-    markerVariant: 'circle-blue' as const,
-  },
-  {
-    id: 4,
-    timeLabel: 'Go Live',
-    title: 'Go Live',
-    description:
-      'Start tracking and responding in real time.',
-    markerVariant: 'circle-orange' as const,
-  },
-  {
-    id: 5,
-    timeLabel: 'Weeks 2–4',
-    title: 'Optimization',
-    description:
-      'Continuously improve alerts and workflows.',
-    markerVariant: 'diamond-orange' as const,
-  },
-];
+//   if (variant === 'diamond-orange') {
+//     return (
+//       <div className="relative flex items-center justify-center">
+//         <span className="relative h-[17px] w-[17px] rotate-45 rounded-sm bg-[#e2501a] shadow-[0_0_12px_rgba(226,80,26,0.6)]" />
+//       </div>
+//     );
+//   }
 
-const TimelineMarker = ({ variant }: { variant: (typeof timelineSteps)[0]['markerVariant'] }) => {
-  if (variant === 'circle-blue-first') {
-    return (
-      <div className="relative flex items-center justify-center">
-        <span className="relative flex h-[22px] w-[22px] items-center justify-center rounded-full bg-[#007bFF] shadow-[0_0_15px_rgba(0,123,255,0.5)]">
-          <span className="h-[6px] w-[6px] rounded-full bg-white" />
-        </span>
-      </div>
-    );
-  }
-
-  if (variant === 'diamond-orange') {
-    return (
-      <div className="relative flex items-center justify-center">
-        <span className="relative h-[17px] w-[17px] rotate-45 rounded-sm bg-[#e2501a] shadow-[0_0_12px_rgba(226,80,26,0.6)]" />
-      </div>
-    );
-  }
-
-  const isOrange = variant === 'circle-orange';
-  return (
-    <div className="relative flex items-center justify-center">
-      <span
-        className={`absolute h-[22px] w-[22px] rounded-full border ${isOrange ? 'border-[#e2501a]/30 bg-[#e2501a]/15' : 'border-[#007bFF]/30 bg-[#007bFF]/15'
-          }`}
-      />
-      <span
-        className={`relative h-[6px] w-[6px] rounded-full ${isOrange
-          ? 'bg-[#e2501a] shadow-[0_0_10px_rgba(226,80,26,0.6)]'
-          : 'bg-[#007bFF] shadow-[0_0_10px_rgba(0,123,255,0.6)]'
-          }`}
-      />
-    </div>
-  );
-};
+//   const isOrange = variant === 'circle-orange';
+//   return (
+//     <div className="relative flex items-center justify-center">
+//       <span
+//         className={`absolute h-[22px] w-[22px] rounded-full border ${isOrange ? 'border-[#e2501a]/30 bg-[#e2501a]/15' : 'border-[#007bFF]/30 bg-[#007bFF]/15'
+//           }`}
+//       />
+//       <span
+//         className={`relative h-[6px] w-[6px] rounded-full ${isOrange
+//           ? 'bg-[#e2501a] shadow-[0_0_10px_rgba(226,80,26,0.6)]'
+//           : 'bg-[#007bFF] shadow-[0_0_10px_rgba(0,123,255,0.6)]'
+//           }`}
+//       />
+//     </div>
+//   );
+// };
 
 const DeploymentTimeline = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -195,12 +193,12 @@ const DeploymentTimeline = () => {
   return (
     <section
       ref={sectionRef}
-      className="bg-background-secondary py-[80px] lg:py-[120px] xl:py-[150px]"
+      className="bg-background-secondary py-[100px]"
     >
       <div className="main-container">
         {/* ── Section header (uses existing RevealAnimation) ── */}
 
-        <div className="sm:mb-0 grid grid-cols-12 md:space-y-0 xl:mb-1">
+        {/* <div className="sm:mb-0 grid grid-cols-12 md:space-y-0 xl:mb-1">
           <div className="col-span-12 text-center">
             <RevealAnimation delay={0.1}>
               <div className="mb-3 flex items-center w-fit mx-auto rounded-full bg-white py-[6px] px-[13px] border-[1px] border-[#B7D4FF]">
@@ -215,13 +213,12 @@ const DeploymentTimeline = () => {
                 it within days.</p>
             </RevealAnimation>
           </div>
-        </div>
+        </div> */}
 
 
         {/* ── Desktop Timeline (md+) ── */}
-        <div className="hidden md:block">
+        {/* <div className="hidden md:block">
           <div className="relative">
-            {/* Time labels row */}
             <div className="mb-6 flex items-end">
               {timelineSteps.map((step, idx) => (
                 <div
@@ -233,19 +230,14 @@ const DeploymentTimeline = () => {
                 </div>
               ))}
             </div>
-
-            {/* Track + markers row */}
             <div className="relative flex items-center">
-              {/* Dim background track */}
               <div className="absolute left-[10%] top-1/2 h-[2px] w-[80%] -translate-y-1/2 bg-white/10" />
-
-              {/* Animated progress track */}
               <div
                 ref={trackRef}
                 className="absolute left-[10%] top-1/2 h-[2px] w-[80%] -translate-y-1/2 bg-gradient-to-r from-[#007bFF] via-[#007bFF] to-[#e2501a]"
               />
 
-              {/* Markers */}
+          
               {timelineSteps.map((step, idx) => (
                 <div
                   key={step.id}
@@ -257,7 +249,7 @@ const DeploymentTimeline = () => {
               ))}
             </div>
 
-            {/* Content cards row */}
+           
             <div className="mt-6 flex">
               {timelineSteps.map((step, idx) => (
                 <div
@@ -277,9 +269,9 @@ const DeploymentTimeline = () => {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
 
-        <div className="relative flex flex-col gap-0 md:hidden">
+        {/* <div className="relative flex flex-col gap-0 md:hidden">
           {timelineSteps.map((step, idx) => (
             <RevealAnimation key={step.id} delay={0.1 + idx * 0.12}>
               <div className="relative flex gap-5 min-h-[120px]">
@@ -287,12 +279,9 @@ const DeploymentTimeline = () => {
                   <div className="relative z-10 flex h-10 items-center justify-center">
                     <TimelineMarker variant={step.markerVariant} />
                   </div>
-                  {/* Bottom Line Segment (connects current node to bottom of step) */}
                   {idx < timelineSteps.length - 1 && (
                     <div className="absolute left-1/2 -translate-x-1/2 top-5 bottom-0 w-[2px] pointer-events-none">
-                      {/* Background track snippet */}
                       <div className="absolute top-0 h-full w-full bg-white/10" />
-                      {/* Progress segment snippet */}
                       <div
                         className={`mobile-progress-segment absolute top-0 h-full w-full ${idx < 2 ? 'bg-[#007bFF]' : idx === 2 ? 'bg-gradient-to-b from-[#007bFF] to-[#e2501a]' : 'bg-[#e2501a]'
                           }`}
@@ -300,12 +289,12 @@ const DeploymentTimeline = () => {
                       />
                     </div>
                   )}
-                  {/* Top Line Segment (connects top of step to node center, for steps > 0) */}
+         
                   {idx > 0 && (
                     <div className="absolute left-1/2 -translate-x-1/2 top-0 h-5 w-[2px] pointer-events-none">
-                      {/* Background track snippet */}
+               
                       <div className="absolute top-0 h-full w-full bg-white/10" />
-                      {/* Progress segment snippet */}
+              
                       <div
                         className={`mobile-progress-segment absolute top-0 h-full w-full ${idx < 3 ? 'bg-[#007bFF]' : 'bg-[#e2501a]'
                           }`}
@@ -324,10 +313,10 @@ const DeploymentTimeline = () => {
               </div>
             </RevealAnimation>
           ))}
-        </div>
+        </div> */}
 
         <RevealAnimation delay={0.4}>
-          <div className='flex flex-col mt-16 bg-white rounded-2xl'>
+          <div className='flex flex-col bg-white rounded-2xl'>
             <div className='flex text-center justify-center mt-10 px-[20px]'>
               <h3 className='text-primary-700 fw-700 text-[30px] !leading-[34px]'>Certified. Compliant. Secure.</h3>
             </div>

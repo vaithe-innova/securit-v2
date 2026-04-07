@@ -90,7 +90,7 @@ const ContactInfo = () => {
               </RevealAnimation>
             </div>
             <div className="col-span-12 md:col-span-6 lg:col-span-7">
-              <div className="bg-white mx-auto w-full max-w-[847px] rounded-2xl p-6 md:p-10 lg:p-12">
+              <div className="bg-white mx-auto w-full max-w-[847px] rounded-2xl">
                 <RevealAnimation delay={0.2}>
                   <form className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
@@ -100,7 +100,7 @@ const ContactInfo = () => {
                           type="text"
                           placeholder="Name *"
                           required
-                          className="w-full h-[52px] px-4 rounded-lg border border-stroke-11 bg-white focus:outline-none focus:border-primary-500 placeholder:text-secondary-400 text-secondary-800"
+                          className="w-full h-[40px] px-4 rounded-lg border border-stroke-11 bg-white focus:outline-none focus:border-primary-500 placeholder:text-secondary-400 text-secondary-800"
                         />
                       </div>
                       {/* Work Email */}
@@ -109,7 +109,7 @@ const ContactInfo = () => {
                           type="email"
                           placeholder="Work Email *"
                           required
-                          className="w-full h-[52px] px-4 rounded-lg border border-stroke-11 bg-white focus:outline-none focus:border-primary-500 placeholder:text-secondary-400 text-secondary-800"
+                          className="w-full h-[40px] px-4 rounded-lg border border-stroke-11 bg-white focus:outline-none focus:border-primary-500 placeholder:text-secondary-400 text-secondary-800"
                         />
                       </div>
                       {/* Company */}
@@ -118,7 +118,7 @@ const ContactInfo = () => {
                           type="text"
                           placeholder="Company *"
                           required
-                          className="w-full h-[52px] px-4 rounded-lg border border-stroke-11 bg-white focus:outline-none focus:border-primary-500 placeholder:text-secondary-400 text-secondary-800"
+                          className="w-full h-[40px] px-4 rounded-lg border border-stroke-11 bg-white focus:outline-none focus:border-primary-500 placeholder:text-secondary-400 text-secondary-800"
                         />
                       </div>
                       {/* Job Title */}
@@ -127,7 +127,7 @@ const ContactInfo = () => {
                           type="text"
                           placeholder="Job Title *"
                           required
-                          className="w-full h-[52px] px-4 rounded-lg border border-stroke-11 bg-white focus:outline-none focus:border-primary-500 placeholder:text-secondary-400 text-secondary-800"
+                          className="w-full h-[40px] px-4 rounded-lg border border-stroke-11 bg-white focus:outline-none focus:border-primary-500 placeholder:text-secondary-400 text-secondary-800"
                         />
                       </div>
                       {/* Inquiry Type */}
@@ -135,7 +135,7 @@ const ContactInfo = () => {
                         <input
                           type="text"
                           placeholder="Inquiry Type"
-                          className="w-full h-[52px] px-4 rounded-lg border border-stroke-11 bg-white focus:outline-none focus:border-primary-500 placeholder:text-secondary-400 text-secondary-800"
+                          className="w-full h-[40px] px-4 rounded-lg border border-stroke-11 bg-white focus:outline-none focus:border-primary-500 placeholder:text-secondary-400 text-secondary-800"
                         />
                       </div>
                       {/* Phone */}

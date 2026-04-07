@@ -7,7 +7,7 @@ import { BlurOne, BlurTwo } from '@/icons';
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-[#E5F3FF] to-[#FFFFFF] pt-[100px] lg:pt-[150px] xl:pt-[152px]">
+    <section className="relative overflow-hidden bg-[#E5F3FF] pt-[100px] lg:pt-[150px] xl:pt-[152px]">
       {/* Background glowing effects to match prototype */}
       <span className="absolute left-[-65px] top-[-37px]">
         <BlurOne />
@@ -53,7 +53,7 @@ const Hero = () => {
                   </LinkButton>
                 </li>
               </RevealAnimation>
-              <RevealAnimation delay={0.5} direction="left" offset={50}>
+              {/* <RevealAnimation delay={0.5} direction="left" offset={50}>
                 <li className="w-full">
                   <LinkButton
                     href="#video"
@@ -65,7 +65,7 @@ const Hero = () => {
                     Watch a Video
                   </LinkButton>
                 </li>
-              </RevealAnimation>
+              </RevealAnimation> */}
             </ul>
           </div>
           <HeroPerspective />

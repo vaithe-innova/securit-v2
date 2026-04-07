@@ -11,7 +11,7 @@ const Counter = () => {
           <div className="col-span-12 text-center">
             <RevealAnimation delay={0.1}>
               <div className="mb-4 flex items-center w-fit mx-auto rounded-full bg-white py-[6px] px-[13px] border-[1px] border-[#0070CE]">
-                <span className="text-xs sm:text-sm md:text-base font-normal text-primary-700">Why it Matters</span>
+                <span className="text-xs sm:text-sm md:text-base font-normal text-primary-700">Why this Matters</span>
               </div>
             </RevealAnimation>
             <RevealAnimation delay={0.2}>

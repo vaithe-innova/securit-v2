@@ -123,20 +123,20 @@ const Platform = () => {
             </div>
 
             {/* Top Middle: Signal */}
-            <div className="bg-white dark:bg-background-5 rounded-3xl p-6 md:p-8 shadow-sm border border-primary-500">
-              <h3 className="text-secondary font-semibold md:text-[25px] mb-3">
-                <img src={signalList.titleIcon} alt={signalList.title} className=' h-[32px] inline-block mr-2' /> {signalList.title}
+            <div className="group bg-white dark:bg-background-5 rounded-3xl p-6 md:p-8 shadow-sm border border-primary-200 dark:border-primary-500/30 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_8px_32px_rgba(0,112,206,0.18)] hover:border-primary-500">
+              <h3 className="text-secondary font-semibold md:text-[25px] mb-3 flex items-center gap-2">
+                <img src={signalList.titleIcon} alt={signalList.title} className="h-[32px] inline-block transition-transform duration-300 group-hover:scale-110" /> {signalList.title}
               </h3>
               <p className="text-[#53575A] text-[16px] mb-6 !leading-[24px]">
                 {signalList.description}
               </p>
               <ul className="space-y-4">
                 {signalList.list.map((feature) => (
-                  <li key={feature.id} className="flex gap-3 items-start">
-                    <span className="mt-[2px] text-primary-600">
+                  <li key={feature.id} className="flex gap-3 items-start group/item">
+                    <span className="mt-[2px] text-primary-600 transition-transform duration-200 group-hover/item:scale-110">
                       <TickIcon />
                     </span>
-                    <span className="text-secondary text-[16px] !leading-[21px]">
+                    <span className="text-secondary text-[16px] !leading-[21px] transition-colors duration-200 group-hover/item:text-primary-700">
                       {feature.text}
                     </span>
                   </li>
@@ -145,20 +145,20 @@ const Platform = () => {
             </div>
 
             {/* Top Right: Intelligence */}
-            <div className="bg-white dark:bg-background-5 rounded-3xl p-6 md:p-8 shadow-sm border border-primary-500">
-              <h3 className="text-secondary font-semibold md:text-[25px] mb-3">
-                <img src={intelligenceList.titleIcon} alt={intelligenceList.title} className=' h-[32px] inline-block mr-2' /> {intelligenceList.title}
+            <div className="group bg-white dark:bg-background-5 rounded-3xl p-6 md:p-8 shadow-sm border border-primary-200 dark:border-primary-500/30 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_8px_32px_rgba(0,112,206,0.18)] hover:border-primary-500">
+              <h3 className="text-secondary font-semibold md:text-[25px] mb-3 flex items-center gap-2">
+                <img src={intelligenceList.titleIcon} alt={intelligenceList.title} className="h-[32px] inline-block transition-transform duration-300 group-hover:scale-110" /> {intelligenceList.title}
               </h3>
               <p className="text-[#53575A] text-[16px] mb-6 !leading-[24px]">
                 {intelligenceList.description}
               </p>
               <ul className="space-y-4">
                 {intelligenceList.list.map((feature) => (
-                  <li key={feature.id} className="flex gap-3 items-start">
-                    <span className="mt-[2px] text-primary-600">
+                  <li key={feature.id} className="flex gap-3 items-start group/item">
+                    <span className="mt-[2px] text-primary-600 transition-transform duration-200 group-hover/item:scale-110">
                       <TickIcon />
                     </span>
-                    <span className="text-secondary text-[16px] !leading-[21px]">
+                    <span className="text-secondary text-[16px] !leading-[21px] transition-colors duration-200 group-hover/item:text-primary-700">
                       {feature.text}
                     </span>
                   </li>
@@ -167,27 +167,29 @@ const Platform = () => {
             </div>
 
             {/* Bottom Left: Diagram */}
-            <div className="bg-white dark:bg-background-5 rounded-3xl shadow-sm flex items-center justify-center min-h-[300px] border border-primary-500">
-              <div className="relative w-full">
+            <div className="group bg-white dark:bg-background-5 rounded-3xl shadow-sm flex items-center justify-center min-h-[300px] border border-primary-200 dark:border-primary-500/30 overflow-hidden transition-all duration-300 hover:shadow-[0_8px_32px_rgba(0,112,206,0.18)] hover:border-primary-500">
+              <div className="relative w-full transition-transform duration-500 group-hover:scale-[1.02]">
                 <img src={feature1.src} alt="Platform" className="h-full object-contain rounded-3xl" />
               </div>
             </div>
 
+
+
             {/* Bottom Middle: Action */}
-            <div className="bg-white dark:bg-background-5 rounded-3xl p-6 md:p-8 shadow-sm border border-primary-500">
-              <h3 className="text-secondary font-semibold md:text-[25px] mb-3">
-                <img src={actionList.titleIcon} alt={actionList.title} className=' h-[32px] inline-block mr-2' /> {actionList.title}
+            <div className="group bg-white dark:bg-background-5 rounded-3xl p-6 md:p-8 shadow-sm border border-primary-200 dark:border-primary-500/30 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_8px_32px_rgba(0,112,206,0.18)] hover:border-primary-500">
+              <h3 className="text-secondary font-semibold md:text-[25px] mb-3 flex items-center gap-2">
+                <img src={actionList.titleIcon} alt={actionList.title} className="h-[32px] inline-block transition-transform duration-300 group-hover:scale-110" /> {actionList.title}
               </h3>
               <p className="text-[#53575A] text-[16px] mb-6 !leading-[24px]">
                 {actionList.description}
               </p>
               <ul className="space-y-4">
                 {actionList.list.map((feature) => (
-                  <li key={feature.id} className="flex gap-3 items-start">
-                    <span className="mt-[2px] text-primary-600">
+                  <li key={feature.id} className="flex gap-3 items-start group/item">
+                    <span className="mt-[2px] text-primary-600 transition-transform duration-200 group-hover/item:scale-110">
                       <TickIcon />
                     </span>
-                    <span className="text-secondary text-[16px] !leading-[21px]">
+                    <span className="text-secondary text-[16px] !leading-[21px] transition-colors duration-200 group-hover/item:text-primary-700">
                       {feature.text}
                     </span>
                   </li>
@@ -196,20 +198,20 @@ const Platform = () => {
             </div>
 
             {/* Bottom Right: Control */}
-            <div className="bg-white dark:bg-background-5 rounded-3xl p-6 md:p-8 shadow-sm border border-primary-500">
-              <h3 className="text-secondary font-semibold md:text-[25px] mb-3">
-                <img src={controlList.titleIcon} alt={controlList.title} className=' h-[32px] inline-block mr-2' />  {controlList.title}
+            <div className="group bg-white dark:bg-background-5 rounded-3xl p-6 md:p-8 shadow-sm border border-primary-200 dark:border-primary-500/30 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_8px_32px_rgba(0,112,206,0.18)] hover:border-primary-500">
+              <h3 className="text-secondary font-semibold md:text-[25px] mb-3 flex items-center gap-2">
+                <img src={controlList.titleIcon} alt={controlList.title} className="h-[32px] inline-block transition-transform duration-300 group-hover:scale-110" />  {controlList.title}
               </h3>
               <p className="text-[#53575A] text-[16px] mb-6 !leading-[24px]">
                 {controlList.description}
               </p>
               <ul className="space-y-4">
                 {controlList.list.map((feature) => (
-                  <li key={feature.id} className="flex gap-3 items-start">
-                    <span className="mt-[2px] text-primary-600">
+                  <li key={feature.id} className="flex gap-3 items-start group/item">
+                    <span className="mt-[2px] text-primary-600 transition-transform duration-200 group-hover/item:scale-110">
                       <TickIcon />
                     </span>
-                    <span className="text-secondary text-[16px] !leading-[21px]">
+                    <span className="text-secondary text-[16px] !leading-[21px] transition-colors duration-200 group-hover/item:text-primary-700">
                       {feature.text}
                     </span>
                   </li>

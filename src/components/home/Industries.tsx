@@ -126,7 +126,6 @@ const Industries = () => {
                   <div className="flip-card-back flex flex-col justify-between w-full h-full bg-gradient-to-br from-[#004AA9] to-[#0070CE] p-5 md:p-6 overflow-hidden">
                     {/* Top: icon + name */}
                     <div>
-                      <span className="text-4xl mb-3 block">{industry.icon}</span>
                       <h3 className="text-white font-bold text-[18px] md:text-[20px] leading-tight mb-1">
                         {industry.name}
                       </h3>
@@ -145,12 +144,6 @@ const Industries = () => {
                       ))}
                     </ul>
 
-                    {/* Bottom: hover cue */}
-                    <div className="mt-4 pt-3 border-t border-white/20">
-                      <span className="text-white/60 text-[11px] tracking-wider uppercase font-medium">
-                        Securit covers it
-                      </span>
-                    </div>
                   </div>
 
                 </div>

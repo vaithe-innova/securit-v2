@@ -37,7 +37,7 @@ const OurTeam = () => {
         {/* Heading */}
         <div className="mb-3 space-y-4 text-center">
           <RevealAnimation delay={0.2}>
-            <div className="inline-block border border-primary-200 dark:border-primary-500/30 rounded-full px-5 py-[6px] mb-3 bg-transparent">
+            <div className="inline-block border border-[#0070CE] dark:border-primary-500/30 rounded-full px-5 py-[6px] mb-3 bg-transparent">
               <span className="text-primary-700 dark:text-primary-400 text-sm sm:text-[15px] font-medium">
                 Our People
               </span>

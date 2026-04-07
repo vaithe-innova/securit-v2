@@ -17,9 +17,13 @@ body {
 .bg-gradient1{
   background: linear-gradient(135deg, #2B7FFF 0%, #155DFC 100%);
 }
+.carousel.carousel-slider {
+    padding-bottom: 35px !important;
+}
 .btn-remove:hover:before{
   opacity: 0 !important;
 }
+.carousel .control-dots .dot{box-shadow: none !important;background: #0070ce !important;}
 
 .fw-700 {
   font-weight: 700;

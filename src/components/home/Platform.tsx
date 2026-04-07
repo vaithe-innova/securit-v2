@@ -122,6 +122,15 @@ const Platform = () => {
               </RevealAnimation>
             </div>
 
+            
+
+            {/* Bottom Left: Diagram */}
+            <div className="bg-white dark:bg-background-5 rounded-3xl shadow-sm flex lg:hidden items-center justify-center min-h-[300px] border border-primary-500">
+              <div className="relative w-full">
+                <img src={feature1.src} alt="Platform" className="h-full object-contain rounded-3xl" />
+              </div>
+            </div>
+
             {/* Top Middle: Signal */}
             <div className="bg-white dark:bg-background-5 rounded-3xl p-6 md:p-8 shadow-sm border border-primary-500">
               <h3 className="text-secondary font-semibold md:text-[25px] mb-3">
@@ -152,6 +161,7 @@ const Platform = () => {
               <p className="text-[#53575A] text-[16px] mb-6 !leading-[24px]">
                 {intelligenceList.description}
               </p>
+              
               <ul className="space-y-4">
                 {intelligenceList.list.map((feature) => (
                   <li key={feature.id} className="flex gap-3 items-start">
@@ -166,8 +176,9 @@ const Platform = () => {
               </ul>
             </div>
 
+            
             {/* Bottom Left: Diagram */}
-            <div className="bg-white dark:bg-background-5 rounded-3xl shadow-sm flex items-center justify-center min-h-[300px] border border-primary-500">
+            <div className="bg-white dark:bg-background-5 rounded-3xl shadow-sm hidden lg:flex items-center justify-center min-h-[300px] border border-primary-500">
               <div className="relative w-full">
                 <img src={feature1.src} alt="Platform" className="h-full object-contain rounded-3xl" />
               </div>

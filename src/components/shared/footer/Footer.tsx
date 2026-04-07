@@ -91,11 +91,20 @@ const Footer = () => {
                 <p className="text-primary-50 text-[14px] !leading-[18px]">
                   Have a question or want to learn more? Reach out and we&apos;ll connect you with the right person.
                 </p>
-                <div className="space-y-3">
+                <div className="space-y-1">
                   <p className="text-[14px] !leading-[18px] text-white">
                     <span className="text-primary-50 mr-1">Email:</span>
                     <a href="mailto:info@securit.com" className="text-primary-50 transition-colors duration-200 hover:text-accent/80">
                       info@securit.com
+                    </a>
+                  </p>
+                </div>
+
+                <div className="space-y-1">
+                  <p className="text-[14px] !leading-[18px] text-white">
+                    <span className="text-primary-50 mr-1">Phone:</span>
+                    <a href="tel:+18007248328" className="text-primary-50 transition-colors duration-200 hover:text-accent/80">
+                      +1 (800) 724-8328
                     </a>
                   </p>
                 </div>

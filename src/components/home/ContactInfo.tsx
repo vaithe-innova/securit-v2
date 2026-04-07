@@ -46,7 +46,7 @@ const ContactInfo = () => {
           <div className="mb-6 sm:mb-10 grid grid-cols-12 md:gap-8 space-y-4 md:space-y-0">
             <div className="col-span-12 md:col-span-6 lg:col-span-5 gap-2">
               <RevealAnimation delay={0.1}>
-                <h2 className="text-secondary-900 text-[24px] lg:text-[30px] leading-[44px]">
+                <h2 className="text-secondary-900 mt-2 text-[24px] lg:text-[30px] leading-[42px]">
                   Ready to Innovate with Us?
                 </h2>
               </RevealAnimation>
@@ -56,25 +56,25 @@ const ContactInfo = () => {
                 </h2>
               </RevealAnimation>
               <RevealAnimation delay={0.4}>
-                <div className="space-y-6">
-                  <p className="text-secondary-600 text-sm md:text-base">
+                <div className="space-y-5">
+                  <p className="text-secondary font-medium text-sm md:text-[20px] mt-5">
                     Connect with us on social media
                   </p>
                   <div className="flex items-center gap-3">
                     {/* LinkedIn */}
-                    <Link href="https://linkedin.com" target="_blank" className="w-[44px] h-[44px] bg-[#0077b5] rounded-lg flex items-center justify-center transition-transform hover:-translate-y-1">
+                    <Link href="https://linkedin.com" target="_blank" className="w-[42px] h-[42px] bg-[#0077b5] rounded-[12px] flex items-center justify-center transition-transform hover:-translate-y-1">
                       <img src="/images/icons/new-linkedin.svg" alt="LinkedIn" />
                     </Link>
                     {/* Facebook */}
-                    <Link href="https://facebook.com" target="_blank" className="w-[44px] h-[44px] bg-[#3b5998] rounded-lg flex items-center justify-center transition-transform hover:-translate-y-1">
+                    <Link href="https://facebook.com" target="_blank" className="w-[42px] h-[42px] bg-[#3b5998] rounded-[12px] flex items-center justify-center transition-transform hover:-translate-y-1">
                       <img src="/images/icons/new-facebook.svg" alt="Facebook" />
                     </Link>
                     {/* X (Twitter) */}
-                    <Link href="https://x.com" target="_blank" className="w-[44px] h-[44px] bg-black rounded-lg flex items-center justify-center transition-transform hover:-translate-y-1">
+                    <Link href="https://x.com" target="_blank" className="w-[42px] h-[42px] bg-black rounded-[12px] flex items-center justify-center transition-transform hover:-translate-y-1">
                       <img src="/images/icons/new-twitter.svg" alt="Twitter" />
                     </Link>
                     {/* Instagram */}
-                    <Link href="https://instagram.com" target="_blank" className="w-[44px] h-[44px] bg-[#e4405f] rounded-lg flex items-center justify-center transition-transform hover:-translate-y-1">
+                    <Link href="https://instagram.com" target="_blank" className="w-[42px] h-[42px] bg-[#e4405f] rounded-[12px] flex items-center justify-center transition-transform hover:-translate-y-1">
                       <img src="/images/icons/new-instagram.svg" alt="Instagram" />
                     </Link>
                   </div>
@@ -82,7 +82,7 @@ const ContactInfo = () => {
               </RevealAnimation>
               <RevealAnimation delay={0.5}>
                 <div className="mt-12 space-y-2">
-                  <p className="text-secondary-400 text-[15px">Write to us at</p>
+                  <p className="text-[#53575A] text-[15px">Write to us at</p>
                   <Link href="mailto:info@securit.com" className="text-primary-500 text-[16px] !leading-[24px] hover:underline">
                     info@securit.com
                   </Link>
@@ -141,7 +141,7 @@ const ContactInfo = () => {
                       {/* Phone */}
                       <div className="space-y-1 relative" ref={dropdownRef}>
                         <div
-                          className="absolute left-0 top-1/2 -translate-y-1/2 flex items-center gap-2 px-4 cursor-pointer hover:bg-gray-50 h-full rounded-l-lg border-r border-stroke-11 z-10"
+                          className="absolute left-0 top-1/2 -translate-y-1/2 flex items-center gap-2 px-4 cursor-pointer hover:bg-white h-full rounded-l-lg border-r border-stroke-11 focus:border focus:border-stroke-11 hover:border hover:border-stroke-11 z-10"
                           onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                         >
                           <Image src={`https://flagcdn.com/w40/${selectedCountry.iso}.png`} width={24} height={16} alt={selectedCountry.name} className="object-contain" unoptimized />
@@ -173,7 +173,7 @@ const ContactInfo = () => {
                         <input
                           type="tel"
                           placeholder="Phone"
-                          className="w-full h-[52px] pl-[115px] pr-4 rounded-lg border border-stroke-11 bg-white focus:outline-none focus:border-primary-500 placeholder:text-secondary-400 text-secondary-800"
+                          className="w-full h-[40px] pl-[115px] pr-4 rounded-lg border border-stroke-11 bg-white focus:outline-none focus:border-primary-500 placeholder:text-secondary-400 text-secondary-800"
                         />
                       </div>
                     </div>
@@ -208,7 +208,7 @@ const ContactInfo = () => {
                       type="submit"
                       disabled={!captchaValue}
                       className={`font-bold py-3 px-10 rounded-full transition-colors duration-300 text-base md:text-lg ${captchaValue
-                        ? 'bg-primary-500 text-white hover:bg-primary-600'
+                        ? 'bg-primary-500 text-white hover:bg-primary-700 cursor-pointer'
                         : 'bg-gray-300 text-gray-500 cursor-not-allowed'
                         }`}
                     >

@@ -37,3 +37,64 @@ body {
 .bg-blue-light {
   background-color: #F5FAFF;
 }
+.carousel.carousel-slider .control-arrow{display: none !important;}
+
+.card .line {
+  position: absolute;
+  background: #155dfc;
+  transition: all 0.4s ease;
+  border-radius: 20px;
+}
+
+/* TOP */
+.card .top {
+  height: 2px;
+  width: 0;
+  top: 0;
+  left: 0;
+}
+
+/* RIGHT */
+.card .right {
+  width: 2px;
+  height: 0;
+  top: 0;
+  right: 0;
+}
+
+/* BOTTOM */
+.card .bottom {
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/* LEFT */
+.card .left {
+  width: 2px;
+  height: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/* HOVER ANIMATION SEQUENCE */
+.card:hover .top {
+  width: 100%;
+  transition-delay: 0s;
+}
+
+.card:hover .right {
+  height: 100%;
+  transition-delay: 0.2s;
+}
+
+.card:hover .bottom {
+  width: 100%;
+  transition-delay: 0.4s;
+}
+
+.card:hover .left {
+  height: 100%;
+  transition-delay: 0.6s;
+}

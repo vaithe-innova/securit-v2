@@ -122,6 +122,15 @@ const Platform = () => {
               </RevealAnimation>
             </div>
 
+
+
+            {/* Bottom Left: Diagram */}
+            <div className="bg-white dark:bg-background-5 rounded-3xl shadow-sm flex lg:hidden items-center justify-center min-h-[300px] border border-primary-500">
+              <div className="relative w-full">
+                <img src={feature1.src} alt="Platform" className="h-full object-contain rounded-3xl" />
+              </div>
+            </div>
+
             {/* Top Middle: Signal */}
             <div className="group bg-white dark:bg-background-5 rounded-3xl p-6 md:p-8 shadow-sm border border-primary-200 dark:border-primary-500/30 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_8px_32px_rgba(0,112,206,0.18)] hover:border-primary-500">
               <h3 className="text-secondary font-semibold md:text-[25px] mb-3 flex items-center gap-2">
@@ -152,6 +161,7 @@ const Platform = () => {
               <p className="text-[#53575A] text-[16px] mb-6 !leading-[24px]">
                 {intelligenceList.description}
               </p>
+
               <ul className="space-y-4">
                 {intelligenceList.list.map((feature) => (
                   <li key={feature.id} className="flex gap-3 items-start group/item">
@@ -166,14 +176,13 @@ const Platform = () => {
               </ul>
             </div>
 
+
             {/* Bottom Left: Diagram */}
-            <div className="group bg-white dark:bg-background-5 rounded-3xl shadow-sm flex items-center justify-center min-h-[300px] border border-primary-200 dark:border-primary-500/30 overflow-hidden transition-all duration-300 hover:shadow-[0_8px_32px_rgba(0,112,206,0.18)] hover:border-primary-500">
-              <div className="relative w-full transition-transform duration-500 group-hover:scale-[1.02]">
+            <div className="bg-white dark:bg-background-5 rounded-3xl shadow-sm hidden lg:flex items-center justify-center min-h-[300px] border border-primary-500">
+              <div className="relative w-full">
                 <img src={feature1.src} alt="Platform" className="h-full object-contain rounded-3xl" />
               </div>
             </div>
-
-
 
             {/* Bottom Middle: Action */}
             <div className="group bg-white dark:bg-background-5 rounded-3xl p-6 md:p-8 shadow-sm border border-primary-200 dark:border-primary-500/30 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_8px_32px_rgba(0,112,206,0.18)] hover:border-primary-500">

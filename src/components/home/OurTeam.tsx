@@ -6,27 +6,27 @@ import RevealAnimation from '../animation/RevealAnimation';
 const teamMembers = [
   {
     id: 1,
-    name: 'Sadhu, Rajendra',
-    role: 'Sr. VP, Hi-Tech SBU',
-    image: '/images/team/4.png',
+    name: 'Rajendra (Raj) Sadhu',
+    role: 'Senior Vice President, Hi-Tech SBU',
+    image: '/images/team/Rajendra-Raj-Sadhu.jpg',
   },
   {
     id: 2,
-    name: 'Karki, Pradeep',
-    role: 'AVP, Product',
-    image: '/images/team/2.png',
+    name: 'Pradeep Karki',
+    role: 'Associate Vice President',
+    image: '/images/team/placeholder.jpg',
   },
   {
     id: 3,
-    name: 'Sharma, Sanchit',
-    role: 'Manager, Sales',
-    image: '/images/team/3.png',
+    name: 'Sanchit Sharma',
+    role: 'Deputy Manager - Support',
+    image: '/images/team/placeholder.jpg',
   },
   {
     id: 4,
-    name: 'Yeturi, Varun',
-    role: 'Deputy Manager, Sales',
-    image: '/images/team/1.png',
+    name: 'Name',
+    role: 'Designation',
+    image: '/images/team/placeholder.jpg',
   },
 ];
 
@@ -59,7 +59,7 @@ const OurTeam = () => {
 
         {/* Team Grid */}
         <div className="pb-5 pt-3 md:p-8">
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {teamMembers.map((member, index) => (
               <RevealAnimation key={member.id} delay={0.15 + index * 0.15} direction="up" offset={40}>
                 <div

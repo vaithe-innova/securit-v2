@@ -87,7 +87,7 @@ const HowItWorks = () => {
             <video
               ref={videoRef}
               className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${isPlaying ? 'opacity-100' : 'opacity-60'}`}
-              src="https://www.w3schools.com/html/mov_bbb.mp4"
+              src="images/securit-video.mp4"
               controls={isPlaying}
               onPlay={() => setIsPlaying(true)}
               onPause={() => setIsPlaying(false)}

@@ -45,35 +45,40 @@ const Industries = () => {
         </div>
 
         {/* Grid of Industries */}
-        <RevealAnimation delay={0.4}>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 md:gap-[30px] w-full mx-auto">
-            {industries.map((industry) => (
-              <div
-                key={industry.id}
-                className="flex flex-col group overflow-hidden bg-primary-700 dark:bg-background-5 w-full h-[280px] sm:h-[320px] md:h-[360px] lg:h-[400px] xl:h-[440px] cursor-pointer"
-              >
-                {/* Image Section */}
-                <div className="relative w-full h-[76%] overflow-hidden bg-black/10">
-                  <Image
-                    src={industry.image}
-                    alt={industry.name}
-                    fill
-                    className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
-                  />
-                  {/* Subtle overlay for better contrast */}
-                  <div className="absolute inset-0 bg-primary-700/10 mix-blend-multiply transition-opacity duration-300 group-hover:opacity-0" />
-                </div>
+            {industries.map((industry, index) => (
+              <RevealAnimation key={industry.id} delay={0.1 + index * 0.1} direction="up" offset={40}>
+                <div
+                  className="flex flex-col group overflow-hidden bg-primary-700 dark:bg-background-5 w-full h-[280px] sm:h-[320px] md:h-[360px] lg:h-[400px] xl:h-[440px] cursor-pointer transition-shadow duration-300 hover:shadow-[0_12px_40px_rgba(0,74,169,0.4)]"
+                >
+                  {/* Image Section */}
+                  <div className="relative w-full h-[76%] overflow-hidden bg-black/10">
+                    <Image
+                      src={industry.image}
+                      alt={industry.name}
+                      fill
+                      className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
+                    />
+                    {/* Dark overlay that fades on hover */}
+                    <div className="absolute inset-0 bg-primary-900/20 transition-opacity duration-500 group-hover:opacity-0" />
+                    {/* Hover name badge */}
+                    <div className="absolute inset-0 flex items-end justify-center pb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <span className="bg-white/90 text-primary-700 font-bold text-sm px-4 py-1 rounded-full backdrop-blur-sm">
+                        {industry.name}
+                      </span>
+                    </div>
+                  </div>
 
-                {/* Title Section */}
-                <div className="h-[24%] flex items-center justify-center p-3 text-center bg-primary-700">
-                  <h3 className="text-white font-bold text-[15px] sm:text-base md:text-lg tracking-wide">
-                    {industry.name}
-                  </h3>
+                  {/* Title Section */}
+                  <div className="h-[24%] flex items-center justify-center p-3 text-center bg-primary-700 transition-colors duration-300 group-hover:bg-primary-800">
+                    <h3 className="text-white font-bold text-[15px] sm:text-base md:text-lg tracking-wide">
+                      {industry.name}
+                    </h3>
+                  </div>
                 </div>
-              </div>
+              </RevealAnimation>
             ))}
           </div>
-        </RevealAnimation>
 
         <RevealAnimation delay={0.5}>
           <p className="text-primary-500 text-center mx-auto w-full text-[18px] md:text-[20px] leading-[1.5] mt-5">

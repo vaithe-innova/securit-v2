@@ -58,13 +58,12 @@ const OurTeam = () => {
         </div>
 
         {/* Team Grid */}
-        <RevealAnimation delay={0.5}>
-          <div className="pb-5 pt-3 md:p-8">
-            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-              {teamMembers.map((member) => (
+        <div className="pb-5 pt-3 md:p-8">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            {teamMembers.map((member, index) => (
+              <RevealAnimation key={member.id} delay={0.15 + index * 0.15} direction="up" offset={40}>
                 <div
-                  key={member.id}
-                  className="group flex flex-col overflow-hidden rounded-xl border border-stroke-1 dark:border-white/10 bg-white dark:bg-background-5 shadow-sm hover:shadow-md transition-shadow duration-300"
+                  className="group flex flex-col overflow-hidden rounded-xl border border-stroke-1 dark:border-white/10 bg-white dark:bg-background-5 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
                 >
                   {/* Photo */}
                   <div className="relative w-full aspect-[3/3.5] overflow-hidden bg-gray-100 dark:bg-background-7">
@@ -72,13 +71,15 @@ const OurTeam = () => {
                       src={member.image}
                       alt={member.name}
                       fill
-                      className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                      className="object-cover object-top transition-transform duration-500 group-hover:scale-108"
                       unoptimized
                     />
+                    {/* Subtle colour overlay on hover */}
+                    <div className="absolute inset-0 bg-primary-700/0 group-hover:bg-primary-700/10 transition-colors duration-500" />
                   </div>
 
                   {/* Info */}
-                  <div className="p-3 text-center border-t border-stroke-1 dark:border-white/10">
+                  <div className="p-3 text-center border-t border-stroke-1 dark:border-white/10 transition-colors duration-300 group-hover:bg-primary-50/40 dark:group-hover:bg-primary-900/20">
                     <p className="text-secondary dark:text-accent font-semibold text-[20px] !leading-[26px]">
                       {member.name}
                     </p>
@@ -87,10 +88,10 @@ const OurTeam = () => {
                     </p>
                   </div>
                 </div>
-              ))}
-            </div>
+              </RevealAnimation>
+            ))}
           </div>
-        </RevealAnimation>
+        </div>
       </div>
     </section>
   );

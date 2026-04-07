@@ -114,7 +114,7 @@ const Footer = () => {
         </div>
 
         {/* Divider and Copyright */}
-        <div className="relative pt-[26px] pb-[100px] text-center">
+        <div className="relative pb-[60px] text-center">
           <FooterDivider />
           <RevealAnimation delay={0.7} offset={10} start="top 95%">
             <div className="flex flex-col items-start gap-4 pt-8 sm:flex-row sm:items-center sm:justify-between">

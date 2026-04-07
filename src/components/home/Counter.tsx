@@ -22,36 +22,39 @@ const Counter = () => {
             </RevealAnimation>
           </div>
         </div>
-        <RevealAnimation delay={0.4}>
           <div className="grid grid-cols-1 md:grid-cols-3 mt-10 md:mt-16">
-            <div className="px-4 md:px-8 lg:px-12 py-6 md:py-0 text-center md:text-left border-b md:border-b-0 border-[#E7E7E7]">
-              <h3 className="text-primary-500 fw-700 flex justify-center md:justify-start text-[42px] lg:text-[48px] xl:text-[56px] !leading-tight">
-                <NumberAnimation number={2.78} speed={2000} interval={200} rooms={3} heightSpaceRatio={2} />M +
-              </h3>
-              <p className="text-primary-900 text-sm md:text-base lg:text-lg font-medium !leading-tight mt-3">
-                Workers die each year from occupational accidents and work-related diseases 
-              </p>
-            </div>
-            <div className="px-4 md:px-8 lg:px-12 py-6 md:py-0 text-center md:text-left border-b md:border-b-0 md:border-x border-[#E7E7E7]">
-              <h3 className="text-primary-500 fw-700 flex justify-center md:justify-start text-[42px] lg:text-[48px] xl:text-[56px] !leading-tight">
-                $<NumberAnimation number={176.5} speed={2000} interval={200} rooms={1} heightSpaceRatio={2} />B +
-              </h3>
-              <p className="text-primary-900 text-sm md:text-base lg:text-lg font-medium !leading-tight mt-3">
-                Annual economic cost of workplace injuries and fatalities worldwide  
-                <br className="hidden lg:block" /> 
-              </p>
-            </div>
-            <div className="px-4 md:px-8 lg:px-12 py-6 md:py-0 text-center md:text-left">
-              <h3 className="text-primary-500 fw-700 flex justify-center md:justify-start text-[42px] lg:text-[48px] xl:text-[56px] !leading-tight">
-                <NumberAnimation number={400} speed={2000} interval={200} rooms={3} heightSpaceRatio={2} />% ROI
-              </h3>
-              <p className="text-primary-900 text-sm md:text-base lg:text-lg font-medium !leading-tight mt-3">
-                Average return for every dollar invested in workplace safety 
-                 {/* <br className="hidden lg:block" />  */}
-              </p>
-            </div>
+            <RevealAnimation delay={0.2} direction="up" offset={40}>
+              <div className="px-4 md:px-8 lg:px-12 py-6 md:py-0 text-center md:text-left border-b md:border-b-0 border-[#E7E7E7]">
+                <h3 className="text-primary-500 fw-700 flex justify-center md:justify-start text-[42px] lg:text-[48px] xl:text-[56px] !leading-tight">
+                  <NumberAnimation number={2.78} speed={2000} interval={200} rooms={3} heightSpaceRatio={2} />M +
+                </h3>
+                <p className="text-primary-900 text-sm md:text-base lg:text-lg font-medium !leading-tight mt-3">
+                  Workers die each year from occupational accidents and work-related diseases
+                </p>
+              </div>
+            </RevealAnimation>
+            <RevealAnimation delay={0.4} direction="up" offset={40}>
+              <div className="px-4 md:px-8 lg:px-12 py-6 md:py-0 text-center md:text-left border-b md:border-b-0 md:border-x border-[#E7E7E7]">
+                <h3 className="text-primary-500 fw-700 flex justify-center md:justify-start text-[42px] lg:text-[48px] xl:text-[56px] !leading-tight">
+                  $<NumberAnimation number={176.5} speed={2000} interval={200} rooms={1} heightSpaceRatio={2} />B +
+                </h3>
+                <p className="text-primary-900 text-sm md:text-base lg:text-lg font-medium !leading-tight mt-3">
+                  Annual economic cost of workplace injuries and fatalities worldwide
+                  <br className="hidden lg:block" />
+                </p>
+              </div>
+            </RevealAnimation>
+            <RevealAnimation delay={0.6} direction="up" offset={40}>
+              <div className="px-4 md:px-8 lg:px-12 py-6 md:py-0 text-center md:text-left">
+                <h3 className="text-primary-500 fw-700 flex justify-center md:justify-start text-[42px] lg:text-[48px] xl:text-[56px] !leading-tight">
+                  <NumberAnimation number={400} speed={2000} interval={200} rooms={3} heightSpaceRatio={2} />% ROI
+                </h3>
+                <p className="text-primary-900 text-sm md:text-base lg:text-lg font-medium !leading-tight mt-3">
+                  Average return for every dollar invested in workplace safety
+                </p>
+              </div>
+            </RevealAnimation>
           </div>
-        </RevealAnimation>
       </div>
     </section>
   );

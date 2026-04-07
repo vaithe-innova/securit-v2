@@ -1,4 +1,4 @@
-import { Roboto } from 'next/font/google';
+import { Poppins } from 'next/font/google';
 
 // const interTight = Inter_Tight({
 //   subsets: ['latin'],
@@ -7,11 +7,18 @@ import { Roboto } from 'next/font/google';
 //   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
 // });
 
-const roboto = Roboto({
+// const roboto = Roboto({
+//   subsets: ['latin'],
+//   variable: '--font-roboto',
+//   display: 'swap',
+//   weight: ['100', '300', '400', '500', '600', '700', '900'],
+// });
+
+const poppins = Poppins({
   subsets: ['latin'],
-  variable: '--font-roboto',
+  variable: '--font-poppins',
   display: 'swap',
-  weight: ['100', '300', '400', '500', '600', '700', '900'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
 });
 
-export { roboto };
+export { poppins };

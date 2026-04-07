@@ -2,12 +2,13 @@
 
 import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/LinkButton';
-import HeroPerspective from './HeroPerspective';
 import { BlurOne, BlurTwo } from '@/icons';
+import banner from '@public/images/banner.png';
+import Image from 'next/image';
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden bg-[#E5F3FF] pt-[100px] lg:pt-[150px] xl:pt-[152px]">
+    <section className="relative overflow-hidden bg-[#E5F3FF] pt-[132px] sm:pt-[142px] md:pt-[152px] lg:pt-[172px] xl:pt-[192px] pb-[50px] sm:pb-[70px] md:pb-[80px] lg:pb-[100px] xl:pb-[120px]">
       {/* Background glowing effects to match prototype */}
       <span className="absolute left-[-65px] top-[-37px]">
         <BlurOne />
@@ -23,52 +24,64 @@ const Hero = () => {
       </span>
       <div className="relative z-10 main-container">
         <div className="space-y-[40px] md:space-y-[50px] lg:space-y-[60px] xl:space-y-[70px]">
-          <div className="flex flex-col items-center">
-            <RevealAnimation delay={0.1}>
-              <div className="mb-3 md:mb-4 lg:mb-5 flex items-center rounded-full bg-white py-[6px] px-[13px] border-[1px] border-[#B7D4FF]">
-                <span className="text-xs sm:text-sm md:text-base font-normal text-primary-700">AI-Powered Worker Safety Platform</span>
+          <div className="">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-8">
+              <div className="gap-2 flex flex-col items-start lg:pr-10">
+                <RevealAnimation delay={0.1}>
+                  <div className="mb-2 flex rounded-full bg-white py-[6px] px-[13px] border-[1px] border-primary-500">
+                    <span className="text-xs sm:text-sm md:text-base font-normal text-primary-700">Redefining Safety as a Strategic Advantage</span>
+                  </div>
+                </RevealAnimation>
+                <div className="space-y-3 md:space-y-5">
+                  <RevealAnimation delay={0.2}>
+                    <h1 className="max-w-[700px] text-primary-700 fw-700 tracking-tight !leading-[40px] md:!leading-[56px] lg:!leading-[58px] xl:!leading-[60px] text-4xl md:text-5xl xl:text-[56px]">
+                      Safety Charged at <span className='text-primary-500'>100%</span> Always.
+                    </h1>
+                  </RevealAnimation>
+                  <RevealAnimation delay={0.3}>
+                    <p className="mx-auto max-w-[800px] text-base sm:text-[18px] lg:text-[20px] text-secondary font-normal !leading-[26px] lg:!leading-[30px]">
+                      If your team only responds when things go wrong, it's already too late. Securit keeps safety charged — live alerts, location tracking, and site-wide risk detection running at 100%, always.
+                    </p>
+                  </RevealAnimation>
+                </div>
+                <ul className="flex flex-col gap-y-3 w-full sm:w-auto sm:flex-row sm:gap-x-4 pt-5 sm:pt-8 md:pt-9 lg:pt-10 xl:pt-[46px]">
+                  <RevealAnimation delay={0.3} direction="left" offset={50}>
+                    <li className="">
+                      <LinkButton
+                        href="#contact"
+                        insideSpan={false}
+                        className="btn rounded-full btn-primary text-white hover:btn-white-dark px-4 py-2 !leading-[28px] sm:!leading-[30px] md:!leading-[32px] lg:!leading-[38px] text-sm sm:text-base md:text-[18px] font-semibold w-full sm:w-[180px] md:w-[200px] lg:w-[209px] sm:h-11 md:h-12 lg:h-14 shadow-sm">
+                        Get Started Free
+                      </LinkButton>
+                    </li>
+                  </RevealAnimation>
+                  <RevealAnimation delay={0.5} direction="left" offset={50}>
+                    <li>
+                      <LinkButton
+                        href="#video"
+                        insideSpan={false}
+                        className="btn btn-md flex justify-center items-center gap-3 btn-white px-4 py-2 !leading-[28px] sm:!leading-[30px] md:!leading-[32px] lg:!leading-[38px] text-sm sm:text-base md:text-[18px] font-semibold w-full sm:w-[200px] md:w-[220px] lg:w-[241px] sm:h-11 md:h-12 lg:h-14 border-[#0070CE] text-primary-500 btn-remove hover:bg-primary-700 hover:text-white">                    
+                        Explore Features                    
+                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fillRule="evenodd" clipRule="evenodd" d="M8.90777 3.28748C9.14292 3.05233 9.52418 3.05233 9.75934 3.28748L15.3794 8.90755C15.6146 9.14271 15.6146 9.52397 15.3794 9.75912L9.75934 15.3792C9.52418 15.6143 9.14292 15.6143 8.90777 15.3792C8.67261 15.144 8.67261 14.7628 8.90777 14.5276L13.4999 9.93549H3.71348C3.38092 9.93549 3.11133 9.6659 3.11133 9.33334C3.11133 9.00078 3.38092 8.73119 3.71348 8.73119H13.4999L8.90777 4.13905C8.67261 3.9039 8.67261 3.52263 8.90777 3.28748Z" fill="#0070CE"/>
+                        </svg>
+                      </LinkButton>
+                    </li>
+                  </RevealAnimation>
+                </ul>
               </div>
-            </RevealAnimation>
-            <div className="space-y-3 md:mx-10 md:space-y-4 lg:mx-0 text-align:-webkit-center">
-              <RevealAnimation delay={0.2}>
-                <h1 className="max-w-[700px] text-center text-primary-700 fw-700 tracking-tight !leading-[38px] md:!leading-[50px] lg:!leading-[58px] text-4xl md:text-5xl xl:text-[56px]">
-                  Make workplace safety impossible to miss.
-                </h1>
-              </RevealAnimation>
-              <RevealAnimation delay={0.3}>
-                <p className="mx-auto max-w-[800px] text-center text-base lg:text-[18px] text-secondary font-normal !leading-[20px] lg:!leading-[24px]">
-                  Real-time location intelligence and AI-powered insights to protect your workforce,
-                  reduce incidents, and transform reactive safety into proactive prevention.
-                </p>
-              </RevealAnimation>
+              <div className="gap-2 flex flex-col items-start">
+                <RevealAnimation delay={0.1}>
+                  <div className="flex items-center">
+                    <figure>
+                      <Image src={banner} alt="banner"  />
+                    </figure>
+                  </div>
+                </RevealAnimation>
+              </div>
             </div>
-            <ul className="flex w-full flex-col items-center justify-center items-start gap-y-3 text-center sm:w-auto sm:flex-row sm:gap-x-4 pt-8 md:pt-9 lg:pt-10 xl:pt-[46px]">
-              <RevealAnimation delay={0.3} direction="left" offset={50}>
-                <li className="w-full">
-                  <LinkButton
-                    href="#contact"
-                    insideSpan={false}
-                    className="btn rounded-full btn-primary text-white hover:btn-white-dark px-4 py-2 !leading-[24px] sm:!leading-[24px] md:!leading-[28px] lg:!leading-[32px] text-sm sm:text-base font-bold w-full sm:w-[170px] md:w-[210px] lg:w-[234px] sm:h-10 md:h-11 lg:h-12 shadow-sm">
-                    Schedule a Demo
-                  </LinkButton>
-                </li>
-              </RevealAnimation>
-              {/* <RevealAnimation delay={0.5} direction="left" offset={50}>
-                <li className="w-full">
-                  <LinkButton
-                    href="#video"
-                    insideSpan={false}
-                    className="btn btn-md flex justify-center items-center gap-3 btn-outline-primary px-4 py-2 !leading-[24px] sm:!leading-[24px] md:!leading-[28px] lg:!leading-[32px] text-sm sm:text-base font-bold w-full sm:w-[170px] md:w-[210px] lg:w-[234px] sm:h-10 md:h-11 lg:h-12 border-[#0070CE] text-[#0070CE]">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path clip="evenodd" d="M4.40321 2.09407C4.65178 1.95923 4.95462 1.97001 5.19284 2.12217L19.6445 11.3529C19.866 11.4945 20 11.7383 20 12C20 12.2617 19.866 12.5055 19.6445 12.6471L5.19284 21.8778C4.95462 22.03 4.65178 22.0408 4.40321 21.9059C4.15464 21.7711 4 21.5122 4 21.2308V2.76923C4 2.48784 4.15464 2.22891 4.40321 2.09407ZM5.54839 4.1782V19.8218L17.7941 12L5.54839 4.1782Z" fill="#0070CE" />
-                    </svg>
-                    Watch a Video
-                  </LinkButton>
-                </li>
-              </RevealAnimation> */}
-            </ul>
           </div>
-          <HeroPerspective />
+          {/* <HeroPerspective /> */}
         </div>
       </div>
     </section>

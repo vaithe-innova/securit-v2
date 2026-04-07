@@ -64,7 +64,7 @@ const HowItWorks = () => {
 
           <RevealAnimation delay={0.3}>
             <h2 className="text-primary-700 font-bold text-[30px] !leading-[34px] mb-2">
-              Real-time safety, powered by intelligence
+              Turn intelligence into action across your operations
             </h2>
           </RevealAnimation>
 

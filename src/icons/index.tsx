@@ -41,6 +41,13 @@ const CheckIconCircle: FC<ArrowIconProps> = ({ className }) => (
   </svg>
 );
 
+const TickIcon: FC<ArrowIconProps> = ({  }) => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 6L7 17L2 12" stroke="#1DB954" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M22 10L14.5 17.5L13 16" stroke="#1DB954" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+</svg>
+);
+
 const BlurOne: FC<ArrowIconProps> = ({}) => (
   <svg width="325" height="515" viewBox="0 0 325 515" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g filter="url(#filter0_f_840_725)">
@@ -1099,6 +1106,7 @@ export {
   TaskIcon,
   ThreeDotsIcon,
   TransferSuccessIcon,
+  TickIcon,
   UpArrowIcon,
   UserGroupIcon,
   UserIcon,

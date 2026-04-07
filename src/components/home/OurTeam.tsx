@@ -32,7 +32,7 @@ const teamMembers = [
 
 const OurTeam = () => {
   return (
-    <section className="bg-white dark:bg-background-6 pt-16 pb-16 md:pt-20 md:pb-20 lg:pt-[90px] lg:pb-[90px]">
+    <section className="bg-white dark:bg-background-6 pt-16 pb-16 md:pt-20 md:pb-20 lg:pt-[90px] lg:pb-[90px]" id="team">
       <div className="main-container">
         {/* Heading */}
         <div className="mb-3 space-y-4 text-center">

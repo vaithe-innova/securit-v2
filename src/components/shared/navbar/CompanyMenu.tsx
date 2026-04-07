@@ -8,11 +8,11 @@ type CompanyMenuItem = {
 
 const companyMenuItems: CompanyMenuItem[] = [
   {
-    href: '',
+    href: '/about',
     title: 'About Us',
   },
   {
-    href: '',
+    href: '/#team',
     title: 'Our Team',
   },
 ];

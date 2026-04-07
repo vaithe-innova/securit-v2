@@ -9,7 +9,7 @@ interface OfferListProps {
 
 const OfferList = ({ offerData }: OfferListProps) => {
     return (
-        <section className="bg-background-5 pt-20 pb-20 md:pb-16 lg:pb-[100px] xl:pt-[120px] xl:pb-[140px]">
+        <section className="bg-background-5 pt-20 pb-20 md:pb-16 lg:pb-[100px] xl:pt-[120px] xl:pb-[140px]" id="features">
             <div className="main-container">
                 <div className="mb-[60px] space-y-6 text-center">
                     <RevealAnimation delay={0.2}>
@@ -19,7 +19,7 @@ const OfferList = ({ offerData }: OfferListProps) => {
                     </RevealAnimation>
                     <RevealAnimation delay={0.3}>
                         <h2 className="my-3 max-w-[900px] mx-auto text-white fw-700 text-[30px] !leading-[33px]" >
-                            Built to prevent. Not just respond. 
+                            Built to prevent. Not just respond.
                         </h2>
                     </RevealAnimation>
                     {/* <RevealAnimation delay={0.4}>

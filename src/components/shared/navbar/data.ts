@@ -24,7 +24,7 @@ export const mobileMenuData: IMobileMenuGroup[] = [
     title: 'Company',
     href: undefined,
     submenu: [
-      { id: 'about', label: 'About Us', href: '#about' },
+      { id: 'about', label: 'About Us', href: '/about' },
       { id: 'team', label: 'Our Team', href: '#team' },
     ],
   },

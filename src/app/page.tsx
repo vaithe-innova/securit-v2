@@ -8,6 +8,7 @@ import DeploymentTimeline from '@/components/home/DeploymentTimeline';
 import ContactInfo from '@/components/home/ContactInfo';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
+import Facts from '@/components/home/Facts';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
@@ -21,6 +22,7 @@ const page = () => {
       <Counter />
       <WhatWeOffer />
       <HowItWorks />
+      <Facts />
       <Platform />
       <Industries />
       <DeploymentTimeline />

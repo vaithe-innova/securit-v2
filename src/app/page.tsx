@@ -25,9 +25,9 @@ const page = () => {
       <HowItWorks />
       <Platform />
       <Industries />
+      <DeploymentTimeline />
       <OurTeam />
       <StartFree />
-      <DeploymentTimeline />
       <ContactInfo />
     </main>
   );

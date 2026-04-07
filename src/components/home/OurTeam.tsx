@@ -8,25 +8,25 @@ const teamMembers = [
     id: 1,
     name: 'Sadhu, Rajendra',
     role: 'Sr. VP, Hi-Tech SBU',
-    image: '/images/ns-img-401.jpg',
+    image: '/images/team/4.png',
   },
   {
     id: 2,
     name: 'Karki, Pradeep',
     role: 'AVP, Product',
-    image: '/images/ns-img-402.jpg',
+    image: '/images/team/2.png',
   },
   {
     id: 3,
     name: 'Sharma, Sanchit',
     role: 'Manager, Sales',
-    image: '/images/ns-img-404.jpg',
+    image: '/images/team/3.png',
   },
   {
     id: 4,
     name: 'Yeturi, Varun',
     role: 'Deputy Manager, Sales',
-    image: '/images/ns-img-405.jpg',
+    image: '/images/team/1.png',
   },
 ];
 
@@ -35,9 +35,9 @@ const OurTeam = () => {
     <section className="bg-white dark:bg-background-6 pt-16 pb-16 md:pt-20 md:pb-20 lg:pt-[90px] lg:pb-[90px]">
       <div className="main-container">
         {/* Heading */}
-        <div className="mx-auto mb-10 md:mb-14 max-w-[800px] space-y-4 text-center">
+        <div className="mb-3 space-y-4 text-center">
           <RevealAnimation delay={0.2}>
-            <div className="inline-block border border-primary-200 dark:border-primary-500/30 rounded-full px-5 py-[6px] mb-2 bg-transparent">
+            <div className="inline-block border border-primary-200 dark:border-primary-500/30 rounded-full px-5 py-[6px] mb-3 bg-transparent">
               <span className="text-primary-700 dark:text-primary-400 text-sm sm:text-[15px] font-medium">
                 Our People
               </span>
@@ -51,7 +51,7 @@ const OurTeam = () => {
           </RevealAnimation>
 
           <RevealAnimation delay={0.4}>
-            <p className="text-secondary dark:text-accent/60 mx-auto max-w-[650px] text-[18px] md:text-[20px] leading-[1.5]">
+            <p className="text-secondary dark:text-accent/60 text-[18px] md:text-[20px] leading-[1.2]">
               Safety experts, engineers, and innovators united by one mission — protecting workers everywhere they work.
             </p>
           </RevealAnimation>
@@ -59,7 +59,7 @@ const OurTeam = () => {
 
         {/* Team Grid */}
         <RevealAnimation delay={0.5}>
-          <div className="p-6 md:p-8">
+          <div className="pb-5 pt-3 md:p-8">
             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
               {teamMembers.map((member) => (
                 <div
@@ -79,10 +79,10 @@ const OurTeam = () => {
 
                   {/* Info */}
                   <div className="p-3 text-center border-t border-stroke-1 dark:border-white/10">
-                    <p className="text-secondary dark:text-accent font-semibold text-[14px] md:text-[15px] leading-snug">
+                    <p className="text-secondary dark:text-accent font-semibold text-[20px] !leading-[26px]">
                       {member.name}
                     </p>
-                    <p className="text-secondary/60 dark:text-accent/50 text-[12px] md:text-[13px] mt-0.5 leading-snug">
+                    <p className="text-[#53575A] text-[16px] mt-0.5 !leading-[26px]">
                       {member.role}
                     </p>
                   </div>

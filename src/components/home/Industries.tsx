@@ -10,11 +10,46 @@ import imgMining from '@public/images/mining.png';
 import imgLogistics from '@public/images/logistics.png';
 
 const industries = [
-  { id: 1, name: 'Construction', image: imgConstruction },
-  { id: 2, name: 'Manufacturing', image: imgManufacturing },
-  { id: 3, name: 'Oil & Gas', image: imgOilGas },
-  { id: 4, name: 'Mining', image: imgMining },
-  { id: 5, name: 'Logistics', image: imgLogistics },
+  {
+    id: 1,
+    name: 'Construction',
+    image: imgConstruction,
+    icon: '🏗️',
+    tagline: 'Protect workers on-site',
+    points: ['Fall detection & SOS alerts', 'Geofenced safety zones', 'Real-time headcount'],
+  },
+  {
+    id: 2,
+    name: 'Manufacturing',
+    image: imgManufacturing,
+    icon: '🏭',
+    tagline: 'Zero-downtime safety ops',
+    points: ['Machine hazard monitoring', 'Shift attendance tracking', 'Automated incident reports'],
+  },
+  {
+    id: 3,
+    name: 'Oil & Gas',
+    image: imgOilGas,
+    icon: '⛽',
+    tagline: 'Safety in high-risk zones',
+    points: ['Gas leak & thermal alerts', 'Remote worker lone-man', 'Regulatory compliance logs'],
+  },
+  {
+    id: 4,
+    name: 'Mining',
+    image: imgMining,
+    icon: '⛏️',
+    tagline: 'Underground & surface cover',
+    points: ['Worker location tracking', 'Environmental sensor data', 'Emergency evacuation flows'],
+  },
+  {
+    id: 5,
+    name: 'Logistics',
+    image: imgLogistics,
+    icon: '🚚',
+    tagline: 'Fleet & yard safety',
+    points: ['Driver fatigue detection', 'Yard entry/exit alerts', 'Route risk monitoring'],
+  },
 ];
 
 const Industries = () => {
@@ -36,44 +71,88 @@ const Industries = () => {
               Built for environments where safety moves fast
             </h2>
           </RevealAnimation>
-
-          {/* <RevealAnimation delay={0.4}>
-            <p className="text-secondary dark:text-accent/60 mx-auto max-w-[750px] text-[18px] md:text-[20px] leading-[1.5]">
-              Securit delivers real-time visibility and rapid response for high-risk, high-activity workplaces.
-            </p>
-          </RevealAnimation> */}
         </div>
 
-        {/* Grid of Industries */}
+        {/* Grid of Industries — flip cards */}
+        {/* Inject the perspective + preserve-3d styles globally via a style tag */}
+        <style>{`
+          .flip-card { perspective: 1000px; }
+          .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.65s cubic-bezier(0.4, 0.2, 0.2, 1);
+            transform-style: preserve-3d;
+          }
+          .flip-card:hover .flip-card-inner { transform: rotateY(180deg); }
+          .flip-card-front,
+          .flip-card-back {
+            position: absolute;
+            inset: 0;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+          }
+          .flip-card-back { transform: rotateY(180deg); }
+        `}</style>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 md:gap-[30px] w-full mx-auto">
           {industries.map((industry, index) => (
             <RevealAnimation key={industry.id} delay={0.1 + index * 0.1} direction="up" offset={40}>
-              <div
-                className="flex flex-col group overflow-hidden bg-primary-700 dark:bg-background-5 w-full h-[280px] sm:h-[320px] md:h-[360px] lg:h-[400px] xl:h-[440px] cursor-pointer transition-shadow duration-300 hover:shadow-[0_12px_40px_rgba(0,74,169,0.4)]"
-              >
-                {/* Image Section */}
-                <div className="relative w-full h-[76%] overflow-hidden bg-black/10">
-                  <Image
-                    src={industry.image}
-                    alt={industry.name}
-                    fill
-                    className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
-                  />
-                  {/* Dark overlay that fades on hover */}
-                  <div className="absolute inset-0 bg-primary-900/20 transition-opacity duration-500 group-hover:opacity-0" />
-                  {/* Hover name badge */}
-                  <div className="absolute inset-0 flex items-end justify-center pb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="bg-white/90 text-primary-700 font-bold text-sm px-4 py-1 rounded-full backdrop-blur-sm">
-                      {industry.name}
-                    </span>
-                  </div>
-                </div>
+              {/* Outer container sets height — must NOT be overflow-hidden so 3D works */}
+              <div className="flip-card w-full h-[280px] sm:h-[320px] md:h-[360px] lg:h-[400px] xl:h-[440px] cursor-pointer">
+                <div className="flip-card-inner rounded-none">
 
-                {/* Title Section */}
-                <div className="h-[24%] flex items-center justify-center p-3 text-center bg-primary-700 transition-colors duration-300 group-hover:bg-primary-800">
-                  <h3 className="text-white font-bold text-[15px] sm:text-base md:text-lg tracking-wide">
-                    {industry.name}
-                  </h3>
+                  {/* ── FRONT ── */}
+                  <div className="flip-card-front flex flex-col overflow-hidden bg-primary-700 dark:bg-background-5 w-full h-full">
+                    {/* Image */}
+                    <div className="relative w-full h-[76%] overflow-hidden bg-black/10">
+                      <Image
+                        src={industry.image}
+                        alt={industry.name}
+                        fill
+                        className="object-cover"
+                      />
+                      <div className="absolute inset-0 bg-primary-900/20" />
+                    </div>
+                    {/* Title bar */}
+                    <div className="h-[24%] flex items-center justify-center p-3 text-center bg-primary-700">
+                      <h3 className="text-white font-bold text-[15px] sm:text-base md:text-lg tracking-wide">
+                        {industry.name}
+                      </h3>
+                    </div>
+                  </div>
+
+                  {/* ── BACK ── */}
+                  <div className="flip-card-back flex flex-col justify-between w-full h-full bg-gradient-to-br from-[#004AA9] to-[#0070CE] p-5 md:p-6 overflow-hidden">
+                    {/* Top: icon + name */}
+                    <div>
+                      <span className="text-4xl mb-3 block">{industry.icon}</span>
+                      <h3 className="text-white font-bold text-[18px] md:text-[20px] leading-tight mb-1">
+                        {industry.name}
+                      </h3>
+                      <p className="text-white/70 text-[13px] md:text-[14px] font-medium mb-4 leading-snug">
+                        {industry.tagline}
+                      </p>
+                    </div>
+
+                    {/* Middle: feature points */}
+                    <ul className="space-y-2 flex-1">
+                      {industry.points.map((point, i) => (
+                        <li key={i} className="flex items-start gap-2">
+                          <span className="mt-[3px] shrink-0 w-[6px] h-[6px] rounded-full bg-white/80 block" />
+                          <span className="text-white/90 text-[12px] md:text-[13px] leading-snug">{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    {/* Bottom: hover cue */}
+                    <div className="mt-4 pt-3 border-t border-white/20">
+                      <span className="text-white/60 text-[11px] tracking-wider uppercase font-medium">
+                        Securit covers it
+                      </span>
+                    </div>
+                  </div>
+
                 </div>
               </div>
             </RevealAnimation>

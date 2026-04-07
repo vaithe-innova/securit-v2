@@ -24,7 +24,7 @@ const Facts = () => {
                   $<NumberAnimation number={20} speed={2000} interval={200} rooms={2} heightSpaceRatio={2} />B
                 </h3>
                 <p className="text-white/70 text-sm md:text-base font-normal !leading-tight mt-3">
-                  Connected Safety Market
+                  Connected <br /> Safety Market
                 </p>
               </div>
             </RevealAnimation>
@@ -54,7 +54,7 @@ const Facts = () => {
                   <NumberAnimation number={40} speed={2000} interval={200} rooms={2} heightSpaceRatio={2} />+
                 </h3>
                 <p className="text-white/70 text-sm md:text-base font-normal !leading-tight mt-3">
-                  Countries Deployed
+                  Countries <br />Deployed
                 </p>
               </div>
             </RevealAnimation>

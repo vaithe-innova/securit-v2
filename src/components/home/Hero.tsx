@@ -5,6 +5,8 @@ import LinkButton from '../ui/button/LinkButton';
 import { BlurOne, BlurTwo } from '@/icons';
 import banner from '@public/images/banner.png';
 import Image from 'next/image';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
 
 const Hero = () => {
   return (
@@ -23,65 +25,191 @@ const Hero = () => {
         <BlurTwo />
       </span>
       <div className="relative z-10 main-container">
+
         <div className="space-y-[40px] md:space-y-[50px] lg:space-y-[60px] xl:space-y-[70px]">
-          <div className="">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-8">
-              <div className="gap-2 flex flex-col items-start lg:pr-10">
-                <RevealAnimation delay={0.1}>
-                  <div className="mb-2 flex rounded-full bg-white py-[6px] px-[13px] border-[1px] border-primary-500">
-                    <span className="text-xs sm:text-sm md:text-base font-normal text-primary-700">Redefining Safety as a Strategic Advantage</span>
-                  </div>
-                </RevealAnimation>
-                <div className="space-y-3 md:space-y-5">
-                  <RevealAnimation delay={0.2}>
-                    <h1 className="max-w-[700px] text-primary-700 fw-700 tracking-tight !leading-[40px] md:!leading-[56px] lg:!leading-[58px] xl:!leading-[60px] text-4xl md:text-5xl xl:text-[56px]">
-                      Safety Charged at <span className='text-primary-500'>100%</span> Always.
-                    </h1>
+
+          <Carousel
+            autoPlay
+            interval={3000}      // 3 seconds
+            infiniteLoop         // loop enabled
+            showThumbs={false}
+            showStatus={false}
+            stopOnHover={true}
+            swipeable={true}
+            emulateTouch={true}
+          >
+            <div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-8">
+                <div className="gap-2 flex flex-col items-start lg:pr-10">
+                  <RevealAnimation delay={0.1}>
+                    <div className="mb-2 flex rounded-full bg-white py-[6px] px-[13px] border-[1px] border-primary-500">
+                      <span className="text-xs sm:text-sm md:text-base font-normal text-primary-700">Redefining Safety as a Strategic Advantage</span>
+                    </div>
                   </RevealAnimation>
-                  <RevealAnimation delay={0.3}>
-                    <p className="mx-auto max-w-[800px] text-base sm:text-[18px] lg:text-[20px] text-secondary font-normal !leading-[26px] lg:!leading-[30px]">
-                      If your team only responds when things go wrong, it's already too late. Securit keeps safety charged — live alerts, location tracking, and site-wide risk detection running at 100%, always.
-                    </p>
+                  <div className="space-y-3 md:space-y-5 text-left">
+                    <RevealAnimation delay={0.2}>
+                      <h1 className="max-w-[700px] text-primary-700 fw-700 tracking-tight !leading-[40px] md:!leading-[56px] lg:!leading-[58px] xl:!leading-[60px] text-4xl md:text-5xl xl:text-[56px]">
+                        Safety Charged at <span className='text-primary-500'>100%</span> Always.
+                      </h1>
+                    </RevealAnimation>
+                    <RevealAnimation delay={0.3}>
+                      <p className="mx-auto max-w-[800px] text-base sm:text-[18px] lg:text-[20px] text-secondary font-normal !leading-[26px] lg:!leading-[30px]">
+                        If your team only responds when things go wrong, it's already too late. Securit keeps safety charged — live alerts, location tracking, and site-wide risk detection running at 100%, always.
+                      </p>
+                    </RevealAnimation>
+                  </div>
+                  <ul className="flex flex-col gap-y-3 w-full sm:w-auto sm:flex-row sm:gap-x-4 pt-5 sm:pt-8 md:pt-9 lg:pt-10 xl:pt-[46px]">
+                    <RevealAnimation delay={0.3} direction="left" offset={50}>
+                      <li className="">
+                        <LinkButton
+                          href="#contact"
+                          insideSpan={false}
+                          className="btn rounded-full btn-primary text-white hover:btn-white-dark px-4 py-2 !leading-[28px] sm:!leading-[30px] md:!leading-[32px] lg:!leading-[38px] text-sm sm:text-base md:text-[18px] font-semibold w-full sm:w-[180px] md:w-[200px] lg:w-[209px] sm:h-11 md:h-12 lg:h-14 shadow-sm">
+                          Get Started Free
+                        </LinkButton>
+                      </li>
+                    </RevealAnimation>
+                    <RevealAnimation delay={0.5} direction="left" offset={50}>
+                      <li>
+                        <LinkButton
+                          href="#video"
+                          insideSpan={false}
+                          className="btn btn-md flex justify-center items-center gap-3 btn-white px-4 py-2 !leading-[28px] sm:!leading-[30px] md:!leading-[32px] lg:!leading-[38px] text-sm sm:text-base md:text-[18px] font-semibold w-full sm:w-[200px] md:w-[220px] lg:w-[241px] sm:h-11 md:h-12 lg:h-14 border-[#0070CE] text-primary-500 btn-remove hover:bg-primary-700 hover:text-white">                    
+                          Explore Features                    
+                          <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fillRule="evenodd" clipRule="evenodd" d="M8.90777 3.28748C9.14292 3.05233 9.52418 3.05233 9.75934 3.28748L15.3794 8.90755C15.6146 9.14271 15.6146 9.52397 15.3794 9.75912L9.75934 15.3792C9.52418 15.6143 9.14292 15.6143 8.90777 15.3792C8.67261 15.144 8.67261 14.7628 8.90777 14.5276L13.4999 9.93549H3.71348C3.38092 9.93549 3.11133 9.6659 3.11133 9.33334C3.11133 9.00078 3.38092 8.73119 3.71348 8.73119H13.4999L8.90777 4.13905C8.67261 3.9039 8.67261 3.52263 8.90777 3.28748Z" fill="#0070CE"/>
+                          </svg>
+                        </LinkButton>
+                      </li>
+                    </RevealAnimation>
+                  </ul>
+                </div>
+                <div className="gap-2 flex flex-col items-start">
+                  <RevealAnimation delay={0.1}>
+                    <div className="w-full">
+                      <figure>
+                        <Image src={banner} alt="banner"  />
+                      </figure>
+                    </div>
                   </RevealAnimation>
                 </div>
-                <ul className="flex flex-col gap-y-3 w-full sm:w-auto sm:flex-row sm:gap-x-4 pt-5 sm:pt-8 md:pt-9 lg:pt-10 xl:pt-[46px]">
-                  <RevealAnimation delay={0.3} direction="left" offset={50}>
-                    <li className="">
-                      <LinkButton
-                        href="#contact"
-                        insideSpan={false}
-                        className="btn rounded-full btn-primary text-white hover:btn-white-dark px-4 py-2 !leading-[28px] sm:!leading-[30px] md:!leading-[32px] lg:!leading-[38px] text-sm sm:text-base md:text-[18px] font-semibold w-full sm:w-[180px] md:w-[200px] lg:w-[209px] sm:h-11 md:h-12 lg:h-14 shadow-sm">
-                        Get Started Free
-                      </LinkButton>
-                    </li>
-                  </RevealAnimation>
-                  <RevealAnimation delay={0.5} direction="left" offset={50}>
-                    <li>
-                      <LinkButton
-                        href="#video"
-                        insideSpan={false}
-                        className="btn btn-md flex justify-center items-center gap-3 btn-white px-4 py-2 !leading-[28px] sm:!leading-[30px] md:!leading-[32px] lg:!leading-[38px] text-sm sm:text-base md:text-[18px] font-semibold w-full sm:w-[200px] md:w-[220px] lg:w-[241px] sm:h-11 md:h-12 lg:h-14 border-[#0070CE] text-primary-500 btn-remove hover:bg-primary-700 hover:text-white">                    
-                        Explore Features                    
-                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fillRule="evenodd" clipRule="evenodd" d="M8.90777 3.28748C9.14292 3.05233 9.52418 3.05233 9.75934 3.28748L15.3794 8.90755C15.6146 9.14271 15.6146 9.52397 15.3794 9.75912L9.75934 15.3792C9.52418 15.6143 9.14292 15.6143 8.90777 15.3792C8.67261 15.144 8.67261 14.7628 8.90777 14.5276L13.4999 9.93549H3.71348C3.38092 9.93549 3.11133 9.6659 3.11133 9.33334C3.11133 9.00078 3.38092 8.73119 3.71348 8.73119H13.4999L8.90777 4.13905C8.67261 3.9039 8.67261 3.52263 8.90777 3.28748Z" fill="#0070CE"/>
-                        </svg>
-                      </LinkButton>
-                    </li>
-                  </RevealAnimation>
-                </ul>
               </div>
-              <div className="gap-2 flex flex-col items-start">
-                <RevealAnimation delay={0.1}>
-                  <div className="flex items-center">
-                    <figure>
-                      <Image src={banner} alt="banner"  />
-                    </figure>
+            </div>  
+            <div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-8">
+                <div className="gap-2 flex flex-col items-start">
+                  <RevealAnimation delay={0.1}>
+                    <div className="w-full">
+                      <figure>
+                        <Image src={banner} alt="banner"  />
+                      </figure>
+                    </div>
+                  </RevealAnimation>
+                </div>
+                <div className="gap-2 flex flex-col items-start lg:pr-10">
+                  <RevealAnimation delay={0.1}>
+                    <div className="mb-2 flex rounded-full bg-white py-[6px] px-[13px] border-[1px] border-primary-500">
+                      <span className="text-xs sm:text-sm md:text-base font-normal text-primary-700">Redefining Safety as a Strategic Advantage</span>
+                    </div>
+                  </RevealAnimation>
+                  <div className="space-y-3 md:space-y-5 text-left">
+                    <RevealAnimation delay={0.2}>
+                      <h1 className="max-w-[700px] text-primary-700 fw-700 tracking-tight !leading-[40px] md:!leading-[56px] lg:!leading-[58px] xl:!leading-[60px] text-4xl md:text-5xl xl:text-[56px]">
+                        Safety Charged at <span className='text-primary-500'>100%</span> Always.
+                      </h1>
+                    </RevealAnimation>
+                    <RevealAnimation delay={0.3}>
+                      <p className="mx-auto max-w-[800px] text-base sm:text-[18px] lg:text-[20px] text-secondary font-normal !leading-[26px] lg:!leading-[30px]">
+                        If your team only responds when things go wrong, it's already too late. Securit keeps safety charged — live alerts, location tracking, and site-wide risk detection running at 100%, always.
+                      </p>
+                    </RevealAnimation>
                   </div>
-                </RevealAnimation>
+                  <ul className="flex flex-col gap-y-3 w-full sm:w-auto sm:flex-row sm:gap-x-4 pt-5 sm:pt-8 md:pt-9 lg:pt-10 xl:pt-[46px]">
+                    <RevealAnimation delay={0.3} direction="left" offset={50}>
+                      <li className="">
+                        <LinkButton
+                          href="#contact"
+                          insideSpan={false}
+                          className="btn rounded-full btn-primary text-white hover:btn-white-dark px-4 py-2 !leading-[28px] sm:!leading-[30px] md:!leading-[32px] lg:!leading-[38px] text-sm sm:text-base md:text-[18px] font-semibold w-full sm:w-[180px] md:w-[200px] lg:w-[209px] sm:h-11 md:h-12 lg:h-14 shadow-sm">
+                          Get Started Free
+                        </LinkButton>
+                      </li>
+                    </RevealAnimation>
+                    <RevealAnimation delay={0.5} direction="left" offset={50}>
+                      <li>
+                        <LinkButton
+                          href="#video"
+                          insideSpan={false}
+                          className="btn btn-md flex justify-center items-center gap-3 btn-white px-4 py-2 !leading-[28px] sm:!leading-[30px] md:!leading-[32px] lg:!leading-[38px] text-sm sm:text-base md:text-[18px] font-semibold w-full sm:w-[200px] md:w-[220px] lg:w-[241px] sm:h-11 md:h-12 lg:h-14 border-[#0070CE] text-primary-500 btn-remove hover:bg-primary-700 hover:text-white">                    
+                          Explore Features                    
+                          <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fillRule="evenodd" clipRule="evenodd" d="M8.90777 3.28748C9.14292 3.05233 9.52418 3.05233 9.75934 3.28748L15.3794 8.90755C15.6146 9.14271 15.6146 9.52397 15.3794 9.75912L9.75934 15.3792C9.52418 15.6143 9.14292 15.6143 8.90777 15.3792C8.67261 15.144 8.67261 14.7628 8.90777 14.5276L13.4999 9.93549H3.71348C3.38092 9.93549 3.11133 9.6659 3.11133 9.33334C3.11133 9.00078 3.38092 8.73119 3.71348 8.73119H13.4999L8.90777 4.13905C8.67261 3.9039 8.67261 3.52263 8.90777 3.28748Z" fill="#0070CE"/>
+                          </svg>
+                        </LinkButton>
+                      </li>
+                    </RevealAnimation>
+                  </ul>
+                </div>
               </div>
-            </div>
-          </div>
-          {/* <HeroPerspective /> */}
+            </div> 
+            <div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-8">
+                <div className="gap-2 flex flex-col items-start lg:pr-10">
+                  <RevealAnimation delay={0.1}>
+                    <div className="mb-2 flex rounded-full bg-white py-[6px] px-[13px] border-[1px] border-primary-500">
+                      <span className="text-xs sm:text-sm md:text-base font-normal text-primary-700">Redefining Safety as a Strategic Advantage</span>
+                    </div>
+                  </RevealAnimation>
+                  <div className="space-y-3 md:space-y-5 text-left">
+                    <RevealAnimation delay={0.2}>
+                      <h1 className="max-w-[700px] text-primary-700 fw-700 tracking-tight !leading-[40px] md:!leading-[56px] lg:!leading-[58px] xl:!leading-[60px] text-4xl md:text-5xl xl:text-[56px]">
+                        Safety Charged at <span className='text-primary-500'>100%</span> Always.
+                      </h1>
+                    </RevealAnimation>
+                    <RevealAnimation delay={0.3}>
+                      <p className="mx-auto max-w-[800px] text-base sm:text-[18px] lg:text-[20px] text-secondary font-normal !leading-[26px] lg:!leading-[30px]">
+                        If your team only responds when things go wrong, it's already too late. Securit keeps safety charged — live alerts, location tracking, and site-wide risk detection running at 100%, always.
+                      </p>
+                    </RevealAnimation>
+                  </div>
+                  <ul className="flex flex-col gap-y-3 w-full sm:w-auto sm:flex-row sm:gap-x-4 pt-5 sm:pt-8 md:pt-9 lg:pt-10 xl:pt-[46px]">
+                    <RevealAnimation delay={0.3} direction="left" offset={50}>
+                      <li className="">
+                        <LinkButton
+                          href="#contact"
+                          insideSpan={false}
+                          className="btn rounded-full btn-primary text-white hover:btn-white-dark px-4 py-2 !leading-[28px] sm:!leading-[30px] md:!leading-[32px] lg:!leading-[38px] text-sm sm:text-base md:text-[18px] font-semibold w-full sm:w-[180px] md:w-[200px] lg:w-[209px] sm:h-11 md:h-12 lg:h-14 shadow-sm">
+                          Get Started Free
+                        </LinkButton>
+                      </li>
+                    </RevealAnimation>
+                    <RevealAnimation delay={0.5} direction="left" offset={50}>
+                      <li>
+                        <LinkButton
+                          href="#video"
+                          insideSpan={false}
+                          className="btn btn-md flex justify-center items-center gap-3 btn-white px-4 py-2 !leading-[28px] sm:!leading-[30px] md:!leading-[32px] lg:!leading-[38px] text-sm sm:text-base md:text-[18px] font-semibold w-full sm:w-[200px] md:w-[220px] lg:w-[241px] sm:h-11 md:h-12 lg:h-14 border-[#0070CE] text-primary-500 btn-remove hover:bg-primary-700 hover:text-white">                    
+                          Explore Features                    
+                          <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fillRule="evenodd" clipRule="evenodd" d="M8.90777 3.28748C9.14292 3.05233 9.52418 3.05233 9.75934 3.28748L15.3794 8.90755C15.6146 9.14271 15.6146 9.52397 15.3794 9.75912L9.75934 15.3792C9.52418 15.6143 9.14292 15.6143 8.90777 15.3792C8.67261 15.144 8.67261 14.7628 8.90777 14.5276L13.4999 9.93549H3.71348C3.38092 9.93549 3.11133 9.6659 3.11133 9.33334C3.11133 9.00078 3.38092 8.73119 3.71348 8.73119H13.4999L8.90777 4.13905C8.67261 3.9039 8.67261 3.52263 8.90777 3.28748Z" fill="#0070CE"/>
+                          </svg>
+                        </LinkButton>
+                      </li>
+                    </RevealAnimation>
+                  </ul>
+                </div>
+                <div className="gap-2 flex flex-col items-start">
+                  <RevealAnimation delay={0.1}>
+                    <div className="w-full">
+                      <figure>
+                        <Image src={banner} alt="banner"  />
+                      </figure>
+                    </div>
+                  </RevealAnimation>
+                </div>
+              </div>
+            </div>               
+          </Carousel>          
         </div>
       </div>
     </section>

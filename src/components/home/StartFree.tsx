@@ -9,7 +9,7 @@ const StartFree = () => {
       <div className="main-container">
         <div className="text-center space-y-6">
           <RevealAnimation delay={0.2}>
-            <h2 className="text-[#FFFFFF] fw-[700] text-[30px] !leading-[44px]">
+            <h2 className="text-[#FFFFFF] fw-700 text-[30px] !leading-[44px]">
               If Your Team Only Responds When Things Go Wrong,
               <span className="block">It&apos;s Already Too Late.</span>
             </h2>

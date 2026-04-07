@@ -65,7 +65,7 @@ const Footer = () => {
               <RevealAnimation delay={0.4 + 0.1 * index}>
                 <div className="space-y-6">
                   {item.title && (
-                    <h4 className="text-[18px] !leading-[20px] text-yellow">{item.title}</h4>
+                    <h4 className="text-[18px] !leading-[20px] text-white fw-700">{item.title}</h4>
                   )}
                   <ul className="space-y-4">
                     {item.links.map((link) => (
@@ -73,7 +73,7 @@ const Footer = () => {
                         <Link
                           href={link.href}
                           target={link.target}
-                          className="text-[14px] !leading-[18px] text-primary-50 hover:text-yellow font-normal transition-colors duration-200"
+                          className="text-[14px] !leading-[18px] text-primary-50 hover:text-white font-normal transition-colors duration-200"
                         >
                           {link.label}
                         </Link>
@@ -87,7 +87,7 @@ const Footer = () => {
           <div className="col-span-12 md:col-span-6 xl:col-span-3">
             <RevealAnimation delay={0.6}>
               <div className="max-w-[390px] space-y-6">
-                <h4 className="text-[18px] !leading[20px] text-yellow">General Inquiries</h4>
+                <h4 className="text-[18px] !leading[20px] text-white fw-700">General Inquiries</h4>
                 <p className="text-primary-50 text-[14px] !leading-[18px]">
                   Have a question or want to learn more? Reach out and we&apos;ll connect you with the right person.
                 </p>

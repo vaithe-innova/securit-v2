@@ -131,7 +131,7 @@ const rightsSection: ListSection = {
     { content: 'You have the right to access, update, or delete your personal information.' },
     {
       content:
-        'If you wish to exercise these rights, please contact us at <a href="mailto:support@nextsaas.com" class="text-secondary dark:text-accent">support@nextsaas.com</a>',
+        'If you wish to exercise these rights, please contact us at <a href="mailto:support@securit.app" class="text-secondary dark:text-accent">support@securit.app/a>',
     },
   ],
 };
@@ -169,8 +169,8 @@ const PrivacyContent = () => {
             </RevealAnimation>
             <RevealAnimation delay={0.2}>
               <p>
-                <span className="text-secondary dark:text-accent">NextSaaS</span> is a product operated by
-                <span className="text-secondary dark:text-accent">NextSaaS Technologies LLC</span>. We specialize in
+                <span className="text-secondary dark:text-accent">Securit</span> is a product operated by
+                <span className="text-secondary dark:text-accent">Innova Solutions</span>. We specialize in
                 property management solutions, empowering businesses worldwide to streamline their operations
                 efficiently. We are committed to protecting your privacy and handling your information transparently.
               </p>
@@ -180,12 +180,12 @@ const PrivacyContent = () => {
           {/* Policy Intro */}
           <RevealAnimation delay={0.3}>
             <div className="space-y-2">
-              <h4>NextSaaS privacy policy</h4>
+              <h4>Securit privacy policy</h4>
               <p>
                 This Privacy Policy describes how your personal information is collected, used, and shared when you
                 visit, subscribe, register, or make a purchase from
-                <Link href="https://nextsaas.com" className="text-secondary dark:text-accent">
-                  https://nextsaas.com
+                <Link href="https://securit.app" className="text-secondary dark:text-accent">
+                  https://securit.app
                 </Link>
                 (the &quot;Site&quot;).
               </p>

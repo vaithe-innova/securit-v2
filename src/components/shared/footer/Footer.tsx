@@ -104,14 +104,14 @@ const Footer = () => {
                   </p>
                 </div>
 
-                <div className="space-y-1">
+                {/* <div className="space-y-1">
                   <p className="text-[14px] !leading-[18px] text-white">
                     <span className="text-primary-50 mr-1">Phone:</span>
                     <a href="tel:+18007248328" className="text-primary-50 transition-colors duration-200 hover:text-accent/80">
                       +1 (800) 724-8328
                     </a>
                   </p>
-                </div>
+                </div> */}
               </div>
             </RevealAnimation>
           </div>

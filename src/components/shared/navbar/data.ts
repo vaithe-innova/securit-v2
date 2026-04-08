@@ -15,19 +15,25 @@ export const mobileMenuData: IMobileMenuGroup[] = [
   },
   {
     id: 'blog',
-    title: 'Blog',
+    title: 'Blogs and Events',
     submenu: [],
-    href: '#blog',
+    href: '/blog',
   },
   {
-    id: 'company',
-    title: 'Company',
-    href: undefined,
-    submenu: [
-      { id: 'about', label: 'About Us', href: '/about' },
-      { id: 'team', label: 'Our Team', href: '/#team' },
-    ],
+    id: 'about',
+    title: 'About Us',
+    submenu: [],
+    href: '/about',
   },
+  // {
+  //   id: 'company',
+  //   title: 'Company',
+  //   href: undefined,
+  //   submenu: [
+  //     { id: 'about', label: 'About Us', href: '/about' },
+  //     { id: 'team', label: 'Our Team', href: '/#team' },
+  //   ],
+  // },
   {
     id: 'contact-us',
     title: 'Contact Us',
@@ -40,9 +46,9 @@ export const insightsData: FooterOneData[] = [
   {
     title: 'Insights',
     links: [
-      { label: 'Blogs', href: '' },
-      { label: 'Case Studies', href: '' },
-      { label: 'News and events', href: '' },
+      { label: 'Blogs', href: '/blog' },
+      // { label: 'Case Studies', href: '' },
+      { label: 'News and events', href: '/blog/#events' },
       { label: 'Collaboration', href: '' },
     ],
   },
@@ -52,8 +58,8 @@ export const companyData: FooterOneData[] = [
     title: 'Company',
     links: [
       { label: 'About Us', href: '/about' },
-      { label: 'Pricing', href: '/pricing' },
-      { label: 'Contact Us', href: '/contact-us' },
+      // { label: 'Pricing', href: '/pricing' },
+      { label: 'Contact Us', href: '/#contact' },
       { label: 'FAQs', href: '' },
     ],
   },

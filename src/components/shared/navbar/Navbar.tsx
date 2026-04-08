@@ -6,44 +6,76 @@ import { MobileMenuProvider } from '@/context/MobileMenuContext';
 import { useNavbarScroll } from '@/hooks/useScrollHeader';
 import { cn } from '@/utils/cn';
 import mainLogo from '@public/images/shared/main-logo.svg';
+import facebookIcon from '@public/images/icons/facebook.svg';
+import linkedinIcon from '@public/images/icons/linkedin.svg';
+import twitterIcon from '@public/images/icons/twitter.svg';
+import instagramIcon from '@public/images/icons/instagram.svg';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
+// import { useState } from 'react';
 import MobileMenu from '../mobile-menu/MobileMenu';
 import MobileMenuButton from '../mobile-menu/MobileMenuButton';
-import CompanyMenu from './CompanyMenu';
+// import CompanyMenu from './CompanyMenu';
 import { mobileMenuData } from './data';
 
-const dropdownNavItems = [
-  { label: 'Company', dataMenu: 'company-dropdown-menu', MenuComponent: CompanyMenu },
-];
+// const dropdownNavItems = [
+//   { label: 'Company', dataMenu: 'company-dropdown-menu', MenuComponent: CompanyMenu },
+// ];
 
 const Navbar = () => {
   const pathname = usePathname();
-  const [menuDropdownId, setMenuDropdownId] = useState<string | null>(null);
+  // const [menuDropdownId, setMenuDropdownId] = useState<string | null>(null);
 
   const { isScrolled } = useNavbarScroll(150);
 
-  const handleMenuHover = (dropdownId?: string | null) => {
-    setMenuDropdownId(dropdownId || null);
-  };
+  // const handleMenuHover = (dropdownId?: string | null) => {
+  //   setMenuDropdownId(dropdownId || null);
+  // };
 
   return (
     <MobileMenuProvider>
       <header
-        onMouseLeave={() => handleMenuHover(null)}
         className={cn(
           'fixed left-1/2 z-50 mx-auto w-full -translate-x-1/2 transition-all duration-500',
           isScrolled && '',
         )}>
+        {pathname === '/' && (
+          <div className={cn("bg-[#0070CE] w-full transition-all duration-300 overflow-hidden", isScrolled ? "h-0 opacity-0" : "h-[36px] opacity-100")}>
+            <div className="main-container mx-auto flex items-center justify-between text-white text-[13px] h-full">
+              <div className="flex items-center gap-2">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
+                <a href="mailto:info@securit.app" className="hover:underline">info@securit.app</a>
+              </div>
+              <div className="hidden sm:flex items-center absolute left-1/2 -translate-x-1/2">
+                <Link href="/pricing" className="hover:underline flex items-center gap-1 font-medium">
+                  Try 30-day free trial <span className="text-[14px]">&rarr;</span>
+                </Link>
+              </div>
+              <div className="flex flex-1 sm:flex-none justify-end items-center gap-4">
+                <Link href="https://linkedin.com" target="_blank" className="hover:opacity-80 transition-opacity flex items-center justify-center">
+                  <Image src={linkedinIcon} alt="LinkedIn" width={12} height={12} className="brightness-0 invert" />
+                </Link>
+                <Link href="https://facebook.com" target="_blank" className="hover:opacity-80 transition-opacity flex items-center justify-center">
+                  <Image src={facebookIcon} alt="Facebook" width={12} height={12} className="brightness-0 invert" />
+                </Link>
+                <Link href="https://x.com" target="_blank" className="hover:opacity-80 transition-opacity flex items-center justify-center">
+                  <Image src={twitterIcon} alt="X" width={12} height={12} className="brightness-0 invert" />
+                </Link>
+                <Link href="https://instagram.com" target="_blank" className="hover:opacity-80 transition-opacity flex items-center justify-center">
+                  <Image src={instagramIcon} alt="Instagram" width={12} height={12} className="brightness-0 invert" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        )}
         <RevealAnimation direction="up" offset={100} delay={0.1} instant>
           <div
             className={cn(
               'border-stroke-2 dark:border-stroke-6 bg-accent dark:bg-background-9 border-b-2 py-2.5 xl:py-1',
             )}>
             <div className='main-container  mx-auto flex items-center justify-between max-lg:justify-between'>
-              <div className="flex items-center justify-center" onMouseEnter={() => handleMenuHover(null)}>
+              <div className="flex items-center justify-center">
                 <Link href="/" className="inline-flex items-center">
                   <span className="sr-only">Home</span>
                   <figure className="lg:max-w-[198px]">
@@ -53,28 +85,35 @@ const Navbar = () => {
               </div>
               <nav className="hidden items-center lg:flex">
                 <ul className="flex items-center">
-                  <li className={cn("relative cursor-pointer py-2.5", pathname === "/" && "active")} onMouseEnter={() => handleMenuHover(null)}>
+                  <li className={cn("relative cursor-pointer py-2.5", pathname === "/" && "active")}>
                     <Link
                       href="/"
                       className=" text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">
                       <span>Home</span>
                     </Link>
                   </li>
-                  <li className={cn("relative cursor-pointer py-2.5", pathname === "#features" && "active")} onMouseEnter={() => handleMenuHover(null)}>
+                  <li className={cn("relative cursor-pointer py-2.5", pathname === "#features" && "active")}>
                     <Link
                       href="/#features"
                       className=" text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">
                       <span>Features</span>
                     </Link>
                   </li>
-                  <li className={cn("relative cursor-pointer py-2.5", pathname === "#blog" && "active")} onMouseEnter={() => handleMenuHover(null)}>
+                  <li className={cn("relative cursor-pointer py-2.5", pathname === "/blog" && "active")}>
                     <Link
-                      href="#blog"
+                      href="/blog"
                       className=" text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">
-                      <span>Blog</span>
+                      <span>Blogs and Events</span>
                     </Link>
                   </li>
-                  {dropdownNavItems.map(({ label, dataMenu, MenuComponent }) => (
+                  <li className={cn("relative cursor-pointer py-2.5", pathname === "/about" && "active")}>
+                    <Link
+                      href="/about"
+                      className=" text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">
+                      <span>About Us</span>
+                    </Link>
+                  </li>
+                  {/* {dropdownNavItems.map(({ label, dataMenu, MenuComponent }) => (
                     <li
                       key={label}
                       className={cn("group relative cursor-pointer py-2.5", (menuDropdownId === dataMenu || pathname.startsWith('/company')) && "active")}
@@ -98,8 +137,8 @@ const Navbar = () => {
                       </button>
                       <MenuComponent menuDropdownId={menuDropdownId} setMenuDropdownId={setMenuDropdownId} />
                     </li>
-                  ))}
-                  <li className={cn("relative cursor-pointer py-2.5", pathname === "#contact" && "active")} onMouseEnter={() => handleMenuHover(null)}>
+                  ))} */}
+                  <li className={cn("relative cursor-pointer py-2.5", pathname === "#contact" && "active")}>
                     <Link
                       href="/#contact"
                       className=" text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">
@@ -108,7 +147,7 @@ const Navbar = () => {
                   </li>
                 </ul>
               </nav>
-              <div className="hidden items-center justify-center lg:flex" onMouseEnter={() => handleMenuHover(null)}>
+              <div className="hidden items-center justify-center lg:flex">
                 <Link href="https://workersafety.innovasolutions.com/" target="_blank" className="btn btn-md-v3 btn-primary hover:btn-white-dark dark:hover:btn-white mr-4 font-bold">
                   <span>Login</span>
                 </Link>

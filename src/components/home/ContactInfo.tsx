@@ -58,16 +58,16 @@ const ContactInfo = () => {
                 </h2>
               </RevealAnimation>
               <RevealAnimation delay={0.2}>
-                <h2 className="text-primary-700 font-semibold text-[24px] lg:text-[30px] leading-[34px] mt-3">
+                <h2 className="text-primary-700 font-semibold text-[24px] lg:text-[30px] leading-[34px] mt-3 mb-6">
                   Let&apos;s Talk!
                 </h2>
               </RevealAnimation>
               <RevealAnimation delay={0.4}>
-                <div className="space-y-5">
-                  <p className="text-secondary font-medium text-sm md:text-[20px] mt-3">
+                <div className="space-y-1">
+                  <p className="text-secondary font-semibold text-[20px] mt-2">
                     Try 30-Day Free Trial!
                   </p>
-                  <p className="text-primary-900 text-[20px] leading-[25px] mt-2">
+                  <p className="lg:max-w-[87%] text-primary-900 text-[16px] leading-[25px]">
                     Enjoy full feature access and see real-time compliance in action - before making any commitment.
                   </p>
 

@@ -1,11 +1,11 @@
 ---
 tag: 'finance'
 author: 'Sohel khan'
-authorImage: '/images/ns-avatar-7.png'
+authorImage: '/demo/images/ns-avatar-7.png'
 publishDate: 'June 02, 2025'
 title: 'AI-Powered Compliance: The New Backbone of Fund Operations'
 description: 'AI and automation are transforming compliance in fund operations, helping institutions reduce risks, meet regulatory demands, and improve efficiency across the back-office.'
-thumbnail: '/images/ns-img-402.jpg'
+thumbnail: '/demo/images/ns-img-402.jpg'
 readTime: '7 min read'
 ---
 
@@ -65,7 +65,7 @@ Modern consumers expect brands to care. Stories about green financing, community
 
 Avoid jargon or corporate fluff. Real, unpolished stories resonate more than scripted ads. Transparency in fees, sustainability efforts, and customer service builds stronger connections.
 
-![Brand storytelling in banking](/images/ns-img-464.png)
+![Brand storytelling in banking](/demo/images/ns-img-464.png)
 
 ### Work Smarter, Build Stronger Brands
 

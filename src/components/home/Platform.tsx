@@ -125,7 +125,7 @@ const Platform = () => {
 
 
             {/* Bottom Left: Diagram */}
-            <div className="bg-white dark:bg-background-5 rounded-3xl shadow-sm flex lg:hidden items-center justify-center min-h-[300px] border border-primary-500">
+            <div className="flex lg:hidden items-center justify-center bg-white dark:bg-background-5 rounded-3xl shadow-sm min-h-[300px] border border-primary-200 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_8px_32px_rgba(0,112,206,0.18)] hover:border-primary-500">
               <div className="relative w-full">
                 <img src={feature1.src} alt="Platform" className="h-full object-contain rounded-3xl" />
               </div>
@@ -178,7 +178,7 @@ const Platform = () => {
 
 
             {/* Bottom Left: Diagram */}
-            <div className="bg-white dark:bg-background-5 rounded-3xl shadow-sm hidden lg:flex items-center justify-center min-h-[300px] border border-primary-500">
+            <div className="hidden lg:flex items-center justify-center bg-white dark:bg-background-5 rounded-3xl shadow-sm min-h-[300px] border border-primary-200 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_8px_32px_rgba(0,112,206,0.18)] hover:border-primary-500">
               <div className="relative w-full">
                 <img src={feature1.src} alt="Platform" className="h-full object-contain rounded-3xl" />
               </div>

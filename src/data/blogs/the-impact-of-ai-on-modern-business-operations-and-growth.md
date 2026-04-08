@@ -1,11 +1,11 @@
 ---
 tag: 'sustainability'
 author: 'Bessie Cooper'
-authorImage: '/images/ns-avatar-9.png'
+authorImage: '/demo/images/ns-avatar-9.png'
 publishDate: 'June 28, 2025'
 title: 'The Impact of AI on Modern Business Operations and Growth'
 description: 'Efficient operations in modern banking are about blending digital innovation with customer-centric strategies. By streamlining workflows, adopting automation, and enhancing service delivery, banks can maximize efficiency while delivering exceptional customer value.'
-thumbnail: '/images/ns-img-427.jpg'
+thumbnail: '/demo/images/ns-img-427.jpg'
 readTime: '4 min read'
 ---
 
@@ -65,7 +65,7 @@ Modern consumers expect brands to care. Stories about green financing, community
 
 Avoid jargon or corporate fluff. Real, unpolished stories resonate more than scripted ads. Transparency in fees, sustainability efforts, and customer service builds stronger connections.
 
-![Brand storytelling in banking](/images/ns-img-464.png)
+![Brand storytelling in banking](/demo/images/ns-img-464.png)
 
 ### Work Smarter, Build Stronger Brands
 

@@ -1,11 +1,11 @@
 ---
 tag: 'finance'
 author: 'Yamal Wat'
-authorImage: '/images/ns-avatar-5.png'
+authorImage: '/demo/images/ns-avatar-5.png'
 publishDate: 'May 20, 2025'
 title: 'An Electronic Prescription Tailored for the Finance Sector'
 description: 'An electronic prescription tailored for the finance sector refers to a structured, digital-first solution that streamlines financial workflows, enhances customer service, and enables institutions to operate with higher efficiency and accuracy.'
-thumbnail: '/images/ns-img-406.jpg'
+thumbnail: '/demo/images/ns-img-406.jpg'
 readTime: '7 min read'
 ---
 
@@ -65,7 +65,7 @@ Modern consumers expect brands to care. Stories about green financing, community
 
 Avoid jargon or corporate fluff. Real, unpolished stories resonate more than scripted ads. Transparency in fees, sustainability efforts, and customer service builds stronger connections.
 
-![Brand storytelling in banking](/images/ns-img-464.png)
+![Brand storytelling in banking](/demo/images/ns-img-464.png)
 
 ### Work Smarter, Build Stronger Brands
 

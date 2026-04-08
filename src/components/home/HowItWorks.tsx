@@ -57,7 +57,7 @@ const HowItWorks = () => {
         {/* Headings */}
         <div className="mb-10 md:mb-14 space-y-4 text-center">
           <RevealAnimation delay={0.2}>
-            <div className="mb-3 flex items-center w-fit mx-auto rounded-full bg-white py-[6px] px-[13px] border-[1px] border-[]">
+            <div className="mb-3 flex items-center w-fit mx-auto rounded-full bg-white py-[6px] px-[13px] border-[1px] border-[#0070CE]">
               <span className="text-xs sm:text-sm md:text-base font-normal text-primary-700">How Securit Works</span>
             </div>
           </RevealAnimation>

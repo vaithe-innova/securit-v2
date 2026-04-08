@@ -1,11 +1,11 @@
 ---
 tag: 'banking'
 author: 'Miles Carter'
-authorImage: '/images/ns-avatar-5.png'
+authorImage: '/demo/images/ns-avatar-5.png'
 publishDate: 'April 28, 2025'
 title: 'Mastering Operational Efficiency in Modern Banking'
 description: 'Operational efficiency is no longer just an internal goal—it’s a competitive advantage in modern banking. By combining automation, agile workflows, and customer-first strategies, banks can scale faster, cut costs, and deliver seamless financial services.'
-thumbnail: '/images/ns-img-419.jpg'
+thumbnail: '/demo/images/ns-img-419.jpg'
 readTime: '7 min read'
 ---
 
@@ -65,7 +65,7 @@ Modern consumers expect brands to care. Stories about green financing, community
 
 Avoid jargon or corporate fluff. Real, unpolished stories resonate more than scripted ads. Transparency in fees, sustainability efforts, and customer service builds stronger connections.
 
-![Brand storytelling in banking](/images/ns-img-464.png)
+![Brand storytelling in banking](/demo/images/ns-img-464.png)
 
 ### Work Smarter, Build Stronger Brands
 

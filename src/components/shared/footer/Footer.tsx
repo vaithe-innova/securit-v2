@@ -11,6 +11,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { insightsData, companyData } from '../navbar/data';
 import FooterDivider from './FooterDivider';
+import ContactInfo from '@/components/home/ContactInfo';
+import StartFree from '@/components/home/StartFree';
 
 const legalLinks = [
   { label: 'Privacy Policy', href: '/' },
@@ -22,6 +24,9 @@ const Footer = () => {
   const footerColumns = [...insightsData, ...companyData];
 
   return (
+    <>    
+    <StartFree />
+    <ContactInfo />    
     <footer className="relative overflow-hidden bg-[#000000]">
       <div className="main-container px-5">
         <div className="grid grid-cols-12 justify-between gap-y-12 pt-16 pb-12 xl:gap-x-10 xl:pt-[90px]">
@@ -151,6 +156,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
+    </>
   );
 };
 

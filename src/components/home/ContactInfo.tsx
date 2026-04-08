@@ -5,10 +5,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import ReCAPTCHA from 'react-google-recaptcha';
 import RevealAnimation from '../animation/RevealAnimation';
-import facebookIcon from '@public/images/icons/facebook.svg';
-import instagramIcon from '@public/images/icons/instagram.svg';
-import linkedinIcon from '@public/images/icons/linkedin.svg';
-import twitterIcon from '@public/images/icons/twitter.svg';
 import { useRouter } from 'next/navigation';
 
 const countries = [
@@ -57,38 +53,24 @@ const ContactInfo = () => {
           <div className="mb-6 sm:mb-10 grid grid-cols-12 md:gap-8 space-y-4 md:space-y-0">
             <div className="col-span-12 md:col-span-6 lg:col-span-5 gap-2">
               <RevealAnimation delay={0.1}>
-                <h2 className="text-secondary-900 mt-2 text-[24px] lg:text-[30px] leading-[42px]">
+                <h2 className="text-secondary-900 max-w-[90%] mt-2 text-[24px] lg:text-[30px] leading-[42px]">
                   Do you seriously care about your employees?
                 </h2>
               </RevealAnimation>
               <RevealAnimation delay={0.2}>
-                <h2 className="text-primary-700 font-semibold text-[24px] lg:text-[30px] leading-[34px]">
+                <h2 className="text-primary-700 font-semibold text-[24px] lg:text-[30px] leading-[34px] mt-3">
                   Let&apos;s Talk!
                 </h2>
               </RevealAnimation>
               <RevealAnimation delay={0.4}>
                 <div className="space-y-5">
-                  <p className="text-secondary font-medium text-sm md:text-[20px] mt-5">
-                    Connect with us on social media
+                  <p className="text-secondary font-medium text-sm md:text-[20px] mt-3">
+                    Try 30-Day Free Trial!
                   </p>
-                  <div className="flex items-center gap-3">
-                    {/* LinkedIn */}
-                    <Link href="https://linkedin.com" target="_blank" className="w-[42px] h-[42px] bg-[#0077b5] rounded-[12px] flex items-center justify-center transition-transform hover:-translate-y-1">
-                      <Image src={linkedinIcon} alt="LinkedIn" width={20} height={20} />
-                    </Link>
-                    {/* Facebook */}
-                    <Link href="https://facebook.com" target="_blank" className="w-[42px] h-[42px] bg-[#3b5998] rounded-[12px] flex items-center justify-center transition-transform hover:-translate-y-1">
-                      <Image src={facebookIcon} alt="Facebook" width={20} height={20} />
-                    </Link>
-                    {/* X (Twitter) */}
-                    <Link href="https://x.com" target="_blank" className="w-[42px] h-[42px] bg-black rounded-[12px] flex items-center justify-center transition-transform hover:-translate-y-1">
-                      <Image src={twitterIcon} alt="Twitter" width={20} height={20} />
-                    </Link>
-                    {/* Instagram */}
-                    <Link href="https://instagram.com" target="_blank" className="w-[42px] h-[42px] bg-[#e4405f] rounded-[12px] flex items-center justify-center transition-transform hover:-translate-y-1">
-                      <Image src={instagramIcon} alt="Instagram" width={20} height={20} />
-                    </Link>
-                  </div>
+                  <p className="text-primary-900 text-[20px] leading-[25px] mt-2">
+                    Enjoy full feature access and see real-time compliance in action - before making any commitment.
+                  </p>
+
                 </div>
               </RevealAnimation>
               <RevealAnimation delay={0.5}>

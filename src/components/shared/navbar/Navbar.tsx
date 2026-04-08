@@ -40,35 +40,33 @@ const Navbar = () => {
           'fixed left-1/2 z-50 mx-auto w-full -translate-x-1/2 transition-all duration-500',
           isScrolled && '',
         )}>
-        {pathname === '/' && (
-          <div className={cn("bg-[#0070CE] w-full transition-all duration-300 overflow-hidden", isScrolled ? "h-0 opacity-0" : "h-[36px] opacity-100")}>
-            <div className="main-container mx-auto flex items-center justify-between text-white text-[13px] h-full">
-              <div className="flex items-center gap-2">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
-                <a href="mailto:info@securit.app" className="hover:underline">info@securit.app</a>
-              </div>
-              <div className="hidden sm:flex items-center absolute left-1/2 -translate-x-1/2">
-                <Link href="/pricing" className="hover:underline flex items-center gap-1 font-medium">
-                  Try 30-day free trial <span className="text-[14px]">&rarr;</span>
-                </Link>
-              </div>
-              <div className="flex flex-1 sm:flex-none justify-end items-center gap-4">
-                <Link href="https://linkedin.com" target="_blank" className="hover:opacity-80 transition-opacity flex items-center justify-center">
-                  <Image src={linkedinIcon} alt="LinkedIn" width={12} height={12} className="brightness-0 invert" />
-                </Link>
-                <Link href="https://facebook.com" target="_blank" className="hover:opacity-80 transition-opacity flex items-center justify-center">
-                  <Image src={facebookIcon} alt="Facebook" width={12} height={12} className="brightness-0 invert" />
-                </Link>
-                <Link href="https://x.com" target="_blank" className="hover:opacity-80 transition-opacity flex items-center justify-center">
-                  <Image src={twitterIcon} alt="X" width={12} height={12} className="brightness-0 invert" />
-                </Link>
-                <Link href="https://instagram.com" target="_blank" className="hover:opacity-80 transition-opacity flex items-center justify-center">
-                  <Image src={instagramIcon} alt="Instagram" width={12} height={12} className="brightness-0 invert" />
-                </Link>
-              </div>
+        <div className={cn("bg-[#0070CE] w-full transition-all duration-300 overflow-hidden", isScrolled ? "h-0 opacity-0" : "h-[36px] opacity-100")}>
+          <div className="main-container mx-auto flex items-center justify-between text-white text-[13px] h-full">
+            <div className="flex items-center gap-2">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
+              <a href="mailto:info@securit.app" className="hover:underline">info@securit.app</a>
+            </div>
+            <div className="hidden sm:flex items-center absolute left-1/2 -translate-x-1/2">
+              <Link href="/#contact" className="hover:underline flex items-center gap-1 font-medium">
+                Try 30-day free trial <span className="text-[14px]">&rarr;</span>
+              </Link>
+            </div>
+            <div className="flex flex-1 sm:flex-none justify-end items-center gap-4">
+              <Link href="https://linkedin.com" target="_blank" className="hover:opacity-80 transition-opacity flex items-center justify-center">
+                <Image src={linkedinIcon} alt="LinkedIn" width={12} height={12} className="brightness-0 invert" />
+              </Link>
+              <Link href="https://facebook.com" target="_blank" className="hover:opacity-80 transition-opacity flex items-center justify-center">
+                <Image src={facebookIcon} alt="Facebook" width={12} height={12} className="brightness-0 invert" />
+              </Link>
+              <Link href="https://x.com" target="_blank" className="hover:opacity-80 transition-opacity flex items-center justify-center">
+                <Image src={twitterIcon} alt="X" width={12} height={12} className="brightness-0 invert" />
+              </Link>
+              <Link href="https://instagram.com" target="_blank" className="hover:opacity-80 transition-opacity flex items-center justify-center">
+                <Image src={instagramIcon} alt="Instagram" width={12} height={12} className="brightness-0 invert" />
+              </Link>
             </div>
           </div>
-        )}
+        </div>
         <RevealAnimation direction="up" offset={100} delay={0.1} instant>
           <div
             className={cn(

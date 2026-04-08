@@ -23,8 +23,8 @@ const page = () => {
       <HowItWorks />
       <Facts />
       <Platform />
-      <Industries />
       <DeploymentTimeline />
+      <Industries />
     </main>
   );
 };

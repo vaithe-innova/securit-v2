@@ -12,7 +12,7 @@ import RippleButton from '../ui/button/RippleButton';
 
 const Hero = () => {
   return (
-    <section id="features" className="relative overflow-hidden bg-[#E5F3FF] pt-[132px] sm:pt-[142px] md:pt-[152px] lg:pt-[172px] xl:pt-[192px] pb-[50px] sm:pb-[70px] md:pb-[80px] lg:pb-[100px] xl:pb-[120px]">
+    <section className="relative overflow-hidden bg-[#E5F3FF] pt-[132px] sm:pt-[142px] md:pt-[152px] lg:pt-[172px] xl:pt-[192px] pb-[50px] sm:pb-[70px] md:pb-[80px] lg:pb-[100px] xl:pb-[120px]">
       {/* Background glowing effects to match prototype */}
       <span className="absolute left-[-65px] top-[-37px]">
         <BlurOne />

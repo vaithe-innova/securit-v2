@@ -9,7 +9,7 @@ interface OfferListProps {
 
 const OfferList = ({ offerData }: OfferListProps) => {
     return (
-        <section className="bg-background-5 pt-20 pb-20 md:pb-16 lg:pb-[100px] xl:pt-[120px] xl:pb-[140px]" id="features">
+        <section id="features" className="bg-background-5 pt-20 pb-20 md:pb-16 lg:pb-[100px] xl:pt-[120px] xl:pb-[140px]">
             <div className="main-container">
                 <div className="mb-[60px] space-y-6 text-center">
                     <RevealAnimation delay={0.2}>
@@ -32,11 +32,11 @@ const OfferList = ({ offerData }: OfferListProps) => {
                     {offerData.map((offer, index) => (
                         <RevealAnimation key={offer.slug} delay={0.15 + index * 0.12} direction="up" offset={50}>
                             <div className="card group relative bg-[#050B15] border border-[#155DFC66] h-full rounded-[24px] hover:rounded-[0px]">
-                                  {/* Border lines */}
-  <span className="line top"></span>
-  <span className="line right"></span>
-  <span className="line bottom"></span>
-  <span className="line left"></span>
+                                {/* Border lines */}
+                                <span className="line top"></span>
+                                <span className="line right"></span>
+                                <span className="line bottom"></span>
+                                <span className="line left"></span>
                                 <div className=" p-8 md:p-10 text-left h-full transition-all duration-500">
                                     <div className="w-[52px] h-[52px] bg-primary-500 rounded-[12px] flex items-center justify-center mb-8 transition-transform duration-300">
                                         <div dangerouslySetInnerHTML={{ __html: offer.svgIcon }} />

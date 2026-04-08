@@ -294,7 +294,7 @@ const Hero = () => {
                   <div className="space-y-3 md:space-y-5 text-left">
                     <RevealAnimation delay={0.2}>
                       <h1 className="max-w-[700px] text-primary-700 fw-700 tracking-tight !leading-[40px] md:!leading-[56px] lg:!leading-[58px] xl:!leading-[60px] text-4xl md:text-5xl xl:text-[48px]">
-                        Safety Charged at <br /> <span className='text-primary-500'>100%</span> Always.
+                        Safety charged at <br /> <span className='text-primary-500'>100%</span> always.
                       </h1>
                     </RevealAnimation>
                     <RevealAnimation delay={0.3}>

@@ -13,8 +13,8 @@ const nextConfig: NextConfig = {
   },
   output: 'export',
   trailingSlash: true,
-  basePath: '/demo',       // ✅ REQUIRED
-  assetPrefix: '/demo/',   // ✅ REQUIRED
+  // basePath: '/demo',       // ✅ REQUIRED
+  // assetPrefix: '/demo/',   // ✅ REQUIRED
 };
 
 export default nextConfig;

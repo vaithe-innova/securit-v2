@@ -5,6 +5,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import ReCAPTCHA from 'react-google-recaptcha';
 import RevealAnimation from '../animation/RevealAnimation';
+import linkedin from '@public/images/icons/new-linkedin.svg';
+import instagram from '@public/images/icons/new-instagram.svg';
+import twitter from '@public/images/icons/new-twitter.svg';
+import facebook from '@public/images/icons/new-facebook.svg';
 
 const countries = [
   { name: 'United States', code: '+1', iso: 'us' },
@@ -63,19 +67,23 @@ const ContactInfo = () => {
                   <div className="flex items-center gap-3">
                     {/* LinkedIn */}
                     <Link href="https://linkedin.com" target="_blank" className="w-[42px] h-[42px] bg-[#0077b5] rounded-[12px] flex items-center justify-center transition-transform hover:-translate-y-1">
-                      <img src="/images/icons/new-linkedin.svg" alt="LinkedIn" />
+                     <Image src={linkedin} alt="linedin" />
+                      {/* <img src="/images/icons/new-linkedin.svg" alt="LinkedIn" /> */}
                     </Link>
                     {/* Facebook */}
                     <Link href="https://facebook.com" target="_blank" className="w-[42px] h-[42px] bg-[#3b5998] rounded-[12px] flex items-center justify-center transition-transform hover:-translate-y-1">
-                      <img src="/images/icons/new-facebook.svg" alt="Facebook" />
+                     <Image src={facebook} alt="facebook"  />
+                      {/* <img src="/images/icons/new-facebook.svg" alt="Facebook" /> */}
                     </Link>
                     {/* X (Twitter) */}
                     <Link href="https://x.com" target="_blank" className="w-[42px] h-[42px] bg-black rounded-[12px] flex items-center justify-center transition-transform hover:-translate-y-1">
-                      <img src="/images/icons/new-twitter.svg" alt="Twitter" />
+                     <Image src={twitter} alt="twitter"/>
+                      {/* <img src="/images/icons/new-twitter.svg" alt="Twitter" /> */}
                     </Link>
                     {/* Instagram */}
                     <Link href="https://instagram.com" target="_blank" className="w-[42px] h-[42px] bg-[#e4405f] rounded-[12px] flex items-center justify-center transition-transform hover:-translate-y-1">
-                      <img src="/images/icons/new-instagram.svg" alt="Instagram" />
+                     <Image src={instagram} alt="instagram" />
+                      {/* <img src="/images/icons/new-instagram.svg" alt="Instagram" /> */}
                     </Link>
                   </div>
                 </div>

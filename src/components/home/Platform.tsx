@@ -7,7 +7,7 @@ import feature1 from '@public/images/Inbound.gif';
 // Feature list
 const intelligenceList = {
   title: 'Intelligence',
-  titleIcon: '/images/icons/intelligence_icon.svg',
+  titleIcon: '/demo/images/icons/intelligence_icon.svg',
   description: 'AI turns operational data into actionable safety insights.',
   list: [
     {
@@ -27,7 +27,7 @@ const intelligenceList = {
 
 const signalList = {
   title: 'Signal',
-  titleIcon: '/images/icons/signal_icon.svg',
+  titleIcon: '/demo/images/icons/signal_icon.svg',
   description: 'Real-time inputs from workers, devices, & environmental conditions.',
   list: [
     {
@@ -51,7 +51,7 @@ const signalList = {
 
 const controlList = {
   title: 'Control',
-  titleIcon: '/images/icons/control_icon.svg',
+  titleIcon: '/demo/images/icons/control_icon.svg',
   description: 'Centralized platform to manage safety operations and incidents.',
   list: [
     {
@@ -75,7 +75,7 @@ const controlList = {
 
 const actionList = {
   title: 'Action',
-  titleIcon: '/images/icons/action_icon.svg',
+  titleIcon: '/demo/images/icons/action_icon.svg',
   description: 'Field-ready tools for fast and coordinated response.',
   list: [
     {

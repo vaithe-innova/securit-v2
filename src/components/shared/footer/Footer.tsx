@@ -3,6 +3,10 @@
 import RevealAnimation from '@/components/animation/RevealAnimation';
 import { FooterOneData } from '@/interface';
 import darkLogo from '@public/images/shared/logo-dark.svg';
+import linkedin from '@public/images/icons/linkedin.svg';
+import instagram from '@public/images/icons/instagram.svg';
+import twitter from '@public/images/icons/twitter.svg';
+import facebook from '@public/images/icons/facebook.svg';
 import Image from 'next/image';
 import Link from 'next/link';
 import { insightsData, companyData } from '../navbar/data';
@@ -33,28 +37,32 @@ const Footer = () => {
                     href="https://www.linkedin.com/company/innova-solutions"
                     className="flex h-[32px] w-[32px] items-center justify-center rounded-lg bg-[#1D293D] transition-transform duration-300 hover:-translate-y-1"
                   >
-                    <img src="/images/icons/linkedin.svg" alt="LinkedIn" className="w-[12px] h-[12px]" />
+                    <Image src={linkedin} alt="linkedin" width={12} height={12} />
+                    {/* <img src="/images/icons/linkedin.svg" alt="LinkedIn" className="w-[12px] h-[12px]" /> */}
                   </Link>
                   <Link
                     target="_blank"
                     href="https://www.twitter.com/innovasolutions"
                     className="flex h-[32px] w-[32px] items-center justify-center rounded-lg bg-[#1D293D] transition-transform duration-300 hover:-translate-y-1"
                   >
-                    <img src="/images/icons/twitter.svg" alt="Twitter" className="w-[12px] h-[12px]" />
+                    <Image src={twitter} alt="twitter" width={12} height={12} />
+                    {/* <img src="/images/icons/twitter.svg" alt="Twitter" className="w-[12px] h-[12px]" /> */}
                   </Link>
                   <Link
                     target="_blank"
                     href="https://www.instagram.com/innovasolutions"
                     className="flex h-[32px] w-[32px] items-center justify-center rounded-lg bg-[#1D293D] transition-transform duration-300 hover:-translate-y-1"
                   >
-                    <img src="/images/icons/instagram.svg" alt="Instagram" className="w-[12px] h-[12px]" />
+                    <Image src={instagram} alt="instagram" width={12} height={12} />
+                    {/* <img src="/images/icons/instagram.svg" alt="Instagram" className="w-[12px] h-[12px]" /> */}
                   </Link>
                   <Link
                     target="_blank"
                     href="https://facebook.com"
                     className="flex h-[32px] w-[32px] items-center justify-center rounded-lg bg-[#1D293D] transition-transform duration-300 hover:-translate-y-1"
                   >
-                    <img src="/images/icons/facebook.svg" alt="Facebook" className="w-[12px] h-[12px]" />
+                    <Image src={facebook} alt="facebook" width={12} height={12} />
+                    {/* <img src="/images/icons/facebook.svg" alt="Facebook" className="w-[12px] h-[12px]" /> */}
                   </Link>
                 </div>
               </div>

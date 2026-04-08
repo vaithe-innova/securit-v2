@@ -8,25 +8,25 @@ const teamMembers = [
     id: 1,
     name: 'Rajendra (Raj) Sadhu',
     role: 'Senior Vice President, Hi-Tech SBU',
-    image: '/images/team/Rajendra-Raj-Sadhu.jpg',
+    image: '/demo/images/team/Rajendra-Raj-Sadhu.jpg',
   },
   {
     id: 2,
     name: 'Pradeep Karki',
     role: 'Associate Vice President',
-    image: '/images/team/placeholder.jpg',
+    image: '/demo/images/team/placeholder.jpg',
   },
   {
     id: 3,
     name: 'Sanchit Sharma',
     role: 'Deputy Manager - Support',
-    image: '/images/team/placeholder.jpg',
+    image: '/demo/images/team/placeholder.jpg',
   },
   {
     id: 4,
     name: 'Name',
     role: 'Designation',
-    image: '/images/team/placeholder.jpg',
+    image: '/demo/images/team/placeholder.jpg',
   },
 ];
 

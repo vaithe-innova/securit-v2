@@ -102,8 +102,8 @@ const Footer = () => {
                 <div className="space-y-1">
                   <p className="text-[14px] !leading-[18px] text-white">
                     <span className="text-primary-50 mr-1">Email:</span>
-                    <a href="mailto:info@securit.com" className="text-primary-50 transition-colors duration-200 hover:text-accent/80">
-                      info@securit.com
+                    <a href="mailto:info@securit.app" className="text-primary-50 transition-colors duration-200 hover:text-accent/80">
+                      info@securit.app
                     </a>
                   </p>
                 </div>

@@ -31,19 +31,14 @@ const OfferList = ({ offerData }: OfferListProps) => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                     {offerData.map((offer, index) => (
                         <RevealAnimation key={offer.slug} delay={0.15 + index * 0.12} direction="up" offset={50}>
-                            <div className="card group relative bg-[#050B15] border border-[#155DFC66] h-full rounded-[24px] hover:rounded-[0px]">
-                                  {/* Border lines */}
-  <span className="line top"></span>
-  <span className="line right"></span>
-  <span className="line bottom"></span>
-  <span className="line left"></span>
+                            <div className="group relative bg-[#050B15] border border-[#155DFC66] h-full rounded-[24px] overflow-hidden transition-all duration-500 ease-in-out hover:bg-white">
                                 <div className=" p-8 md:p-10 text-left h-full transition-all duration-500">
                                     <div className="w-[52px] h-[52px] bg-primary-500 rounded-[12px] flex items-center justify-center mb-8 transition-transform duration-300">
                                         <div dangerouslySetInnerHTML={{ __html: offer.svgIcon }} />
                                     </div>
                                     <div className='space-y-4'>
-                                        <h3 className="text-[16px] lg:text-[20px] fw-700 text-white !leading-tight transition-colors duration-300 group-hover:text-primary-300">{offer.title}</h3>
-                                        <p className="text-[#DBEAFE] text-[14px] lg:text-[16px] !leading-[26px]">{offer.description}</p>
+                                        <h3 className="text-[16px] lg:text-[20px] fw-700 !leading-tight text-white transition-colors duration-500 group-hover:text-[#000070]">{offer.title}</h3>
+                                        <p className="text-[#DBEAFE] transition-colors duration-500 group-hover:text-[#202020] text-[14px] lg:text-[16px] !leading-[26px]">{offer.description}</p>
                                     </div>
                                 </div>
                             </div>

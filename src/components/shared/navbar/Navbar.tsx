@@ -99,7 +99,7 @@ const Navbar = () => {
                       <span>Features</span>
                     </Link>
                   </li>
-                  <li className={cn("relative cursor-pointer py-2.5", pathname === "/blog" && "active")} onMouseEnter={() => handleMenuHover(null)}>
+                  <li className={cn("relative cursor-pointer py-2.5", pathname === "/blog" && "active")}>
                     <Link
                       href="/blog"
                       className=" text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">

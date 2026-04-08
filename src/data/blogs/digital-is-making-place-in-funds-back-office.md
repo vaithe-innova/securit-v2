@@ -1,11 +1,11 @@
 ---
 tag: 'finance'
 author: 'Sohi Karim'
-authorImage: '/images/ns-avatar-6.png'
+authorImage: '/demo/images/ns-avatar-6.png'
 publishDate: 'May 28, 2025'
 title: 'Digital is Making Place in Funds Back-Office'
 description: 'The funds industry is experiencing a major shift as digital technologies transform back-office operations—streamlining fund administration, enhancing compliance, and improving efficiency for asset managers and investors alike.'
-thumbnail: '/images/ns-img-411.jpg'
+thumbnail: '/demo/images/ns-img-411.jpg'
 readTime: '6 min read'
 featured: true
 ---
@@ -66,7 +66,7 @@ Modern consumers expect brands to care. Stories about green financing, community
 
 Avoid jargon or corporate fluff. Real, unpolished stories resonate more than scripted ads. Transparency in fees, sustainability efforts, and customer service builds stronger connections.
 
-![Brand storytelling in banking](/images/ns-img-464.png)
+![Brand storytelling in banking](/demo/images/ns-img-464.png)
 
 ### Work Smarter, Build Stronger Brands
 

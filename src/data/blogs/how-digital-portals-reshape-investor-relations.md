@@ -1,11 +1,11 @@
 ---
 tag: 'finance'
 author: 'Jhon Doe'
-authorImage: '/images/ns-avatar-9.png'
+authorImage: '/demo/images/ns-avatar-9.png'
 publishDate: 'June 05, 2025'
 title: 'How Digital Portals Reshape Investor Relations'
 description: 'Investor relations are evolving as digital portals replace paper-heavy processes, offering transparency, accessibility, and real-time engagement for modern investors.'
-thumbnail: '/images/ns-img-416.jpg'
+thumbnail: '/demo/images/ns-img-416.jpg'
 readTime: '6 min read'
 featured: true
 ---
@@ -66,7 +66,7 @@ Modern consumers expect brands to care. Stories about green financing, community
 
 Avoid jargon or corporate fluff. Real, unpolished stories resonate more than scripted ads. Transparency in fees, sustainability efforts, and customer service builds stronger connections.
 
-![Brand storytelling in banking](/images/ns-img-464.png)
+![Brand storytelling in banking](/demo/images/ns-img-464.png)
 
 ### Work Smarter, Build Stronger Brands
 

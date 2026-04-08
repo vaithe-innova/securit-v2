@@ -1,22 +1,27 @@
 [
   {
     "id": 1,
-    "question": "What is the primary role of a business agency?",
-    "answer": "A business agency helps companies grow by offering strategic services like branding, digital marketing, business consulting, and customer experience optimization. Their goal is to improve performance and scalability."
+    "question": "1. What does implementation actually look like for our team?",
+    "answer": "Securit is rolled out in phases—starting with connecting your existing systems, followed by configuring zones and workflows, and then onboarding teams. Most of the work happens in the background, so operations don’t need to stop or change significantly."
   },
   {
     "id": 2,
-    "question": "What kinds of services should I anticipate from a business agency?",
-    "answer": "Typical services include market research, brand strategy, SEO and content marketing, web development, paid advertising, and ongoing performance analytics to track growth and ROI."
+    "question": "2. How does Securit handle environments with changing conditions?",
+    "answer": " The platform is designed for dynamic environments. Zones, rules, and workflows can be adjusted as conditions change—whether that’s new hazards, shifting work areas, or temporary safety controls."
   },
   {
     "id": 3,
-    "question": "How often should I consider updating my website?",
-    "answer": "A website should be reviewed every 6–12 months for performance, design trends, SEO updates, and new technology. Major updates are recommended at least every 2–3 years to stay competitive."
+    "question": "3. Will this create more alerts for our team to manage?",
+    "answer": "No—the goal is the opposite. Securit prioritizes events based on context and severity, helping teams focus on what actually matters instead of reacting to every signal."
   },
   {
     "id": 4,
-    "question": "Why is digital marketing essential for modern businesses?",
-    "answer": "Digital marketing allows businesses to reach targeted audiences, build brand awareness, and drive conversions through channels like social media, email marketing, SEO, and PPC."
+    "question": "4. How does Securit work with contractors or rotating teams?",
+    "answer": "Securit is built to handle mixed workforces. Access, visibility, and alerts can be configured based on roles, so both internal teams and contractors follow consistent safety workflows."
+  },
+  {
+    "id": 5,
+    "question": "5. How does the platform scale as we add more sites or teams?",
+    "answer": "Securit supports multi-site operations with centralized oversight. You can add new locations, zones, and teams without rebuilding your setup, while still maintaining consistent policies and visibility across all environments."
   }
 ]

@@ -1,11 +1,11 @@
 ---
 tag: 'finance'
 author: 'Kristin Wat'
-authorImage: '/images/ns-avatar-1.png'
+authorImage: '/demo/images/ns-avatar-1.png'
 publishDate: 'May 20, 2025'
 title: 'Take control of your online banking and earn rewards.'
 description: 'An electronic prescription tailored for the finance sector refers to a structured, digital solution that streamlines financial services, enhances customer experiences, and improves operational efficiency.'
-thumbnail: '/images/ns-img-425.jpg'
+thumbnail: '/demo/images/ns-img-425.jpg'
 readTime: '7 min read'
 featured: true
 ---
@@ -66,7 +66,7 @@ Modern consumers expect brands to care. Stories about green financing, community
 
 Avoid jargon or corporate fluff. Real, unpolished stories resonate more than scripted ads. Transparency in fees, sustainability efforts, and customer service builds stronger connections.
 
-![Brand storytelling in banking](/images/ns-img-464.png)
+![Brand storytelling in banking](/demo/images/ns-img-464.png)
 
 ### Work Smarter, Build Stronger Brands
 

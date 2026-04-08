@@ -1,11 +1,11 @@
 ---
 tag: 'design'
 author: 'Bessie Cooper'
-authorImage: '/images/ns-avatar-2.png'
+authorImage: '/demo/images/ns-avatar-2.png'
 publishDate: 'Nov 28, 2025'
 title: 'A customized electronic prescription designed specifically'
 description: 'Efficient operations in modern banking are about blending digital innovation with customer-centric strategies. By streamlining workflows, adopting automation, and enhancing service delivery, banks can maximize efficiency while delivering exceptional customer value.'
-thumbnail: '/images/ns-img-404.jpg'
+thumbnail: '/demo/images/ns-img-404.jpg'
 readTime: '3 min read'
 ---
 
@@ -65,7 +65,7 @@ Modern consumers expect brands to care. Stories about green financing, community
 
 Avoid jargon or corporate fluff. Real, unpolished stories resonate more than scripted ads. Transparency in fees, sustainability efforts, and customer service builds stronger connections.
 
-![Brand storytelling in banking](/images/ns-img-464.png)
+![Brand storytelling in banking](/demo/images/ns-img-464.png)
 
 ### Work Smarter, Build Stronger Brands
 

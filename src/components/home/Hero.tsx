@@ -3,14 +3,10 @@
 import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/LinkButton';
 import { BlurOne, BlurTwo } from '@/icons';
-// import banner from '@public/images/banner.png';
-import bg1 from '@public/images/bg1.jpg';
 import banner1 from '@public/images/banner1.png';
 import banner3 from '@public/images/banner3.png';
 import dashboard from '@public/images/dashboard.png';
 import Image from 'next/image';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-// import { Carousel } from 'react-responsive-carousel';
 import RippleButton from '../ui/button/RippleButton';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
@@ -18,10 +14,7 @@ import "swiper/css";
 
 const Hero = () => {
   return (
-    <section id="features" className="relative overflow-hidden bg-[#E5F3FF] pt-[132px] sm:pt-[142px] md:pt-[152px] lg:pt-[172px] xl:pt-[192px] pb-[50px] sm:pb-[70px] md:pb-[80px] lg:pb-[100px] xl:pb-[120px]">
-      <Image src={bg1} alt="bg" className='absolute w-full h-full left-0 top-0 opacity-40 object-cover' />
-      <div className='absolute w-full h-full left-0 top-0 bg-[#f4faff] opacity-80'></div>
-      {/* Background glowing effects to match prototype */}
+    <section className="relative overflow-hidden bg-[#E5F3FF] pt-[132px] sm:pt-[142px] md:pt-[152px] lg:pt-[172px] xl:pt-[192px] pb-[50px] sm:pb-[70px] md:pb-[80px] lg:pb-[100px] xl:pb-[120px]">
       <span className="hidden md:flex absolute left-[-65px] top-[-37px]">
         <BlurOne />
       </span>
@@ -368,16 +361,7 @@ const Hero = () => {
 
             <SwiperSlide>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-8">
-                <div className="gap-2 flex flex-col items-start order-2 md:order-1">
-                  <RevealAnimation delay={0.1}>
-                    <div className="w-full">
-                      <figure>
-                        <Image src={dashboard} alt="banner" />
-                      </figure>
-                    </div>
-                  </RevealAnimation>
-                </div>
-                <div className="gap-2 flex flex-col items-start lg:pr-10 order-1 md:order-2">
+                <div className="gap-2 flex flex-col items-start lg:pr-10">
                   <RevealAnimation delay={0.1}>
                     <div className="mb-2 flex rounded-full bg-white py-[6px] px-[13px] border-[1px] border-primary-500">
                       <span className="text-xs sm:text-sm md:text-base font-normal text-primary-700">Protect Your People. Preserve Your Growth.</span>
@@ -438,6 +422,15 @@ const Hero = () => {
                       </li>
                     </RevealAnimation>
                   </ul>
+                </div>
+                <div className="gap-2 flex flex-col items-start">
+                  <RevealAnimation delay={0.1}>
+                    <div className="w-full">
+                      <figure>
+                        <Image src={dashboard} alt="banner" />
+                      </figure>
+                    </div>
+                  </RevealAnimation>
                 </div>
               </div>
             </SwiperSlide>

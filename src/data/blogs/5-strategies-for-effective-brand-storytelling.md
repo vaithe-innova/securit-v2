@@ -1,12 +1,12 @@
 ---
 tag: 'banking'
 author: 'Bessie Cooper'
-authorImage: '/images/ns-avatar-3.png'
+authorImage: '/demo/images/ns-avatar-3.png'
 publishDate: 'April 28, 2025'
 readTime: '6 min read'
 title: '5 strategies for effective brand storytelling'
 description: 'In an era where trust and connection matter as much as products, brand storytelling helps banks build emotional bonds with customers. Discover five proven strategies to communicate values, create loyalty, and differentiate in a crowded financial market.'
-thumbnail: '/images/ns-img-401.jpg'
+thumbnail: '/demo/images/ns-img-401.jpg'
 ---
 
 ### Introduction
@@ -65,7 +65,7 @@ Modern consumers expect brands to care. Stories about green financing, community
 
 Avoid jargon or corporate fluff. Real, unpolished stories resonate more than scripted ads. Transparency in fees, sustainability efforts, and customer service builds stronger connections.
 
-![Brand storytelling in banking](/images/ns-img-464.png)
+![Brand storytelling in banking](/demo/images/ns-img-464.png)
 
 ### Work Smarter, Build Stronger Brands
 

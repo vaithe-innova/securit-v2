@@ -4,10 +4,8 @@ import HowItWorks from '@/components/home/HowItWorks';
 import Facts from '@/components/home/Facts';
 import Platform from '@/components/home/Platform';
 import Industries from '@/components/home/Industries';
-import StartFree from '@/components/home/StartFree';
 import WhatWeOffer from '@/components/home/WhatWeOffer';
 import DeploymentTimeline from '@/components/home/DeploymentTimeline';
-import ContactInfo from '@/components/home/ContactInfo';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
 
@@ -27,8 +25,6 @@ const page = () => {
       <Platform />
       <Industries />
       <DeploymentTimeline />
-      <StartFree />
-      <ContactInfo />
     </main>
   );
 };

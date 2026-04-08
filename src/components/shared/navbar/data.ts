@@ -60,7 +60,7 @@ export const companyData: FooterOneData[] = [
       { label: 'About Us', href: '/about' },
       // { label: 'Pricing', href: '/pricing' },
       { label: 'Contact Us', href: '/#contact' },
-      { label: 'FAQs', href: '' },
+      { label: 'FAQs', href: '/faq' },
     ],
   },
 ];

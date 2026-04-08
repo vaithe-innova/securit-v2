@@ -3,7 +3,6 @@ import Counter from '@/components/home/Counter';
 import HowItWorks from '@/components/home/HowItWorks';
 import Platform from '@/components/home/Platform';
 import Industries from '@/components/home/Industries';
-import OurTeam from '@/components/home/OurTeam';
 import StartFree from '@/components/home/StartFree';
 import WhatWeOffer from '@/components/home/WhatWeOffer';
 import DeploymentTimeline from '@/components/home/DeploymentTimeline';
@@ -28,7 +27,6 @@ const page = () => {
       <Platform />
       <Industries />
       <DeploymentTimeline />
-      <OurTeam />
       <StartFree />
       <ContactInfo />
     </main>

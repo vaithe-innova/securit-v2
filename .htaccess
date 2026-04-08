@@ -1,0 +1,13 @@
+RewriteEngine On
+
+# Allow Next.js static files
+RewriteCond %{REQUEST_URI} ^/_next/
+RewriteRule ^ - [L]
+
+# Allow existing files
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Fallback to .html
+RewriteRule ^(.*)$ $1.html [L]

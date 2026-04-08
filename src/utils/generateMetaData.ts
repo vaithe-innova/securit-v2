@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 
-export const DEFAULT_URL = 'https://securit.app';
-export const DEFAULT_TITLE = 'Securit - AI-Powered Security & Compliance Platform | Innova Solutions';
+export const DEFAULT_URL = 'https://securit.app/demo/';
+export const DEFAULT_TITLE = 'Securit - Innova Solutions';
 export const DEFAULT_DESCRIPTION =
-  'Securit - AI-Powered Security & Compliance Platform';
-export const DEFAULT_IMAGE_URL = 'https://securit.app/images/logo.png';
+  'Securit - Innova Solutions';
+export const DEFAULT_IMAGE_URL = 'https://securit.app/demo/images/og-image.jpg';
 
 const defaultMetadata: Metadata = {
   metadataBase: new URL(DEFAULT_URL),

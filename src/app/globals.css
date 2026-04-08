@@ -61,7 +61,31 @@ nav ul li.active::after {
 nav ul li.active>a span {
   color: #0070ce !important;
 }
+.carousel .slider {
+  transition-timing-function: ease-in-out !important;
+}
+.swiper-wrapper {
+  transition-timing-function: ease-in-out !important;
+}
+.swiper-pagination{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
 
+}
+.swiper-pagination-bullet {
+  background: #ccc;
+  opacity: 1;
+  width: 12px !important;
+  height: 12px !important;
+  display: inline-block;
+  border-radius: 30px;
+  margin: 0 4px;
+}
+
+.swiper-pagination-bullet-active {
+  background: #0070ce;
+}
 .ripple {
   position: absolute;
   border-radius: 9999px;

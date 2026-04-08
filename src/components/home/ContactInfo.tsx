@@ -51,7 +51,7 @@ const ContactInfo = () => {
             <div className="col-span-12 md:col-span-6 lg:col-span-5 gap-2">
               <RevealAnimation delay={0.1}>
                 <h2 className="text-secondary-900 mt-2 text-[24px] lg:text-[30px] leading-[42px]">
-                  Ready to Innovate with Us?
+                  Do you seriously care about your employees?
                 </h2>
               </RevealAnimation>
               <RevealAnimation delay={0.2}>
@@ -87,8 +87,8 @@ const ContactInfo = () => {
               <RevealAnimation delay={0.5}>
                 <div className="mt-12 space-y-2">
                   <p className="text-[#53575A] text-[15px">Write to us at</p>
-                  <Link href="mailto:info@securit.com" className="text-primary-500 text-[16px] !leading-[24px] hover:underline">
-                    info@securit.com
+                  <Link href="mailto:info@securit.app" className="text-primary-500 text-[16px] !leading-[24px] hover:underline">
+                    info@securit.app
                   </Link>
                 </div>
               </RevealAnimation>

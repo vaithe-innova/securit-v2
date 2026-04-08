@@ -7,7 +7,6 @@ import banner1 from '@public/images/banner1.png';
 import banner3 from '@public/images/banner3.png';
 import dashboard from '@public/images/dashboard.png';
 import Image from 'next/image';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import RippleButton from '../ui/button/RippleButton';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";

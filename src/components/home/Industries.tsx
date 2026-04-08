@@ -78,17 +78,12 @@ const Industries = () => {
         <style>{`
           .flip-card { perspective: 1000px; }
           .flip-card-inner {
-            position: relative;
-            width: 100%;
-            height: 100%;
             transition: transform 0.65s cubic-bezier(0.4, 0.2, 0.2, 1);
             transform-style: preserve-3d;
           }
           .flip-card:hover .flip-card-inner { transform: rotateY(180deg); }
           .flip-card-front,
           .flip-card-back {
-            position: absolute;
-            inset: 0;
             backface-visibility: hidden;
             -webkit-backface-visibility: hidden;
           }
@@ -100,17 +95,16 @@ const Industries = () => {
             <RevealAnimation key={industry.id} delay={0.1 + index * 0.1} direction="up" offset={40}>
               {/* Outer container sets height — must NOT be overflow-hidden so 3D works */}
               <div className="flip-card w-full h-[280px] sm:h-[320px] md:h-[360px] lg:h-[400px] xl:h-[440px] cursor-pointer">
-                <div className="flip-card-inner rounded-none">
+                <div className="flip-card-inner relative w-full h-full rounded-none">
 
                   {/* ── FRONT ── */}
-                  <div className="flip-card-front flex flex-col overflow-hidden bg-primary-700 dark:bg-background-5 w-full h-full">
+                  <div className="flip-card-front absolute inset-0 flex flex-col overflow-hidden bg-primary-700 dark:bg-background-5 w-full h-full">
                     {/* Image */}
-                    <div className="relative w-full h-[76%] overflow-hidden bg-black/10">
+                    <div className="relative w-full h-[76%] overflow-hidden bg-black/10" style={{ position: 'relative' }}>
                       <Image
                         src={industry.image}
                         alt={industry.name}
-                        fill
-                        className="object-cover"
+                        className="w-full h-full object-cover"
                       />
                       <div className="absolute inset-0 bg-primary-900/20" />
                     </div>
@@ -123,7 +117,7 @@ const Industries = () => {
                   </div>
 
                   {/* ── BACK ── */}
-                  <div className="flip-card-back flex flex-col justify-between w-full h-full bg-gradient-to-br from-[#004AA9] to-[#0070CE] p-5 md:p-6 overflow-hidden">
+                  <div className="flip-card-back absolute inset-0 flex flex-col justify-between w-full h-full bg-gradient-to-br from-[#004AA9] to-[#0070CE] p-5 md:p-6 overflow-hidden">
                     {/* Top: icon + name */}
                     <div>
                       <h3 className="text-white font-bold text-[18px] md:text-[20px] leading-tight mb-1">

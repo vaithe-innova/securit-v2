@@ -37,28 +37,28 @@ const Footer = () => {
                     href="https://www.linkedin.com/company/innova-solutions"
                     className="flex h-[32px] w-[32px] items-center justify-center rounded-lg bg-[#1D293D] transition-transform duration-300 hover:-translate-y-1"
                   >
-                    <img src={linkedinIcon} alt="LinkedIn" className="w-[12px] h-[12px]" />
+                    <Image src={linkedinIcon} alt="LinkedIn" className="w-[12px] h-[12px]" width={12} height={12} />
                   </Link>
                   <Link
                     target="_blank"
                     href="https://www.twitter.com/innovasolutions"
                     className="flex h-[32px] w-[32px] items-center justify-center rounded-lg bg-[#1D293D] transition-transform duration-300 hover:-translate-y-1"
                   >
-                    <img src={twitterIcon} alt="Twitter" className="w-[12px] h-[12px]" />
+                    <Image src={twitterIcon} alt="Twitter" className="w-[12px] h-[12px]" width={12} height={12} />
                   </Link>
                   <Link
                     target="_blank"
                     href="https://www.instagram.com/innovasolutions"
                     className="flex h-[32px] w-[32px] items-center justify-center rounded-lg bg-[#1D293D] transition-transform duration-300 hover:-translate-y-1"
                   >
-                    <img src={instagramIcon} alt="Instagram" className="w-[12px] h-[12px]" />
+                    <Image src={instagramIcon} alt="Instagram" className="w-[12px] h-[12px]" width={12} height={12} />
                   </Link>
                   <Link
                     target="_blank"
                     href="https://facebook.com"
                     className="flex h-[32px] w-[32px] items-center justify-center rounded-lg bg-[#1D293D] transition-transform duration-300 hover:-translate-y-1"
                   >
-                    <img src={facebookIcon} alt="Facebook" className="w-[12px] h-[12px]" />
+                    <Image src={facebookIcon} alt="Facebook" className="w-[12px] h-[12px]" width={12} height={12} />
                   </Link>
                 </div>
               </div>

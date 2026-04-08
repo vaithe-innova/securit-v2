@@ -67,19 +67,19 @@ const ContactInfo = () => {
                   <div className="flex items-center gap-3">
                     {/* LinkedIn */}
                     <Link href="https://linkedin.com" target="_blank" className="w-[42px] h-[42px] bg-[#0077b5] rounded-[12px] flex items-center justify-center transition-transform hover:-translate-y-1">
-                      <img src={linkedinIcon} alt="LinkedIn" />
+                      <Image src={linkedinIcon} alt="LinkedIn" width={20} height={20} />
                     </Link>
                     {/* Facebook */}
                     <Link href="https://facebook.com" target="_blank" className="w-[42px] h-[42px] bg-[#3b5998] rounded-[12px] flex items-center justify-center transition-transform hover:-translate-y-1">
-                      <img src={facebookIcon} alt="Facebook" />
+                      <Image src={facebookIcon} alt="Facebook" width={20} height={20} />
                     </Link>
                     {/* X (Twitter) */}
                     <Link href="https://x.com" target="_blank" className="w-[42px] h-[42px] bg-black rounded-[12px] flex items-center justify-center transition-transform hover:-translate-y-1">
-                      <img src={twitterIcon} alt="Twitter" />
+                      <Image src={twitterIcon} alt="Twitter" width={20} height={20} />
                     </Link>
                     {/* Instagram */}
                     <Link href="https://instagram.com" target="_blank" className="w-[42px] h-[42px] bg-[#e4405f] rounded-[12px] flex items-center justify-center transition-transform hover:-translate-y-1">
-                      <img src={instagramIcon} alt="Instagram" />
+                      <Image src={instagramIcon} alt="Instagram" width={20} height={20} />
                     </Link>
                   </div>
                 </div>

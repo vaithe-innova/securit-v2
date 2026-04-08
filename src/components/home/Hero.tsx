@@ -89,7 +89,7 @@ const Hero = () => {
                   <RevealAnimation delay={0.1}>
                     <div className="w-full">
                       <figure>
-                        <Image src={banner} alt="banner"  />
+                        <Image src={banner} alt="banner" style={{ width: '100%', height: 'auto' }} />
                       </figure>
                     </div>
                   </RevealAnimation>
@@ -102,7 +102,7 @@ const Hero = () => {
                   <RevealAnimation delay={0.1}>
                     <div className="w-full">
                       <figure>
-                        <Image src={dashboard} alt="banner"  />
+                        <Image src={dashboard} alt="dashboard" style={{ width: '100%', height: 'auto' }} />
                       </figure>
                     </div>
                   </RevealAnimation>

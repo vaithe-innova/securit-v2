@@ -47,7 +47,7 @@ const Navbar = () => {
                 <Link href="/" className="inline-flex items-center">
                   <span className="sr-only">Home</span>
                   <figure className="lg:max-w-[198px]">
-                    <Image src={mainLogo} alt="Securit" className="h-auto w-full dark:invert" priority />
+                    <Image src={mainLogo} alt="Securit" className="h-auto w-full dark:invert" priority loading="eager" />
                   </figure>
                 </Link>
               </div>

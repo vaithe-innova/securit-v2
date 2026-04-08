@@ -69,12 +69,11 @@ const OurTeam = () => {
                   className="group flex flex-col overflow-hidden rounded-xl border border-stroke-1 dark:border-white/10 bg-white dark:bg-background-5 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
                 >
                   {/* Photo */}
-                  <div className="relative w-full aspect-[3/3.5] overflow-hidden bg-gray-100 dark:bg-background-7">
+                  <div className="relative w-full aspect-[3/3.5] overflow-hidden bg-gray-100 dark:bg-background-7" style={{ position: 'relative' }}>
                     <Image
                       src={member.image}
                       alt={member.name}
-                      fill
-                      className="object-cover object-top transition-transform duration-500 group-hover:scale-108"
+                      className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-108"
                       unoptimized
                     />
                     {/* Subtle colour overlay on hover */}

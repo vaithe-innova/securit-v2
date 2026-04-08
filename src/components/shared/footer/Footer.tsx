@@ -28,9 +28,11 @@ const Footer = () => {
           <div className="col-span-12 md:col-span-6 xl:col-span-3">
             <RevealAnimation delay={0.3}>
               <div className="max-w-[306px]">
-                <figure >
-                  <Image src={darkLogo} alt="Securit Logo" width={175} height={32} />
-                </figure>
+                <Link href="/">
+                  <figure >
+                    <Image src={darkLogo} alt="Securit Logo" width={175} height={32} />
+                  </figure>
+                </Link>
                 <div className="flex items-center mt-6 gap-3">
                   <Link
                     target="_blank"

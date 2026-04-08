@@ -1,6 +1,7 @@
 import Hero from '@/components/home/Hero';
 import Counter from '@/components/home/Counter';
 import HowItWorks from '@/components/home/HowItWorks';
+import Facts from '@/components/home/Facts';
 import Platform from '@/components/home/Platform';
 import Industries from '@/components/home/Industries';
 import StartFree from '@/components/home/StartFree';
@@ -9,7 +10,6 @@ import DeploymentTimeline from '@/components/home/DeploymentTimeline';
 import ContactInfo from '@/components/home/ContactInfo';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
-import Facts from '@/components/home/Facts';
 
 export const metadata: Metadata = {
   ...defaultMetadata,

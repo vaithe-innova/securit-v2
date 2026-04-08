@@ -9,6 +9,7 @@ import facebookIcon from '@public/images/icons/facebook.svg';
 import instagramIcon from '@public/images/icons/instagram.svg';
 import linkedinIcon from '@public/images/icons/linkedin.svg';
 import twitterIcon from '@public/images/icons/twitter.svg';
+import { useRouter } from 'next/navigation';
 
 const countries = [
   { name: 'United States', code: '+1', iso: 'us' },
@@ -24,6 +25,7 @@ const countries = [
 ];
 
 const ContactInfo = () => {
+  const router = useRouter();
   const [selectedCountry, setSelectedCountry] = useState(countries[0]);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [captchaValue, setCaptchaValue] = useState<string | null>(null);
@@ -42,6 +44,11 @@ const ContactInfo = () => {
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
+
+  const handleSubmit = (e: React.MouseEvent<HTMLButtonElement> | React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    router.push('/free-trial');
+  };
 
   return (
     <section className="bg-white pt-20 pb-14 sm:pt-28 md:pt-32 md:pb-16 lg:pb-20 xl:pt-[135px]" id="contact">
@@ -211,6 +218,7 @@ const ContactInfo = () => {
                     <button
                       type="submit"
                       disabled={!captchaValue}
+                      onClick={handleSubmit}
                       className={`font-bold py-3 px-10 rounded-full transition-colors duration-300 text-base md:text-lg ${captchaValue
                         ? 'bg-primary-500 text-white hover:bg-primary-700 cursor-pointer'
                         : 'bg-gray-300 text-gray-500 cursor-not-allowed'

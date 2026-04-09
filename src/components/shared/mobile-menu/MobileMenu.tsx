@@ -17,16 +17,60 @@ const MobileMenu = ({ menuData }: { menuData: IMobileMenuGroup[] }) => {
   const pathname = usePathname();
   const [activeHash, setActiveHash] = useState('');
 
-  // ✅ Sync hash (same fix as navbar)
+  // ✅ Sync hash and Scroll Spy
   useEffect(() => {
-    const updateHash = () => {
-      setActiveHash(window.location.hash || '');
+    if (typeof window === "undefined") return;
+
+    // Handle initial and explicit hash changes
+    const handleHashChange = () => {
+      setActiveHash(window.location.hash);
     };
 
-    updateHash();
+    handleHashChange();
+    window.addEventListener("hashchange", handleHashChange);
 
-    window.addEventListener('hashchange', updateHash);
-    return () => window.removeEventListener('hashchange', updateHash);
+    // Scroll Spy for Home Page Sections
+    let observer: IntersectionObserver;
+    const observedElements: Element[] = [];
+
+    const timeoutId = setTimeout(() => {
+      const sections = ['features', 'contact'];
+      observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setActiveHash(`#${entry.target.id}`);
+            }
+          });
+        },
+        { rootMargin: '-20% 0px -70% 0px' }
+      );
+
+      sections.forEach((id) => {
+        const element = document.getElementById(id);
+        if (element) {
+          observer.observe(element);
+          observedElements.push(element);
+        }
+      });
+    }, 500);
+
+    const handleScrollClear = () => {
+      if (window.scrollY < 100) {
+        setActiveHash('');
+      }
+    };
+    window.addEventListener('scroll', handleScrollClear);
+
+    return () => {
+      window.removeEventListener("hashchange", handleHashChange);
+      window.removeEventListener('scroll', handleScrollClear);
+      clearTimeout(timeoutId);
+      if (observer) {
+        observedElements.forEach((el) => observer.unobserve(el));
+        observer.disconnect();
+      }
+    };
   }, [pathname]);
 
   // ✅ Active logic
@@ -74,6 +118,7 @@ const MobileMenu = ({ menuData }: { menuData: IMobileMenuGroup[] }) => {
                 href={item.href}
                 target={item.target}
                 hasSubmenu={item.submenu.length > 0}
+                isActive={item.href ? isActive(item.href) : false}
               >
                 <ul>
                   {item?.submenu?.map((subItem) => (

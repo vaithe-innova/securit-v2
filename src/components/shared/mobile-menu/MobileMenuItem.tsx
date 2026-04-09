@@ -15,10 +15,10 @@ interface MobileMenuItemProps {
   isActive?: boolean; 
 }
 
-const MobileMenuItem = ({ id, title, href, target, children, hasSubmenu = false }: MobileMenuItemProps) => {
+const MobileMenuItem = ({ id, title, href, target, children, hasSubmenu = false, isActive = false }: MobileMenuItemProps) => {
   const { activeSubmenu, toggleSubmenu, closeMenu } = useMobileMenuContext();
 
-  const isActive = activeSubmenu === id;
+  const isSubmenuOpen = activeSubmenu === id;
 
   const handleToggle = () => {
     if (hasSubmenu) {
@@ -32,7 +32,7 @@ const MobileMenuItem = ({ id, title, href, target, children, hasSubmenu = false 
 
   const textClassName = cn(
     'text-tagline-1 ease block font-normal transition-colors duration-300',
-    isActive ? 'text-secondary dark:text-accent font-medium' : 'text-secondary/60 dark:text-accent/60',
+    isActive ? 'text-primary-500 font-semibold' : (isSubmenuOpen ? 'text-secondary dark:text-accent font-medium' : 'text-secondary/60 dark:text-accent/60'),
   );
 
   const content = (
@@ -42,7 +42,7 @@ const MobileMenuItem = ({ id, title, href, target, children, hasSubmenu = false 
         <span
           className={cn(
             'stroke-secondary/60 dark:stroke-accent/60 size-5 transition-transform duration-300 ease-in-out',
-            isActive && 'rotate-90',
+            isSubmenuOpen && 'rotate-90',
           )}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
             <path d="M8 12L12 8L8 4" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -58,7 +58,7 @@ const MobileMenuItem = ({ id, title, href, target, children, hasSubmenu = false 
         <button
           onClick={handleToggle}
           className={itemClassName}
-          aria-expanded={isActive}
+          aria-expanded={isSubmenuOpen}
           aria-controls={`submenu-${id}`}>
           {content}
         </button>
@@ -76,7 +76,7 @@ const MobileMenuItem = ({ id, title, href, target, children, hasSubmenu = false 
           id={`submenu-${id}`}
           className={cn(
             'dark:bg-background-8 ml-3.5 w-full overflow-y-hidden bg-white transition-[height,opacity] duration-300 ease-in-out',
-            isActive ? 'pointer-events-auto h-fit opacity-100' : 'pointer-events-none h-0 opacity-0',
+            isSubmenuOpen ? 'pointer-events-auto h-fit opacity-100' : 'pointer-events-none h-0 opacity-0',
           )}>
           {/* render submenu  */}
           {children}

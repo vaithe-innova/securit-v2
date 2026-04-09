@@ -4,12 +4,12 @@ import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/LinkButton';
 import { BlurOne, BlurTwo } from '@/icons';
 import banner1 from '@public/images/banner1.png';
-import banner3 from '@public/images/banner3.png';
-import dashboard from '@public/images/dashboard.png';
+// import banner3 from '@public/images/banner3.png';
+// import dashboard from '@public/images/dashboard.png';
 import Image from 'next/image';
 import RippleButton from '../ui/button/RippleButton';
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 
 const Hero = () => {
@@ -31,16 +31,16 @@ const Hero = () => {
 
         <div className="space-y-[40px] md:space-y-[50px] lg:space-y-[60px] xl:space-y-[70px] banner">
           <Swiper
-            modules={[Autoplay, Navigation, Pagination]}
+            modules={[Autoplay, Navigation]}
             loop={true}
             speed={1500} // smooth transition speed
             autoplay={{
               delay: 3500, // 3 seconds per slide
               disableOnInteraction: false,
             }}
-            pagination={{
-              clickable: true, // dots clickable
-            }}
+            // pagination={{
+            //   clickable: false,
+            // }}
             slidesPerView={1}
             allowTouchMove={false} // optional
           >
@@ -49,18 +49,18 @@ const Hero = () => {
                 <div className="gap-2 flex flex-col items-start lg:pr-10">
                   <RevealAnimation delay={0.1}>
                     <div className="mb-2 flex rounded-full bg-white py-[6px] px-[13px] border-[1px] border-primary-500">
-                      <span className="text-xs sm:text-sm md:text-base font-normal text-primary-700">Redefining Safety as a Strategic Advantage</span>
+                      <span className="text-xs sm:text-sm md:text-base font-normal text-primary-700">Smart Safety for Every Worker</span>
                     </div>
                   </RevealAnimation>
                   <div className="space-y-3 md:space-y-5 text-left">
                     <RevealAnimation delay={0.2}>
                       <h1 className="max-w-[700px] text-primary-700 fw-700 tracking-tight !leading-[40px] md:!leading-[56px] lg:!leading-[58px] xl:!leading-[60px] text-4xl md:text-5xl xl:text-[48px]">
-                        Safety charged at <br className='hidden sm:block'/> <span className='text-primary-500'>100%</span> always.
+                        Keeping people safe, Every step of the way
                       </h1>
                     </RevealAnimation>
                     <RevealAnimation delay={0.3}>
                       <p className="mx-auto max-w-[800px] text-base sm:text-[18px] lg:text-[20px] text-secondary font-normal !leading-[26px] lg:!leading-[30px]">
-                        If your team only responds when things go wrong, it's already too late. Securit keeps safety charged — live alerts, location tracking, and site-wide risk detection running at 100%, always.
+                        Securit is an AI-powered worker safety platform that helps you monitor your operations, detect risks early, stay connected to your workforce, and respond quickly when something doesn't look right.
                       </p>
                     </RevealAnimation>
                   </div>
@@ -108,7 +108,7 @@ const Hero = () => {
                     </RevealAnimation>
                   </ul>
                 </div>
-                <div className="gap-2 flex flex-col items-start">
+                <div className="gap-2 hidden sm:flex flex-col items-start">
                   <RevealAnimation delay={0.1}>
                     <div className="w-full">
                       <figure>
@@ -120,7 +120,7 @@ const Hero = () => {
               </div>
             </SwiperSlide>
 
-            <SwiperSlide>
+            {/* <SwiperSlide>
               <div className="px-[2px] grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-8">
                 <div className="gap-2 flex flex-col items-start lg:pr-10">
                   <RevealAnimation delay={0.1}>
@@ -270,7 +270,7 @@ const Hero = () => {
                   </RevealAnimation>
                 </div>
               </div>
-            </SwiperSlide>
+            </SwiperSlide> */}
           </Swiper>
         </div>
       </div>

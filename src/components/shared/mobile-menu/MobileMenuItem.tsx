@@ -12,6 +12,7 @@ interface MobileMenuItemProps {
   target?: string;
   children?: ReactNode;
   hasSubmenu?: boolean;
+  isActive?: boolean; 
 }
 
 const MobileMenuItem = ({ id, title, href, target, children, hasSubmenu = false }: MobileMenuItemProps) => {

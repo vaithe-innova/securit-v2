@@ -318,29 +318,30 @@ const DeploymentTimeline = () => {
         <RevealAnimation delay={0.4}>
           <div className='flex flex-col'>
             <div className='flex text-center justify-center'>
-              <h3 className='text-white fw-700 text-[26px] sm:text-[30px] !leading-[34px]'>Certified. Compliant. Secure.</h3>
+              <h3 className='text-white fw-700 text-[26px] sm:text-[30px] !leading-[34px]'>Compliance you can trust. <br className='hidden sm:block' />
+Security you can rely on.</h3>
             </div>
             <div className="flex flex-col max-md:gap-y-10 max-lg:gap-x-3 md:flex-row justify-around px-3 lg:px-[60px] pt-6 sm:pt-8">
               <div className="text-center flex flex-col justify-center items-center">
                 <figure className='flex items-center justify-center mb-4 sm:mb-5 bg-gradient1 w-16 h-16 rounded-[14px]'>
                   <Image src={metImg} alt="secure" width={32} height={32} />
                 </figure>
-                <h5 className="text-[18px] sm:text-[20px] font-semibold !leading-[28px] text-white"> OSHA Compliant </h5>
-                <p className="text-[#DBEAFE] text-sm sm:text-base !leading-6 sm:!leading-[26px]">Safety Standards Met</p>
+                <h5 className="text-[18px] sm:text-[20px] font-semibold !leading-[28px] text-white"> OSHA-Aligned</h5>
+                <p className="text-[#DBEAFE] text-sm sm:text-base !leading-6 sm:!leading-[26px] max-w-[290px]">Supports workplace safety standards and guidelines</p>
               </div>
               <div className="text-center flex flex-col justify-center items-center">
                 <figure className='flex items-center justify-center mb-4 sm:mb-5 bg-gradient1 w-16 h-16 rounded-[14px]'>
                   <Image src={readyImg} alt="secure" width={32} height={32} />
                 </figure>
-                <h5 className="text-[18px] sm:text-[20px] font-semibold !leading-[28px] text-white"> ISO 45001 Ready </h5>
-                <p className="text-[#DBEAFE] text-sm sm:text-base !leading-6 sm:!leading-[26px]">Occupational Health & Safety</p>
+                <h5 className="text-[18px] sm:text-[20px] font-semibold !leading-[28px] text-white">ISO 45001-Ready</h5>
+                <p className="text-[#DBEAFE] text-sm sm:text-base !leading-6 sm:!leading-[26px] max-w-[290px]">Designed to support occupational health & safety frameworks</p>
               </div>
               <div className="text-center flex flex-col justify-center items-center">
                 <figure className='flex items-center justify-center mb-4 sm:mb-5 bg-gradient1 w-16 h-16 rounded-[14px]'>
                   <Image src={secureImg} alt="secure" width={32} height={32} />
                 </figure>
-                <h5 className="text-[18px] sm:text-[20px] font-semibold !leading-[28px] text-white"> GDPR/Privacy Secure </h5>
-                <p className="text-[#DBEAFE] text-sm sm:text-base !leading-6 sm:!leading-[26px]">Data Protection Certified</p>
+                <h5 className="text-[18px] sm:text-[20px] font-semibold !leading-[28px] text-white">Privacy-Focused</h5>
+                <p className="text-[#DBEAFE] text-sm sm:text-base !leading-6 sm:!leading-[26px] max-w-[290px]">Built to align with GDPR and modern data protection practices</p>
               </div>
             </div>
           </div>

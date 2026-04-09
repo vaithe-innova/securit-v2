@@ -13,7 +13,6 @@ import instagramIcon from '@public/images/icons/instagram.svg';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-// import { useState } from 'react';
 import MobileMenu from '../mobile-menu/MobileMenu';
 import MobileMenuButton from '../mobile-menu/MobileMenuButton';
 // import CompanyMenu from './CompanyMenu';
@@ -31,10 +30,6 @@ const [activeHash, setActiveHash] = useState("");
 
   const { isScrolled } = useNavbarScroll(150);
 
-  // const handleMenuHover = (dropdownId?: string | null) => {
-  //   setMenuDropdownId(dropdownId || null);
-  // };
-
   useEffect(() => {
   const handleHashChange = () => {
     setActiveHash(window.location.hash);
@@ -51,12 +46,31 @@ const [activeHash, setActiveHash] = useState("");
 const isActive = (path: string) => {
   return pathname === path || pathname.endsWith(path) || pathname.endsWith(path + "/");
 };
-const isFeatureActive =
-  (pathname === "/" || pathname === "/demo") &&
-  activeHash === "#features";
-const isContactActive =
-  (pathname === "/" || pathname === "/demo") &&
-  activeHash === "#contact";
+
+
+useEffect(() => {
+  const updateHash = () => {
+    const hash = window.location.hash;
+    setActiveHash(hash || ""); // ✅ always reset if empty
+  };
+
+  // run on load + route change
+  updateHash();
+
+  window.addEventListener("hashchange", updateHash);
+
+  return () => {
+    window.removeEventListener("hashchange", updateHash);
+  };
+}, [pathname]);
+
+const isHomePage = pathname === "/" || pathname.startsWith("/demo");
+
+const isHomeActive = isHomePage && !activeHash;
+
+const isFeatureActive = isHomePage && activeHash === "#features";
+
+const isContactActive = isHomePage && activeHash === "#contact";
 
   return (
     <MobileMenuProvider>
@@ -108,17 +122,17 @@ const isContactActive =
               </div>
               <nav className="hidden items-center lg:flex">
                 <ul className="flex items-center">
-                  <li className={cn("relative py-2.5", pathname === "/" && !activeHash && "active")}>
-                    <Link
-                      href="/"
+                  <li className={cn("relative py-2.5", isHomeActive && "active")}>
+                    <Link href="/" onClick={() => setActiveHash("")}
                       className=" text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">
                       <span>Home</span>
                     </Link>
                   </li>
                   <li className={cn("relative py-2.5", isFeatureActive && "active")}>
                     <Link
-                      href="/#features"
-                      className=" text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">
+                        href="/#features"
+                        onClick={() => setActiveHash('#features')}
+                        className=" text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">
                       <span>Features</span>
                     </Link>
                   </li>
@@ -163,8 +177,9 @@ const isContactActive =
                   ))} */}
                   <li className={cn("relative py-2.5", isContactActive && "active")}>
                     <Link
-                      href="/#contact"
-                      className=" text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">
+                        href="/#contact"
+                        onClick={() => setActiveHash('#contact')}
+                        className=" text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">
                       <span>Contact</span>
                     </Link>
                   </li>

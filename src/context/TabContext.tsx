@@ -34,9 +34,9 @@ const defaultConfig: TabConfig = {
     y: 20,
   },
   mobile: {
-    activeBg: '#864ffe',
-    activeColor: 'white',
-    activeBorder: '#5a19be',
+    activeBg: '#0070ce',
+    activeColor: '#FFF',
+    activeBorder: '',
     scale: 1.05,
   },
 };

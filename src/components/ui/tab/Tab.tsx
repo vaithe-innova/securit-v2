@@ -52,7 +52,7 @@ const Tab: React.FC<TabProps> = ({ index, children, className = '', variant = 'd
   // Mobile variant styles and inline styles
   const getMobileClassName = (): string => {
     const baseClasses =
-      'text-tagline-2 border-stroke-2 dark:border-stroke-7 dark:bg-background-7 min-w-16 cursor-pointer rounded-full border px-3.5 py-2 font-medium transition-all duration-200 ease-out';
+      'text-tagline-2 min-w-16 cursor-pointer border-0 bg-background-3 rounded-full text-primary-500 px-3.5 py-2 font-medium transition-all duration-200 ease-out';
 
     if (isActive) {
       return cn(baseClasses, className);

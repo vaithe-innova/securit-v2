@@ -117,7 +117,7 @@ const Platform = () => {
               </RevealAnimation>
               <RevealAnimation delay={0.3}>
                 <h2 className="font-bold text-primary-700 dark:text-white text-[30px] !leading-[34px]">
-                  One platform for safety visibility
+                  Purpose-built safety, Designed for every worker
                 </h2>
               </RevealAnimation>
               <RevealAnimation delay={0.4}>
@@ -138,7 +138,7 @@ const Platform = () => {
 
             {/* Top Middle: Signal */}
             <div className="group bg-white dark:bg-background-5 rounded-3xl p-6 md:p-8 shadow-sm border border-primary-200 dark:border-primary-500/30 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_8px_32px_rgba(0,112,206,0.18)] hover:border-primary-500">
-              <h3 className="text-secondary font-semibold md:text-[25px] mb-3 flex items-center gap-2">
+              <h3 className="text-secondary font-semibold text-[20px] md:text-[25px] mb-3 flex items-center gap-2">
                 <Image src={signalList.titleIcon} alt={signalList.title} className="h-[32px] w-auto inline-block transition-transform duration-300 group-hover:scale-110" /> {signalList.title}
               </h3>
               <p className="text-[#53575A] text-sm sm:text-base mb-6 !leading-[24px]">
@@ -160,7 +160,7 @@ const Platform = () => {
 
             {/* Top Right: Intelligence */}
             <div className="group bg-white dark:bg-background-5 rounded-3xl p-6 md:p-8 shadow-sm border border-primary-200 dark:border-primary-500/30 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_8px_32px_rgba(0,112,206,0.18)] hover:border-primary-500">
-              <h3 className="text-secondary font-semibold md:text-[25px] mb-3 flex items-center gap-2">
+              <h3 className="text-secondary font-semibold text-[20px] md:text-[25px] mb-3 flex items-center gap-2">
                 <Image src={intelligenceList.titleIcon} alt={intelligenceList.title} className="h-[32px] w-auto inline-block transition-transform duration-300 group-hover:scale-110" /> {intelligenceList.title}
               </h3>
               <p className="text-[#53575A] text-sm sm:text-base mb-6 !leading-[24px]">
@@ -191,7 +191,7 @@ const Platform = () => {
 
             {/* Bottom Middle: Action */}
             <div className="group bg-white dark:bg-background-5 rounded-3xl p-6 md:p-8 shadow-sm border border-primary-200 dark:border-primary-500/30 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_8px_32px_rgba(0,112,206,0.18)] hover:border-primary-500">
-              <h3 className="text-secondary font-semibold md:text-[25px] mb-3 flex items-center gap-2">
+              <h3 className="text-secondary font-semibold text-[20px] md:text-[25px] mb-3 flex items-center gap-2">
                 <Image src={actionList.titleIcon} alt={actionList.title} className="h-[32px] w-auto inline-block transition-transform duration-300 group-hover:scale-110" /> {actionList.title}
               </h3>
               <p className="text-[#53575A] text-sm sm:text-base mb-6 !leading-[24px]">
@@ -213,7 +213,7 @@ const Platform = () => {
 
             {/* Bottom Right: Control */}
             <div className="group bg-white dark:bg-background-5 rounded-3xl p-6 md:p-8 shadow-sm border border-primary-200 dark:border-primary-500/30 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_8px_32px_rgba(0,112,206,0.18)] hover:border-primary-500">
-              <h3 className="text-secondary font-semibold md:text-[25px] mb-3 flex items-center gap-2">
+              <h3 className="text-secondary font-semibold text-[20px] md:text-[25px] mb-3 flex items-center gap-2">
                 <Image src={controlList.titleIcon} alt={controlList.title} className="h-[32px] w-auto inline-block transition-transform duration-300 group-hover:scale-110" />  {controlList.title}
               </h3>
               <p className="text-[#53575A] text-sm sm:text-base mb-6 !leading-[24px]">

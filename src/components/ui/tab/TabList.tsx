@@ -31,7 +31,7 @@ const TabList: React.FC<TabListProps> = ({ children, variant = 'desktop', classN
       );
     } else {
       return cn(
-        'mb-14 flex flex-wrap items-center justify-start gap-4 sm:mx-auto sm:max-w-[500px] lg:mb-[72px] lg:hidden',
+        'mb-14 flex flex-wrap items-center justify-center gap-4 sm:mx-auto sm:max-w-[500px] lg:mb-[72px] lg:hidden',
         className,
       );
     }

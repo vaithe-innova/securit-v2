@@ -31,64 +31,38 @@ const Navbar = () => {
   const { isScrolled } = useNavbarScroll(150);
 
   useEffect(() => {
-    if (typeof window === "undefined") return;
-
-    // Handle explicit hash changes (like from another page)
     const handleHashChange = () => {
       setActiveHash(window.location.hash);
     };
 
-    handleHashChange();
+    handleHashChange(); // initial
     window.addEventListener("hashchange", handleHashChange);
-
-    // Scroll Spy for Home Page Sections
-    let observer: IntersectionObserver;
-    const observedElements: Element[] = [];
-
-    // Run slightly after mount so elements exist
-    const timeoutId = setTimeout(() => {
-      const sections = ['features', 'contact'];
-      observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              setActiveHash(`#${entry.target.id}`);
-            }
-          });
-        },
-        { rootMargin: '-20% 0px -70% 0px' }
-      );
-
-      sections.forEach((id) => {
-        const element = document.getElementById(id);
-        if (element) {
-          observer.observe(element);
-          observedElements.push(element);
-        }
-      });
-    }, 500);
-
-    const handleScrollClear = () => {
-      if (window.scrollY < 100) {
-        setActiveHash('');
-      }
-    };
-    window.addEventListener('scroll', handleScrollClear);
 
     return () => {
       window.removeEventListener("hashchange", handleHashChange);
-      window.removeEventListener('scroll', handleScrollClear);
-      clearTimeout(timeoutId);
-      if (observer) {
-        observedElements.forEach((el) => observer.unobserve(el));
-        observer.disconnect();
-      }
     };
-  }, [pathname]);
+  }, []);
 
   const isActive = (path: string) => {
     return pathname === path || pathname.endsWith(path) || pathname.endsWith(path + "/");
   };
+
+
+  useEffect(() => {
+    const updateHash = () => {
+      const hash = window.location.hash;
+      setActiveHash(hash || ""); // ✅ always reset if empty
+    };
+
+    // run on load + route change
+    updateHash();
+
+    window.addEventListener("hashchange", updateHash);
+
+    return () => {
+      window.removeEventListener("hashchange", updateHash);
+    };
+  }, [pathname]);
 
   const isHomePage = pathname === "/" || pathname.startsWith("/demo");
 
@@ -102,7 +76,7 @@ const Navbar = () => {
     <MobileMenuProvider>
       <header
         className={cn(
-          'fixed left-1/2 z-50 mx-auto w-full -translate-x-1/2 transition-all duration-500',
+          'fixed  h-[72px] left-1/2 z-50 top-0 mx-auto w-full -translate-x-1/2 transition-all duration-500',
           isScrolled && '',
         )}>
         <div className={cn("bg-[#0070CE] w-full transition-all duration-300 overflow-hidden", isScrolled ? "h-0 opacity-0" : "h-[36px] opacity-100")}>

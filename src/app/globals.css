@@ -104,10 +104,22 @@ nav ul li.active>a span {
 }
 @media screen and (max-width: 480px) {
   .banner h1{
-    font-size: 34px !important;
+    font-size: 30px !important;
+    line-height: 22px !important
   }
   .banner p{
-    font-size: 14px !important;
+    font-size: 12px !important;
     line-height: 22px !important;
   }
+}
+.banner-bg{
+  /* backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px); */
+  background: linear-gradient(
+    90deg,
+    #09092E 0%,
+    #030354e6 37.3%,
+    #00003970 79.9%,
+    #00007054 100%
+  );
 }

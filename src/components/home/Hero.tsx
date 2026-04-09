@@ -2,11 +2,7 @@
 
 import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/LinkButton';
-import { BlurOne, BlurTwo } from '@/icons';
-import banner1 from '@public/images/banner1.png';
-// import banner3 from '@public/images/banner3.png';
-// import dashboard from '@public/images/dashboard.png';
-import Image from 'next/image';
+// import { BlurOne, BlurTwo } from '@/icons';
 import RippleButton from '../ui/button/RippleButton';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
@@ -14,19 +10,21 @@ import "swiper/css";
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden bg-[#E5F3FF] pt-[132px] sm:pt-[142px] md:pt-[152px] lg:pt-[172px] xl:pt-[192px] pb-[50px] sm:pb-[70px] md:pb-[80px] lg:pb-[100px] xl:pb-[120px]">
-      <span className="hidden md:flex absolute left-[-65px] top-[-37px]">
-        <BlurOne />
-      </span>
-      <span className="hidden md:flex absolute left-[-70px] top-[-118px]">
-        <BlurTwo />
-      </span>
-      <span className="hidden md:flex absolute right-[-65px] top-[-37px] scale-x-[-1]">
-        <BlurOne />
-      </span>
-      <span className="hidden md:flex absolute right-[-70px] top-[-118px] scale-x-[-1]">
-        <BlurTwo />
-      </span>
+    <section className="relative overflow-hidden bg-[#E5F3FF] pt-[132px] sm:pt-[142px] md:pt-[152px] lg:pt-[172px] xl:pt-[192px] pb-[50px] sm:pb-[70px] md:pb-[80px] lg:pb-[100px] xl:pb-[120px] banner-bg banner">
+      {/* 🎥 Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover left-[20%] top-[70px]"
+      >
+        <source src="/demo/images/banner-video.mp4" type="video/mp4" />
+      </video>
+
+      {/* 🌫️ Overlay */}
+      <div className="absolute inset-0 backdrop-blur-[1px] banner-bg"></div>
+
       <div className="relative z-10 main-container">
 
         <div className="space-y-[40px] md:space-y-[50px] lg:space-y-[60px] xl:space-y-[70px] banner">
@@ -45,21 +43,21 @@ const Hero = () => {
             allowTouchMove={false} // optional
           >
             <SwiperSlide>
-              <div className="px-[2px] grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-8">
+              <div className="px-[2px] grid grid-cols-1 md:grid-cols-1 gap-10 lg:gap-8">
                 <div className="gap-2 flex flex-col items-start lg:pr-10">
                   <RevealAnimation delay={0.1}>
-                    <div className="mb-2 flex rounded-full bg-white py-[6px] px-[13px] border-[1px] border-primary-500">
-                      <span className="text-xs sm:text-sm md:text-base font-normal text-primary-700">Smart Safety for Every Worker</span>
+                    <div className="mb-2 flex rounded-full bg-white py-[6px] px-[13px]">
+                      <span className="text-xs sm:text-sm md:text-base font-normal text-[#0070CD]">Smart Safety for Every Worker</span>
                     </div>
                   </RevealAnimation>
                   <div className="space-y-3 md:space-y-5 text-left">
                     <RevealAnimation delay={0.2}>
-                      <h1 className="max-w-[700px] text-primary-700 fw-700 tracking-tight !leading-[40px] md:!leading-[56px] lg:!leading-[58px] xl:!leading-[60px] text-4xl md:text-5xl xl:text-[48px]">
-                        Keeping people safe, Every step of the way
+                      <h1 className="max-w-[650px] text-white fw-700 tracking-tight !leading-[38px] sm:!leading-[40px] md:!leading-[56px] lg:!leading-[58px] xl:!leading-[60px] text-4xl md:text-5xl xl:text-[56px]">
+                        Keeping people safe, <br className='hidden md:block' /> Every step of the way
                       </h1>
                     </RevealAnimation>
                     <RevealAnimation delay={0.3}>
-                      <p className="mx-auto max-w-[800px] text-base sm:text-[18px] lg:text-[20px] text-secondary font-normal !leading-[26px] lg:!leading-[30px]">
+                      <p className="mx-auto max-w-[650px] text-base sm:text-[17px] lg:text-[18px] text-white font-normal !leading-[22px] lg:!leading-[24px]">
                         Securit is an AI-powered worker safety platform that helps you monitor your operations, detect risks early, stay connected to your workforce, and respond quickly when something doesn't look right.
                       </p>
                     </RevealAnimation>
@@ -107,15 +105,6 @@ const Hero = () => {
                       </li>
                     </RevealAnimation>
                   </ul>
-                </div>
-                <div className="gap-2 hidden sm:flex flex-col items-start">
-                  <RevealAnimation delay={0.1}>
-                    <div className="w-full">
-                      <figure>
-                        <Image src={banner1} alt="banner" />
-                      </figure>
-                    </div>
-                  </RevealAnimation>
                 </div>
               </div>
             </SwiperSlide>

@@ -24,53 +24,53 @@ import { useEffect, useState } from 'react';
 // ];
 
 const Navbar = () => {
- const pathname = usePathname();
-const [activeHash, setActiveHash] = useState("");
+  const pathname = usePathname();
+  const [activeHash, setActiveHash] = useState("");
   // const [menuDropdownId, setMenuDropdownId] = useState<string | null>(null);
 
   const { isScrolled } = useNavbarScroll(150);
 
   useEffect(() => {
-  const handleHashChange = () => {
-    setActiveHash(window.location.hash);
+    const handleHashChange = () => {
+      setActiveHash(window.location.hash);
+    };
+
+    handleHashChange(); // initial
+    window.addEventListener("hashchange", handleHashChange);
+
+    return () => {
+      window.removeEventListener("hashchange", handleHashChange);
+    };
+  }, []);
+
+  const isActive = (path: string) => {
+    return pathname === path || pathname.endsWith(path) || pathname.endsWith(path + "/");
   };
 
-  handleHashChange(); // initial
-  window.addEventListener("hashchange", handleHashChange);
 
-  return () => {
-    window.removeEventListener("hashchange", handleHashChange);
-  };
-}, []);
+  useEffect(() => {
+    const updateHash = () => {
+      const hash = window.location.hash;
+      setActiveHash(hash || ""); // ✅ always reset if empty
+    };
 
-const isActive = (path: string) => {
-  return pathname === path || pathname.endsWith(path) || pathname.endsWith(path + "/");
-};
+    // run on load + route change
+    updateHash();
 
+    window.addEventListener("hashchange", updateHash);
 
-useEffect(() => {
-  const updateHash = () => {
-    const hash = window.location.hash;
-    setActiveHash(hash || ""); // ✅ always reset if empty
-  };
+    return () => {
+      window.removeEventListener("hashchange", updateHash);
+    };
+  }, [pathname]);
 
-  // run on load + route change
-  updateHash();
+  const isHomePage = pathname === "/" || pathname.startsWith("/demo");
 
-  window.addEventListener("hashchange", updateHash);
+  const isHomeActive = isHomePage && !activeHash;
 
-  return () => {
-    window.removeEventListener("hashchange", updateHash);
-  };
-}, [pathname]);
+  const isFeatureActive = isHomePage && activeHash === "#features";
 
-const isHomePage = pathname === "/" || pathname.startsWith("/demo");
-
-const isHomeActive = isHomePage && !activeHash;
-
-const isFeatureActive = isHomePage && activeHash === "#features";
-
-const isContactActive = isHomePage && activeHash === "#contact";
+  const isContactActive = isHomePage && activeHash === "#contact";
 
   return (
     <MobileMenuProvider>
@@ -130,9 +130,9 @@ const isContactActive = isHomePage && activeHash === "#contact";
                   </li>
                   <li className={cn("relative py-2.5", isFeatureActive && "active")}>
                     <Link
-                        href="/#features"
-                        onClick={() => setActiveHash('#features')}
-                        className=" text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">
+                      href="/#features"
+                      onClick={() => setActiveHash('#features')}
+                      className=" text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">
                       <span>Features</span>
                     </Link>
                   </li>
@@ -177,16 +177,16 @@ const isContactActive = isHomePage && activeHash === "#contact";
                   ))} */}
                   <li className={cn("relative py-2.5", isContactActive && "active")}>
                     <Link
-                        href="/#contact"
-                        onClick={() => setActiveHash('#contact')}
-                        className=" text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">
+                      href="/#contact"
+                      onClick={() => setActiveHash('#contact')}
+                      className=" text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">
                       <span>Contact</span>
                     </Link>
                   </li>
                 </ul>
               </nav>
               <div className="hidden items-center justify-center lg:flex">
-                <Link href="https://workersafety.innovasolutions.com/" target="_blank" className="btn btn-md-v3 btn-primary hover:btn-white-dark dark:hover:btn-white mr-4 font-bold">
+                <Link href="https://workersafety.innovasolutions.com/" target="_blank" className="btn btn-md-v3 btn-primary hover:btn-white-dark dark:hover:btn-white font-bold">
                   <span>Login</span>
                 </Link>
               </div>

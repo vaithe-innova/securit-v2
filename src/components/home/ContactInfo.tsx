@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import ReCAPTCHA from 'react-google-recaptcha';
 import RevealAnimation from '../animation/RevealAnimation';
-import { useRouter } from 'next/navigation';
+import { toast, ToastContainer } from 'react-toastify';
 
 const countries = [
   { "name": "United States", "code": "+1", "iso": "us" },
@@ -204,7 +204,7 @@ const countries = [
 ];
 
 const ContactInfo = () => {
-  const router = useRouter();
+  // const router = useRouter();
   const [selectedCountry, setSelectedCountry] = useState(countries[0]);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [searchCountry, setSearchCountry] = useState('');
@@ -281,11 +281,14 @@ const ContactInfo = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (validateForm()) {
-      router.push('/free-trial');
+      // router.push('/free-trial');
+      notify();
     }
   };
+  const notify = () => toast('Thank you for submitting your details. Our team will get back to you shortly!');
 
   return (
+    <>
     <section className="bg-[#EFF6FF] pt-20 pb-14 sm:pt-28 md:pt-32 md:pb-16 lg:pb-20 xl:pt-[135px]" id="contact">
       <div className="main-container">
         <div className="space-y-[50px]">
@@ -497,6 +500,19 @@ const ContactInfo = () => {
         </div>
       </div>
     </section>
+    <ToastContainer
+      position="top-right"
+      autoClose={5000}
+      hideProgressBar={false}
+      newestOnTop={false}
+      closeOnClick={false}
+      rtl={false}
+      pauseOnFocusLoss
+      draggable
+      pauseOnHover
+      theme="dark"
+      />
+    </>
   );
 };
 

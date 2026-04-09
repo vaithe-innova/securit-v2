@@ -23,7 +23,7 @@ const Hero = () => {
       </video>
 
       {/* 🌫️ Overlay */}
-      <div className="absolute inset-0 backdrop-blur-[1px] banner-bg"></div>
+      <div className="absolute inset-0 backdrop-blur-[0px] banner-bg"></div>
 
       <div className="relative z-10 main-container">
 
@@ -46,8 +46,8 @@ const Hero = () => {
               <div className="px-[2px] grid grid-cols-1 md:grid-cols-1 gap-10 lg:gap-8">
                 <div className="gap-2 flex flex-col items-start lg:pr-10">
                   <RevealAnimation delay={0.1}>
-                    <div className="mb-2 flex rounded-full bg-white py-[6px] px-[13px]">
-                      <span className="text-xs sm:text-sm md:text-base font-normal text-[#0070CD]">Smart Safety for Every Worker</span>
+                    <div className="mb-4 flex rounded-full bg-white py-[6px] px-[13px]">
+                      <span className="text-xs sm:text-sm md:text-base font-normal text-primary-700">Smart Safety for Every Worker</span>
                     </div>
                   </RevealAnimation>
                   <div className="space-y-3 md:space-y-5 text-left">

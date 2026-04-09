@@ -205,17 +205,17 @@ const Navbar = () => {
                     <Link
                       href="/#contact"
                       onClick={() => setActiveHash('#contact')}
-                      className=" text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">
+                      className=" text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent pl-4 pr-0 py-2 font-semibold transition-all duration-200">
                       <span>Contact</span>
                     </Link>
                   </li>
                 </ul>
               </nav>
-              <div className="hidden items-center justify-center lg:flex">
+              {/* <div className="hidden items-center justify-center lg:flex">
                 <Link href="https://workersafety.innovasolutions.com/" target="_blank" className="btn btn-md-v3 btn-primary hover:btn-white-dark dark:hover:btn-white font-bold">
                   <span>Login</span>
                 </Link>
-              </div>
+              </div> */}
 
               {/* mobile menu ham burger icon  */}
               <MobileMenuButton />

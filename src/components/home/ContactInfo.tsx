@@ -286,7 +286,7 @@ const ContactInfo = () => {
   };
 
   return (
-    <section className="bg-white pt-20 pb-14 sm:pt-28 md:pt-32 md:pb-16 lg:pb-20 xl:pt-[135px]" id="contact">
+    <section className="bg-[#EFF6FF] pt-20 pb-14 sm:pt-28 md:pt-32 md:pb-16 lg:pb-20 xl:pt-[135px]" id="contact">
       <div className="main-container">
         <div className="space-y-[50px]">
           <div className="mb-6 sm:mb-10 grid grid-cols-12 md:gap-8 space-y-4 md:space-y-0">
@@ -322,7 +322,7 @@ const ContactInfo = () => {
               </RevealAnimation>
             </div>
             <div className="col-span-12 md:col-span-6 lg:col-span-7">
-              <div className="bg-white mx-auto w-full max-w-[847px] rounded-2xl">
+              <div className="mx-auto w-full max-w-[847px] rounded-2xl">
                 <RevealAnimation delay={0.2}>
                   <form className="space-y-6" onSubmit={handleSubmit}>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">

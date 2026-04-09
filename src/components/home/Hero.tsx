@@ -81,7 +81,7 @@ const Hero = () => {
                           className="btn btn-md flex justify-center items-center gap-3 btn-white px-4 py-2 !leading-[28px] sm:!leading-[30px] md:!leading-[32px] lg:!leading-[38px] text-sm sm:text-base md:text-[18px] font-semibold w-full sm:w-[200px] md:w-[220px] lg:w-[241px] sm:h-11 md:h-12 lg:h-14 border-[#0070CE] text-primary-500 btn-remove hover:bg-primary-700 hover:text-white"
                           onClick={() => {
                             setTimeout(() => {
-                              document.getElementById("video")?.scrollIntoView({
+                              document.getElementById("features")?.scrollIntoView({
                                 behavior: "smooth",
                                 block: "start",
                               });

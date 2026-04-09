@@ -63,7 +63,7 @@ const HowItWorks = () => {
           </RevealAnimation>
 
           <RevealAnimation delay={0.3}>
-            <h2 className="text-primary-700 font-bold text-[30px] !leading-[34px] mb-2">
+            <h2 className="text-primary-700 font-bold text-[24px] sm:text-[30px] !leading-[30px] sm:!leading-[34px] mb-2">
               Turn intelligence into action across your operations
             </h2>
           </RevealAnimation>

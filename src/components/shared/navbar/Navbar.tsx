@@ -13,25 +13,64 @@ import instagramIcon from '@public/images/icons/instagram.svg';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-// import { useState } from 'react';
 import MobileMenu from '../mobile-menu/MobileMenu';
 import MobileMenuButton from '../mobile-menu/MobileMenuButton';
 // import CompanyMenu from './CompanyMenu';
 import { mobileMenuData } from './data';
+import { useEffect, useState } from 'react';
 
 // const dropdownNavItems = [
 //   { label: 'Company', dataMenu: 'company-dropdown-menu', MenuComponent: CompanyMenu },
 // ];
 
 const Navbar = () => {
-  const pathname = usePathname();
+ const pathname = usePathname();
+const [activeHash, setActiveHash] = useState("");
   // const [menuDropdownId, setMenuDropdownId] = useState<string | null>(null);
 
   const { isScrolled } = useNavbarScroll(150);
 
-  // const handleMenuHover = (dropdownId?: string | null) => {
-  //   setMenuDropdownId(dropdownId || null);
-  // };
+  useEffect(() => {
+  const handleHashChange = () => {
+    setActiveHash(window.location.hash);
+  };
+
+  handleHashChange(); // initial
+  window.addEventListener("hashchange", handleHashChange);
+
+  return () => {
+    window.removeEventListener("hashchange", handleHashChange);
+  };
+}, []);
+
+const isActive = (path: string) => {
+  return pathname === path || pathname.endsWith(path) || pathname.endsWith(path + "/");
+};
+
+
+useEffect(() => {
+  const updateHash = () => {
+    const hash = window.location.hash;
+    setActiveHash(hash || ""); // ✅ always reset if empty
+  };
+
+  // run on load + route change
+  updateHash();
+
+  window.addEventListener("hashchange", updateHash);
+
+  return () => {
+    window.removeEventListener("hashchange", updateHash);
+  };
+}, [pathname]);
+
+const isHomePage = pathname === "/" || pathname.startsWith("/demo");
+
+const isHomeActive = isHomePage && !activeHash;
+
+const isFeatureActive = isHomePage && activeHash === "#features";
+
+const isContactActive = isHomePage && activeHash === "#contact";
 
   return (
     <MobileMenuProvider>
@@ -42,16 +81,16 @@ const Navbar = () => {
         )}>
         <div className={cn("bg-[#0070CE] w-full transition-all duration-300 overflow-hidden", isScrolled ? "h-0 opacity-0" : "h-[36px] opacity-100")}>
           <div className="main-container mx-auto flex items-center justify-between text-white text-[13px] h-full">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1 sm:gap-2">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
               <a href="mailto:info@securit.app" className="hover:underline">info@securit.app</a>
             </div>
-            <div className="hidden sm:flex items-center absolute left-1/2 -translate-x-1/2">
-              <Link href="/#contact" className="hover:underline flex items-center gap-1 font-medium">
+            <div className="flex justify-end sm:justify-center sm:items-center sm:absolute sm:left-1/2 sm:-translate-x-1/2">
+              <Link href="/#contact" className="hover:underline flex items-center gap-1 font-medium text-xs sm:text-sm">
                 Try 30-day free trial <span className="text-[14px]">&rarr;</span>
               </Link>
             </div>
-            <div className="flex flex-1 sm:flex-none justify-end items-center gap-4">
+            <div className="hidden sm:flex flex-1 sm:flex-none justify-end items-center gap-4">
               <Link href="https://linkedin.com" target="_blank" className="hover:opacity-80 transition-opacity flex items-center justify-center">
                 <Image src={linkedinIcon} alt="LinkedIn" width={12} height={12} className="brightness-0 invert" />
               </Link>
@@ -83,28 +122,28 @@ const Navbar = () => {
               </div>
               <nav className="hidden items-center lg:flex">
                 <ul className="flex items-center">
-                  <li className={cn("relative cursor-pointer py-2.5", pathname === "/" && "active")}>
-                    <Link
-                      href="/"
+                  <li className={cn("relative py-2.5", isHomeActive && "active")}>
+                    <Link href="/" onClick={() => setActiveHash("")}
                       className=" text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">
                       <span>Home</span>
                     </Link>
                   </li>
-                  <li className={cn("relative cursor-pointer py-2.5", pathname === "#features" && "active")}>
+                  <li className={cn("relative py-2.5", isFeatureActive && "active")}>
                     <Link
-                      href="/#features"
-                      className=" text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">
+                        href="/#features"
+                        onClick={() => setActiveHash('#features')}
+                        className=" text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">
                       <span>Features</span>
                     </Link>
                   </li>
-                  <li className={cn("relative cursor-pointer py-2.5", pathname === "/blog" && "active")}>
+                  <li className={cn("relative py-2.5", isActive("/blog") && "active")}>
                     <Link
                       href="/blog"
                       className=" text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">
-                      <span>Blogs and Events</span>
+                      <span>Blogs &amp; Events</span>
                     </Link>
                   </li>
-                  <li className={cn("relative cursor-pointer py-2.5", pathname === "/about" && "active")}>
+                  <li className={cn("relative cursor-pointer py-2.5", isActive("/about") && "active")}>
                     <Link
                       href="/about"
                       className=" text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">
@@ -136,10 +175,11 @@ const Navbar = () => {
                       <MenuComponent menuDropdownId={menuDropdownId} setMenuDropdownId={setMenuDropdownId} />
                     </li>
                   ))} */}
-                  <li className={cn("relative cursor-pointer py-2.5", pathname === "#contact" && "active")}>
+                  <li className={cn("relative py-2.5", isContactActive && "active")}>
                     <Link
-                      href="/#contact"
-                      className=" text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">
+                        href="/#contact"
+                        onClick={() => setActiveHash('#contact')}
+                        className=" text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">
                       <span>Contact</span>
                     </Link>
                   </li>

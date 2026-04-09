@@ -94,13 +94,13 @@ const Industries = () => {
           {industries.map((industry, index) => (
             <RevealAnimation key={industry.id} delay={0.1 + index * 0.1} direction="up" offset={40}>
               {/* Outer container sets height — must NOT be overflow-hidden so 3D works */}
-              <div className="flip-card w-full h-[280px] sm:h-[320px] md:h-[360px] lg:h-[400px] xl:h-[440px] cursor-pointer">
+              <div className="flip-card w-full h-[230px] sm:h-[280px] md:h-[300px] lg:h-[320px] xl:h-[345px] cursor-pointer">
                 <div className="flip-card-inner relative w-full h-full rounded-none">
 
                   {/* ── FRONT ── */}
                   <div className="flip-card-front absolute inset-0 flex flex-col overflow-hidden bg-primary-700 dark:bg-background-5 w-full h-full">
                     {/* Image */}
-                    <div className="relative w-full h-[76%] overflow-hidden bg-black/10" style={{ position: 'relative' }}>
+                    <div className="relative w-full h-full overflow-hidden bg-black/10" style={{ position: 'relative' }}>
                       <Image
                         src={industry.image}
                         alt={industry.name}
@@ -109,8 +109,8 @@ const Industries = () => {
                       <div className="absolute inset-0 bg-primary-900/20" />
                     </div>
                     {/* Title bar */}
-                    <div className="h-[24%] flex items-center justify-center p-3 text-center bg-primary-700">
-                      <h3 className="text-white font-bold text-[15px] sm:text-base md:text-lg tracking-wide">
+                    <div className="h-[64px] flex items-center justify-center p-3 text-center bg-primary-700">
+                      <h3 className="text-white font-semibold text-[15px] sm:text-sm md:text-base tracking-wide">
                         {industry.name}
                       </h3>
                     </div>

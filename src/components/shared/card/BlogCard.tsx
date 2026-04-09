@@ -11,10 +11,10 @@ interface BlogCardProps {
 
 const BlogCard = ({ blog, className }: BlogCardProps) => {
   return (
-    <article>
+    <article className='h-full'>
       <div
         className={cn(
-          'bg-background-1 dark:bg-background-6 relative scale-100 overflow-hidden rounded-[20px] transition-transform duration-500 hover:scale-[102%] hover:transition-transform hover:duration-500 md:min-h-[552px]',
+          'bg-background-1 dark:bg-background-6 relative scale-100 overflow-hidden rounded-[20px] transition-transform duration-500 hover:scale-[102%] hover:transition-transform hover:duration-500 h-full',
           className,
         )}>
         <figure className="h-[260px] max-w-full overflow-hidden xl:max-w-[409px]">

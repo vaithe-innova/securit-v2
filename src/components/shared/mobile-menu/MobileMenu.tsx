@@ -8,33 +8,63 @@ import Image from 'next/image';
 import Link from 'next/link';
 import MenuCloseButton from './MenuCloseButton';
 import MobileMenuItem from './MobileMenuItem';
-
+import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 const MobileMenu = ({ menuData }: { menuData: IMobileMenuGroup[] }) => {
   const { isOpen } = useMobileMenuContext();
+
+  const pathname = usePathname();
+  const [activeHash, setActiveHash] = useState('');
+
+  // ✅ Sync hash (same fix as navbar)
+  useEffect(() => {
+    const updateHash = () => {
+      setActiveHash(window.location.hash || '');
+    };
+
+    updateHash();
+
+    window.addEventListener('hashchange', updateHash);
+    return () => window.removeEventListener('hashchange', updateHash);
+  }, [pathname]);
+
+  // ✅ Active logic
+  const isHomePage = pathname === '/' || pathname.startsWith('/demo');
+
+  const isHomeActive = isHomePage && !activeHash;
+  const isFeatureActive = isHomePage && activeHash === '#features';
+  const isContactActive = isHomePage && activeHash === '#contact';
+
+  const isActive = (href: string) => {
+    if (href === '/') {return isHomeActive;}
+    if (href.includes('#features')) {return isFeatureActive;}
+    if (href.includes('#contact')) {return isContactActive;}
+
+    return pathname === href || pathname.startsWith(href);
+  };
+
   return (
     <aside
       className={cn(
-        'dark:bg-background-8 scroll-bar fixed top-0 right-0 z-[9999] h-screen w-full translate-x-full bg-white transition-all duration-300 sm:w-1/2 sm:rounded-l-3xl xl:hidden',
+        'dark:bg-background-8 fixed top-0 right-0 z-[9999] h-screen w-full translate-x-full bg-white transition-all duration-300 sm:w-1/2 sm:rounded-l-3xl xl:hidden',
         isOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0',
-      )}>
+      )}
+    >
       <div className="space-y-4 p-5 sm:p-8 lg:p-9">
+        
+        {/* HEADER */}
         <div className="flex items-center justify-between">
-          <Link href="/">
-            <span className="sr-only">Home</span>
-            <figure className="">
-              <Image src={mainLogo} alt="Securit Logo" className="block w-full" />
-            </figure>
+          <Link href="/" onClick={() => setActiveHash('')}>
+            <Image src={mainLogo} alt="Logo" />
           </Link>
-          {/* close btn  */}
           <MenuCloseButton />
         </div>
 
-        {/* menu items list  */}
-        <div className="scroll-bar mt-6 h-[85vh] w-full overflow-x-hidden pb-10">
-          <p className="text-secondary dark:text-accent text-tagline-1 before:bg-stroke-4 dark:before:bg-stroke-6 relative mb-2 block font-normal before:absolute before:top-1/2 before:-right-16 before:h-px before:w-full before:-translate-y-1/2 before:content-['']">
-            Menu
-          </p>
+        {/* MENU */}
+        <div className="mt-6 h-[85vh] overflow-y-auto pb-10">
+          <p className="text-secondary mb-2">Menu</p>
+
           <ul className="space-y-2">
             {menuData.map((item) => (
               <MobileMenuItem
@@ -43,15 +73,31 @@ const MobileMenu = ({ menuData }: { menuData: IMobileMenuGroup[] }) => {
                 title={item.title}
                 href={item.href}
                 target={item.target}
-                hasSubmenu={item.submenu.length > 0}>
-                {/* submenu items list  */}
+                hasSubmenu={item.submenu.length > 0}
+              >
                 <ul>
                   {item?.submenu?.map((subItem) => (
                     <li key={subItem.id}>
                       <Link
                         href={subItem.href}
                         target={subItem.target}
-                        className="text-tagline-1 text-secondary dark:text-accent ml-4 block py-2.5 text-left font-normal transition-all duration-200">
+                        onClick={() => {
+                          // ✅ manual hash control
+                          if (subItem.href.includes('#features')) {
+                            setActiveHash('#features');
+                          } else if (subItem.href.includes('#contact')) {
+                            setActiveHash('#contact');
+                          } else {
+                            setActiveHash('');
+                          }
+                        }}
+                        className={cn(
+                          'ml-4 block py-2.5 text-left transition-all duration-200',
+                          isActive(subItem.href)
+                            ? 'text-primary-500 font-semibold'
+                            : 'text-secondary'
+                        )}
+                      >
                         {subItem.label}
                       </Link>
                     </li>
@@ -66,5 +112,4 @@ const MobileMenu = ({ menuData }: { menuData: IMobileMenuGroup[] }) => {
   );
 };
 
-MobileMenu.displayName = 'MobileMenu';
 export default MobileMenu;

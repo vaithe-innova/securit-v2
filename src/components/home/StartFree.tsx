@@ -5,10 +5,10 @@ import RevealAnimation from '../animation/RevealAnimation';
 
 const StartFree = () => {
   return (
-    <section className="relative overflow-hidden bg-white">
+    <section className="relative overflow-hidden bg-white mb-[60px] sm:mb-[80px] md:mb-[100px]">
       {/* Animated background glow blobs */}
-      <span className="pointer-events-none absolute -left-20 sm:-left-32 -top-20 sm:-top-32 h-[200px] w-[200px] md:h-[400px] md:w-[400px] rounded-full bg-white/5 blur-2xl sm:blur-3xl" />
-      <span className="pointer-events-none absolute -right-20 sm:-right-32 -bottom-20 sm:-bottom-32 h-[200px] w-[200px] md:h-[400px] md:w-[400px] rounded-full bg-white/5 blur-2xl sm:blur-3xl" />
+      {/* <span className="pointer-events-none absolute -left-20 sm:-left-32 -top-20 sm:-top-32 h-[200px] w-[200px] md:h-[400px] md:w-[400px] rounded-full bg-white/5 blur-2xl sm:blur-3xl" />
+      <span className="pointer-events-none absolute -right-20 sm:-right-32 -bottom-20 sm:-bottom-32 h-[200px] w-[200px] md:h-[400px] md:w-[400px] rounded-full bg-white/5 blur-2xl sm:blur-3xl" /> */}
 
       <div className="relative z-10 main-container">
         <div className="
@@ -53,7 +53,7 @@ const StartFree = () => {
               <div className="pt-2">
                 <div className="relative inline-flex">
                   {/* Pulse ring */}
-                  <span className="absolute inset-0 rounded-full animate-ping bg-white/30" />
+                  {/* <span className="absolute inset-0 rounded-full animate-ping bg-white/30" /> */}
                   <Link
                     href="#contact"
                     className="relative inline-flex items-center justify-center bg-white text-[#004AA9] font-semibold text-[15px] md:text-[18px] px-8 py-3 rounded-full hover:bg-primary-50 hover:scale-105 active:scale-95 transition-all duration-300 shadow-lg"

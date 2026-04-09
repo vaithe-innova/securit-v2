@@ -102,3 +102,12 @@ nav ul li.active>a span {
     opacity: 0;
   }
 }
+@media screen and (max-width: 480px) {
+  .banner h1{
+    font-size: 34px !important;
+  }
+  .banner p{
+    font-size: 14px !important;
+    line-height: 22px !important;
+  }
+}

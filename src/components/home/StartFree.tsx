@@ -13,14 +13,14 @@ const StartFree = () => {
       <div className="relative z-10 main-container">
         <div className="text-center space-y-6">
           <RevealAnimation delay={0.2}>
-            <h2 className="text-[#FFFFFF] fw-700 text-[30px] !leading-[44px]">
+            <h2 className="text-[#FFFFFF] fw-700 text-[24px] sm:text-[26px] md:text-[30px] !leading-[32px] sm:!leading-[36px] md:!leading-[44px]">
               If Your Team Only Responds When Things Go Wrong,
               <span className="block">It&apos;s Already Too Late.</span>
             </h2>
           </RevealAnimation>
 
           <RevealAnimation delay={0.35}>
-            <p className="text-[20px] !leading-[26px] text-primary-50 max-w-[900px] mx-auto">
+            <p className="tezt-base sm:text-[20px] !leading-[26px] text-primary-50 max-w-[900px] mx-auto">
               Keep safety charged at 100% – always. Join 500+ companies trusting Securit to protect every worker, every shift, in every language, across every site.
             </p>
           </RevealAnimation>

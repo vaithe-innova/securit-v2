@@ -1,11 +1,11 @@
 import Hero from '@/components/home/Hero';
 import Counter from '@/components/home/Counter';
-import HowItWorks from '@/components/home/HowItWorks';
+// import HowItWorks from '@/components/home/HowItWorks';
 import Facts from '@/components/home/Facts';
 import Platform from '@/components/home/Platform';
 import Industries from '@/components/home/Industries';
 import WhatWeOffer from '@/components/home/WhatWeOffer';
-import DeploymentTimeline from '@/components/home/DeploymentTimeline';
+// import DeploymentTimeline from '@/components/home/DeploymentTimeline';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
 
@@ -20,10 +20,10 @@ const page = () => {
       <Hero />
       <Counter />
       <WhatWeOffer />
-      <HowItWorks />
+      {/* <HowItWorks /> */}
       <Facts />
       <Platform />
-      <DeploymentTimeline />
+      {/* <DeploymentTimeline /> */}
       <Industries />
     </main>
   );

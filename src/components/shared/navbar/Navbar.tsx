@@ -31,7 +31,7 @@ const Navbar = () => {
   const { isScrolled } = useNavbarScroll(150);
 
   useEffect(() => {
-    if (typeof window === "undefined") return;
+    if (typeof window === "undefined") { return; }
 
     // Handle explicit hash changes (like from another page)
     const handleHashChange = () => {

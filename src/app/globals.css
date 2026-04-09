@@ -57,22 +57,31 @@ nav ul li.active::after {
   border-radius: 2px 2px 0 0;
 }
 
+nav ul li.active:last-child:after {
+  width: calc(100% + 16px);
+  left: calc(50% + 8px);
+}
+
 /* Active nav link text */
 nav ul li.active>a span {
   color: #0070ce !important;
 }
+
 .carousel .slider {
   transition-timing-function: ease-in-out !important;
 }
+
 .swiper-wrapper {
   transition-timing-function: ease-in-out !important;
 }
-.swiper-pagination{
+
+.swiper-pagination {
   display: flex;
   justify-content: center;
   margin-top: 10px;
 
 }
+
 .swiper-pagination-bullet {
   background: #ccc;
   opacity: 1;
@@ -86,6 +95,7 @@ nav ul li.active>a span {
 .swiper-pagination-bullet-active {
   background: #0070ce;
 }
+
 .ripple {
   position: absolute;
   border-radius: 9999px;
@@ -102,11 +112,13 @@ nav ul li.active>a span {
     opacity: 0;
   }
 }
+
 @media screen and (max-width: 480px) {
-  .banner h1{
+  .banner h1 {
     font-size: 34px !important;
   }
-  .banner p{
+
+  .banner p {
     font-size: 14px !important;
     line-height: 22px !important;
   }

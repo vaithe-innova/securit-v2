@@ -18,7 +18,19 @@ const SmoothScrollProvider = ({ children }: Readonly<SmoothScrollingProps>) => {
   useEffect(() => {
     // Only scroll to top if pathname actually changed (navigation), not on initial render or reload
     if (!isInitialRender.current && previousPathnameRef.current !== pathname) {
-      lenis?.scrollTo(0, { immediate: true });
+      if (!window.location.hash) {
+        lenis?.scrollTo(0, { immediate: true });
+      }
+    }
+
+    // Handle initial hash scroll or hash change on same page
+    const hash = window.location.hash;
+    if (hash && lenis) {
+      // Small delay to ensure content is measured after hydration
+      const timeoutId = setTimeout(() => {
+        lenis.scrollTo(hash, { offset: -100 });
+      }, 500);
+      return () => clearTimeout(timeoutId);
     }
 
     // Update refs

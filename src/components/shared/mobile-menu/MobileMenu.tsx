@@ -10,6 +10,7 @@ import MenuCloseButton from './MenuCloseButton';
 import MobileMenuItem from './MobileMenuItem';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import useActiveSection from '@/hooks/useActiveSection';
 
 const MobileMenu = ({ menuData }: { menuData: IMobileMenuGroup[] }) => {
   const { isOpen } = useMobileMenuContext();
@@ -17,61 +18,19 @@ const MobileMenu = ({ menuData }: { menuData: IMobileMenuGroup[] }) => {
   const pathname = usePathname();
   const [activeHash, setActiveHash] = useState('');
 
-  // ✅ Sync hash and Scroll Spy
+  const activeSection = useActiveSection(['features', 'contact']);
+
   useEffect(() => {
-    if (typeof window === "undefined") return;
-
-    // Handle initial and explicit hash changes
-    const handleHashChange = () => {
-      setActiveHash(window.location.hash);
-    };
-
-    handleHashChange();
-    window.addEventListener("hashchange", handleHashChange);
-
-    // Scroll Spy for Home Page Sections
-    let observer: IntersectionObserver;
-    const observedElements: Element[] = [];
-
-    const timeoutId = setTimeout(() => {
-      const sections = ['features', 'contact'];
-      observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              setActiveHash(`#${entry.target.id}`);
-            }
-          });
-        },
-        { rootMargin: '-20% 0px -70% 0px' }
-      );
-
-      sections.forEach((id) => {
-        const element = document.getElementById(id);
-        if (element) {
-          observer.observe(element);
-          observedElements.push(element);
-        }
-      });
-    }, 500);
-
-    const handleScrollClear = () => {
-      if (window.scrollY < 100) {
-        setActiveHash('');
-      }
-    };
-    window.addEventListener('scroll', handleScrollClear);
-
-    return () => {
-      window.removeEventListener("hashchange", handleHashChange);
-      window.removeEventListener('scroll', handleScrollClear);
-      clearTimeout(timeoutId);
-      if (observer) {
-        observedElements.forEach((el) => observer.unobserve(el));
-        observer.disconnect();
-      }
-    };
-  }, [pathname]);
+    if (activeSection) {
+      setActiveHash(`#${activeSection}`);
+    } else {
+      const handleHashChange = () => {
+        setActiveHash(window.location.hash);
+      };
+      
+      handleHashChange();
+    }
+  }, [activeSection, pathname]);
 
   // ✅ Active logic
   const isHomePage = pathname === '/' || pathname.startsWith('/demo');

@@ -18,6 +18,7 @@ import MobileMenuButton from '../mobile-menu/MobileMenuButton';
 // import CompanyMenu from './CompanyMenu';
 import { mobileMenuData } from './data';
 import { useEffect, useState } from 'react';
+import useActiveSection from '@/hooks/useActiveSection';
 
 // const dropdownNavItems = [
 //   { label: 'Company', dataMenu: 'company-dropdown-menu', MenuComponent: CompanyMenu },
@@ -30,39 +31,26 @@ const Navbar = () => {
 
   const { isScrolled } = useNavbarScroll(150);
 
+  const isActive = (path: string) => {
+    return pathname === path || pathname.endsWith(path) || pathname.endsWith(path + "/");
+  };
+
+  const activeSection = useActiveSection(['features', 'contact']);
+
   useEffect(() => {
     const handleHashChange = () => {
       setActiveHash(window.location.hash);
     };
 
-    handleHashChange(); // initial
+    if (activeSection) {
+      setActiveHash(`#${activeSection}`);
+    } else {
+      handleHashChange();
+    }
+
     window.addEventListener("hashchange", handleHashChange);
-
-    return () => {
-      window.removeEventListener("hashchange", handleHashChange);
-    };
-  }, []);
-
-  const isActive = (path: string) => {
-    return pathname === path || pathname.endsWith(path) || pathname.endsWith(path + "/");
-  };
-
-
-  useEffect(() => {
-    const updateHash = () => {
-      const hash = window.location.hash;
-      setActiveHash(hash || ""); // ✅ always reset if empty
-    };
-
-    // run on load + route change
-    updateHash();
-
-    window.addEventListener("hashchange", updateHash);
-
-    return () => {
-      window.removeEventListener("hashchange", updateHash);
-    };
-  }, [pathname]);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, [activeSection, pathname]);
 
   const isHomePage = pathname === "/" || pathname.startsWith("/demo");
 

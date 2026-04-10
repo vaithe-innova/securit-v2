@@ -55,7 +55,7 @@ const StartFree = () => {
                   {/* Pulse ring */}
                   {/* <span className="absolute inset-0 rounded-full animate-ping bg-white/30" /> */}
                   <Link
-                    href="#contact"
+                    href="/#contact"
                     className="relative inline-flex items-center justify-center bg-white text-[#004AA9] font-semibold text-[15px] md:text-[18px] px-8 py-3 rounded-full hover:bg-primary-50 hover:scale-105 active:scale-95 transition-all duration-300 shadow-lg"
                   >
                     Get Started Free

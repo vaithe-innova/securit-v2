@@ -5,7 +5,7 @@ export const mobileMenuData: IMobileMenuGroup[] = [
     id: 'home',
     title: 'Home',
     submenu: [],
-    href: '/',
+    href: '/#home',
   },
   {
     id: 'features',

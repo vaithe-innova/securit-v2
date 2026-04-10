@@ -18,7 +18,7 @@ const MobileMenu = ({ menuData }: { menuData: IMobileMenuGroup[] }) => {
   const pathname = usePathname();
   const [activeHash, setActiveHash] = useState('');
 
-  const activeSection = useActiveSection(['features', 'contact']);
+  const activeSection = useActiveSection(['home', 'features', 'contact']);
 
   useEffect(() => {
     if (activeSection) {
@@ -35,12 +35,12 @@ const MobileMenu = ({ menuData }: { menuData: IMobileMenuGroup[] }) => {
   // ✅ Active logic
   const isHomePage = pathname === '/' || pathname.startsWith('/demo');
 
-  const isHomeActive = isHomePage && !activeHash;
+  const isHomeActive = isHomePage && (!activeHash || activeHash === "#home");
   const isFeatureActive = isHomePage && activeHash === '#features';
   const isContactActive = isHomePage && activeHash === '#contact';
 
   const isActive = (href: string) => {
-    if (href === '/') {return isHomeActive;}
+    if (href === '/' || href.includes('#home')) {return isHomeActive;}
     if (href.includes('#features')) {return isFeatureActive;}
     if (href.includes('#contact')) {return isContactActive;}
 
@@ -58,7 +58,7 @@ const MobileMenu = ({ menuData }: { menuData: IMobileMenuGroup[] }) => {
         
         {/* HEADER */}
         <div className="flex items-center justify-between">
-          <Link href="/" onClick={() => setActiveHash('')}>
+          <Link href="/#home" onClick={() => setActiveHash('#home')}>
             <Image src={mainLogo} alt="Logo" />
           </Link>
           <MenuCloseButton />
@@ -87,7 +87,9 @@ const MobileMenu = ({ menuData }: { menuData: IMobileMenuGroup[] }) => {
                         target={subItem.target}
                         onClick={() => {
                           // ✅ manual hash control
-                          if (subItem.href.includes('#features')) {
+                          if (subItem.href.includes('#home')) {
+                            setActiveHash('#home');
+                          } else if (subItem.href.includes('#features')) {
                             setActiveHash('#features');
                           } else if (subItem.href.includes('#contact')) {
                             setActiveHash('#contact');

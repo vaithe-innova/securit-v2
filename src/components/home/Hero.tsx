@@ -10,7 +10,7 @@ import "swiper/css";
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden bg-[#E5F3FF] pt-[132px] sm:pt-[142px] md:pt-[152px] lg:pt-[172px] xl:pt-[192px] pb-[50px] sm:pb-[70px] md:pb-[80px] lg:pb-[100px] xl:pb-[120px] banner-bg banner">
+    <section id="home" className="relative overflow-hidden bg-[#E5F3FF] pt-[132px] sm:pt-[142px] md:pt-[152px] lg:pt-[172px] xl:pt-[192px] pb-[50px] sm:pb-[70px] md:pb-[80px] lg:pb-[100px] xl:pb-[120px] banner-bg banner">
       {/* 🎥 Background Video */}
       <video
         autoPlay

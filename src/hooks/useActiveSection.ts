@@ -58,6 +58,17 @@ export const useActiveSection = (sectionIds: string[], options: IntersectionObse
     };
   }, [sectionIds, options]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY < 100) {
+        setActiveSection(null);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return activeSection;
 };
 

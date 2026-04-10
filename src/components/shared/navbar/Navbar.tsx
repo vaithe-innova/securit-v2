@@ -18,6 +18,7 @@ import MobileMenuButton from '../mobile-menu/MobileMenuButton';
 // import CompanyMenu from './CompanyMenu';
 import { mobileMenuData } from './data';
 import { useEffect, useState } from 'react';
+import useActiveSection from '@/hooks/useActiveSection';
 
 // const dropdownNavItems = [
 //   { label: 'Company', dataMenu: 'company-dropdown-menu', MenuComponent: CompanyMenu },
@@ -30,43 +31,30 @@ const Navbar = () => {
 
   const { isScrolled } = useNavbarScroll(150);
 
+  const isActive = (path: string) => {
+    return pathname === path || pathname.endsWith(path) || pathname.endsWith(path + "/");
+  };
+
+  const activeSection = useActiveSection(['home', 'features', 'contact']);
+
   useEffect(() => {
     const handleHashChange = () => {
       setActiveHash(window.location.hash);
     };
 
-    handleHashChange(); // initial
+    if (activeSection) {
+      setActiveHash(`#${activeSection}`);
+    } else {
+      handleHashChange();
+    }
+
     window.addEventListener("hashchange", handleHashChange);
-
-    return () => {
-      window.removeEventListener("hashchange", handleHashChange);
-    };
-  }, []);
-
-  const isActive = (path: string) => {
-    return pathname === path || pathname.endsWith(path) || pathname.endsWith(path + "/");
-  };
-
-
-  useEffect(() => {
-    const updateHash = () => {
-      const hash = window.location.hash;
-      setActiveHash(hash || ""); // ✅ always reset if empty
-    };
-
-    // run on load + route change
-    updateHash();
-
-    window.addEventListener("hashchange", updateHash);
-
-    return () => {
-      window.removeEventListener("hashchange", updateHash);
-    };
-  }, [pathname]);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, [activeSection, pathname]);
 
   const isHomePage = pathname === "/" || pathname.startsWith("/demo");
 
-  const isHomeActive = isHomePage && !activeHash;
+  const isHomeActive = isHomePage && (!activeHash || activeHash === "#home");
 
   const isFeatureActive = isHomePage && activeHash === "#features";
 
@@ -123,7 +111,7 @@ const Navbar = () => {
               <nav className="hidden items-center lg:flex">
                 <ul className="flex items-center">
                   <li className={cn("relative py-2.5", isHomeActive && "active")}>
-                    <Link href="/" onClick={() => setActiveHash("")}
+                    <Link href="/#home" onClick={() => setActiveHash("#home")}
                       className=" text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">
                       <span>Home</span>
                     </Link>

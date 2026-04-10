@@ -10,6 +10,7 @@ import MenuCloseButton from './MenuCloseButton';
 import MobileMenuItem from './MobileMenuItem';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import useActiveSection from '@/hooks/useActiveSection';
 
 const MobileMenu = ({ menuData }: { menuData: IMobileMenuGroup[] }) => {
   const { isOpen } = useMobileMenuContext();
@@ -17,71 +18,29 @@ const MobileMenu = ({ menuData }: { menuData: IMobileMenuGroup[] }) => {
   const pathname = usePathname();
   const [activeHash, setActiveHash] = useState('');
 
-  // ✅ Sync hash and Scroll Spy
+  const activeSection = useActiveSection(['home', 'features', 'contact']);
+
   useEffect(() => {
-    if (typeof window === "undefined") return;
-
-    // Handle initial and explicit hash changes
-    const handleHashChange = () => {
-      setActiveHash(window.location.hash);
-    };
-
-    handleHashChange();
-    window.addEventListener("hashchange", handleHashChange);
-
-    // Scroll Spy for Home Page Sections
-    let observer: IntersectionObserver;
-    const observedElements: Element[] = [];
-
-    const timeoutId = setTimeout(() => {
-      const sections = ['features', 'contact'];
-      observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              setActiveHash(`#${entry.target.id}`);
-            }
-          });
-        },
-        { rootMargin: '-20% 0px -70% 0px' }
-      );
-
-      sections.forEach((id) => {
-        const element = document.getElementById(id);
-        if (element) {
-          observer.observe(element);
-          observedElements.push(element);
-        }
-      });
-    }, 500);
-
-    const handleScrollClear = () => {
-      if (window.scrollY < 100) {
-        setActiveHash('');
-      }
-    };
-    window.addEventListener('scroll', handleScrollClear);
-
-    return () => {
-      window.removeEventListener("hashchange", handleHashChange);
-      window.removeEventListener('scroll', handleScrollClear);
-      clearTimeout(timeoutId);
-      if (observer) {
-        observedElements.forEach((el) => observer.unobserve(el));
-        observer.disconnect();
-      }
-    };
-  }, [pathname]);
+    if (activeSection) {
+      setActiveHash(`#${activeSection}`);
+    } else {
+      const handleHashChange = () => {
+        setActiveHash(window.location.hash);
+      };
+      
+      handleHashChange();
+    }
+  }, [activeSection, pathname]);
 
   // ✅ Active logic
   const isHomePage = pathname === '/' || pathname.startsWith('/demo');
 
-  const isHomeActive = isHomePage && !activeHash;
+  const isHomeActive = isHomePage && (!activeHash || activeHash === "#home");
   const isFeatureActive = isHomePage && activeHash === '#features';
   const isContactActive = isHomePage && activeHash === '#contact';
 
   const isActive = (href: string) => {
-    if (href === '/') {return isHomeActive;}
+    if (href === '/' || href.includes('#home')) {return isHomeActive;}
     if (href.includes('#features')) {return isFeatureActive;}
     if (href.includes('#contact')) {return isContactActive;}
 
@@ -99,7 +58,7 @@ const MobileMenu = ({ menuData }: { menuData: IMobileMenuGroup[] }) => {
         
         {/* HEADER */}
         <div className="flex items-center justify-between">
-          <Link href="/" onClick={() => setActiveHash('')}>
+          <Link href="/#home" onClick={() => setActiveHash('#home')}>
             <Image src={mainLogo} alt="Logo" />
           </Link>
           <MenuCloseButton />
@@ -128,7 +87,9 @@ const MobileMenu = ({ menuData }: { menuData: IMobileMenuGroup[] }) => {
                         target={subItem.target}
                         onClick={() => {
                           // ✅ manual hash control
-                          if (subItem.href.includes('#features')) {
+                          if (subItem.href.includes('#home')) {
+                            setActiveHash('#home');
+                          } else if (subItem.href.includes('#features')) {
                             setActiveHash('#features');
                           } else if (subItem.href.includes('#contact')) {
                             setActiveHash('#contact');

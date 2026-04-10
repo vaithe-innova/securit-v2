@@ -37,7 +37,7 @@ const signalList = {
   list: [
     {
       id: 1,
-      text: 'Mobile safety applications',
+      text: 'Mobile safety application',
     },
     {
       id: 2,
@@ -85,7 +85,7 @@ const actionList = {
   list: [
     {
       id: 1,
-      text: 'Mobile safety applications',
+      text: 'Mobile safety application',
     },
     {
       id: 2,

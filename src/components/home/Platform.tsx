@@ -100,7 +100,7 @@ const actionList = {
 
 const Platform = () => {
   return (
-    <section className="bg-[#EFF6FF] dark:bg-background-6 pt-16 pb-16 md:pt-20 md:pb-20 lg:pt-[90px] lg:pb-[90px]">
+    <section id='platform' className="bg-[#EFF6FF] dark:bg-background-6 pt-16 pb-16 md:pt-20 md:pb-20 lg:pt-[90px] lg:pb-[90px]">
       <div className="main-container">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6 w-full">
           <div className="flex flex-col justify-start lg:pr-6 mb-6 md:mb-0 space-y-5">

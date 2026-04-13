@@ -15,19 +15,13 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import MobileMenu from '../mobile-menu/MobileMenu';
 import MobileMenuButton from '../mobile-menu/MobileMenuButton';
-// import CompanyMenu from './CompanyMenu';
 import { mobileMenuData } from './data';
 import { useEffect, useState } from 'react';
 import useActiveSection from '@/hooks/useActiveSection';
 
-// const dropdownNavItems = [
-//   { label: 'Company', dataMenu: 'company-dropdown-menu', MenuComponent: CompanyMenu },
-// ];
-
 const Navbar = () => {
   const pathname = usePathname();
   const [activeHash, setActiveHash] = useState("");
-  // const [menuDropdownId, setMenuDropdownId] = useState<string | null>(null);
 
   const { isScrolled } = useNavbarScroll(150);
 
@@ -35,7 +29,7 @@ const Navbar = () => {
     return pathname === path || pathname.endsWith(path) || pathname.endsWith(path + "/");
   };
 
-  const activeSection = useActiveSection(['home', 'features', 'contact']);
+  const activeSection = useActiveSection(['home', 'features', 'platform', 'industries', 'contact']);
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -57,6 +51,10 @@ const Navbar = () => {
   const isHomeActive = isHomePage && (!activeHash || activeHash === "#home");
 
   const isFeatureActive = isHomePage && activeHash === "#features";
+
+  const isPlatformActive = isHomePage && activeHash === "#platform";
+
+  const isIndustriesActive = isHomePage && activeHash === "#industries";
 
   const isContactActive = isHomePage && activeHash === "#contact";
 
@@ -124,6 +122,22 @@ const Navbar = () => {
                       <span>Features</span>
                     </Link>
                   </li>
+                  <li className={cn("relative py-2.5", isPlatformActive && "active")}>
+                    <Link
+                      href="/#platform"
+                      onClick={() => setActiveHash('#platform')}
+                      className=" text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">
+                      <span>Platform</span>
+                    </Link>
+                  </li>
+                  <li className={cn("relative py-2.5", isIndustriesActive && "active")}>
+                    <Link
+                      href="/#industries"
+                      onClick={() => setActiveHash('#industries')}
+                      className=" text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">
+                      <span>Industries</span>
+                    </Link>
+                  </li>
                   <li className={cn("relative py-2.5", isActive("/blog") && "active")}>
                     <Link
                       href="/blog"
@@ -138,31 +152,6 @@ const Navbar = () => {
                       <span>About Us</span>
                     </Link>
                   </li>
-                  {/* {dropdownNavItems.map(({ label, dataMenu, MenuComponent }) => (
-                    <li
-                      key={label}
-                      className={cn("group relative cursor-pointer py-2.5", (menuDropdownId === dataMenu || pathname.startsWith('/company')) && "active")}
-                      data-menu={dataMenu}
-                      onMouseEnter={() => handleMenuHover(dataMenu)}>
-                      <button
-                        type="button"
-                        className=" text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex cursor-pointer items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">
-                        <span>{label}</span>
-                        <span className="block origin-center translate-y-px transition-all duration-300 group-hover:rotate-180">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            strokeWidth="1.5"
-                            stroke="currentColor"
-                            className="size-4">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                          </svg>
-                        </span>
-                      </button>
-                      <MenuComponent menuDropdownId={menuDropdownId} setMenuDropdownId={setMenuDropdownId} />
-                    </li>
-                  ))} */}
                   <li className={cn("relative py-2.5", isContactActive && "active")}>
                     <Link
                       href="/#contact"
@@ -173,18 +162,10 @@ const Navbar = () => {
                   </li>
                 </ul>
               </nav>
-              {/* <div className="hidden items-center justify-center lg:flex">
-                <Link href="https://workersafety.innovasolutions.com/" target="_blank" className="btn btn-md-v3 btn-primary hover:btn-white-dark dark:hover:btn-white font-bold">
-                  <span>Login</span>
-                </Link>
-              </div> */}
-
-              {/* mobile menu ham burger icon  */}
               <MobileMenuButton />
             </div>
           </div>
         </RevealAnimation>
-        {/* mobile menu component */}
       </header>
       <MobileMenu menuData={mobileMenuData} />
     </MobileMenuProvider>

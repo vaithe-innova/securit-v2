@@ -315,37 +315,32 @@ const DeploymentTimeline = () => {
           ))}
         </div> */}
 
-        <RevealAnimation delay={0.4}>
-          <div className='flex flex-col'>
+        <div className='flex flex-col'>
+          <RevealAnimation delay={0.2} direction="down" offset={30}>
             <div className='flex text-center justify-center'>
               <h3 className='text-white fw-700 text-[26px] sm:text-[30px] !leading-[34px]'>Compliance you can trust. <br className='hidden sm:block' />
-Security you can rely on.</h3>
+                Security you can rely on.</h3>
             </div>
-            <div className="flex flex-col max-md:gap-y-10 max-lg:gap-x-3 md:flex-row justify-around px-3 lg:px-[60px] pt-6 sm:pt-8">
-              <div className="text-center flex flex-col justify-center items-center">
-                <figure className='flex items-center justify-center mb-4 sm:mb-5 bg-gradient1 w-16 h-16 rounded-[14px]'>
-                  <Image src={metImg} alt="secure" width={32} height={32} />
-                </figure>
-                <h5 className="text-[18px] sm:text-[20px] font-semibold !leading-[28px] text-white"> OSHA-Aligned</h5>
-                <p className="text-[#DBEAFE] text-sm sm:text-base !leading-6 sm:!leading-[26px] max-w-[290px]">Supports workplace safety standards and guidelines</p>
-              </div>
-              <div className="text-center flex flex-col justify-center items-center">
-                <figure className='flex items-center justify-center mb-4 sm:mb-5 bg-gradient1 w-16 h-16 rounded-[14px]'>
-                  <Image src={readyImg} alt="secure" width={32} height={32} />
-                </figure>
-                <h5 className="text-[18px] sm:text-[20px] font-semibold !leading-[28px] text-white">ISO 45001-Ready</h5>
-                <p className="text-[#DBEAFE] text-sm sm:text-base !leading-6 sm:!leading-[26px] max-w-[290px]">Designed to support occupational health & safety frameworks</p>
-              </div>
-              <div className="text-center flex flex-col justify-center items-center">
-                <figure className='flex items-center justify-center mb-4 sm:mb-5 bg-gradient1 w-16 h-16 rounded-[14px]'>
-                  <Image src={secureImg} alt="secure" width={32} height={32} />
-                </figure>
-                <h5 className="text-[18px] sm:text-[20px] font-semibold !leading-[28px] text-white">Privacy-Focused</h5>
-                <p className="text-[#DBEAFE] text-sm sm:text-base !leading-6 sm:!leading-[26px] max-w-[290px]">Built to align with GDPR and modern data protection practices</p>
-              </div>
-            </div>
+          </RevealAnimation>
+
+          <div className="flex flex-col max-md:gap-y-10 max-lg:gap-x-3 md:flex-row justify-around px-3 lg:px-[60px] pt-10 sm:pt-12">
+            {[
+              { img: metImg, title: "OSHA-Aligned", desc: "Supports workplace safety standards and guidelines", delay: 0.3 },
+              { img: readyImg, title: "ISO 45001-Ready", desc: "Designed to support occupational health & safety frameworks", delay: 0.5 },
+              { img: secureImg, title: "Privacy-Focused", desc: "Built to align with GDPR and modern data protection practices", delay: 0.7 }
+            ].map((item, idx) => (
+              <RevealAnimation key={idx} delay={item.delay} animationType="to" direction="up" offset={50}>
+                <div className="group text-center flex flex-col justify-center items-center hover:bg-white/20 p-6 rounded-2xl transition-all duration-500 cursor-default">
+                  <figure className='flex items-center justify-center mb-4 sm:mb-5 bg-gradient1 w-16 h-16 rounded-[14px] shadow-lg group-hover:scale-110 group-hover:rotate-[8deg] transition-all duration-500'>
+                    <Image src={item.img} alt="secure" width={32} height={32} className="group-hover:scale-110 transition-transform duration-500" />
+                  </figure>
+                  <h5 className="text-[18px] sm:text-[20px] font-semibold !leading-[28px] text-white transition-colors duration-500">{item.title}</h5>
+                  <p className="text-[#DBEAFE] text-sm sm:text-base !leading-6 sm:!leading-[26px] max-w-[290px] opacity-80 group-hover:opacity-100 transition-opacity duration-500">{item.desc}</p>
+                </div>
+              </RevealAnimation>
+            ))}
           </div>
-        </RevealAnimation>
+        </div>
       </div>
     </section>
   );

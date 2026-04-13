@@ -18,7 +18,7 @@ const MobileMenu = ({ menuData }: { menuData: IMobileMenuGroup[] }) => {
   const pathname = usePathname();
   const [activeHash, setActiveHash] = useState('');
 
-  const activeSection = useActiveSection(['home', 'features', 'contact']);
+  const activeSection = useActiveSection(['home', 'features', 'platform', 'industries', 'contact']);
 
   useEffect(() => {
     if (activeSection) {
@@ -27,7 +27,7 @@ const MobileMenu = ({ menuData }: { menuData: IMobileMenuGroup[] }) => {
       const handleHashChange = () => {
         setActiveHash(window.location.hash);
       };
-      
+
       handleHashChange();
     }
   }, [activeSection, pathname]);
@@ -38,11 +38,15 @@ const MobileMenu = ({ menuData }: { menuData: IMobileMenuGroup[] }) => {
   const isHomeActive = isHomePage && (!activeHash || activeHash === "#home");
   const isFeatureActive = isHomePage && activeHash === '#features';
   const isContactActive = isHomePage && activeHash === '#contact';
+  const isPlatformActive = isHomePage && activeHash === '#platform';
+  const isIndustriesActive = isHomePage && activeHash === '#industries';
 
   const isActive = (href: string) => {
-    if (href === '/' || href.includes('#home')) {return isHomeActive;}
-    if (href.includes('#features')) {return isFeatureActive;}
-    if (href.includes('#contact')) {return isContactActive;}
+    if (href === '/' || href.includes('#home')) { return isHomeActive; }
+    if (href.includes('#features')) { return isFeatureActive; }
+    if (href.includes('#platform')) { return isPlatformActive; }
+    if (href.includes('#industries')) { return isIndustriesActive; }
+    if (href.includes('#contact')) { return isContactActive; }
 
     return pathname === href || pathname.startsWith(href);
   };
@@ -55,7 +59,7 @@ const MobileMenu = ({ menuData }: { menuData: IMobileMenuGroup[] }) => {
       )}
     >
       <div className="space-y-4 p-5 sm:p-8 lg:p-9">
-        
+
         {/* HEADER */}
         <div className="flex items-center justify-between">
           <Link href="/#home" onClick={() => setActiveHash('#home')}>
@@ -91,6 +95,10 @@ const MobileMenu = ({ menuData }: { menuData: IMobileMenuGroup[] }) => {
                             setActiveHash('#home');
                           } else if (subItem.href.includes('#features')) {
                             setActiveHash('#features');
+                          } else if (subItem.href.includes('#platform')) {
+                            setActiveHash('#platform');
+                          } else if (subItem.href.includes('#industries')) {
+                            setActiveHash('#industries');
                           } else if (subItem.href.includes('#contact')) {
                             setActiveHash('#contact');
                           } else {

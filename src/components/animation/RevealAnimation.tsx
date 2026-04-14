@@ -1,21 +1,15 @@
 'use client';
 import { cn } from '@/utils/cn';
 import Springer from '@/utils/springer';
-import { useGSAP } from '@gsap/react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import React, { ReactElement, Ref, cloneElement, useRef } from 'react';
-
-// Register GSAP plugins
-if (typeof window !== 'undefined') {
-  gsap.registerPlugin(ScrollTrigger);
-}
+import React, { ReactElement, Ref, cloneElement, useEffect, useRef, useState } from 'react';
 
 interface RevealAnimationProps {
   children: ReactElement<{
     className?: string;
     ref?: Ref<HTMLElement>;
-    'data-ns-animate'?: boolean;
+    'data-ns-animate'?: string;
   }>;
   duration?: number;
   delay?: number;
@@ -44,9 +38,20 @@ const RevealAnimation = ({
   animationType = 'from',
   className = '',
 }: RevealAnimationProps) => {
+  const [isMounted, setIsMounted] = useState(false);
   const elementRef = useRef<HTMLElement>(null);
 
-  useGSAP(() => {
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isMounted) {
+      return;
+    }
+
+    gsap.registerPlugin(ScrollTrigger);
+
     const element = elementRef.current;
     if (!element) {
       return;
@@ -101,18 +106,32 @@ const RevealAnimation = ({
       // For 'to' animations, we usually set the 'from' states first then animate to 'to'
       gsap.fromTo(element, fromVars, { ...vars, opacity: 1, x: 0, y: 0, rotation: 0 });
     }
-  }, [duration, delay, offset, instant, start, end, direction, useSpring, rotation, animationType]);
+
+    return () => {
+      if (!instant) {
+        ScrollTrigger.getAll().forEach((trigger) => {
+          if (trigger.trigger === element) {
+            trigger.kill();
+          }
+        });
+      }
+    };
+  }, [isMounted, duration, delay, offset, instant, start, end, direction, useSpring, rotation, animationType]);
 
   // Early return if children is not valid (after all hooks)
   if (!children || !React.isValidElement(children)) {
     return null;
   }
 
+  if (!isMounted) {
+    return children;
+  }
+
   // Clone the child element and add the ref, className, and data-ns-animate attribute
   return cloneElement(children, {
     ref: elementRef,
     className: cn(children?.props?.className, className),
-    'data-ns-animate': true,
+    'data-ns-animate': 'true',
   });
 };
 

@@ -19,7 +19,7 @@ const Hero = () => {
         playsInline
         className="absolute inset-0 w-full h-full object-cover left-[20%] top-[70px]"
       >
-        <source src="/demo/images/banner-video.mp4" type="video/mp4" />
+        <source src="/demo/images/securit-web-banner_v21.mp4" type="video/mp4" />
       </video>
 
       {/* 🌫️ Overlay */}

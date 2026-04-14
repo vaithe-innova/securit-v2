@@ -84,7 +84,7 @@ const Footer = () => {
                           <Link
                             href={link.href}
                             target={link.target}
-                            className="text-[14px] !leading-[18px] text-primary-50 hover:text-white font-normal transition-colors duration-200"
+                            className="text-[14px] !leading-[18px] text-primary-50 font-normal relative inline-block overflow-hidden before:absolute before:bottom-0 before:left-0 before:h-px before:w-full before:origin-right before:scale-x-0 before:bg-white before:transition-transform before:duration-500 before:content-[''] hover:before:origin-left hover:before:scale-x-100"
                           >
                             {link.label}
                           </Link>
@@ -141,7 +141,7 @@ const Footer = () => {
                       <li key={link.label}>
                         <Link
                           href={link.href}
-                          className="text-[14px] text-primary-50/70 hover:text-primary-50 font-normal transition-colors duration-200"
+                          className="text-[14px] text-primary-50/70 font-normal relative inline-block overflow-hidden before:absolute before:bottom-0 before:left-0 before:h-px before:w-full before:origin-right before:scale-x-0 before:bg-white/70 before:transition-transform before:duration-500 before:content-[''] hover:before:origin-left hover:before:scale-x-100"
                         >
                           {link.label}
                         </Link>

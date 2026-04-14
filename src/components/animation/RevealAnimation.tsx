@@ -20,7 +20,7 @@ interface RevealAnimationProps {
   direction?: 'up' | 'down' | 'left' | 'right';
   useSpring?: boolean;
   rotation?: number;
-  animationType?: 'from' | 'to';
+  animationType?: 'from' | 'to' | 'skew-in';
   className?: string;
 }
 
@@ -102,6 +102,13 @@ const RevealAnimation = ({
     // Specific animation logic
     if (animationType === 'from') {
       gsap.from(element, { ...vars, ...fromVars });
+    } else if (animationType === 'skew-in') {
+      gsap.from(element, {
+        ...vars,
+        ...fromVars,
+        skewX: direction === 'left' ? -6 : direction === 'right' ? 6 : 0,
+        skewY: direction === 'up' ? -4 : direction === 'down' ? 4 : 0,
+      });
     } else {
       // For 'to' animations, we usually set the 'from' states first then animate to 'to'
       gsap.fromTo(element, fromVars, { ...vars, opacity: 1, x: 0, y: 0, rotation: 0 });

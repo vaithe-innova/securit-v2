@@ -14,8 +14,20 @@ export const mobileMenuData: IMobileMenuGroup[] = [
     href: '/#features',
   },
   {
+    id: 'platform',
+    title: 'Platform',
+    submenu: [],
+    href: '/#platform',
+  },
+  {
+    id: 'industries',
+    title: 'Industries',
+    submenu: [],
+    href: '/#industries',
+  },
+  {
     id: 'blog',
-    title: 'Blogs and Events',
+    title: 'Blogs & Events',
     submenu: [],
     href: '/blog',
   },
@@ -25,17 +37,8 @@ export const mobileMenuData: IMobileMenuGroup[] = [
     submenu: [],
     href: '/about',
   },
-  // {
-  //   id: 'company',
-  //   title: 'Company',
-  //   href: undefined,
-  //   submenu: [
-  //     { id: 'about', label: 'About Us', href: '/about' },
-  //     { id: 'team', label: 'Our Team', href: '/#team' },
-  //   ],
-  // },
   {
-    id: 'contact-us',
+    id: 'contact',
     title: 'Contact Us',
     submenu: [],
     href: '/#contact',

@@ -19,7 +19,7 @@ const Hero = () => {
         playsInline
         className="absolute inset-0 w-full h-full object-cover left-[20%] top-[70px]"
       >
-        <source src="/demo/images/banner-video.mp4" type="video/mp4" />
+        <source src="/demo/images/securit-web-banner_v21.mp4" type="video/mp4" />
       </video>
 
       {/* 🌫️ Overlay */}
@@ -46,7 +46,7 @@ const Hero = () => {
               <div className="px-[2px] grid grid-cols-1 md:grid-cols-1 gap-10 lg:gap-8">
                 <div className="gap-2 flex flex-col items-start lg:pr-10">
                   <RevealAnimation delay={0.1}>
-                    <div className="mb-4 flex rounded-full bg-white py-[6px] px-[13px]">
+                    <div className="mb-4 flex rounded-[30px] bg-white py-[6px] px-5">
                       <span className="text-xs sm:text-sm md:text-base font-normal text-primary-700">Smart Safety for Every Worker</span>
                     </div>
                   </RevealAnimation>

@@ -289,228 +289,245 @@ const ContactInfo = () => {
 
   return (
     <>
-    <section className="bg-[#EFF6FF] pt-20 pb-14 sm:pt-28 md:pt-32 md:pb-16 lg:pb-20 xl:pt-[135px]" id="contact">
-      <div className="main-container">
-        <div className="space-y-[50px]">
-          <div className="mb-6 sm:mb-10 grid grid-cols-12 md:gap-8 space-y-4 md:space-y-0">
-            <div className="col-span-12 md:col-span-6 lg:col-span-5 gap-2">
-              <RevealAnimation delay={0.1}>
-                <h2 className="text-secondary-900 max-w-[90%] mt-2 text-[24px] lg:text-[30px] leading-[42px]">
-                  Do you seriously care about your employees?
-                </h2>
-              </RevealAnimation>
-              <RevealAnimation delay={0.2}>
-                <h2 className="text-primary-700 font-semibold text-[24px] lg:text-[30px] leading-[34px] mt-3 mb-6">
-                  Let&apos;s Talk!
-                </h2>
-              </RevealAnimation>
-              <RevealAnimation delay={0.4}>
-                <div className="space-y-1">
-                  <p className="text-secondary font-semibold text-[20px] mt-2">
-                    Try 30-Day Free Trial!
-                  </p>
-                  <p className="lg:max-w-[87%] text-primary-900 text-[16px] leading-[25px]">
-                    Enjoy full feature access and see real-time compliance in action - before making any commitment.
-                  </p>
-
-                </div>
-              </RevealAnimation>
-              <RevealAnimation delay={0.5}>
-                <div className="mt-12 space-y-2">
-                  <p className="text-[#53575A] text-[15px">Write to us at</p>
-                  <Link href="mailto:info@securit.app" className="text-primary-500 text-[16px] !leading-[24px] hover:underline">
-                    info@securit.app
-                  </Link>
-                </div>
-              </RevealAnimation>
-            </div>
-            <div className="col-span-12 md:col-span-6 lg:col-span-7">
-              <div className="mx-auto w-full max-w-[847px] rounded-2xl">
-                <RevealAnimation delay={0.2}>
+      <section className="bg-[#EFF6FF] pt-20 pb-14 sm:pt-28 md:pt-32 md:pb-16 lg:pb-20 xl:pt-[135px]" id="contact">
+        <div className="main-container">
+          <div className="space-y-[50px]">
+            <div className="mb-6 sm:mb-10 grid grid-cols-12 md:gap-8 space-y-4 md:space-y-0">
+              <div className="col-span-12 md:col-span-6 lg:col-span-5 gap-2">
+                <RevealAnimation delay={0.1} direction="down" offset={20}>
+                  <h2 className="text-secondary-900 max-w-[90%] mt-2 text-[24px] lg:text-[30px] leading-[42px] xl:max-w-[100%]">
+                    Do you seriously care about your employees?
+                  </h2>
+                </RevealAnimation>
+                <RevealAnimation delay={0.2} direction="down" offset={20}>
+                  <h2 className="text-primary-700 font-semibold text-[24px] lg:text-[30px] leading-[34px] mt-3 mb-6">
+                    Let&apos;s Talk!
+                  </h2>
+                </RevealAnimation>
+                <RevealAnimation delay={0.4} direction="up" offset={30}>
+                  <div className="space-y-1 bg-white/50 p-6 rounded-2xl transition-all duration-300 border border-primary-100 cursor-default">
+                    <p className="text-primary-700 font-semibold text-[20px] mt-2">
+                      Try 30-Day Free Trial!
+                    </p>
+                    <p className="lg:max-w-[87%] text-primary-900 text-[16px] leading-[25px]">
+                      Enjoy full feature access and see real-time compliance in action - before making any commitment.
+                    </p>
+                  </div>
+                </RevealAnimation>
+                <RevealAnimation delay={0.5} direction="up" offset={30}>
+                  <div className="mt-12 space-y-2">
+                    <p className="text-[#53575A] text-[15px]">Write to us at</p>
+                    <Link href="mailto:info@securit.app" className="text-primary-900 text-[16px] !leading-[24px] hover:text-primary-500 transition-all">
+                      info@securit.app
+                    </Link>
+                  </div>
+                </RevealAnimation>
+              </div>
+              <div className="col-span-12 md:col-span-6 lg:col-span-12 xl:col-span-7">
+                <div className="mx-auto w-full max-w-[847px] rounded-2xl">
                   <form className="space-y-6" onSubmit={handleSubmit}>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                       {/* Name */}
-                      <div className="space-y-1">
-                        <input
-                          type="text"
-                          name="name"
-                          value={formData.name}
-                          onChange={handleChange}
-                          placeholder="Name *"
-                          className={`w-full h-[40px] px-4 rounded-lg border ${errors.name ? 'border-red-500' : 'border-stroke-11'} bg-white focus:outline-none focus:border-primary-500 placeholder:text-secondary-400 text-secondary-800`}
-                        />
-                        {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name}</p>}
-                      </div>
-                      {/* Work Email */}
-                      <div className="space-y-1">
-                        <input
-                          type="email"
-                          name="email"
-                          value={formData.email}
-                          onChange={handleChange}
-                          placeholder="Work Email *"
-                          className={`w-full h-[40px] px-4 rounded-lg border ${errors.email ? 'border-red-500' : 'border-stroke-11'} bg-white focus:outline-none focus:border-primary-500 placeholder:text-secondary-400 text-secondary-800`}
-                        />
-                        {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
-                      </div>
-                      {/* Company */}
-                      <div className="space-y-1">
-                        <input
-                          type="text"
-                          name="company"
-                          value={formData.company}
-                          onChange={handleChange}
-                          placeholder="Company *"
-                          className={`w-full h-[40px] px-4 rounded-lg border ${errors.company ? 'border-red-500' : 'border-stroke-11'} bg-white focus:outline-none focus:border-primary-500 placeholder:text-secondary-400 text-secondary-800`}
-                        />
-                        {errors.company && <p className="text-red-500 text-xs mt-1">{errors.company}</p>}
-                      </div>
-                      {/* Job Title */}
-                      <div className="space-y-1">
-                        <input
-                          type="text"
-                          name="jobTitle"
-                          value={formData.jobTitle}
-                          onChange={handleChange}
-                          placeholder="Job Title *"
-                          className={`w-full h-[40px] px-4 rounded-lg border ${errors.jobTitle ? 'border-red-500' : 'border-stroke-11'} bg-white focus:outline-none focus:border-primary-500 placeholder:text-secondary-400 text-secondary-800`}
-                        />
-                        {errors.jobTitle && <p className="text-red-500 text-xs mt-1">{errors.jobTitle}</p>}
-                      </div>
-                      {/* Inquiry Type */}
-                      <div className="space-y-1">
-                        <input
-                          type="text"
-                          name="inquiryType"
-                          value={formData.inquiryType}
-                          onChange={handleChange}
-                          placeholder="Inquiry Type"
-                          className="w-full h-[40px] px-4 rounded-lg border border-stroke-11 bg-white focus:outline-none focus:border-primary-500 placeholder:text-secondary-400 text-secondary-800"
-                        />
-                      </div>
-                      {/* Phone */}
-                      <div className="space-y-1 relative" ref={dropdownRef}>
-                        <div
-                          className="absolute left-0 top-[20px] -translate-y-1/2 flex items-center gap-2 px-4 cursor-pointer hover:bg-white h-[40px] rounded-l-lg border-r border-stroke-11 focus:border focus:border-stroke-11 hover:border hover:border-stroke-11 z-10"
-                          onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                        >
-                          <Image src={`https://flagcdn.com/w40/${selectedCountry.iso}.png`} width={24} height={16} alt={selectedCountry.name} className="object-contain" unoptimized />
-                          <span className="text-sm font-medium text-secondary-800">{selectedCountry.code}</span>
-                          <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" className={`transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`}>
-                            <path d="M1 1L5 5L9 1" stroke="#94999C" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                          </svg>
+                      <RevealAnimation delay={0.3} direction="down" offset={20}>
+                        <div className="space-y-1">
+                          <input
+                            type="text"
+                            name="name"
+                            value={formData.name}
+                            onChange={handleChange}
+                            placeholder="Name *"
+                            className={`w-full h-[45px] px-4 rounded-lg border ${errors.name ? 'border-red-500' : 'border-stroke-11'} bg-white focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500/20 placeholder:text-secondary-400 text-secondary-800 transition-all duration-300 hover:shadow-md`}
+                          />
+                          {errors.name && <p className="text-red-500 text-xs mt-1 pl-1">{errors.name}</p>}
                         </div>
-
-                        {isDropdownOpen && (
-                          <div className="absolute top-[44px] left-0 w-[260px] max-h-[300px] overflow-hidden flex flex-col bg-white border border-stroke-11 rounded-lg shadow-lg z-50">
-                            <div className="p-2 border-b border-stroke-11 sticky top-0 bg-white">
-                              <input
-                                type="text"
-                                placeholder="Search country..."
-                                value={searchCountry}
-                                onChange={(e) => setSearchCountry(e.target.value)}
-                                className="w-full h-[32px] px-3 rounded-md border border-stroke-11 bg-white focus:outline-none focus:border-primary-500 placeholder:text-secondary-400 text-secondary-800 text-sm"
-                                onClick={(e) => e.stopPropagation()}
-                              />
-                            </div>
-                            <div className="overflow-y-auto flex-1 py-1">
-                              {countries
-                                .filter(c => c.name.toLowerCase().includes(searchCountry.toLowerCase()) || c.code.includes(searchCountry))
-                                .map((country) => (
-                                  <div
-                                    key={country.name + country.code}
-                                    className="flex items-center gap-3 px-4 py-2 hover:bg-primary-50 cursor-pointer transition-colors"
-                                    onClick={() => {
-                                      setSelectedCountry(country);
-                                      setIsDropdownOpen(false);
-                                      setSearchCountry('');
-                                    }}
-                                  >
-                                    <Image src={`https://flagcdn.com/w40/${country.iso}.png`} width={24} height={16} alt={country.name} className="object-contain" unoptimized />
-                                    <span className="text-xs text-secondary-800 truncate flex-1">{country.name}</span>
-                                    <span className="text-xs text-secondary-400 font-medium whitespace-nowrap">{country.code}</span>
-                                  </div>
-                                ))}
-                              {countries.filter(c => c.name.toLowerCase().includes(searchCountry.toLowerCase()) || c.code.includes(searchCountry)).length === 0 && (
-                                <div className="px-4 py-3 text-sm text-secondary-400 text-center">No countries found</div>
-                              )}
-                            </div>
+                      </RevealAnimation>
+                      {/* Work Email */}
+                      <RevealAnimation delay={0.4} direction="down" offset={20}>
+                        <div className="space-y-1">
+                          <input
+                            type="email"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            placeholder="Work Email *"
+                            className={`w-full h-[45px] px-4 rounded-lg border ${errors.email ? 'border-red-500' : 'border-stroke-11'} bg-white focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500/20 placeholder:text-secondary-400 text-secondary-800 transition-all duration-300 hover:shadow-md`}
+                          />
+                          {errors.email && <p className="text-red-500 text-xs mt-1 pl-1">{errors.email}</p>}
+                        </div>
+                      </RevealAnimation>
+                      {/* Company */}
+                      <RevealAnimation delay={0.5} direction="down" offset={20}>
+                        <div className="space-y-1">
+                          <input
+                            type="text"
+                            name="company"
+                            value={formData.company}
+                            onChange={handleChange}
+                            placeholder="Company *"
+                            className={`w-full h-[45px] px-4 rounded-lg border ${errors.company ? 'border-red-500' : 'border-stroke-11'} bg-white focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500/20 placeholder:text-secondary-400 text-secondary-800 transition-all duration-300 hover:shadow-md`}
+                          />
+                          {errors.company && <p className="text-red-500 text-xs mt-1 pl-1">{errors.company}</p>}
+                        </div>
+                      </RevealAnimation>
+                      {/* Job Title */}
+                      <RevealAnimation delay={0.6} direction="down" offset={20}>
+                        <div className="space-y-1">
+                          <input
+                            type="text"
+                            name="jobTitle"
+                            value={formData.jobTitle}
+                            onChange={handleChange}
+                            placeholder="Job Title *"
+                            className={`w-full h-[45px] px-4 rounded-lg border ${errors.jobTitle ? 'border-red-500' : 'border-stroke-11'} bg-white focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500/20 placeholder:text-secondary-400 text-secondary-800 transition-all duration-300 hover:shadow-md`}
+                          />
+                          {errors.jobTitle && <p className="text-red-500 text-xs mt-1 pl-1">{errors.jobTitle}</p>}
+                        </div>
+                      </RevealAnimation>
+                      {/* Inquiry Type */}
+                      <RevealAnimation delay={0.7} direction="down" offset={20}>
+                        <div className="space-y-1">
+                          <input
+                            type="text"
+                            name="inquiryType"
+                            value={formData.inquiryType}
+                            onChange={handleChange}
+                            placeholder="Inquiry Type"
+                            className="w-full h-[45px] px-4 rounded-lg border border-stroke-11 bg-white focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500/20 placeholder:text-secondary-400 text-secondary-800 transition-all duration-300 hover:shadow-md"
+                          />
+                        </div>
+                      </RevealAnimation>
+                      {/* Phone */}
+                      <RevealAnimation delay={0.8} direction="down" offset={20}>
+                        <div className="space-y-1 relative z-10" ref={dropdownRef}>
+                          <div
+                            className="absolute left-0 top-[22.5px] -translate-y-1/2 flex items-center gap-2 px-4 cursor-pointer hover:bg-white h-[45px] rounded-l-lg border-r border-stroke-11 transition-colors z-10"
+                            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                          >
+                            <Image src={`https://flagcdn.com/w40/${selectedCountry.iso}.png`} width={24} height={16} alt={selectedCountry.name} className="object-contain" unoptimized />
+                            <span className="text-sm font-medium text-secondary-800">{selectedCountry.code}</span>
+                            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" className={`transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`}>
+                              <path d="M1 1L5 5L9 1" stroke="#94999C" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
                           </div>
-                        )}
 
-                        <input
-                          type="tel"
-                          name="phone"
-                          value={formData.phone}
-                          onChange={handleChange}
-                          placeholder="Phone"
-                          className={`w-full h-[40px] pl-[115px] pr-4 rounded-lg border ${errors.phone ? 'border-red-500' : 'border-stroke-11'} bg-white focus:outline-none focus:border-primary-500 placeholder:text-secondary-400 text-secondary-800`}
-                        />
-                        {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
-                      </div>
+                          {isDropdownOpen && (
+                            <div className="absolute top-full left-0 w-[260px] max-h-[300px] overflow-hidden flex flex-col bg-white border border-stroke-11 rounded-lg shadow-lg z-50 animate-in fade-in zoom-in duration-200">
+                              <div className="p-2 border-b border-stroke-11 sticky top-0 bg-white">
+                                <input
+                                  type="text"
+                                  placeholder="Search country..."
+                                  value={searchCountry}
+                                  onChange={(e) => setSearchCountry(e.target.value)}
+                                  className="w-full h-[32px] px-3 rounded-md border border-stroke-11 bg-white focus:outline-none focus:border-primary-500 placeholder:text-secondary-400 text-secondary-800 text-sm"
+                                  onClick={(e) => e.stopPropagation()}
+                                />
+                              </div>
+                              <div className="overflow-y-auto flex-1 py-1">
+                                {countries
+                                  .filter(c => c.name.toLowerCase().includes(searchCountry.toLowerCase()) || c.code.includes(searchCountry))
+                                  .map((country) => (
+                                    <div
+                                      key={country.name + country.code}
+                                      className="flex items-center gap-3 px-4 py-2 hover:bg-primary-50 cursor-pointer transition-colors"
+                                      onClick={() => {
+                                        setSelectedCountry(country);
+                                        setIsDropdownOpen(false);
+                                        setSearchCountry('');
+                                      }}
+                                    >
+                                      <Image src={`https://flagcdn.com/w40/${country.iso}.png`} width={24} height={16} alt={country.name} className="object-contain" unoptimized />
+                                      <span className="text-xs text-secondary-800 truncate flex-1">{country.name}</span>
+                                      <span className="text-xs text-secondary-400 font-medium whitespace-nowrap">{country.code}</span>
+                                    </div>
+                                  ))}
+                                {countries.filter(c => c.name.toLowerCase().includes(searchCountry.toLowerCase()) || c.code.includes(searchCountry)).length === 0 && (
+                                  <div className="px-4 py-3 text-sm text-secondary-400 text-center">No countries found</div>
+                                )}
+                              </div>
+                            </div>
+                          )}
+
+                          <input
+                            type="tel"
+                            name="phone"
+                            value={formData.phone}
+                            onChange={handleChange}
+                            placeholder="Phone"
+                            className={`w-full h-[45px] pl-[115px] pr-4 rounded-lg border ${errors.phone ? 'border-red-500' : 'border-stroke-11'} bg-white focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500/20 placeholder:text-secondary-400 text-secondary-800 transition-all duration-300 hover:shadow-md`}
+                          />
+                          {errors.phone && <p className="text-red-500 text-xs mt-1 pl-1">{errors.phone}</p>}
+                        </div>
+                      </RevealAnimation>
                     </div>
                     {/* Message */}
-                    <div className="space-y-1">
-                      <textarea
-                        rows={4}
-                        name="message"
-                        value={formData.message}
-                        onChange={handleChange}
-                        placeholder="Message"
-                        className="w-full p-4 rounded-lg border border-stroke-11 bg-white focus:outline-none focus:border-primary-500 placeholder:text-secondary-400 text-secondary-800 min-h-[150px]"
-                      />
-                    </div>
+                    <RevealAnimation delay={0.9} direction="down" offset={20}>
+                      <div className="space-y-1">
+                        <textarea
+                          rows={4}
+                          name="message"
+                          value={formData.message}
+                          onChange={handleChange}
+                          placeholder="Message"
+                          className="w-full p-4 rounded-lg border border-stroke-11 bg-white focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500/20 placeholder:text-secondary-400 text-secondary-800 min-h-[150px] transition-all duration-300 hover:shadow-md"
+                        />
+                      </div>
+                    </RevealAnimation>
                     {/* Checkbox */}
-                    <div className="flex items-start gap-3">
-                      <input
-                        type="checkbox"
-                        id="updates"
-                        name="agreeUpdates"
-                        checked={formData.agreeUpdates}
-                        onChange={handleChange}
-                        className="mt-1 w-4 h-4 rounded border-stroke-11 text-primary-500 focus:ring-primary-500"
-                      />
-                      <label htmlFor="updates" className="text-xs md:text-sm text-secondary-600 leading-snug">
-                        By checking this box, I agree to receive updates from Innova Solutions
-                      </label>
-                    </div>
+                    <RevealAnimation delay={1.0} direction="up" offset={10}>
+                      <div className="flex items-start gap-3">
+                        <input
+                          type="checkbox"
+                          id="updates"
+                          name="agreeUpdates"
+                          checked={formData.agreeUpdates}
+                          onChange={handleChange}
+                          className="mt-1 w-4 h-4 rounded border-stroke-11 text-primary-500 focus:ring-primary-500 cursor-pointer"
+                        />
+                        <label htmlFor="updates" className="text-xs md:text-sm text-secondary-600 leading-snug cursor-pointer select-none">
+                          By checking this box, I agree to receive updates from Innova Solutions
+                        </label>
+                      </div>
+                    </RevealAnimation>
                     {/* reCAPTCHA */}
-                    <div className="py-2">
-                      <ReCAPTCHA
-                        sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''}
-                        onChange={handleCaptchaChange}
-                      />
-                    </div>
+                    <RevealAnimation delay={1.1} direction="up" offset={10}>
+                      <div className="py-2">
+                        <ReCAPTCHA
+                          sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''}
+                          onChange={handleCaptchaChange}
+                        />
+                      </div>
+                    </RevealAnimation>
                     {/* Submit Button */}
-                    <button
-                      type="submit"
-                      disabled={!captchaValue}
-                      className={`font-bold py-3 px-10 rounded-full transition-colors duration-300 text-base md:text-lg ${captchaValue
-                        ? 'bg-primary-500 text-white hover:bg-primary-700 cursor-pointer'
-                        : 'bg-gray-300 text-gray-500 cursor-not-allowed'
-                        }`}
-                    >
-                      Submit
-                    </button>
+                    <RevealAnimation delay={1.2} direction="up" offset={20}>
+                      <button
+                        type="submit"
+                        disabled={!captchaValue}
+                        className={`font-bold py-3 px-10 rounded-full transition-all duration-300 text-base md:text-lg shadow-lg active:scale-95 ${captchaValue
+                          ? 'bg-primary-500 text-white hover:bg-primary-600 hover:shadow-primary-500/20 hover:-translate-y-1 cursor-pointer'
+                          : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                          }`}
+                      >
+                        Submit
+                      </button>
+                    </RevealAnimation>
                   </form>
-                </RevealAnimation>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <ToastContainer
-      position="top-right"
-      autoClose={5000}
-      hideProgressBar={false}
-      newestOnTop={false}
-      closeOnClick={false}
-      rtl={false}
-      pauseOnFocusLoss
-      draggable
-      pauseOnHover
-      theme="dark"
+      </section>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
       />
     </>
   );

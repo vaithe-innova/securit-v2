@@ -54,7 +54,7 @@ const industries = [
 
 const Industries = () => {
   return (
-    <section id='industries' className="bg-white dark:bg-background-6 pt-16 pb-16 md:pt-20 md:pb-20 lg:pt-[90px] lg:pb-[90px]">
+    <section id='industries' className="bg-white dark:bg-background-6 pt-16 md:pt-20 lg:pt-[90px]">
       <div className="main-container">
         {/* Heading Section */}
         <div className="mx-auto mb-10 md:mb-14 max-w-[800px] space-y-4 text-center">

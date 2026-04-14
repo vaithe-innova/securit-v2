@@ -5,7 +5,7 @@ import RevealAnimation from '../animation/RevealAnimation';
 
 const StartFree = () => {
   return (
-    <section className="relative overflow-hidden bg-white mb-[60px] sm:mb-[80px] md:mb-[100px]">
+    <section className="relative overflow-hidden bg-white my-[60px] sm:my-[80px] md:my-[100px]">
       {/* Animated background glow blobs */}
       <span className="pointer-events-none absolute -left-20 sm:-left-32 -top-20 sm:-top-32 h-[200px] w-[200px] md:h-[400px] md:w-[400px] rounded-full bg-primary-100/20 blur-3xl animate-pulse" />
       <span className="pointer-events-none absolute -right-20 sm:-right-32 -bottom-20 sm:-bottom-32 h-[200px] w-[200px] md:h-[400px] md:w-[400px] rounded-full bg-primary-200/20 blur-3xl animate-pulse delay-700" />

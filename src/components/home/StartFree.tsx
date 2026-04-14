@@ -35,7 +35,7 @@ const StartFree = () => {
   md:px-[60px]
 ">
           <div className="space-y-6 text-left max-w-[746px] relative z-20">
-            <RevealAnimation delay={0.1} animationType="skew-in" direction="left" offset={80}>
+            <RevealAnimation delay={0.1} animationType="from" direction="left" offset={80}>
               <h2 className="text-[#FFFFFF] fw-700 text-[26px] sm:text-[28px] md:text-[32px] lg:text-[36px] xl:text-[40px] !leading-[32px] sm:!leading-[36px] md:!leading-[40px] lg:!leading-[46px] group-hover:scale-[1.01] transition-transform duration-700">
                 If your team only responds when things go wrong, It's already too late.
               </h2>

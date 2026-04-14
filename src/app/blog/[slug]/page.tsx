@@ -24,14 +24,6 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   return (
     <main className="bg-background-3 dark:bg-background-7">
       <BlogContent blog={blogContent} />
-      <CTA
-        className="dark:bg-background-7 bg-white"
-        badgeClass="!badge-yellow-v2"
-        badgeText="Get started"
-        ctaHeading="Build a complete website using the assistance"
-        description="Start your free trial today and see your ideas come to life easily and creatively."
-        ctaBtnText="Get started"
-      />
     </main>
   );
 };

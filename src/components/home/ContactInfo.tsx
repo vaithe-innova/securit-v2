@@ -398,7 +398,7 @@ const ContactInfo = () => {
                       </RevealAnimation>
                       {/* Phone */}
                       <RevealAnimation delay={0.8} direction="down" offset={20}>
-                        <div className="space-y-1 relative" ref={dropdownRef}>
+                        <div className="space-y-1 relative z-10" ref={dropdownRef}>
                           <div
                             className="absolute left-0 top-[22.5px] -translate-y-1/2 flex items-center gap-2 px-4 cursor-pointer hover:bg-white h-[45px] rounded-l-lg border-r border-stroke-11 transition-colors z-10"
                             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
@@ -411,7 +411,7 @@ const ContactInfo = () => {
                           </div>
 
                           {isDropdownOpen && (
-                            <div className="absolute top-[48px] left-0 w-[260px] max-h-[300px] overflow-hidden flex flex-col bg-white border border-stroke-11 rounded-lg shadow-xl z-50 animate-in fade-in zoom-in duration-200">
+                            <div className="absolute top-full left-0 w-[260px] max-h-[300px] overflow-hidden flex flex-col bg-white border border-stroke-11 rounded-lg shadow-lg z-50 animate-in fade-in zoom-in duration-200">
                               <div className="p-2 border-b border-stroke-11 sticky top-0 bg-white">
                                 <input
                                   type="text"

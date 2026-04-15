@@ -63,13 +63,13 @@ const HowItWorks = () => {
           </RevealAnimation>
 
           <RevealAnimation delay={0.3}>
-            <h2 className="text-primary-700 font-bold text-[24px] sm:text-[30px] !leading-[30px] sm:!leading-[34px] mb-2">
+            <h2 className="text-primary-700 font-bold text-[22px] sm:text-[30px] !leading-[28px] sm:!leading-[34px] mb-2">
               Turn intelligence into action across your operations
             </h2>
           </RevealAnimation>
 
           <RevealAnimation delay={0.4}>
-            <p className="text-secondary text-[20px] !leading-[26px]">
+            <p className="text-secondary text-base sm:text-[20px] !leading-[24px] sm:!leading-[26px]">
               Securit collects worker and site data, analyzes risk instantly, and triggers alerts when it matters most.
             </p>
           </RevealAnimation>

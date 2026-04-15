@@ -278,13 +278,38 @@ const ContactInfo = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (validateForm()) {
       // router.push('/free-trial');
       notify();
+
+
+      const formData = {
+        // name: e.target.name.value,
+        // email: e.target.email.value,
+        // message: e.target.message.value,
+      };
+
+      try {
+        const response = await fetch('/send-email.php', { // Ensure the path is correct
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData),
+        });
+
+        const result = await response.json();
+        if (result.status === 'success') {
+          alert("Email sent successfully!");
+        } else {
+          alert("Error sending email.");
+        }
+      } catch (error) {
+        console.error("Submission error:", error);
+      }
     }
   };
+  
   const notify = () => toast('Thank you for submitting your details. Our team will get back to you shortly!');
 
   return (
@@ -295,12 +320,12 @@ const ContactInfo = () => {
             <div className="mb-6 sm:mb-10 grid grid-cols-12 md:gap-8 space-y-4 md:space-y-0">
               <div className="col-span-12 md:col-span-6 lg:col-span-5 gap-2">
                 <RevealAnimation delay={0.1} direction="down" offset={20}>
-                  <h2 className="text-secondary-900 max-w-[90%] mt-2 text-[24px] lg:text-[30px] leading-[42px] xl:max-w-[100%]">
+                  <h2 className="text-secondary-900 max-w-[90%] mt-2 text-[22px] sm:text-[24px] lg:text-[30px] leading-[30px] sm:leading-[36px] lg:leading-[42px] xl:max-w-[100%]">
                     Do you seriously care about your employees?
                   </h2>
                 </RevealAnimation>
                 <RevealAnimation delay={0.2} direction="down" offset={20}>
-                  <h2 className="text-primary-700 font-semibold text-[24px] lg:text-[30px] leading-[34px] mt-3 mb-6">
+                  <h2 className="text-primary-700 font-semibold text-[22px] sm:text-[24px] lg:text-[30px] leading-[28px] sm:leading-[32px] lg:leading-[34px] mt-3 mb-6">
                     Let&apos;s Talk!
                   </h2>
                 </RevealAnimation>

@@ -17,7 +17,7 @@ const OfferList = ({ offerData }: OfferListProps) => {
                     </div>
                 </RevealAnimation>
                 <RevealAnimation delay={0.3}>
-                    <h2 className="my-3 max-w-[900px] mx-auto text-primary-700 fw-700 text-[30px] !leading-[33px]" >
+                    <h2 className="my-3 max-w-[900px] mx-auto text-primary-700 fw-700 text-[22px] sm:text-[26px] md:text-[30px] !leading-[28px] sm:!leading-[31px] md:!leading-[33px]" >
                         One platform for total safety visibility
                     </h2>
                 </RevealAnimation>

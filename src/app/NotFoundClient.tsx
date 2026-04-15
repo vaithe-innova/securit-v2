@@ -18,7 +18,7 @@ const NotFoundClient = () => {
                 </figure>
               </RevealAnimation>
               <RevealAnimation delay={0.3}>
-                <h1 className="text-[80px] leading-[1.1] font-medium md:text-[120px] lg:!text-[180px] xl:!text-[200px]">
+                <h1 className="text-[56px] leading-[1.1] font-medium sm:text-[80px] md:text-[120px] lg:!text-[180px] xl:!text-[200px]">
                   404
                 </h1>
               </RevealAnimation>

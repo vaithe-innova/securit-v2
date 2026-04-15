@@ -48,13 +48,13 @@ const OurTeam = () => {
           </RevealAnimation>
 
           <RevealAnimation delay={0.2} direction="down" offset={20}>
-            <h2 className="text-primary-700 dark:text-white font-bold text-3xl md:text-[36px] lg:text-[40px] !leading-tight">
+            <h2 className="text-primary-700 dark:text-white font-bold text-[22px] sm:text-[28px] md:text-[36px] lg:text-[40px] !leading-tight">
               Meet the Team
             </h2>
           </RevealAnimation>
 
           <RevealAnimation delay={0.3} direction="down" offset={20}>
-            <p className="text-secondary dark:text-accent/60 text-[18px] md:text-[20px] leading-[1.2]">
+            <p className="text-secondary dark:text-accent/60 text-base sm:text-[18px] md:text-[20px] leading-[1.35] sm:leading-[1.2]">
               Safety experts, engineers, and innovators united by one mission — protecting workers everywhere they work.
             </p>
           </RevealAnimation>

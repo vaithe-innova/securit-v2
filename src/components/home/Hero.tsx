@@ -52,7 +52,7 @@ const Hero = () => {
                   </RevealAnimation>
                   <div className="space-y-3 md:space-y-5 text-left">
                     <RevealAnimation delay={0.2}>
-                      <h1 className="max-w-[650px] text-white fw-700 tracking-tight !leading-[38px] sm:!leading-[40px] md:!leading-[56px] lg:!leading-[58px] xl:!leading-[60px] text-4xl md:text-5xl xl:text-[56px]">
+                      <h1 className="max-w-[650px] text-white fw-700 tracking-tight !leading-[34px] sm:!leading-[40px] md:!leading-[56px] lg:!leading-[58px] xl:!leading-[60px] text-[30px] sm:text-4xl md:text-5xl xl:text-[56px]">
                         Keeping people safe, <br className='hidden md:block' /> Every step of the way
                       </h1>
                     </RevealAnimation>

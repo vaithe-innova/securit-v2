@@ -67,7 +67,7 @@ const Industries = () => {
           </RevealAnimation>
 
           <RevealAnimation delay={0.3}>
-            <h2 className="text-primary-700 dark:text-white font-bold text-3xl md:text-4xl lg:text-[30px] leading-tight mb-4">
+            <h2 className="text-primary-700 dark:text-white font-bold text-[22px] sm:text-[26px] md:text-4xl lg:text-[30px] leading-tight mb-4">
               Built for environments where safety moves fast
             </h2>
           </RevealAnimation>

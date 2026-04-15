@@ -104,7 +104,7 @@ const Platform = () => {
       <div className="main-container">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6 w-full">
           <div className="flex flex-col justify-start lg:pr-6 mb-6 md:mb-0 space-y-5">
-            <RevealAnimation delay={0.2}>
+            <RevealAnimation delay={0.2} direction="left" animationType="from" offset={100} useSpring={true} repeatative>
               <div className="inline-block border border-[#0070CE] dark:border-primary-500/30 bg-white dark:bg-transparent rounded-[30px] px-5 py-[6px] w-max ">
                 <span className="text-primary-700 dark:text-primary-400 text-sm sm:text-[15px] font-medium">
                   Platform Capabilities

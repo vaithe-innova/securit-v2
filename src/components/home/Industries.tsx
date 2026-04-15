@@ -58,7 +58,7 @@ const Industries = () => {
       <div className="main-container">
         {/* Heading Section */}
         <div className="mx-auto mb-10 md:mb-14 max-w-[800px] space-y-4 text-center">
-          <RevealAnimation delay={0.2}>
+          <RevealAnimation delay={0.2} direction="left" animationType="from" offset={100} useSpring={true} repeatative>
             <div className="inline-block border border-[#0070CE] dark:border-primary-500/30 rounded-[30px] px-5 py-[6px] mb-2 bg-transparent">
               <span className="text-primary-700 dark:text-primary-400 text-sm sm:text-[15px] font-medium">
                 Industries

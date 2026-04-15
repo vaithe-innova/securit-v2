@@ -11,7 +11,7 @@ const OfferList = ({ offerData }: OfferListProps) => {
     return (
         <div className="main-container">
             <div className="mb-[60px] space-y-6 text-center">
-                <RevealAnimation delay={0.2}>
+                <RevealAnimation delay={0.4} direction="left" animationType="from" offset={100} useSpring={true} repeatative>
                     <div className="mb-5 flex items-center w-fit mx-auto rounded-[30px] bg-white py-[6px] px-5 border-[1px] border-[#0070CE]">
                         <span className="text-xs sm:text-sm md:text-base font-normal bg-white text-primary-700">What We Offer</span>
                     </div>

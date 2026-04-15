@@ -22,11 +22,12 @@ interface RevealAnimationProps {
   rotation?: number;
   animationType?: 'from' | 'to' | 'skew-in';
   className?: string;
+  repeatative?: boolean;
 }
 
 const RevealAnimation = ({
   children,
-  duration = 0.8,
+  duration = 0.6,
   delay = 0,
   offset = 60,
   instant = false,
@@ -37,6 +38,7 @@ const RevealAnimation = ({
   rotation = 0,
   animationType = 'from',
   className = '',
+  repeatative = false,
 }: RevealAnimationProps) => {
   const [isMounted, setIsMounted] = useState(false);
   const elementRef = useRef<HTMLElement>(null);
@@ -77,7 +79,7 @@ const RevealAnimation = ({
         trigger: element,
         start: start,
         end: end,
-        toggleActions: 'play none none none',
+        toggleActions: repeatative ? 'restart none none reset' : 'play none none none',
       };
     }
 
@@ -99,19 +101,29 @@ const RevealAnimation = ({
       case 'up': fromVars.y = -offset; break;
     }
 
+    // To state (fully visible, resting position)
+    const toVars: gsap.TweenVars = { ...vars, opacity: 1, x: 0, y: 0, rotation: 0, skewX: 0, skewY: 0 };
+
     // Specific animation logic
     if (animationType === 'from') {
-      gsap.from(element, { ...vars, ...fromVars });
+      if (repeatative) {
+        gsap.fromTo(element, fromVars, toVars);
+      } else {
+        gsap.from(element, { ...vars, ...fromVars });
+      }
     } else if (animationType === 'skew-in') {
-      gsap.from(element, {
-        ...vars,
+      const skewFromVars = {
         ...fromVars,
         skewX: direction === 'left' ? -6 : direction === 'right' ? 6 : 0,
         skewY: direction === 'up' ? -4 : direction === 'down' ? 4 : 0,
-      });
+      };
+      if (repeatative) {
+        gsap.fromTo(element, skewFromVars, toVars);
+      } else {
+        gsap.from(element, { ...vars, ...skewFromVars });
+      }
     } else {
-      // For 'to' animations, we usually set the 'from' states first then animate to 'to'
-      gsap.fromTo(element, fromVars, { ...vars, opacity: 1, x: 0, y: 0, rotation: 0 });
+      gsap.fromTo(element, fromVars, toVars);
     }
 
     return () => {
@@ -123,7 +135,7 @@ const RevealAnimation = ({
         });
       }
     };
-  }, [isMounted, duration, delay, offset, instant, start, end, direction, useSpring, rotation, animationType]);
+  }, [isMounted, duration, delay, offset, instant, start, end, direction, useSpring, rotation, animationType, repeatative]);
 
   // Early return if children is not valid (after all hooks)
   if (!children || !React.isValidElement(children)) {

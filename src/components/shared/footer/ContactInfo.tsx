@@ -318,7 +318,7 @@ const ContactInfo = () => {
         <div className="main-container">
           <div className="space-y-[50px]">
             <div className="mb-6 sm:mb-10 grid grid-cols-12 md:gap-8 space-y-4 md:space-y-0">
-              <div className="col-span-12 md:col-span-6 lg:col-span-5 gap-2">
+              <div className="col-span-12 md:col-span-12 lg:col-span-5 xl:col-span-5 gap-2">
                 <RevealAnimation delay={0.1} direction="down" offset={20}>
                   <h2 className="text-secondary-900 max-w-[90%] mt-2 text-[22px] sm:text-[24px] lg:text-[30px] leading-[30px] sm:leading-[36px] lg:leading-[42px] xl:max-w-[100%]">
                     Do you seriously care about your employees?
@@ -348,7 +348,7 @@ const ContactInfo = () => {
                   </div>
                 </RevealAnimation>
               </div>
-              <div className="col-span-12 md:col-span-6 lg:col-span-12 xl:col-span-7">
+              <div className="col-span-12 md:col-span-12 lg:col-span-7 xl:col-span-7">
                 <div className="mx-auto w-full max-w-[847px] rounded-2xl">
                   <form className="space-y-6" onSubmit={handleSubmit}>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">

@@ -3,8 +3,6 @@ import Image, { StaticImageData } from 'next/image';
 import ReactMarkdown from 'react-markdown';
 import rehypeSlug from 'rehype-slug';
 import RevealAnimation from '../animation/RevealAnimation';
-// import Comment from './Comment';
-// import ShareLink from './ShareLink';
 
 const BlogContent = ({ blog }: { blog: matter.GrayMatterFile<string> }) => {
   return (
@@ -52,16 +50,11 @@ const BlogContent = ({ blog }: { blog: matter.GrayMatterFile<string> }) => {
             />
           </figure>
         </RevealAnimation>
-        {/* Blog details-body */}
-
         <RevealAnimation delay={0.5}>
           <article className="details-body">
             <ReactMarkdown rehypePlugins={[[rehypeSlug]]}>{blog.content}</ReactMarkdown>
           </article>
         </RevealAnimation>
-        {/* details-footer */}
-        {/* <ShareLink /> */}
-        {/* <Comment /> */}
       </div>
     </section>
   );

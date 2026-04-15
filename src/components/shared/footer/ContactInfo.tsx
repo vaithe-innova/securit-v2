@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import ReCAPTCHA from 'react-google-recaptcha';
-import RevealAnimation from '../animation/RevealAnimation';
+import RevealAnimation from '../../animation/RevealAnimation';
 import { toast, ToastContainer } from 'react-toastify';
 
 const countries = [
@@ -309,7 +309,7 @@ const ContactInfo = () => {
       }
     }
   };
-  
+
   const notify = () => toast('Thank you for submitting your details. Our team will get back to you shortly!');
 
   return (

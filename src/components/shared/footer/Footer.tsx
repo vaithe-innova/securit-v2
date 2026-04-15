@@ -11,8 +11,8 @@ import facebookIcon from '@public/images/icons/facebook.svg';
 import instagramIcon from '@public/images/icons/instagram.svg';
 import linkedinIcon from '@public/images/icons/linkedin.svg';
 import twitterIcon from '@public/images/icons/twitter.svg';
-import ContactInfo from '@/components/home/ContactInfo';
-import StartFree from '@/components/home/StartFree';
+import ContactInfo from '@/components/shared/footer/ContactInfo';
+import StartFree from '@/components/shared/footer/StartFree';
 
 const legalLinks = [
   { label: 'Privacy Policy', href: '/' },

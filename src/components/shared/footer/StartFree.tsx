@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import RevealAnimation from '../animation/RevealAnimation';
+import RevealAnimation from '../../animation/RevealAnimation';
 
 const StartFree = () => {
   return (

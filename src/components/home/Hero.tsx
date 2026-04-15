@@ -2,11 +2,10 @@
 
 import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/LinkButton';
-// import { BlurOne, BlurTwo } from '@/icons';
 import RippleButton from '../ui/button/RippleButton';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
-import "swiper/css";
+
 
 const Hero = () => {
   return (

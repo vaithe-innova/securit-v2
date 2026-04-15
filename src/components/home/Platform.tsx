@@ -124,8 +124,8 @@ const Platform = () => {
           </div>
 
 
-          <RevealAnimation delay={0.4} animationType="to" direction="up" offset={50}>
-            <div className="group bg-white dark:bg-background-5 rounded-3xl p-8 md:p-10 shadow-sm border border-primary-100 dark:border-primary-500/30 transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_25px_50px_-12px_rgba(0,112,206,0.15)] hover:border-primary-500">
+          <RevealAnimation delay={0.4} animationType="to" direction="up" offset={50} className="h-full">
+            <div className="group h-full bg-white dark:bg-background-5 rounded-3xl p-8 md:p-10 shadow-sm border border-primary-100 dark:border-primary-500/30 transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_25px_50px_-12px_rgba(0,112,206,0.15)] hover:border-primary-500">
               <h3 className="text-secondary dark:text-white font-bold text-[20px] sm:text-[22px] md:text-[26px] mb-4 flex items-center gap-3">
                 <div className="p-2 bg-primary-50 dark:bg-primary-900/20 rounded-xl group-hover:scale-110 group-hover:rotate-[10deg] transition-all duration-500">
                   <Image src={signalList.titleIcon} alt={signalList.title} className="h-[32px] w-[32px] object-contain" />
@@ -150,8 +150,8 @@ const Platform = () => {
             </div>
           </RevealAnimation>
 
-          <RevealAnimation delay={0.5} animationType="to" direction="up" offset={50}>
-            <div className="group bg-white dark:bg-background-5 rounded-3xl p-8 md:p-10 shadow-sm border border-primary-100 dark:border-primary-500/30 transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_25px_50px_-12px_rgba(0,112,206,0.15)] hover:border-primary-500">
+          <RevealAnimation delay={0.5} animationType="to" direction="up" offset={50} className="h-full">
+            <div className="group h-full bg-white dark:bg-background-5 rounded-3xl p-8 md:p-10 shadow-sm border border-primary-100 dark:border-primary-500/30 transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_25px_50px_-12px_rgba(0,112,206,0.15)] hover:border-primary-500">
               <h3 className="text-secondary dark:text-white font-bold text-[20px] sm:text-[22px] md:text-[26px] mb-4 flex items-center gap-3">
                 <div className="p-2 bg-primary-50 dark:bg-primary-900/20 rounded-xl group-hover:scale-110 group-hover:rotate-[10deg] transition-all duration-500">
                   <Image src={intelligenceList.titleIcon} alt={intelligenceList.title} className="h-[32px] w-[32px] object-contain" />
@@ -176,8 +176,8 @@ const Platform = () => {
             </div>
           </RevealAnimation>
 
-          <RevealAnimation delay={0.6} animationType="to" direction="right" offset={40}>
-            <div className="flex items-center justify-center bg-white dark:bg-background-5 rounded-[2rem] shadow-sm min-h-[350px] border border-primary-100 dark:border-primary-500/20 transition-all duration-700 hover:shadow-[0_30px_60px_-15px_rgba(0,112,206,0.2)] hover:border-primary-500 overflow-hidden relative group">
+          <RevealAnimation delay={0.6} animationType="to" direction="right" offset={40} className="h-full">
+            <div className="flex items-center justify-center bg-white dark:bg-background-5 rounded-[2rem] shadow-sm h-full min-h-[350px] border border-primary-100 dark:border-primary-500/20 transition-all duration-700 hover:shadow-[0_30px_60px_-15px_rgba(0,112,206,0.2)] hover:border-primary-500 overflow-hidden relative group">
               <div className="relative w-full h-full p-4 transform transition-transform duration-1000 group-hover:scale-110">
                 <Image src={feature1} alt="Platform" className="h-full w-full object-contain rounded-2xl" />
               </div>
@@ -185,8 +185,8 @@ const Platform = () => {
             </div>
           </RevealAnimation>
 
-          <RevealAnimation delay={0.7} animationType="to" direction="up" offset={50}>
-            <div className="group bg-white dark:bg-background-5 rounded-3xl p-8 md:p-10 shadow-sm border border-primary-100 dark:border-primary-500/30 transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_25px_50px_-12px_rgba(0,112,206,0.15)] hover:border-primary-500">
+          <RevealAnimation delay={0.7} animationType="to" direction="up" offset={50} className="h-full">
+            <div className="group h-full bg-white dark:bg-background-5 rounded-3xl p-8 md:p-10 shadow-sm border border-primary-100 dark:border-primary-500/30 transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_25px_50px_-12px_rgba(0,112,206,0.15)] hover:border-primary-500">
               <h3 className="text-secondary dark:text-white font-bold text-[20px] sm:text-[22px] md:text-[26px] mb-4 flex items-center gap-3">
                 <div className="p-2 bg-primary-50 dark:bg-primary-900/20 rounded-xl group-hover:scale-110 group-hover:rotate-[10deg] transition-all duration-500">
                   <Image src={actionList.titleIcon} alt={actionList.title} className="h-[32px] w-[32px] object-contain" />
@@ -211,8 +211,8 @@ const Platform = () => {
             </div>
           </RevealAnimation>
 
-          <RevealAnimation delay={0.8} animationType="to" direction="up" offset={50}>
-            <div className="group bg-white dark:bg-background-5 rounded-3xl p-8 md:p-10 shadow-sm border border-primary-100 dark:border-primary-500/30 transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_25px_50px_-12px_rgba(0,112,206,0.15)] hover:border-primary-500">
+          <RevealAnimation delay={0.8} animationType="to" direction="up" offset={50} className="h-full">
+            <div className="group h-full bg-white dark:bg-background-5 rounded-3xl p-8 md:p-10 shadow-sm border border-primary-100 dark:border-primary-500/30 transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_25px_50px_-12px_rgba(0,112,206,0.15)] hover:border-primary-500">
               <h3 className="text-secondary dark:text-white font-bold text-[20px] sm:text-[22px] md:text-[26px] mb-4 flex items-center gap-3">
                 <div className="p-2 bg-primary-50 dark:bg-primary-900/20 rounded-xl group-hover:scale-110 group-hover:rotate-[10deg] transition-all duration-500">
                   <Image src={controlList.titleIcon} alt={controlList.title} className="h-[32px] w-[32px] object-contain" />

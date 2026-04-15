@@ -1,4 +1,3 @@
-
 import about from '@public/images/about.webp';
 import Image from 'next/image';
 import LinkButton from '../ui/button/LinkButton';
@@ -18,7 +17,6 @@ const OurMission = () => {
                   </div>
                 </div>
               </RevealAnimation>
-              {/* <span className="text-primary-500 tracking-[2%] sm:tracking-[3%] !leading-4 text-xs sm:text-sm font-normal uppercase">About Innova</span> */}
               <h2 className="text-primary-700 mt-2 mb-4 font-bold text-[22px] sm:text-[26px] md:text-[34px] lg:text-[40px] leading-tight">
                 Innova Solutions is a global technology and talent partner specializing in transformative digital solutions.
               </h2>

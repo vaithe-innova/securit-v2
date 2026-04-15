@@ -1,16 +1,11 @@
 'use client';
-import { cn } from '@/utils/cn';
 import Springer from '@/utils/springer';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import React, { ReactElement, Ref, cloneElement, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 interface RevealAnimationProps {
-  children: ReactElement<{
-    className?: string;
-    ref?: Ref<HTMLElement>;
-    'data-ns-animate'?: string;
-  }>;
+  children: React.ReactNode;
   duration?: number;
   delay?: number;
   offset?: number;
@@ -40,18 +35,9 @@ const RevealAnimation = ({
   className = '',
   repeatative = false,
 }: RevealAnimationProps) => {
-  const [isMounted, setIsMounted] = useState(false);
-  const elementRef = useRef<HTMLElement>(null);
+  const elementRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  useEffect(() => {
-    if (!isMounted) {
-      return;
-    }
-
     gsap.registerPlugin(ScrollTrigger);
 
     const element = elementRef.current;
@@ -135,23 +121,17 @@ const RevealAnimation = ({
         });
       }
     };
-  }, [isMounted, duration, delay, offset, instant, start, end, direction, useSpring, rotation, animationType, repeatative]);
+  }, [duration, delay, offset, instant, start, end, direction, useSpring, rotation, animationType, repeatative]);
 
-  // Early return if children is not valid (after all hooks)
-  if (!children || !React.isValidElement(children)) {
+  if (!children) {
     return null;
   }
 
-  if (!isMounted) {
-    return children;
-  }
-
-  // Clone the child element and add the ref, className, and data-ns-animate attribute
-  return cloneElement(children, {
-    ref: elementRef,
-    className: cn(children?.props?.className, className),
-    'data-ns-animate': 'true',
-  });
+  return (
+    <div ref={elementRef} className={className}>
+      {children}
+    </div>
+  );
 };
 
 export default RevealAnimation;

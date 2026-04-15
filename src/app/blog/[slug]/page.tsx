@@ -22,7 +22,7 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const blogContent = getMarkDownContent('src/data/blogs/', slug);
 
   return (
-    <main className="bg-background-3 dark:bg-background-7">
+    <main id="main-content" className="bg-background-3 dark:bg-background-7">
       <BlogContent blog={blogContent} />
     </main>
   );

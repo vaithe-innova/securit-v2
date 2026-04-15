@@ -75,6 +75,7 @@ const Tab: React.FC<TabProps> = ({ index, children, className = '', variant = 'd
 
   return (
     <button
+      type="button"
       ref={buttonRef}
       role="tab"
       aria-controls={`tab-content-${index}`}

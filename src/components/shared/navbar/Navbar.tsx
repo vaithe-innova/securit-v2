@@ -77,17 +77,17 @@ const Navbar = () => {
               </Link>
             </div>
             <div className="hidden sm:flex flex-1 sm:flex-none justify-end items-center gap-4">
-              <Link href="https://linkedin.com" target="_blank" className="hover:opacity-80 transition-opacity flex items-center justify-center">
-                <Image src={linkedinIcon} alt="LinkedIn" width={12} height={12} className="brightness-0 invert" />
+              <Link href="https://linkedin.com" target="_blank" aria-label="Visit our LinkedIn page (opens in new tab)" className="hover:opacity-80 transition-opacity flex items-center justify-center">
+                <Image src={linkedinIcon} alt="" width={12} height={12} className="brightness-0 invert" />
               </Link>
-              <Link href="https://facebook.com" target="_blank" className="hover:opacity-80 transition-opacity flex items-center justify-center">
-                <Image src={facebookIcon} alt="Facebook" width={12} height={12} className="brightness-0 invert" />
+              <Link href="https://facebook.com" target="_blank" aria-label="Visit our Facebook page (opens in new tab)" className="hover:opacity-80 transition-opacity flex items-center justify-center">
+                <Image src={facebookIcon} alt="" width={12} height={12} className="brightness-0 invert" />
               </Link>
-              <Link href="https://x.com" target="_blank" className="hover:opacity-80 transition-opacity flex items-center justify-center">
-                <Image src={twitterIcon} alt="X" width={12} height={12} className="brightness-0 invert" />
+              <Link href="https://x.com" target="_blank" aria-label="Follow us on X / Twitter (opens in new tab)" className="hover:opacity-80 transition-opacity flex items-center justify-center">
+                <Image src={twitterIcon} alt="" width={12} height={12} className="brightness-0 invert" />
               </Link>
-              <Link href="https://instagram.com" target="_blank" className="hover:opacity-80 transition-opacity flex items-center justify-center">
-                <Image src={instagramIcon} alt="Instagram" width={12} height={12} className="brightness-0 invert" />
+              <Link href="https://instagram.com" target="_blank" aria-label="Follow us on Instagram (opens in new tab)" className="hover:opacity-80 transition-opacity flex items-center justify-center">
+                <Image src={instagramIcon} alt="" width={12} height={12} className="brightness-0 invert" />
               </Link>
             </div>
           </div>
@@ -99,17 +99,15 @@ const Navbar = () => {
             )}>
             <div className='main-container  mx-auto flex items-center justify-between max-lg:justify-between'>
               <div className="flex items-center justify-center">
-                <Link href="/" className="inline-flex items-center">
-                  <span className="sr-only">Home</span>
-                  <figure className="lg:max-w-[198px]">
-                    <Image src={mainLogo} alt="Securit" className="h-auto w-full dark:invert" priority loading="eager" />
-                  </figure>
+                <Link href="/" className="inline-flex items-center" aria-label="Securit - Go to homepage">
+                  <Image src={mainLogo} alt="Securit" className="h-auto w-full dark:invert lg:max-w-[198px]" priority loading="eager" />
                 </Link>
               </div>
-              <nav className="hidden items-center lg:flex">
+              <nav className="hidden items-center lg:flex" aria-label="Primary navigation">
                 <ul className="flex items-center">
                   <li className={cn("relative py-2.5", isHomeActive && "active")}>
                     <Link href="/#home" onClick={() => setActiveHash("#home")}
+                      aria-current={isHomeActive ? "page" : undefined}
                       className=" text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">
                       <span>Home</span>
                     </Link>
@@ -118,6 +116,7 @@ const Navbar = () => {
                     <Link
                       href="/#features"
                       onClick={() => setActiveHash('#features')}
+                      aria-current={isFeatureActive ? "page" : undefined}
                       className=" text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">
                       <span>Features</span>
                     </Link>
@@ -126,6 +125,7 @@ const Navbar = () => {
                     <Link
                       href="/#platform"
                       onClick={() => setActiveHash('#platform')}
+                      aria-current={isPlatformActive ? "page" : undefined}
                       className=" text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">
                       <span>Platform</span>
                     </Link>
@@ -134,6 +134,7 @@ const Navbar = () => {
                     <Link
                       href="/#industries"
                       onClick={() => setActiveHash('#industries')}
+                      aria-current={isIndustriesActive ? "page" : undefined}
                       className=" text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">
                       <span>Industries</span>
                     </Link>
@@ -141,6 +142,7 @@ const Navbar = () => {
                   <li className={cn("relative py-2.5", isActive("/blog") && "active")}>
                     <Link
                       href="/blog"
+                      aria-current={isActive("/blog") ? "page" : undefined}
                       className=" text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">
                       <span>Blogs &amp; Events</span>
                     </Link>
@@ -148,6 +150,7 @@ const Navbar = () => {
                   <li className={cn("relative cursor-pointer py-2.5", isActive("/about") && "active")}>
                     <Link
                       href="/about"
+                      aria-current={isActive("/about") ? "page" : undefined}
                       className=" text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-semibold transition-all duration-200">
                       <span>About Us</span>
                     </Link>
@@ -156,6 +159,7 @@ const Navbar = () => {
                     <Link
                       href="/#contact"
                       onClick={() => setActiveHash('#contact')}
+                      aria-current={isContactActive ? "page" : undefined}
                       className=" text-tagline-1 text-secondary hover:text-primary-500 dark:text-accent/60 dark:hover:text-accent flex items-center gap-1 rounded-full border border-transparent pl-4 pr-0 py-2 font-semibold transition-all duration-200">
                       <span>Contact</span>
                     </Link>

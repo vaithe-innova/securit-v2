@@ -13,7 +13,7 @@ import { useEffect, useState } from 'react';
 import useActiveSection from '@/hooks/useActiveSection';
 
 const MobileMenu = ({ menuData }: { menuData: IMobileMenuGroup[] }) => {
-  const { isOpen } = useMobileMenuContext();
+  const { isOpen, closeMenu } = useMobileMenuContext();
 
   const pathname = usePathname();
   const [activeHash, setActiveHash] = useState('');
@@ -49,10 +49,25 @@ const MobileMenu = ({ menuData }: { menuData: IMobileMenuGroup[] }) => {
     if (href.includes('#contact')) { return isContactActive; }
 
     return pathname === href || pathname.startsWith(href);
+
+    useEffect(() => {
+      const handleEscape = (e: KeyboardEvent) => {
+        if (e.key === 'Escape' && isOpen) {
+          closeMenu();
+        }
+      };
+      document.addEventListener('keydown', handleEscape);
+      return () => document.removeEventListener('keydown', handleEscape);
+    }, [isOpen, closeMenu]);
   };
 
   return (
     <aside
+      id="mobile-menu"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Navigation menu"
+      aria-hidden={!isOpen}
       className={cn(
         'dark:bg-background-8 fixed top-0 right-0 z-[9999] h-screen w-full translate-x-full bg-white transition-all duration-300 sm:w-1/2 sm:rounded-l-3xl xl:hidden',
         isOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0',

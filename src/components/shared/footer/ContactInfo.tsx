@@ -355,63 +355,81 @@ const ContactInfo = () => {
                       {/* Name */}
                       <RevealAnimation delay={0.3} direction="down" offset={20}>
                         <div className="space-y-1">
+                          <label htmlFor="contact-name" className="sr-only">Name (required)</label>
                           <input
+                            id="contact-name"
                             type="text"
                             name="name"
                             value={formData.name}
                             onChange={handleChange}
                             placeholder="Name *"
+                            aria-required="true"
+                            aria-describedby={errors.name ? "contact-name-error" : undefined}
                             className={`w-full h-[45px] px-4 rounded-lg border ${errors.name ? 'border-red-500' : 'border-stroke-11'} bg-white focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500/20 placeholder:text-secondary-400 text-secondary-800 transition-all duration-300 hover:shadow-md`}
                           />
-                          {errors.name && <p className="text-red-500 text-xs mt-1 pl-1">{errors.name}</p>}
+                          {errors.name && <p id="contact-name-error" className="text-red-500 text-xs mt-1 pl-1" role="alert">{errors.name}</p>}
                         </div>
                       </RevealAnimation>
                       {/* Work Email */}
                       <RevealAnimation delay={0.4} direction="down" offset={20}>
                         <div className="space-y-1">
+                          <label htmlFor="contact-email" className="sr-only">Work Email (required)</label>
                           <input
+                            id="contact-email"
                             type="email"
                             name="email"
                             value={formData.email}
                             onChange={handleChange}
                             placeholder="Work Email *"
+                            aria-required="true"
+                            aria-describedby={errors.email ? "contact-email-error" : undefined}
                             className={`w-full h-[45px] px-4 rounded-lg border ${errors.email ? 'border-red-500' : 'border-stroke-11'} bg-white focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500/20 placeholder:text-secondary-400 text-secondary-800 transition-all duration-300 hover:shadow-md`}
                           />
-                          {errors.email && <p className="text-red-500 text-xs mt-1 pl-1">{errors.email}</p>}
+                          {errors.email && <p id="contact-email-error" className="text-red-500 text-xs mt-1 pl-1" role="alert">{errors.email}</p>}
                         </div>
                       </RevealAnimation>
                       {/* Company */}
                       <RevealAnimation delay={0.5} direction="down" offset={20}>
                         <div className="space-y-1">
+                          <label htmlFor="contact-company" className="sr-only">Company (required)</label>
                           <input
+                            id="contact-company"
                             type="text"
                             name="company"
                             value={formData.company}
                             onChange={handleChange}
                             placeholder="Company *"
+                            aria-required="true"
+                            aria-describedby={errors.company ? "contact-company-error" : undefined}
                             className={`w-full h-[45px] px-4 rounded-lg border ${errors.company ? 'border-red-500' : 'border-stroke-11'} bg-white focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500/20 placeholder:text-secondary-400 text-secondary-800 transition-all duration-300 hover:shadow-md`}
                           />
-                          {errors.company && <p className="text-red-500 text-xs mt-1 pl-1">{errors.company}</p>}
+                          {errors.company && <p id="contact-company-error" className="text-red-500 text-xs mt-1 pl-1" role="alert">{errors.company}</p>}
                         </div>
                       </RevealAnimation>
                       {/* Job Title */}
                       <RevealAnimation delay={0.6} direction="down" offset={20}>
                         <div className="space-y-1">
+                          <label htmlFor="contact-job-title" className="sr-only">Job Title (required)</label>
                           <input
+                            id="contact-job-title"
                             type="text"
                             name="jobTitle"
                             value={formData.jobTitle}
                             onChange={handleChange}
                             placeholder="Job Title *"
+                            aria-required="true"
+                            aria-describedby={errors.jobTitle ? "contact-job-title-error" : undefined}
                             className={`w-full h-[45px] px-4 rounded-lg border ${errors.jobTitle ? 'border-red-500' : 'border-stroke-11'} bg-white focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500/20 placeholder:text-secondary-400 text-secondary-800 transition-all duration-300 hover:shadow-md`}
                           />
-                          {errors.jobTitle && <p className="text-red-500 text-xs mt-1 pl-1">{errors.jobTitle}</p>}
+                          {errors.jobTitle && <p id="contact-job-title-error" className="text-red-500 text-xs mt-1 pl-1" role="alert">{errors.jobTitle}</p>}
                         </div>
                       </RevealAnimation>
                       {/* Inquiry Type */}
                       <RevealAnimation delay={0.7} direction="down" offset={20}>
                         <div className="space-y-1">
+                          <label htmlFor="contact-inquiry" className="sr-only">Inquiry Type</label>
                           <input
+                            id="contact-inquiry"
                             type="text"
                             name="inquiryType"
                             value={formData.inquiryType}
@@ -422,23 +440,30 @@ const ContactInfo = () => {
                         </div>
                       </RevealAnimation>
                       {/* Phone */}
-                      <RevealAnimation delay={0.8} direction="down" offset={20}>
-                        <div className="space-y-1 relative z-10" ref={dropdownRef}>
-                          <div
+                      <RevealAnimation delay={0.8} direction="down" offset={20} className='z-10'>
+                        <div className="space-y-1 relative" ref={dropdownRef}>
+                          <label htmlFor="contact-phone" className="sr-only">Phone number</label>
+                          <button
+                            type="button"
                             className="absolute left-0 top-[22.5px] -translate-y-1/2 flex items-center gap-2 px-4 cursor-pointer hover:bg-white h-[45px] rounded-l-lg border-r border-stroke-11 transition-colors z-10"
                             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                            aria-label={`Select country code, currently ${selectedCountry.name} (${selectedCountry.code})`}
+                            aria-expanded={isDropdownOpen}
+                            aria-haspopup="listbox"
                           >
-                            <Image src={`https://flagcdn.com/w40/${selectedCountry.iso}.png`} width={24} height={16} alt={selectedCountry.name} className="object-contain" unoptimized />
-                            <span className="text-sm font-medium text-secondary-800">{selectedCountry.code}</span>
-                            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" className={`transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`}>
+                            <Image src={`https://flagcdn.com/w40/${selectedCountry.iso}.png`} width={24} height={16} alt="" className="object-contain" style={{ height: 'auto' }} unoptimized />
+                            <span className="text-sm font-medium text-secondary-800" aria-hidden="true">{selectedCountry.code}</span>
+                            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" className={`transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`}>
                               <path d="M1 1L5 5L9 1" stroke="#94999C" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
-                          </div>
+                          </button>
 
                           {isDropdownOpen && (
                             <div className="absolute top-full left-0 w-[260px] max-h-[300px] overflow-hidden flex flex-col bg-white border border-stroke-11 rounded-lg shadow-lg z-50 animate-in fade-in zoom-in duration-200">
                               <div className="p-2 border-b border-stroke-11 sticky top-0 bg-white">
+                                <label htmlFor="country-search" className="sr-only">Search countries</label>
                                 <input
+                                  id="country-search"
                                   type="text"
                                   placeholder="Search country..."
                                   value={searchCountry}
@@ -460,7 +485,7 @@ const ContactInfo = () => {
                                         setSearchCountry('');
                                       }}
                                     >
-                                      <Image src={`https://flagcdn.com/w40/${country.iso}.png`} width={24} height={16} alt={country.name} className="object-contain" unoptimized />
+                                      <Image src={`https://flagcdn.com/w40/${country.iso}.png`} width={24} height={16} alt={country.name} className="object-contain" style={{ height: 'auto' }} unoptimized />
                                       <span className="text-xs text-secondary-800 truncate flex-1">{country.name}</span>
                                       <span className="text-xs text-secondary-400 font-medium whitespace-nowrap">{country.code}</span>
                                     </div>
@@ -473,21 +498,25 @@ const ContactInfo = () => {
                           )}
 
                           <input
+                            id="contact-phone"
                             type="tel"
                             name="phone"
                             value={formData.phone}
                             onChange={handleChange}
                             placeholder="Phone"
+                            aria-describedby={errors.phone ? "contact-phone-error" : undefined}
                             className={`w-full h-[45px] pl-[115px] pr-4 rounded-lg border ${errors.phone ? 'border-red-500' : 'border-stroke-11'} bg-white focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500/20 placeholder:text-secondary-400 text-secondary-800 transition-all duration-300 hover:shadow-md`}
                           />
-                          {errors.phone && <p className="text-red-500 text-xs mt-1 pl-1">{errors.phone}</p>}
+                          {errors.phone && <p id="contact-phone-error" className="text-red-500 text-xs mt-1 pl-1" role="alert">{errors.phone}</p>}
                         </div>
                       </RevealAnimation>
                     </div>
                     {/* Message */}
                     <RevealAnimation delay={0.9} direction="down" offset={20}>
                       <div className="space-y-1">
+                        <label htmlFor="contact-message" className="sr-only">Message</label>
                         <textarea
+                          id="contact-message"
                           rows={4}
                           name="message"
                           value={formData.message}
@@ -516,10 +545,12 @@ const ContactInfo = () => {
                     {/* reCAPTCHA */}
                     <RevealAnimation delay={1.1} direction="up" offset={10}>
                       <div className="py-2">
-                        <ReCAPTCHA
-                          sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''}
-                          onChange={handleCaptchaChange}
-                        />
+                        <div role="group" aria-label="reCAPTCHA verification required to submit form">
+                          <ReCAPTCHA
+                            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''}
+                            onChange={handleCaptchaChange}
+                          />
+                        </div>
                       </div>
                     </RevealAnimation>
                     {/* Submit Button */}
@@ -527,9 +558,10 @@ const ContactInfo = () => {
                       <button
                         type="submit"
                         disabled={!captchaValue}
+                        aria-disabled={!captchaValue}
                         className={`font-bold py-3 px-10 rounded-full transition-all duration-300 text-base md:text-lg shadow-lg active:scale-95 ${captchaValue
                           ? 'bg-primary-500 text-white hover:bg-primary-600 hover:shadow-primary-500/20 hover:-translate-y-1 cursor-pointer'
-                          : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                          : 'bg-gray-300 text-gray-600 cursor-not-allowed'
                           }`}
                       >
                         Submit

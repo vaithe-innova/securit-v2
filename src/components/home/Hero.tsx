@@ -16,6 +16,8 @@ const Hero = () => {
         loop
         muted
         playsInline
+        title="Securit platform background demonstration"
+        aria-hidden="true"
         className="absolute inset-0 w-full h-full object-cover left-[20%] top-[70px]"
       >
         <source src="/demo/images/web-banner.mp4" type="video/mp4" />
@@ -93,6 +95,8 @@ const Hero = () => {
                             viewBox="0 0 19 19"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true"
+                            focusable="false"
                           >
                             <path
                               fillRule="evenodd"

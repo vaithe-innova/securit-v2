@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const page = () => {
   return (
-    <main className="bg-background-1 dark:bg-background-6">
+    <main id="main-content" className="bg-background-1 dark:bg-background-6">
       <Faq />
     </main>
   );

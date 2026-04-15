@@ -44,7 +44,7 @@ const MobileMenuItem = ({ id, title, href, target, children, hasSubmenu = false,
             'stroke-secondary/60 dark:stroke-accent/60 size-5 transition-transform duration-300 ease-in-out',
             isSubmenuOpen && 'rotate-90',
           )}>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
             <path d="M8 12L12 8L8 4" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </span>

@@ -18,7 +18,7 @@ const BlogContent = ({ blog }: { blog: matter.GrayMatterFile<string> }) => {
                 <Image
                   src={blog.data.authorImage as string | StaticImageData}
                   className="object-cover object-center"
-                  alt="Esther Howard's avatar"
+                  alt={`${blog.data.author}'s avatar`}
                   width={48}
                   height={48}
                   loading="lazy"
@@ -44,7 +44,7 @@ const BlogContent = ({ blog }: { blog: matter.GrayMatterFile<string> }) => {
             <Image
               src={blog.data.thumbnail as string | StaticImageData}
               className="h-full w-full object-cover object-center"
-              alt="blog-details-cover"
+              alt={`Featured image: ${blog.data.title}`}
               width={1200}
               height={700}
             />

@@ -7,14 +7,14 @@ import gradient6 from '../../public/images/ns-img-498.png';
 
 const NotFoundClient = () => {
   return (
-    <main className="bg-background-2 dark:bg-background-5">
+    <main id="main-content" className="bg-background-2 dark:bg-background-5">
       <section className="section-reveal pt-28 pb-20 md:pt-36 md:pb-28 lg:pt-44 lg:pb-40 xl:pt-60 xl:pb-52">
         <div className="main-container">
           <RevealAnimation delay={0.1}>
             <div className="bg-background-3 dark:bg-background-5 dark:border-background-9 relative flex flex-col items-center justify-center overflow-hidden rounded-4xl border-[10px] border-white py-10 pr-2.5 text-center md:py-20 lg:py-[100px]">
               <RevealAnimation delay={0.2} direction="right" offset={200}>
-                <figure className="hero-gradient-2 pointer-events-none absolute -top-[45%] -right-[68%] -z-0 h-full w-full -rotate-[68deg] opacity-70 select-none sm:-top-[65%] sm:-right-[48%]">
-                  <Image src={gradient6} alt="gradient" className="rotate-180" />
+                <figure className="hero-gradient-2 pointer-events-none absolute -top-[45%] -right-[68%] -z-0 h-full w-full -rotate-[68deg] opacity-70 select-none sm:-top-[65%] sm:-right-[48%]" aria-hidden="true">
+                  <Image src={gradient6} alt="" className="rotate-180" />
                 </figure>
               </RevealAnimation>
               <RevealAnimation delay={0.3}>

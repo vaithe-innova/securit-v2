@@ -20,7 +20,7 @@ const NewsShowcase = () => {
           <BlogPaginationWrapper blogs={feed} />
         ) : (
           <div className="py-10">
-            <div className="rounded-md bg-[#f8d7da] px-5 py-4 text-[#842029]" role="status" aria-live="polite">
+            <div className="rounded-md bg-[#f8d7da] px-5 py-4 text-[#842029]" role="alert" aria-live="assertive">
               <p className="text-base font-normal">No results found.</p>
             </div>
           </div>

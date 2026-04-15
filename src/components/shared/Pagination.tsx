@@ -72,6 +72,7 @@ const Pagination = ({ totalItems, itemsPerPage, currentPage, onPageChange, class
       {/* Previous button */}
       <li className="group">
         <button
+          type="button"
           onClick={handlePrevious}
           disabled={currentPage === 1}
           className="flex w-10 h-10 items-center justify-center border border-stroke-3 cursor-pointer dark:border-stroke-7 rounded-full hover:bg-primary-500 duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-transparent">
@@ -98,6 +99,7 @@ const Pagination = ({ totalItems, itemsPerPage, currentPage, onPageChange, class
             </span>
           ) : (
             <button
+              type="button"
               onClick={() => onPageChange(page as number)}
               className={`flex w-10 h-10 items-center text-tagline-2 font-medium justify-center rounded-full transition-all duration-300 ${
                 currentPage === page
@@ -113,6 +115,7 @@ const Pagination = ({ totalItems, itemsPerPage, currentPage, onPageChange, class
       {/* Next button */}
       <li className="group">
         <button
+          type="button"
           onClick={handleNext}
           disabled={currentPage === totalPages}
           className="flex w-10 h-10 items-center justify-center border border-stroke-3 cursor-pointer dark:border-stroke-7 rounded-full hover:bg-primary-500 duration-300  disabled:cursor-not-allowed disabled:hover:bg-transparent">

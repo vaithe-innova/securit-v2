@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 const page = () => {
   return (
-    <main className="bg-background-3 dark:bg-background-7">
+    <main id="main-content" className="bg-background-3 dark:bg-background-7">
       <section className="pt-32 pb-[100px] sm:pt-36 md:pt-42 xl:pt-[180px]">
         <div className="main-container">
           <div className="mb-3 sm:max-w-[70%] mx-auto space-y-4 text-center">

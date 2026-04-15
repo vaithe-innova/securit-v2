@@ -58,7 +58,8 @@ const Hero = () => {
                     </RevealAnimation>
                     <RevealAnimation delay={0.3}>
                       <p className="mx-auto max-w-[650px] text-base sm:text-[17px] lg:text-[18px] text-white font-normal !leading-[22px] lg:!leading-[24px]">
-                        Securit is an AI-powered worker safety platform that helps you monitor your operations, detect risks early, stay connected to your workforce, and respond quickly when something doesn't look right.
+                        Stay OSHA-aligned and ISO 45001-ready with real-time alerts, fall detection, incident management, and automated compliance tracking — all in one platform. 
+                        {/* Securit is an AI-powered worker safety platform that helps you monitor your operations, detect risks early, stay connected to your workforce, and respond quickly when something doesn't look right. */}
                       </p>
                     </RevealAnimation>
                   </div>

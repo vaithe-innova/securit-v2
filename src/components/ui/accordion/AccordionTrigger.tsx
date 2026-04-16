@@ -77,6 +77,8 @@ const AccordionTrigger: React.FC<AccordionTriggerProps> = ({
             data-state={isActive ? 'open' : 'closed'}>
             <svg
               data-state={isActive ? 'open' : 'closed'}
+              aria-hidden="true"
+              focusable="false"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -112,6 +114,7 @@ const AccordionTrigger: React.FC<AccordionTriggerProps> = ({
 
   return (
     <button
+      type="button"
       className={cn(isDisabled && 'cursor-not-allowed opacity-50', className)}
       onClick={handleClick}
       aria-expanded={isActive}

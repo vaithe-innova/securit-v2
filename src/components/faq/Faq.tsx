@@ -16,13 +16,13 @@ const Faq = () => {
           </RevealAnimation>
 
           <RevealAnimation delay={0.3}>
-            <h2 className="text-primary-700 font-bold text-[24px] sm:text-[30px] !leading-[30px] sm:!leading-[34px] mb-2">
+            <h2 className="text-primary-700 font-bold text-[22px] sm:text-[30px] !leading-[28px] sm:!leading-[34px] mb-2">
               Commonly Asked Question
             </h2>
           </RevealAnimation>
 
           <RevealAnimation delay={0.4}>
-            <p className="text-secondary text-[20px] !leading-[26px]">
+            <p className="text-secondary text-base sm:text-[20px] !leading-[24px] sm:!leading-[26px]">
               By offering concise and informative responses, this section helps users find solutions without the need to contact customer support, saving time
             </p>
           </RevealAnimation>

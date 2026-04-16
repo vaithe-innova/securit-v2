@@ -54,11 +54,11 @@ const industries = [
 
 const Industries = () => {
   return (
-    <section id='industries' className="bg-white dark:bg-background-6 pt-16 pb-16 md:pt-20 md:pb-20 lg:pt-[90px] lg:pb-[90px]">
+    <section id='industries' className="bg-white dark:bg-background-6 pt-16 md:pt-20 lg:pt-[90px]">
       <div className="main-container">
         {/* Heading Section */}
         <div className="mx-auto mb-10 md:mb-14 max-w-[800px] space-y-4 text-center">
-          <RevealAnimation delay={0.2}>
+          <RevealAnimation delay={0.2} direction="left" animationType="from" offset={100} useSpring={true} repeatative>
             <div className="inline-block border border-[#0070CE] dark:border-primary-500/30 rounded-[30px] px-5 py-[6px] mb-2 bg-transparent">
               <span className="text-primary-700 dark:text-primary-400 text-sm sm:text-[15px] font-medium">
                 Industries
@@ -67,7 +67,7 @@ const Industries = () => {
           </RevealAnimation>
 
           <RevealAnimation delay={0.3}>
-            <h2 className="text-primary-700 dark:text-white font-bold text-3xl md:text-4xl lg:text-[30px] leading-tight mb-4">
+            <h2 className="text-primary-700 dark:text-white font-bold text-[22px] sm:text-[26px] md:text-4xl lg:text-[30px] leading-tight mb-4">
               Built for environments where safety moves fast
             </h2>
           </RevealAnimation>

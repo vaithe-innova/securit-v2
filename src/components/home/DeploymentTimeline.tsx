@@ -318,7 +318,7 @@ const DeploymentTimeline = () => {
         <div className='flex flex-col'>
           <RevealAnimation delay={0.2} direction="down" offset={30}>
             <div className='flex text-center justify-center'>
-              <h3 className='text-white fw-700 text-[26px] sm:text-[30px] !leading-[34px]'>Compliance you can trust. <br className='hidden sm:block' />
+              <h3 className='text-white fw-700 text-[22px] sm:text-[30px] !leading-[28px] sm:!leading-[34px]'>Compliance you can trust. <br className='hidden sm:block' />
                 Security you can rely on.</h3>
             </div>
           </RevealAnimation>

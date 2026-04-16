@@ -38,6 +38,7 @@ export default function RippleButton({ children, onClick, className = "" }: any)
 
   return (
     <button
+      type="button"
       ref={btnRef}
       onClick={handleClick}
       className={`relative overflow-hidden ${className}`}

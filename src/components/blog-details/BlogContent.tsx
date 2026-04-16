@@ -3,8 +3,6 @@ import Image, { StaticImageData } from 'next/image';
 import ReactMarkdown from 'react-markdown';
 import rehypeSlug from 'rehype-slug';
 import RevealAnimation from '../animation/RevealAnimation';
-// import Comment from './Comment';
-// import ShareLink from './ShareLink';
 
 const BlogContent = ({ blog }: { blog: matter.GrayMatterFile<string> }) => {
   return (
@@ -20,7 +18,7 @@ const BlogContent = ({ blog }: { blog: matter.GrayMatterFile<string> }) => {
                 <Image
                   src={blog.data.authorImage as string | StaticImageData}
                   className="object-cover object-center"
-                  alt="Esther Howard's avatar"
+                  alt={`${blog.data.author}'s avatar`}
                   width={48}
                   height={48}
                   loading="lazy"
@@ -46,22 +44,17 @@ const BlogContent = ({ blog }: { blog: matter.GrayMatterFile<string> }) => {
             <Image
               src={blog.data.thumbnail as string | StaticImageData}
               className="h-full w-full object-cover object-center"
-              alt="blog-details-cover"
+              alt={`Featured image: ${blog.data.title}`}
               width={1200}
               height={700}
             />
           </figure>
         </RevealAnimation>
-        {/* Blog details-body */}
-
         <RevealAnimation delay={0.5}>
           <article className="details-body">
             <ReactMarkdown rehypePlugins={[[rehypeSlug]]}>{blog.content}</ReactMarkdown>
           </article>
         </RevealAnimation>
-        {/* details-footer */}
-        {/* <ShareLink /> */}
-        {/* <Comment /> */}
       </div>
     </section>
   );

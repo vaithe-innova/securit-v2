@@ -14,17 +14,17 @@ const FreeTrialWelcome = () => {
           <div className="space-y-8 lg:pr-10">
             <RevealAnimation delay={0.1}>
               <div className="space-y-4">
-                <h2 className="text-secondary-700 font-bold text-[33px] !leading-[44px]">
+                <h2 className="text-secondary-700 font-bold text-[24px] sm:text-[28px] md:text-[33px] !leading-[32px] sm:!leading-[38px] md:!leading-[44px]">
                   Welcome to Your <span className="text-primary-500">30-Day Free Trial!</span>
                 </h2>
-                <h3 className="text-secondary-800 text-[24px] !leading-[30px] font-semibold">
+                <h3 className="text-secondary-800 text-[20px] sm:text-[22px] md:text-[24px] !leading-[26px] sm:!leading-[30px] font-semibold">
                   You're all set to explore the platform
                 </h3>
               </div>
             </RevealAnimation>
 
             <RevealAnimation delay={0.2}>
-              <div className="space-y-6 text-[#53575A] text-[18px] leading-[30px]">
+              <div className="space-y-6 text-[#53575A] text-base sm:text-[18px] leading-[26px] sm:leading-[30px]">
                 <p className='text-secondary'>
                   Thank you for getting in touch. Your <span className="font-bold text-secondary">30-day free trial</span> has been successfully activated.
                 </p>

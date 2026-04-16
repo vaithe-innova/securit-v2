@@ -40,7 +40,7 @@ const HeroPerspective = () => {
   return (
     <div className="px-4 md:px-6 lg:px-8 xl:px-0">
       <figure ref={figureRef} className="opacity-0">
-        <Image src={heroVideo} alt="Hero video" className="h-auto w-full" />
+        <Image src={heroVideo} alt="Securit platform dashboard showing real-time safety monitoring and analytics" className="h-auto w-full" />
       </figure>
     </div>
   );

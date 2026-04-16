@@ -2,11 +2,10 @@
 
 import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/LinkButton';
-// import { BlurOne, BlurTwo } from '@/icons';
 import RippleButton from '../ui/button/RippleButton';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
-import "swiper/css";
+
 
 const Hero = () => {
   return (
@@ -17,6 +16,8 @@ const Hero = () => {
         loop
         muted
         playsInline
+        title="Securit platform background demonstration"
+        aria-hidden="true"
         className="absolute inset-0 w-full h-full object-cover left-[20%] top-[70px]"
       >
         <source src="/demo/images/web-banner.mp4" type="video/mp4" />
@@ -45,20 +46,21 @@ const Hero = () => {
             <SwiperSlide>
               <div className="px-[2px] grid grid-cols-1 md:grid-cols-1 gap-10 lg:gap-8">
                 <div className="gap-2 flex flex-col items-start lg:pr-10">
-                  <RevealAnimation delay={0.1}>
+                  <RevealAnimation delay={0.2} direction="left" animationType="from" offset={100} useSpring={true}  repeatative>
                     <div className="mb-4 flex rounded-[30px] bg-white py-[6px] px-5">
                       <span className="text-xs sm:text-sm md:text-base font-normal text-primary-700">Smart Safety for Every Worker</span>
                     </div>
                   </RevealAnimation>
                   <div className="space-y-3 md:space-y-5 text-left">
                     <RevealAnimation delay={0.2}>
-                      <h1 className="max-w-[650px] text-white fw-700 tracking-tight !leading-[38px] sm:!leading-[40px] md:!leading-[56px] lg:!leading-[58px] xl:!leading-[60px] text-4xl md:text-5xl xl:text-[56px]">
+                      <h1 className="max-w-[650px] text-white fw-700 tracking-tight !leading-[34px] sm:!leading-[40px] md:!leading-[56px] lg:!leading-[58px] xl:!leading-[60px] text-[30px] sm:text-4xl md:text-5xl xl:text-[56px]">
                         Keeping people safe, <br className='hidden md:block' /> Every step of the way
                       </h1>
                     </RevealAnimation>
                     <RevealAnimation delay={0.3}>
                       <p className="mx-auto max-w-[650px] text-base sm:text-[17px] lg:text-[18px] text-white font-normal !leading-[22px] lg:!leading-[24px]">
-                        Securit is an AI-powered worker safety platform that helps you monitor your operations, detect risks early, stay connected to your workforce, and respond quickly when something doesn't look right.
+                        Stay OSHA-aligned and ISO 45001-ready with real-time alerts, fall detection, incident management, and automated compliance tracking — all in one platform. 
+                        {/* Securit is an AI-powered worker safety platform that helps you monitor your operations, detect risks early, stay connected to your workforce, and respond quickly when something doesn't look right. */}
                       </p>
                     </RevealAnimation>
                   </div>
@@ -93,6 +95,8 @@ const Hero = () => {
                             viewBox="0 0 19 19"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true"
+                            focusable="false"
                           >
                             <path
                               fillRule="evenodd"

@@ -22,7 +22,7 @@ const BlogCard = ({ blog, className }: BlogCardProps) => {
             src={blog?.thumbnail}
             width={409}
             height={250}
-            alt="Illustration representing electronic prescription in finance sector"
+            alt={`Thumbnail for blog post: ${blog?.title}`}
             loading="lazy"
             className="h-full w-full object-cover"
           />
@@ -40,7 +40,7 @@ const BlogCard = ({ blog, className }: BlogCardProps) => {
           </div>
           <div>
             <h3 className="sm:text-heading-5 text-heading-6 mb-2 font-normal">
-              <Link href={`/blog/${blog.slug}`} aria-label="Read more about electronic prescription in finance sector">
+              <Link href={`/blog/${blog.slug}`} aria-label={`Read more about ${blog?.title}`}>
                 {blog?.title}
               </Link>
             </h3>
@@ -52,7 +52,7 @@ const BlogCard = ({ blog, className }: BlogCardProps) => {
             <LinkButton
               href={`/blog/${blog.slug}`}
               className="btn btn-md btn-white hover:btn-secondary dark:btn-transparent dark:hover:btn-accent dark:hover:text-secondary w-full sm:w-auto"
-              aria-label="Read full article about electronic prescription">
+              aria-label={`Read full article: ${blog?.title}`}>
               Read more
             </LinkButton>
           </div>

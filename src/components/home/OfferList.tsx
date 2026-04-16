@@ -11,13 +11,13 @@ const OfferList = ({ offerData }: OfferListProps) => {
     return (
         <div className="main-container">
             <div className="mb-[60px] space-y-6 text-center">
-                <RevealAnimation delay={0.2}>
+                <RevealAnimation delay={0.2} direction="left" animationType="from" offset={100} useSpring={true} repeatative>
                     <div className="mb-5 flex items-center w-fit mx-auto rounded-[30px] bg-white py-[6px] px-5 border-[1px] border-[#0070CE]">
                         <span className="text-xs sm:text-sm md:text-base font-normal bg-white text-primary-700">What We Offer</span>
                     </div>
                 </RevealAnimation>
                 <RevealAnimation delay={0.3}>
-                    <h2 className="my-3 max-w-[900px] mx-auto text-primary-700 fw-700 text-[30px] !leading-[33px]" >
+                    <h2 className="my-3 max-w-[900px] mx-auto text-primary-700 fw-700 text-[22px] sm:text-[26px] md:text-[30px] !leading-[28px] sm:!leading-[31px] md:!leading-[33px]" >
                         One platform for total safety visibility
                     </h2>
                 </RevealAnimation>

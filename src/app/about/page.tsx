@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const page = () => {
   return (
-    <main className="bg-background-3 dark:bg-background-7">
+    <main id="main-content" className="bg-background-3 dark:bg-background-7">
       <OurMission />
     </main>
   );

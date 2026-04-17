@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import { TickIcon } from '@/icons';
 import { motion } from 'framer-motion';
 
 const steps = [
@@ -57,26 +58,6 @@ export default function WorkProcess() {
           >
             Platform Capabilities
           </motion.span>
-
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-3xl lg:text-5xl font-bold text-[#00174c] mb-6 leading-tight max-w-4xl mx-auto"
-          >
-            Purpose-built safety, Designed for every worker
-          </motion.h2>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
-          >
-            Connect devices, sensors, and workflows to monitor activity, detect risks, and respond faster.
-          </motion.p>
         </div>
 
         {/* Sticky Cards Section */}
@@ -94,13 +75,13 @@ export default function WorkProcess() {
                 <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center p-8 lg:p-14">
                   {/* Left Column Content */}
                   <div className="order-2 lg:order-1 lg:pl-4">
-                    <span className="text-blue-600 font-bold text-sm uppercase tracking-widest mb-4 block">
+                    <span className="text-primary-600 text-sm mb-4 block">
                       {step.category}
                     </span>
-                    <h3 className="text-3xl lg:text-4xl font-extrabold text-[#00174c] mb-6 leading-[1.1] tracking-tight">
+                    <h3 className="text-3xl lg:text-4xl font-bold text-primary-900 mb-6 leading-[1.1] tracking-tight">
                       {step.title}
                     </h3>
-                    <p className="text-lg text-gray-500 mb-10 leading-relaxed font-medium">
+                    <p className="text-lg text-primary-400 mb-10 leading-relaxed">
                       {step.desc}
                     </p>
 
@@ -112,13 +93,11 @@ export default function WorkProcess() {
                           whileInView={{ opacity: 1, x: 0 }}
                           viewport={{ once: true }}
                           transition={{ delay: 0.3 + (i * 0.1) }}
-                          className="flex items-center gap-4 text-gray-850"
+                          className="flex items-center gap-4 text-secondary"
                         >
-                          <div className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-100/50 flex items-center justify-center">
-                            <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1.5 6L5 9.5L12.5 2" stroke="#10b981" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                          </div>
+                          <span className="mt-[2px] text-primary-600 transition-transform duration-300 group-hover/item:scale-125">
+                            <TickIcon />
+                          </span>
                           <span className="text-[18px] font-semibold text-gray-700 tracking-tight">{feature}</span>
                         </motion.li>
                       ))}

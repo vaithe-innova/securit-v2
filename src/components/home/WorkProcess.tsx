@@ -41,6 +41,19 @@ const steps = [
     ],
     image: '/demo/images/platform/3-action.jpg',
   },
+  {
+    id: '04',
+    category: 'Control',
+    title: 'Field Layer—enabling action on the ground',
+    desc: 'Centralized platform to manage safety operations and incidents.',
+    features: [
+      'Workforce visibility dashboard',
+      'Incident management',
+      'Policy enforcement',
+      'Automated compliance tracking'
+    ],
+    image: '/demo/images/platform/4-control.jpg',
+  },
 ];
 
 export default function WorkProcessSticky() {
@@ -76,16 +89,10 @@ export default function WorkProcessSticky() {
                   className="sticky"
                   style={{ top: `${100 + i * 20}px`, zIndex: 10 + i }}
                 >
-                  {/* <div className="mb-10 p-8 rounded-2xl bg-white/10 backdrop-blur border border-white/10">
-                <h3 className="text-2xl font-semibold mb-2">
-                  {step.id} — {step.title}
-                </h3>
-                <p className="text-gray-400">{step.desc}</p>
-              </div> */}
-                  <div className="bg-white rounded-[1.5rem] border-[1px] border-[#D3D3D3] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.05)] overflow-hidden">
-                    <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start p-5 lg:p-10">
+                  <div className="bg-white rounded-[1.5rem] border-[1px] border-[#D3D3D3] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.05)] overflow-hidden mb-[20px]">
+                    <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center p-5 lg:p-10">
                       {/* Left Column Content */}
-                      <div className="order-2 lg:order-1 pt-4">
+                      <div>
                         <div className='flex flex-col text-left'>
                           <span className="text-primary-600 text-sm mb-2 block">
                             {step.category}
@@ -114,7 +121,7 @@ export default function WorkProcessSticky() {
                       </div>
 
                       {/* Right Column Image */}
-                      <div className="order-1 lg:order-2 max-md:hidden">
+                      <div className='lg:block md:block sm:hidden xs:hidden'>
                         <div className="relative aspect-[4/3] lg:aspect-[1.5/1] rounded-[2rem] overflow-hidden shadow-xl">
                           <Image
                             src={step.image}

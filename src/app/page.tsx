@@ -1,5 +1,5 @@
 import Hero from '@/components/home/Hero';
-import Platform from '@/components/home/Platform';
+// import Platform from '@/components/home/Platform';
 import Industries from '@/components/home/Industries';
 import WhatWeOffer from '@/components/home/WhatWeOffer';
 import { defaultMetadata } from '@/utils/generateMetaData';
@@ -19,7 +19,7 @@ const page = () => {
     <main id="main-content" className="bg-background-2 dark:bg-background-5">
       <Hero />
       <WhatWeOffer />
-      <Platform />
+      {/* <Platform /> */}
       <WorkProcess />
       <DeploymentTimeline />
       <Industries />

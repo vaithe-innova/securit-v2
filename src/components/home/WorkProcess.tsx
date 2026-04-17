@@ -62,7 +62,7 @@ export default function WorkProcessSticky() {
       <section id='platform' className="bg-[#EFF6FF] dark:bg-background-6 pt-16 pb-16 md:pt-20 md:pb-20 lg:pt-[90px] lg:pb-[90px]">
         <div className="main-container">
           <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-5 lg:gap-6 w-full text-center">
-            <div className="flex flex-col justify-start lg:pr-6 mb-6 md:mb-0 space-y-5">
+            <div className="flex flex-col justify-start mb-7 space-y-4">
               <RevealAnimation delay={0.2} direction="left" animationType="from" offset={100} useSpring={true} repeatative>
                 <div className="inline-block border border-[#0070CE] dark:border-primary-500/30 bg-white dark:bg-transparent rounded-[30px] px-5 py-[6px] w-max ">
                   <span className="text-primary-700 dark:text-primary-400 text-sm sm:text-[15px] font-medium">

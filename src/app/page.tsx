@@ -5,7 +5,7 @@ import WhatWeOffer from '@/components/home/WhatWeOffer';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
 import DeploymentTimeline from '@/components/home/DeploymentTimeline';
-import WorkProcess from '@/components/animation/WorkProcess';
+import WorkProcess from '@/components/home/WorkProcess';
 
 export const metadata: Metadata = {
   ...defaultMetadata,

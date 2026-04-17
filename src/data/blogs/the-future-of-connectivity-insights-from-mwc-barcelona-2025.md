@@ -5,7 +5,7 @@ authorImage: '/demo/images/avatar.svg'
 publishDate: 'Mar 25, 2025'
 title: 'The Future of Connectivity: Insights from MWC Barcelona 2025'
 description: 'There are few places in the world where the past and the future exist so closely together. In Barcelona, you can stand in the shadow of a 14th-century cathedral, its stones worn smooth by time, while just a few steps away, a digital billboard flickers with the promise of what’s next. This city has seen revolutions in art, thought, and industry, but for one week every year, it becomes something else entirely: a meeting place for the future.Walking through MWC Barcelona 2025, you don’t just witness change—you feel it unfolding beneath your feet. The industry is shifting, and with it, everything we know about connectivity, security, and how we interact with the world. Some innovations will fade into the background, becoming as invisible yet essential as the air we breathe. Others will reshape entire industries, rewriting how we live our daily lives.'
-thumbnail: '/demo/images/the-future-of-connectivity-desktop.webp'
+thumbnail: '/demo/images/blog/the-future-of-connectivity-desktop.webp'
 readTime: '4 min read'
 ---
 

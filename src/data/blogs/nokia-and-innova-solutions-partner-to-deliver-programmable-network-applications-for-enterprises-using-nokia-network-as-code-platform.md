@@ -6,7 +6,7 @@ publishDate: 'Dec 03, 2023'
 readTime: '3 min read'
 title: 'Nokia and Innova Solutions partner to deliver programmable network applications for enterprises using Nokia Network as Code platform'
 description: 'Nokia and Innova Solutions developing programmable network solutions for enterprises in financial services, asset management, and industrial workplace safety. Initial focus in North America and Europe, with other regions to follow later in 2024'
-thumbnail: '/demo/images/nokia-network-code-platform-desktop.webp'
+thumbnail: '/demo/images/blog/nokia-network-code-platform-desktop.webp'
 ---
 
 ### Introduction
@@ -19,11 +19,11 @@ The use case opportunities are vast and varied, ranging from enhanced fraud prot
 
 Through the platform, these applications will unlock 5G network capabilities for enterprises, such as dynamic bandwidth allocation, real-time location visualization, predictive maintenance, and event-driven triggers for security and safety responses.
 
-#### Shkumbin Hamiti, Head of Network Monetization Platform, Cloud and Network Services, at Nokia, said:
+#### Shkumbin Hamiti, Head of Network Monetization Platform, Cloud and Network Services, at Nokia, said
 
 We look forward to working with Innova and its team of application developers to generate use cases that solve a variety of pain points and needs for enterprises. Innova has a strong record of delivering solutions that enable companies to innovate, accelerate success, and improve business efficiency. With Nokia’s Network as Code platform, Innova developers will have a strong programmable network foundation for building new use cases that quickly respond to enterprise market demands.
 
-#### Raj Sadhu, SVP of the Hi-Tech Strategic Business Unit at Innova Solutions, said:
+#### Raj Sadhu, SVP of the Hi-Tech Strategic Business Unit at Innova Solutions, said
 
 We’re thrilled to partner with Nokia—a world-renowned organization that shares our passion for digital innovation. Combining Nokia’s trusted mobile network technology with Innova’s OSS/BSS expertise will enable us to bring revolutionary products to market. Leveraging the Network as Code platform, Innova and Nokia will continue to bring innovation to life for clients around the globe through groundbreaking programmable network solutions.
 

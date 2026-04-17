@@ -82,19 +82,21 @@ export default function WorkProcessSticky() {
                 </h3>
                 <p className="text-gray-400">{step.desc}</p>
               </div> */}
-                  <div className="bg-white rounded-[2.5rem] border border-gray-100 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.05)] overflow-hidden">
-                    <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center p-8 lg:p-14">
+                  <div className="bg-white rounded-[1.5rem] border-[1px] border-[#D3D3D3] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.05)] overflow-hidden">
+                    <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start p-5 lg:p-10">
                       {/* Left Column Content */}
-                      <div className="order-2 lg:order-1 lg:pl-4">
-                        <span className="text-primary-600 text-sm mb-4 block">
-                          {step.category}
-                        </span>
-                        <h3 className="text-3xl lg:text-4xl font-bold text-primary-900 mb-6 leading-[1.1] tracking-tight">
-                          {step.title}
-                        </h3>
-                        <p className="text-lg text-primary-400 mb-10 leading-relaxed">
-                          {step.desc}
-                        </p>
+                      <div className="order-2 lg:order-1 pt-4">
+                        <div className='flex flex-col text-left'>
+                          <span className="text-primary-600 text-sm mb-2 block">
+                            {step.category}
+                          </span>
+                          <h3 className="text-[24px] lg:text-[28px] font-bold text-primary-900 mb-4 leading-[1.1] tracking-tight">
+                            {step.title}
+                          </h3>
+                          <p className="text-lg text-primary-400 mb-6 leading-relaxed">
+                            {step.desc}
+                          </p>
+                        </div>
 
                         <ul className="space-y-5">
                           {step.features.map((feature, i) => (
@@ -105,14 +107,14 @@ export default function WorkProcessSticky() {
                               <span className="mt-[2px] text-primary-600 transition-transform duration-300 group-hover/item:scale-125">
                                 <TickIcon />
                               </span>
-                              <span className="text-[18px] font-semibold text-gray-700 tracking-tight">{feature}</span>
+                              <span className="text-[18px] text-secondary tracking-tight">{feature}</span>
                             </li>
                           ))}
                         </ul>
                       </div>
 
                       {/* Right Column Image */}
-                      <div className="order-1 lg:order-2">
+                      <div className="order-1 lg:order-2 max-md:hidden">
                         <div className="relative aspect-[4/3] lg:aspect-[1.5/1] rounded-[2rem] overflow-hidden shadow-xl">
                           <Image
                             src={step.image}

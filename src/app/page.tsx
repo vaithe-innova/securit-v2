@@ -5,6 +5,7 @@ import WhatWeOffer from '@/components/home/WhatWeOffer';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
 import DeploymentTimeline from '@/components/home/DeploymentTimeline';
+import WorkProcess from '@/components/animation/WorkProcess';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
@@ -19,6 +20,7 @@ const page = () => {
       <Hero />
       <WhatWeOffer />
       <Platform />
+      <WorkProcess />
       <DeploymentTimeline />
       <Industries />
     </main>

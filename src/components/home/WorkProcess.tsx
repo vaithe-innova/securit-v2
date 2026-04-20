@@ -121,7 +121,7 @@ export default function WorkProcessSticky() {
                       </div>
 
                       {/* Right Column Image */}
-                      <div className='lg:block md:block sm:hidden xs:hidden'>
+                      <div className=''>
                         <div className="relative aspect-[4/3] lg:aspect-[1.5/1] rounded-[2rem] overflow-hidden shadow-xl">
                           <Image
                             src={step.image}

@@ -20,7 +20,7 @@ const Hero = () => {
         aria-hidden="true"
         className="absolute inset-0 w-full h-full object-cover left-[20%] top-[70px]"
       >
-        <source src="/demo/images/web-banner.mp4" type="video/mp4" />
+        <source src="/images/web-banner.mp4" type="video/mp4" />
       </video>
 
       {/* 🌫️ Overlay */}
@@ -46,7 +46,7 @@ const Hero = () => {
             <SwiperSlide>
               <div className="px-[2px] grid grid-cols-1 md:grid-cols-1 gap-10 lg:gap-8">
                 <div className="gap-2 flex flex-col items-start lg:pr-10">
-                  <RevealAnimation delay={0.2} direction="left" animationType="from" offset={100} useSpring={true}  repeatative>
+                  <RevealAnimation delay={0.2} direction="left" animationType="from" offset={100} useSpring={true} repeatative>
                     <div className="mb-4 flex rounded-[30px] bg-white py-[6px] px-5">
                       <span className="text-xs sm:text-sm md:text-base font-normal text-primary-700">Smart Safety for Every Worker</span>
                     </div>
@@ -59,7 +59,7 @@ const Hero = () => {
                     </RevealAnimation>
                     <RevealAnimation delay={0.3}>
                       <p className="mx-auto max-w-[650px] text-base sm:text-[17px] lg:text-[18px] text-white font-normal !leading-[22px] lg:!leading-[24px]">
-                        Stay OSHA-aligned and ISO 45001-ready with real-time alerts, fall detection, incident management, and automated compliance tracking — all in one platform. 
+                        Stay OSHA-aligned and ISO 45001-ready with real-time alerts, fall detection, incident management, and automated compliance tracking — all in one platform.
                         {/* Securit is an AI-powered worker safety platform that helps you monitor your operations, detect risks early, stay connected to your workforce, and respond quickly when something doesn't look right. */}
                       </p>
                     </RevealAnimation>

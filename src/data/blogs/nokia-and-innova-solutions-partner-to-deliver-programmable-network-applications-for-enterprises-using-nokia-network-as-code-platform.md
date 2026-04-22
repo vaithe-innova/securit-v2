@@ -1,12 +1,12 @@
 ---
 tag: 'network'
 author: 'Innova Solutions'
-authorImage: '/demo/images/avatar.svg'
+authorImage: '/images/avatar.svg'
 publishDate: 'Dec 03, 2023'
 readTime: '3 min read'
 title: 'Nokia and Innova Solutions partner to deliver programmable network applications for enterprises using Nokia Network as Code platform'
 description: 'Nokia and Innova Solutions developing programmable network solutions for enterprises in financial services, asset management, and industrial workplace safety. Initial focus in North America and Europe, with other regions to follow later in 2024'
-thumbnail: '/demo/images/blog/nokia-network-code-platform-desktop.webp'
+thumbnail: '/images/blog/nokia-network-code-platform-desktop.webp'
 ---
 
 ### Introduction

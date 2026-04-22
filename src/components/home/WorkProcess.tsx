@@ -15,7 +15,7 @@ const steps = [
       'Fall detection',
       'Environmental monitoring',
     ],
-    image: '/demo/images/platform/1-connectivity.jpg',
+    image: '/images/platform/1-connectivity.jpg',
   },
   {
     id: '02',
@@ -27,7 +27,7 @@ const steps = [
       'Anomaly detection',
       'Live sensor threshold alerts',
     ],
-    image: '/demo/images/platform/2-intelligence.jpg',
+    image: '/images/platform/2-intelligence.jpg',
   },
   {
     id: '03',
@@ -39,7 +39,7 @@ const steps = [
       'Geofencing alerts',
       'SOS-triggered workflows & escalation',
     ],
-    image: '/demo/images/platform/3-action.jpg',
+    image: '/images/platform/3-action.jpg',
   },
   {
     id: '04',
@@ -52,7 +52,7 @@ const steps = [
       'Policy enforcement',
       'Automated compliance tracking'
     ],
-    image: '/demo/images/platform/4-control.jpg',
+    image: '/images/platform/4-control.jpg',
   },
 ];
 

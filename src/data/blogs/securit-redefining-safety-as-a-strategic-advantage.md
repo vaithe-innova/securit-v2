@@ -1,11 +1,11 @@
 ---
 tag: 'high risk'
 author: 'Sanchit Sharma, Deputy Manager - Support'
-authorImage: '/demo/images/avatar.svg'
+authorImage: '/images/avatar.svg'
 publishDate: 'Aug 8, 2025'
 title: 'Securit: Redefining Safety as a Strategic Advantage'
 description: 'High-risk incidents continue to expose critical safety gaps across industries. Industrial accidents, equipment malfunctions, medical emergencies, and communication breakdowns remain alarmingly common in sectors like manufacturing, energy, logistics, and healthcare. Explosions caused by undetected leaks, workers collapsing in isolated zones, and delayed emergency responses are not rare anomalies—they’re recurring failures of outdated systems. The issue isn’t a lack of protocol—it’s a lack of infrastructure. Traditional safety approaches rely on manual check-ins, static workflows, and fragmented tools that can’t match the complexity or pace of today’s operations. These blind spots reduce situational awareness and delay action in moments when time is critical. Securit is built to close that gap.'
-thumbnail: '/demo/images/blog/securit-redefining-safety-desktop.jpg'
+thumbnail: '/images/blog/securit-redefining-safety-desktop.jpg'
 readTime: '6 min read'
 ---
 
@@ -29,7 +29,7 @@ Digital tools emerged to help. Scheduling software, compliance dashboards, and i
 
 Instead of adding yet another tool to an already crowded stack, Securit unifies safety intelligence across teams, locations, and systems. Built through close collaboration with field experts and business leaders, it streamlines workflows, surfaces critical insights, and brings order to operational chaos—giving decision-makers the clarity to act with confidence, not guesswork.
 
-![Beyond-Safety](/demo/images/blog/beyond-safety-pic.jpg)
+![Beyond-Safety](/images/blog/beyond-safety-pic.jpg)
 
 ### Inside the Tech: What Powers Securit
 

@@ -20,7 +20,7 @@ const StartFree = () => {
   before:rounded-[24px]
   before:bg-[linear-gradient(180deg,rgba(107,5,202,0.75)_0%,rgba(30,23,75,0.1)_100%)]
   md:before:hidden
-  bg-[url('/demo/images/get-start-bg.jpg')]
+  bg-[url('/images/get-start-bg.jpg')]
   bg-cover
   bg-right
   md:bg-center

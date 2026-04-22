@@ -1,13 +1,54 @@
 RewriteEngine On
-
-# Allow Next.js static files
+ 
+# ✅ Base path (important if inside /demo)
+RewriteBase /demo/
+ 
+# ✅ Allow Next.js internal assets
 RewriteCond %{REQUEST_URI} ^/_next/
 RewriteRule ^ - [L]
-
-# Allow existing files
+ 
+# ✅ Allow static files (images, css, js, etc.)
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
-
-# Fallback to .html
+ 
+# ✅ Fallback to .html (Next export support)
 RewriteRule ^(.*)$ $1.html [L]
+ 
+<IfModule mod_headers.c>
+ 
+  # ✅ Content Security Policy (improved)
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';"
+ 
+  # ✅ HSTS (HTTPS only)
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+ 
+  # ✅ Prevent MIME sniffing
+  Header always set X-Content-Type-Options "nosniff"
+ 
+  # ✅ Referrer policy
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+ 
+  # ✅ Clickjacking protection
+  Header always set X-Frame-Options "DENY"
+ 
+  # ✅ Cross-origin resource policy
+  Header always set Cross-Origin-Resource-Policy "same-origin"
+ 
+</IfModule>
+ 
+# ✅ Optional: Enable compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/json
+</IfModule>
+ 
+# ✅ Optional: Cache static assets (performance boost)
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+</IfModule>

@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
+    "build-out": "next build && composer require phpmailer/phpmailer --working-dir=out",
     "start": "next start",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",

@@ -34,15 +34,14 @@ const nextConfig: NextConfig = {
         headers: [
           {
             key: 'Content-Security-Policy',
-            value: [
-              "default-src 'self'",
-              "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
-              "style-src 'self' 'unsafe-inline'",
-              "img-src 'self' data: blob:",
-              "font-src 'self' data:",
-              "connect-src 'self'",
-              "frame-ancestors 'none'",
-            ].join('; '),
+            value: `
+              default-src 'self';
+              script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com https://www.gstatic.com;
+              img-src 'self' data: blob: https://flagcdn.com;
+              frame-src https://www.google.com;
+              connect-src 'self' https://www.google.com;
+              style-src 'self' 'unsafe-inline';
+            `.replace(/\n/g, ""),
           },
           {
             key: 'Strict-Transport-Security',

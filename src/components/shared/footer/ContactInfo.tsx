@@ -210,6 +210,7 @@ const ContactInfo = () => {
   const [searchCountry, setSearchCountry] = useState('');
   const [captchaValue, setCaptchaValue] = useState<string | null>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const [loading, setLoading] = useState(false);
 
   const [formData, setFormData] = useState({
     name: '',
@@ -278,39 +279,51 @@ const ContactInfo = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const resetForm = () => {
+    setFormData({
+      name: '',
+      email: '',
+      company: '',
+      jobTitle: '',
+      inquiryType: '',
+      phone: '',
+      message: '',
+      agreeUpdates: false,
+    });
+    setCaptchaValue(null);
+  };
+
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
-    if (validateForm()) {
-      // router.push('/free-trial');
-      notify();
+    if (!validateForm()) {return;}
+    if (!captchaValue) {
+      toast.error("Please complete captcha");
+      return;
+    }
 
-
-      const formData = {
-        // name: e.target.name.value,
-        // email: e.target.email.value,
-        // message: e.target.message.value,
-      };
-
-      try {
-        const response = await fetch('/send-email.php', { // Ensure the path is correct
+    setLoading(true);
+    try {
+        const response = await fetch('/api/send-email', { // Ensure the path is correct
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(formData),
+          body: JSON.stringify({...formData,}),
         });
 
         const result = await response.json();
         if (result.status === 'success') {
-          alert("Email sent successfully!");
+          toast.success("Email sent successfully!");
+          resetForm();
         } else {
-          alert("Error sending email.");
+          toast.error("Failed to send email");
         }
       } catch (error) {
-        console.error("Submission error:", error);
+        console.error(error);
+        toast.error("Something went wrong");
       }
-    }
+      setLoading(false);
   };
 
-  const notify = () => toast('Thank you for submitting your details. Our team will get back to you shortly!');
+  // const notify = () => toast('Thank you for submitting your details. Our team will get back to you shortly!');
 
   return (
     <>
@@ -557,14 +570,14 @@ const ContactInfo = () => {
                     <RevealAnimation delay={1.2} direction="up" offset={20}>
                       <button
                         type="submit"
-                        disabled={!captchaValue}
+                        disabled={loading || !captchaValue}
                         aria-disabled={!captchaValue}
                         className={`font-bold py-3 px-10 rounded-full transition-all duration-300 text-base md:text-lg shadow-lg active:scale-95 ${captchaValue
                           ? 'bg-primary-500 text-white hover:bg-primary-600 hover:shadow-primary-500/20 hover:-translate-y-1 cursor-pointer'
                           : 'bg-gray-300 text-gray-600 cursor-not-allowed'
                           }`}
                       >
-                        Submit
+                        {loading ? "Sending..." : "Submit"}
                       </button>
                     </RevealAnimation>
                   </form>

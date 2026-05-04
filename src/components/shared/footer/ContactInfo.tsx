@@ -293,9 +293,10 @@ const ContactInfo = () => {
     setCaptchaValue(null);
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleSubmit = async (e: any) => {
     e.preventDefault();
-    if (!validateForm()) {return;}
+    if (!validateForm()) { return; }
     if (!captchaValue) {
       toast.error("Please complete captcha");
       return;
@@ -303,24 +304,24 @@ const ContactInfo = () => {
 
     setLoading(true);
     try {
-        const response = await fetch('/api/send-email', { // Ensure the path is correct
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({...formData,}),
-        });
+      const response = await fetch('/send-mail.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...formData }),
+      });
 
-        const result = await response.json();
-        if (result.status === 'success') {
-          toast.success("Email sent successfully!");
-          resetForm();
-        } else {
-          toast.error("Failed to send email");
-        }
-      } catch (error) {
-        console.error(error);
-        toast.error("Something went wrong");
+      const result = await response.json();
+      if (result.status === 'success') {
+        toast.success("Email sent successfully!");
+        resetForm();
+      } else {
+        toast.error("Failed to send email");
       }
-      setLoading(false);
+    } catch (error) {
+      console.error(error);
+      toast.error("Something went wrong");
+    }
+    setLoading(false);
   };
 
   // const notify = () => toast('Thank you for submitting your details. Our team will get back to you shortly!');
